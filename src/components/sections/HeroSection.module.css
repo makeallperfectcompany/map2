@@ -191,15 +191,18 @@
    ================================================================= */
 .heroFeatures {
   display: flex;
-  gap: 56px;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  gap: 24px;
+  width: 100%;
 }
 .heroFeat {
+  flex: 1;
   display: flex;
   align-items: center;
   gap: 14px;
   cursor: default;
   min-height: 70px;
+  min-width: 0;
 }
 .heroFeatIcon {
   width: 64px; height: 64px;
@@ -377,13 +380,14 @@
   /* 4 bullets — grid 2×2 */
   .heroFeatures {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 12px;
     width: 100%;
   }
   .heroFeatIcon { width: 56px; height: 56px; }
   /* Card-style bullets */
   .heroFeat {
+    flex: unset;
     flex-direction: column;
     text-align: center;
     gap: 10px;
@@ -391,8 +395,10 @@
     border-radius: 16px;
     background: rgba(255,255,255,0.5);
     border: 1px solid rgba(15,16,20,0.04);
-    min-height: 130px;
+    min-height: 140px;
     justify-content: center;
+    display: flex;
+    align-items: center;
   }
   .featText {
     font-size: 13px;
@@ -448,6 +454,9 @@
   .heroFeatures {
     grid-template-columns: 1fr;
     gap: 10px;
+  }
+  .heroFeat {
+    min-height: 100px;
   }
   .heroFeatIcon { width: 44px; height: 44px; }
   .featText { font-size: 11px; }
