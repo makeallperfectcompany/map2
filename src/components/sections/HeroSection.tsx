@@ -167,7 +167,7 @@ export default function HeroSection({ menuOpen, onMenuClose }: HeroSectionProps)
               <div className={styles.heroFeat}>
                 <div className={styles.heroFeatIcon}>
                   <Image
-                    src="/assets/home/hero/icon-analytics.webp"
+                    src="/assets/home/hero/icon-advertising.webp"
                     alt=""
                     width={64}
                     height={64}
@@ -176,42 +176,15 @@ export default function HeroSection({ menuOpen, onMenuClose }: HeroSectionProps)
                 <div className={styles.featText}>Реклама<br />и аналитика</div>
               </div>
 
-              {/* 4: SEO и разработка — inline SVG иконка */}
+              {/* 4: SEO и разработка */}
               <div className={styles.heroFeat}>
                 <div className={styles.heroFeatIcon}>
-                  <svg
-                    width="64"
-                    height="64"
-                    viewBox="0 0 64 64"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    aria-hidden="true"
-                  >
-                    {/* Glass circle background */}
-                    <circle cx="32" cy="32" r="30" fill="#a855f7" fillOpacity="0.1" stroke="#4B5563" strokeWidth="1.8"/>
-                    {/* Code icon: < / > */}
-                    <path
-                      d="M25 26L19 32L25 38"
-                      stroke="#4B5563"
-                      strokeWidth="1.8"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                    <path
-                      d="M39 26L45 32L39 38"
-                      stroke="#4B5563"
-                      strokeWidth="1.8"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                    <path
-                      d="M35 23L29 41"
-                      stroke="#4B5563"
-                      strokeWidth="1.8"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
+                  <Image
+                    src="/assets/home/hero/icon-seo.webp"
+                    alt=""
+                    width={64}
+                    height={64}
+                  />
                 </div>
                 <div className={styles.featText}>SEO<br />и разработка</div>
               </div>
