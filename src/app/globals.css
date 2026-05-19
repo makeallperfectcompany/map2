@@ -1,0 +1,29 @@
+*, *::before, *::after { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+
+:root {
+  --ink:        #0e0f12;
+  --ink-2:      #1a1c20;
+  --muted:      #6b6f76;
+  --line:       rgba(15,16,20,0.08);
+  --glass:      rgba(255,255,255,0.55);
+  --glass-2:    rgba(255,255,255,0.78);
+  --ease:       cubic-bezier(.2,.7,.2,1);
+  --ease-snap:  cubic-bezier(.34,1.56,.64,1);
+}
+
+body {
+  font-family: var(--font-onest), system-ui, sans-serif;
+  color: var(--ink);
+  background: #f5f6f8;
+  min-height: 100vh;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    transition-duration: .01ms !important;
+  }
+}
