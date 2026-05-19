@@ -287,6 +287,45 @@
 .heroMenuOverlayOpen .heroMenuItem:nth-child(5) { transition-delay: .36s; }
 
 /* =================================================================
+   MOBILE VISUAL BLOCK
+   ================================================================= */
+.heroMobileVisual {
+  display: none;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 28px;
+  overflow: hidden;
+  background: #f5f5f7;
+}
+@media (max-width: 1024px) {
+  .heroMobileVisual {
+    display: block;
+    width: 100%;
+    max-width: 320px;
+    margin: 20px auto;
+    height: 280px;
+  }
+}
+@media (max-width: 640px) {
+  .heroMobileVisual {
+    max-width: 260px;
+    height: 240px;
+  }
+}
+@media (max-width: 430px) {
+  .heroMobileVisual {
+    max-width: 220px;
+    height: 200px;
+  }
+}
+.heroMobileLogoBg {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+/* =================================================================
    RESPONSIVE
    ================================================================= */
 @media (min-width: 1600px) {
@@ -300,7 +339,8 @@
 }
 @media (max-width: 1024px) {
   .heroSection { min-height: auto; }
-  .heroBg { object-position: center top; }
+  /* Скрыть desktop background на mobile/tablet */
+  .heroBg { display: none; }
   .heroSection::before {
     background: linear-gradient(180deg,
       rgba(255,255,255,0) 0%,
@@ -309,48 +349,58 @@
   }
   .heroInner {
     grid-template-columns: 1fr;
-    padding: calc(80px + 45vw) 32px 60px;
+    padding: 120px 32px 60px;
     gap: 24px;
   }
   .right { display: none; }
-  .heroActions { margin-bottom: 48px; }
-  .heroFeatures { gap: 32px; }
+  .heroActions { margin-bottom: 20px; }
+  /* 4 bullets — grid 2×2 */
+  .heroFeatures {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    width: 100%;
+  }
   .heroFeatIcon { width: 56px; height: 56px; }
 }
 @media (max-width: 768px) {
-  .heroInner { padding: calc(76px + 52vw) 28px 48px; }
+  .heroInner { padding: 100px 28px 48px; }
   .heroTitle { font-size: 44px; letter-spacing: -0.02em; }
   .heroLead { font-size: 15px; max-width: 100%; margin-bottom: 32px; }
-  .heroActions { margin-bottom: 40px; gap: 12px; }
+  .heroActions { margin-bottom: 20px; gap: 12px; }
   .btn { min-width: 0; padding: 16px 22px; font-size: 14.5px; }
-  .heroFeatures { gap: 24px; row-gap: 18px; }
+  .heroFeatures { gap: 12px; row-gap: 12px; }
   .heroFeat { gap: 12px; }
   .heroFeatIcon { width: 50px; height: 50px; }
   .featText { font-size: 12.5px; }
 }
 @media (max-width: 640px) {
   .heroTitle { font-size: 38px; }
-  .heroInner { padding: calc(72px + 60vw) 20px 40px; }
-  .heroActions { flex-direction: column; margin-bottom: 36px; }
+  .heroInner { padding: 90px 20px 40px; }
+  .heroActions { flex-direction: column; margin-bottom: 16px; }
   .btn { width: 100%; justify-content: center; padding: 16px 20px; }
-  .heroFeatures { gap: 20px; }
+  .heroFeatures { gap: 10px; }
   .heroFeatIcon { width: 48px; height: 48px; }
   .featText { font-size: 12px; }
   .heroMenuOverlay { padding: 88px 20px 40px; }
   .heroMenuItem { font-size: clamp(26px, 8vw, 36px); padding: 12px 2px; }
 }
 @media (max-width: 430px) {
-  .heroInner { padding: calc(68px + 64vw) 16px 32px; }
+  .heroInner { padding: 80px 16px 32px; }
   .heroTitle { font-size: 32px; letter-spacing: -0.015em; }
   .heroLead { font-size: 14px; margin-bottom: 28px; }
   .heroActions { gap: 10px; }
   .btn { padding: 14px 18px; font-size: 13.5px; }
-  .heroFeatures { gap: 16px; }
+  .heroFeatures { gap: 10px; }
 }
 @media (max-width: 375px) {
   .heroTitle { font-size: 28px; }
-  .heroInner { padding: calc(64px + 66vw) 14px 28px; }
-  .heroFeatures { gap: 14px; }
+  .heroInner { padding: 76px 14px 28px; }
+  /* На очень маленьких экранах — 1 колонка */
+  .heroFeatures {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
   .heroFeatIcon { width: 44px; height: 44px; }
   .featText { font-size: 11px; }
   .btn { padding: 12px 16px; font-size: 13px; }

@@ -74,6 +74,7 @@ export default function HeroSection({ menuOpen, onMenuClose }: HeroSectionProps)
 
       {/* Hero Section */}
       <section className={styles.heroSection}>
+        {/* Desktop background — скрывается на mobile через CSS */}
         <Image
           className={styles.heroBg}
           src="/assets/home/hero/hero-bg.webp"
@@ -119,7 +120,24 @@ export default function HeroSection({ menuOpen, onMenuClose }: HeroSectionProps)
               </a>
             </div>
 
+            {/* Mobile visual block — виден только на <= 1024px */}
+            <div className={styles.heroMobileVisual}>
+              <picture>
+                <source media="(max-width: 640px)" srcSet="/assets/home/hero/hero-mobile-logo-bg.webp" />
+                <source media="(max-width: 1024px)" srcSet="/assets/home/hero/hero-mobile-logo-bg.webp" />
+                <Image
+                  className={styles.heroMobileLogoBg}
+                  src="/assets/home/hero/hero-mobile-logo-bg.webp"
+                  alt=""
+                  width={941}
+                  height={1672}
+                  priority
+                />
+              </picture>
+            </div>
+
             <div className={styles.heroFeatures}>
+              {/* 1: Стратегия и рост */}
               <div className={styles.heroFeat}>
                 <div className={styles.heroFeatIcon}>
                   <Image
@@ -132,6 +150,7 @@ export default function HeroSection({ menuOpen, onMenuClose }: HeroSectionProps)
                 <div className={styles.featText}>Стратегия<br />и рост</div>
               </div>
 
+              {/* 2: Дизайн и контент */}
               <div className={styles.heroFeat}>
                 <div className={styles.heroFeatIcon}>
                   <Image
@@ -144,6 +163,7 @@ export default function HeroSection({ menuOpen, onMenuClose }: HeroSectionProps)
                 <div className={styles.featText}>Дизайн<br />и контент</div>
               </div>
 
+              {/* 3: Реклама и аналитика */}
               <div className={styles.heroFeat}>
                 <div className={styles.heroFeatIcon}>
                   <Image
@@ -154,6 +174,46 @@ export default function HeroSection({ menuOpen, onMenuClose }: HeroSectionProps)
                   />
                 </div>
                 <div className={styles.featText}>Реклама<br />и аналитика</div>
+              </div>
+
+              {/* 4: SEO и разработка — inline SVG иконка */}
+              <div className={styles.heroFeat}>
+                <div className={styles.heroFeatIcon}>
+                  <svg
+                    width="64"
+                    height="64"
+                    viewBox="0 0 64 64"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true"
+                  >
+                    {/* Glass circle background */}
+                    <circle cx="32" cy="32" r="30" fill="#a855f7" fillOpacity="0.1" stroke="#4B5563" strokeWidth="1.8"/>
+                    {/* Code icon: < / > */}
+                    <path
+                      d="M25 26L19 32L25 38"
+                      stroke="#4B5563"
+                      strokeWidth="1.8"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                    <path
+                      d="M39 26L45 32L39 38"
+                      stroke="#4B5563"
+                      strokeWidth="1.8"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                    <path
+                      d="M35 23L29 41"
+                      stroke="#4B5563"
+                      strokeWidth="1.8"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                </div>
+                <div className={styles.featText}>SEO<br />и разработка</div>
               </div>
             </div>
           </div>
