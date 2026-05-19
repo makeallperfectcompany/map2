@@ -13,6 +13,9 @@ export const metadata: Metadata = {
   title: "Make All Perfect — маркетинг полного цикла",
   description:
     "Мы объединяем стратегию, дизайн, рекламу, контент и аналитику в единую систему роста бизнеса.",
+  icons: {
+    icon: "/favicon.webp",
+  },
 };
 
 export default function RootLayout({
