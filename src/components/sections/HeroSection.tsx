@@ -121,70 +121,59 @@ export default function HeroSection({ menuOpen, onMenuClose }: HeroSectionProps)
             </div>
 
             {/* Mobile visual block — виден только на <= 1024px */}
-            <div className={styles.heroMobileVisual}>
-              <picture>
-                <source media="(max-width: 640px)" srcSet="/assets/home/hero/hero-mobile-logo-bg.webp" />
-                <source media="(max-width: 1024px)" srcSet="/assets/home/hero/hero-mobile-logo-bg.webp" />
-                <Image
-                  className={styles.heroMobileLogoBg}
-                  src="/assets/home/hero/hero-mobile-logo-bg.webp"
-                  alt=""
-                  width={941}
-                  height={1672}
-                  priority
-                />
-              </picture>
-            </div>
+            <div className={styles.mobileLogoVisual} aria-hidden="true" />
 
             <div className={styles.heroFeatures}>
               {/* 1: Стратегия и рост */}
               <div className={styles.heroFeat}>
-                <div className={styles.heroFeatIcon}>
-                  <Image
-                    src="/assets/home/hero/icon-strategy.webp"
-                    alt=""
-                    width={64}
-                    height={64}
-                  />
+                <div className={styles.featIco}>
+                  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <circle cx="12" cy="12" r="7"/>
+                    <path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22"/>
+                    <path d="M8 14l3-3 3 3 4-4"/>
+                    <path d="M18 10h-4V6"/>
+                  </svg>
                 </div>
                 <div className={styles.featText}>Стратегия<br />и рост</div>
               </div>
 
               {/* 2: Дизайн и контент */}
               <div className={styles.heroFeat}>
-                <div className={styles.heroFeatIcon}>
-                  <Image
-                    src="/assets/home/hero/icon-design.webp"
-                    alt=""
-                    width={64}
-                    height={64}
-                  />
+                <div className={styles.featIco}>
+                  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M14 5l5 5"/>
+                    <path d="M4 20l4.5-1 9-9a1.8 1.8 0 0 0 0-2.5l-1-1a1.8 1.8 0 0 0-2.5 0l-9 9L4 20z"/>
+                    <path d="M4 4h6M4 8h4M4 12h3"/>
+                  </svg>
                 </div>
                 <div className={styles.featText}>Дизайн<br />и контент</div>
               </div>
 
               {/* 3: Реклама и аналитика */}
               <div className={styles.heroFeat}>
-                <div className={styles.heroFeatIcon}>
-                  <Image
-                    src="/assets/home/hero/icon-advertising.webp"
-                    alt=""
-                    width={64}
-                    height={64}
-                  />
+                <div className={styles.featIco}>
+                  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M4 20V10"/>
+                    <path d="M10 20V6"/>
+                    <path d="M16 20v-9"/>
+                    <path d="M22 20V4"/>
+                    <path d="M3 20h20"/>
+                  </svg>
                 </div>
                 <div className={styles.featText}>Реклама<br />и аналитика</div>
               </div>
 
               {/* 4: SEO и разработка */}
               <div className={styles.heroFeat}>
-                <div className={styles.heroFeatIcon}>
-                  <Image
-                    src="/assets/home/hero/icon-seo.webp"
-                    alt=""
-                    width={64}
-                    height={64}
-                  />
+                <div className={styles.featIco}>
+                  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M8 8l-4 4 4 4"/>
+                    <path d="M16 8l4 4-4 4"/>
+                    <path d="M13.5 5.5l-3 13"/>
+                    <path d="M6.5 19c3.8-1.1 7.6-3.4 10.8-7.2"/>
+                    <path d="M17.3 11.8h-3.2"/>
+                    <path d="M17.3 11.8v3.2"/>
+                  </svg>
                 </div>
                 <div className={styles.featText}>SEO<br />и разработка</div>
               </div>

@@ -187,45 +187,77 @@
 }
 
 /* =================================================================
-   FEATURES with glass-icon images
+   FEATURES with SVG icons
    ================================================================= */
-.heroFeatures {
+
+/* Mobile visual block as background */
+.mobileLogoVisual {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .mobileLogoVisual {
+    display: block;
+    width: 100%;
+    max-width: 600px;
+    height: clamp(200px, 45vw, 300px);
+    margin: 22px auto;
+    border-radius: 28px;
+    overflow: hidden;
+    background-image: url("/assets/home/hero/hero-mobile-logo-card-bg.webp");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    box-shadow: 0 18px 44px rgba(15,16,20,0.055);
+  }
+}
+
+@media (max-width: 640px) {
+  .mobileLogoVisual {
+    max-width: 100%;
+    height: clamp(180px, 50vw, 260px);
+  }
+}
+
+/* SVG icon container */
+.featIco {
   display: flex;
-  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  flex-shrink: 0;
+  background: rgba(255,255,255,0.8);
+  border-radius: 12px;
+  backdrop-filter: blur(4px);
+}
+
+.featIco svg {
+  width: 22px;
+  height: 22px;
+  stroke: #4B5563;
+  stroke-width: 1.8;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* Desktop: 4 bullets in a row */
+.heroFeatures {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 24px;
+  align-items: center;
   width: 100%;
 }
+
 .heroFeat {
-  flex: 1;
   display: flex;
   align-items: center;
   gap: 14px;
   cursor: default;
-  min-height: 70px;
-  min-width: 0;
 }
-.heroFeatIcon {
-  width: 64px; height: 64px;
-  flex-shrink: 0;
-  display: grid; place-items: center;
-  transition: transform .5s var(--ease-snap), filter .4s var(--ease);
-  filter:
-    drop-shadow(0 8px 16px rgba(15,16,20,0.12))
-    drop-shadow(0 1px 0 rgba(255,255,255,0.75));
-}
-.heroFeatIcon img {
-  width: 100%; height: 100%;
-  object-fit: contain;
-  display: block;
-  user-select: none;
-  -webkit-user-drag: none;
-}
-.heroFeat:hover .heroFeatIcon {
-  transform: rotate(-6deg) scale(1.08);
-  filter:
-    drop-shadow(0 12px 24px rgba(15,16,20,0.20))
-    drop-shadow(0 1px 0 rgba(255,255,255,0.85));
-}
+
 .featText {
   font-size: 13.5px;
   line-height: 1.3;
@@ -292,44 +324,7 @@
 .heroMenuOverlayOpen .heroMenuItem:nth-child(4) { transition-delay: .30s; }
 .heroMenuOverlayOpen .heroMenuItem:nth-child(5) { transition-delay: .36s; }
 
-/* =================================================================
-   MOBILE VISUAL BLOCK
-   ================================================================= */
-.heroMobileVisual {
-  display: none;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  border-radius: 28px;
-  overflow: hidden;
-  background: #f5f5f7;
-}
-@media (max-width: 1024px) {
-  .heroMobileVisual {
-    display: block;
-    width: 100%;
-    max-width: 320px;
-    margin: 20px auto;
-    height: 280px;
-  }
-}
-@media (max-width: 640px) {
-  .heroMobileVisual {
-    max-width: 260px;
-    height: 240px;
-  }
-}
-@media (max-width: 430px) {
-  .heroMobileVisual {
-    max-width: 220px;
-    height: 200px;
-  }
-}
-.heroMobileLogoBg {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  object-position: center;
-}
+
 
 /* =================================================================
    RESPONSIVE
@@ -377,17 +372,17 @@
     justify-content: center;
     margin-bottom: 20px;
   }
-  /* 4 bullets — grid 2×2 */
+  /* Tablet / Mobile: 2×2 */
   .heroFeatures {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 12px;
-    width: 100%;
   }
-  .heroFeatIcon { width: 56px; height: 56px; }
+  .featIco {
+    width: 48px;
+    height: 48px;
+  }
   /* Card-style bullets */
   .heroFeat {
-    flex: unset;
     flex-direction: column;
     text-align: center;
     gap: 10px;
@@ -395,7 +390,7 @@
     border-radius: 16px;
     background: rgba(255,255,255,0.5);
     border: 1px solid rgba(15,16,20,0.04);
-    min-height: 140px;
+    min-height: 130px;
     justify-content: center;
     display: flex;
     align-items: center;
@@ -413,7 +408,7 @@
   .btn { min-width: 0; padding: 16px 22px; font-size: 14.5px; }
   .heroFeatures { gap: 12px; row-gap: 12px; }
   .heroFeat { gap: 12px; }
-  .heroFeatIcon { width: 50px; height: 50px; }
+  .featIco { width: 50px; height: 50px; }
   .featText { font-size: 12.5px; }
 }
 @media (max-width: 640px) {
@@ -434,7 +429,7 @@
   }
   .heroFeatures { gap: 10px; }
   .heroFeat { min-height: 120px; padding: 14px 10px; }
-  .heroFeatIcon { width: 48px; height: 48px; }
+  .featIco { width: 48px; height: 48px; }
   .featText { font-size: 12px; }
   .heroMenuOverlay { padding: 88px 20px 40px; }
   .heroMenuItem { font-size: clamp(26px, 8vw, 36px); padding: 12px 2px; }
@@ -458,7 +453,7 @@
   .heroFeat {
     min-height: 100px;
   }
-  .heroFeatIcon { width: 44px; height: 44px; }
+  .featIco { width: 44px; height: 44px; }
   .featText { font-size: 11px; }
   .btn { padding: 12px 16px; font-size: 13px; }
 }
