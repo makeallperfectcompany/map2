@@ -190,34 +190,11 @@
    FEATURES with SVG icons
    ================================================================= */
 
-/* Mobile visual block as background */
-.mobileLogoVisual {
-  display: none;
-}
+/* Mobile visual card — hidden on desktop, shown on mobile/tablet */
+.heroCardVisual { display: none; }
 
-@media (max-width: 1024px) {
-  .mobileLogoVisual {
-    display: block;
-    width: 100%;
-    max-width: 600px;
-    height: clamp(200px, 45vw, 300px);
-    margin: 22px auto;
-    border-radius: 28px;
-    overflow: hidden;
-    background-image: url("/assets/home/hero/hero-mobile-logo-card-bg.webp");
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    box-shadow: 0 18px 44px rgba(15,16,20,0.055);
-  }
-}
-
-@media (max-width: 640px) {
-  .mobileLogoVisual {
-    max-width: 100%;
-    height: clamp(180px, 50vw, 260px);
-  }
-}
+/* Old mobileLogoVisual — no longer needed */
+.mobileLogoVisual { display: none !important; }
 
 /* SVG icon container */
 .featIco {
@@ -372,33 +349,78 @@
     justify-content: center;
     margin-bottom: 20px;
   }
-  /* Tablet / Mobile: 2×2 */
-  .heroFeatures {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 12px;
+
+  /* Visual card with integrated bullets */
+  .heroCardVisual {
+    display: block;
+    position: relative;
+    width: 100%;
+    min-height: 380px;
+    margin: 20px auto;
+    border-radius: 28px;
+    overflow: hidden;
+    box-shadow: 0 18px 44px rgba(15,16,20,0.055);
   }
-  .featIco {
-    width: 48px;
-    height: 48px;
+
+  .cardBg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("/assets/home/hero/hero-mobile-logo-card-bg.webp");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
   }
-  /* Card-style bullets */
-  .heroFeat {
-    flex-direction: column;
-    text-align: center;
+
+  .cardBullets {
+    z-index: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 10px;
-    padding: 16px 12px;
-    border-radius: 16px;
-    background: rgba(255,255,255,0.5);
-    border: 1px solid rgba(15,16,20,0.04);
-    min-height: 130px;
-    justify-content: center;
+    padding: 16px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  .cardBullet {
     display: flex;
     align-items: center;
+    gap: 10px;
+    padding: 10px 12px;
+    background: rgba(255,255,255,0.6);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.3);
+    min-height: 48px;
   }
-  .featText {
+
+  .cardBulletText {
     font-size: 13px;
-    line-height: 1.3;
+    font-weight: 500;
+    color: #1A1C20;
+    line-height: 1.2;
   }
+
+  .cardBullet .featIco {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    flex-shrink: 0;
+    background: rgba(255,255,255,0.9);
+  }
+
+  .cardBullet .featIco svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  /* Hide desktop features bullets on mobile/tablet — they are now inside the card */
+  .heroFeatures { display: none; }
+
 }
 @media (max-width: 768px) {
   .heroInner { padding: 100px 28px 48px; }
@@ -427,12 +449,34 @@
     justify-content: center;
     padding: 16px 20px;
   }
-  .heroFeatures { gap: 10px; }
-  .heroFeat { min-height: 120px; padding: 14px 10px; }
-  .featIco { width: 48px; height: 48px; }
-  .featText { font-size: 12px; }
   .heroMenuOverlay { padding: 88px 20px 40px; }
   .heroMenuItem { font-size: clamp(26px, 8vw, 36px); padding: 12px 2px; }
+  /* Card responsive */
+  .heroCardVisual {
+    min-height: 320px;
+    margin: 16px auto;
+    border-radius: 24px;
+  }
+  .cardBullets {
+    gap: 8px;
+    padding: 12px;
+  }
+  .cardBullet {
+    padding: 8px 10px;
+    gap: 8px;
+    min-height: 42px;
+  }
+  .cardBulletText {
+    font-size: 12px;
+  }
+  .cardBullet .featIco {
+    width: 32px;
+    height: 32px;
+  }
+  .cardBullet .featIco svg {
+    width: 16px;
+    height: 16px;
+  }
 }
 @media (max-width: 430px) {
   .heroInner { padding: 80px 16px 32px; }
@@ -440,22 +484,31 @@
   .heroLead { font-size: 14px; margin-bottom: 28px; }
   .heroActions { gap: 10px; }
   .btn { padding: 14px 18px; font-size: 13.5px; }
-  .heroFeatures { gap: 10px; }
+  /* Card responsive */
+  .heroCardVisual {
+    min-height: 280px;
+  }
+  .cardBullets {
+    gap: 6px;
+    padding: 10px;
+  }
+  .cardBullet {
+    padding: 6px 8px;
+    min-height: 38px;
+  }
 }
 @media (max-width: 375px) {
   .heroTitle { font-size: 28px; }
   .heroInner { padding: 76px 14px 28px; }
-  /* На очень маленьких экранах — 1 колонка */
-  .heroFeatures {
-    grid-template-columns: 1fr;
-    gap: 10px;
-  }
-  .heroFeat {
-    min-height: 100px;
-  }
-  .featIco { width: 44px; height: 44px; }
-  .featText { font-size: 11px; }
   .btn { padding: 12px 16px; font-size: 13px; }
+  /* Card responsive — 1 column */
+  .heroCardVisual {
+    min-height: 300px;
+  }
+  .cardBullets {
+    grid-template-columns: 1fr;
+    padding: 10px;
+  }
 }
 
 /* prefers-reduced-motion is handled globally in globals.css */
