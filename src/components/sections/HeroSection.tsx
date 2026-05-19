@@ -88,7 +88,7 @@ export default function HeroSection({ menuOpen, onMenuClose }: HeroSectionProps)
         <div className={styles.heroInner}>
           <div className={styles.left}>
             <h1 className={styles.heroTitle}>
-              Маркетинг полного цикла для брендов, которые хотят лидировать
+              Маркетинг полного цикла для брендов, которые хотят <span className={styles.highlight}>лидировать</span>
             </h1>
 
             <p className={styles.heroLead}>
@@ -96,7 +96,7 @@ export default function HeroSection({ menuOpen, onMenuClose }: HeroSectionProps)
             </p>
 
             <div className={styles.heroActions}>
-              <a className={`${styles.btn} ${styles.btnPrimary}`} href="#">
+              <a className={`${styles.btn} ${styles.btnAccent}`} href="#">
                 <span className={styles.label}>Обсудить проект</span>
                 <span className={styles.arrWrap}>
                   <svg className={`${styles.arr} ${styles.arrMain}`} viewBox="0 0 14 14" fill="none">

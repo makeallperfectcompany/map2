@@ -58,6 +58,14 @@
   color: var(--ink);
   margin: 0 0 30px;
 }
+
+.highlight {
+  background: linear-gradient(90deg, #1A3A6E 0%, #0071E3 55%, #7FB7FF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
 .heroLead {
   font-size: 17px;
   line-height: 1.55;
@@ -119,6 +127,36 @@
   position: absolute; inset: 0;
   transform: translate(-100%, 100%);
 }
+
+/* Accent — brand gradient */
+.btnAccent {
+  background: linear-gradient(90deg, #1A3A6E 0%, #0071E3 55%, #7FB7FF 100%);
+  color: #fff;
+  box-shadow: 0 8px 24px rgba(0,113,227,0.20);
+}
+.btnAccent::before {
+  content: "";
+  position: absolute;
+  top: 0; bottom: 0;
+  left: -120%;
+  width: 60%;
+  background: linear-gradient(115deg,
+    transparent 0%,
+    rgba(255,255,255,0.0) 30%,
+    rgba(255,255,255,0.25) 50%,
+    rgba(255,255,255,0.0) 70%,
+    transparent 100%);
+  transform: skewX(-18deg);
+  z-index: 1;
+  transition: left .9s var(--ease);
+}
+.btnAccent:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 40px rgba(0,113,227,0.28);
+  filter: brightness(1.08);
+}
+.btnAccent:hover::before { left: 130%; }
+.btnAccent:active { transform: translateY(0); transition-duration: .15s; }
 
 /* Primary (black) */
 .btnPrimary {
