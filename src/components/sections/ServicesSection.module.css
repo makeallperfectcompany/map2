@@ -1,0 +1,336 @@
+.servicesSection {
+  margin: 40px 24px;
+  padding: 120px 0;
+  border-radius: 32px;
+  background:
+    radial-gradient(circle at 78% 10%, rgba(122, 167, 199, 0.14), transparent 34%),
+    linear-gradient(135deg, #111419 0%, #1a1d23 52%, #0e1014 100%);
+  color: #f5f5f7;
+  overflow: hidden;
+}
+
+.container {
+  width: min(100%, 1232px);
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+.head {
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(320px, 0.72fr);
+  gap: 64px;
+  align-items: end;
+}
+
+.eyebrow {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 28px;
+  font: 600 15px/1.2 Inter, system-ui, sans-serif;
+  letter-spacing: -0.01em;
+  color: #7fb7ff;
+}
+
+.eyebrow span:last-child {
+  color: rgba(245, 245, 247, 0.62);
+}
+
+.title {
+  margin: 0;
+  font: 760 56px/1.05 Inter, system-ui, sans-serif;
+  letter-spacing: -0.05em;
+  color: #f5f5f7;
+  max-width: 720px;
+}
+
+.title span {
+  display: block;
+  color: #86868b;
+}
+
+.lead {
+  margin: 0 0 4px;
+  max-width: 480px;
+  color: rgba(245, 245, 247, 0.64);
+  font: 400 18px/1.55 Inter, system-ui, sans-serif;
+  letter-spacing: -0.015em;
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin: 34px 0 64px;
+}
+
+.primaryButton,
+.ghostButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 52px;
+  border-radius: 999px;
+  font: 650 15px/1 Inter, system-ui, sans-serif;
+  letter-spacing: -0.01em;
+  text-decoration: none;
+  transition: transform .25s cubic-bezier(.2,.8,.2,1), opacity .25s;
+}
+
+.primaryButton {
+  padding: 0 24px;
+  color: #111419;
+  background: #ffffff;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.18);
+}
+
+.ghostButton {
+  padding: 0 6px;
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.primaryButton:hover,
+.ghostButton:hover {
+  transform: translateY(-2px);
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1.36fr 1fr 1fr;
+  gap: 16px;
+}
+
+.card {
+  min-height: 388px;
+  border-radius: 24px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  cursor: default;
+  transition: transform .32s cubic-bezier(.2,.8,.2,1), background .32s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+.featuredCard {
+  background:
+    radial-gradient(circle at 88% 12%, rgba(127, 183, 255, 0.20), transparent 36%),
+    linear-gradient(135deg, #1a3a6e 0%, #081f3f 100%);
+  color: #ffffff;
+}
+
+.darkCard {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #f5f5f7;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.05);
+}
+
+.cardEyebrow {
+  margin-bottom: 24px;
+  font: 500 11px/1.2 "JetBrains Mono", ui-monospace, monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: rgba(255, 255, 255, 0.56);
+}
+
+.featuredCard .cardEyebrow {
+  color: #7fb7ff;
+}
+
+.card h3 {
+  margin: 0 0 24px;
+  font: 740 35px/1.06 Inter, system-ui, sans-serif;
+  letter-spacing: -0.04em;
+}
+
+.card h3 span {
+  display: block;
+  color: rgba(245, 245, 247, 0.56);
+}
+
+.featuredCard h3 span {
+  color: rgba(255, 255, 255, 0.68);
+}
+
+.metric {
+  margin-bottom: 16px;
+  font: 820 72px/0.95 Inter, system-ui, sans-serif;
+  letter-spacing: -0.07em;
+}
+
+.darkCard .metric {
+  font-size: 52px;
+  color: #7fb7ff;
+}
+
+.card p {
+  margin: 0;
+  color: rgba(245, 245, 247, 0.68);
+  font: 400 14px/1.55 Inter, system-ui, sans-serif;
+}
+
+.cardBottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+  margin-top: auto;
+  padding-top: 22px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.cardBottom span {
+  font: 500 13px/1.2 "JetBrains Mono", ui-monospace, monospace;
+  color: rgba(245, 245, 247, 0.58);
+}
+
+.cardBottom a {
+  color: #ffffff;
+  font: 650 14px/1 Inter, system-ui, sans-serif;
+  text-decoration: none;
+}
+
+.darkCard .cardBottom a {
+  color: #7fb7ff;
+}
+
+.serviceRail {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.railItem {
+  min-height: 74px;
+  border-radius: 20px;
+  padding: 18px 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: rgba(245, 245, 247, 0.74);
+  background: rgba(255, 255, 255, 0.045);
+  border: 1px solid rgba(255, 255, 255, 0.065);
+  font: 600 15px/1.25 Inter, system-ui, sans-serif;
+  letter-spacing: -0.015em;
+}
+
+.railDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #7fb7ff;
+  box-shadow: 0 0 24px rgba(127, 183, 255, 0.52);
+}
+
+@media (max-width: 1024px) {
+  .servicesSection {
+    margin: 28px 14px;
+    padding: 76px 0;
+    border-radius: 28px;
+  }
+
+  .head {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .title {
+    font-size: 46px;
+  }
+
+  .lead {
+    max-width: 620px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    min-height: 320px;
+  }
+
+  .serviceRail {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .servicesSection {
+    margin: 22px 10px;
+    padding: 58px 0;
+    border-radius: 24px;
+  }
+
+  .container {
+    padding: 0 18px;
+  }
+
+  .eyebrow {
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 22px;
+    font-size: 14px;
+  }
+
+  .title {
+    font-size: 34px;
+    line-height: 1.08;
+    letter-spacing: -0.045em;
+  }
+
+  .lead {
+    font-size: 16px;
+  }
+
+  .actions {
+    flex-direction: column;
+    align-items: stretch;
+    margin: 28px 0 36px;
+  }
+
+  .primaryButton,
+  .ghostButton {
+    width: 100%;
+  }
+
+  .ghostButton {
+    min-height: 48px;
+    border: 1px solid rgba(255,255,255,0.08);
+    background: rgba(255,255,255,0.045);
+  }
+
+  .card {
+    min-height: 286px;
+    border-radius: 22px;
+    padding: 24px;
+  }
+
+  .card h3 {
+    font-size: 28px;
+  }
+
+  .metric {
+    font-size: 56px;
+  }
+
+  .darkCard .metric {
+    font-size: 42px;
+  }
+
+  .cardBottom {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .serviceRail {
+    grid-template-columns: 1fr;
+  }
+
+  .railItem {
+    min-height: 62px;
+  }
+}
