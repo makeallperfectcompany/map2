@@ -60,7 +60,10 @@
 }
 
 .highlight {
-  background: linear-gradient(90deg, #1A3A6E 0%, #0071E3 55%, #7FB7FF 100%);
+  display: inline-block;
+  padding-right: 0.05em;
+  padding-bottom: 0.03em;
+  background: linear-gradient(90deg, #1A3A6E 0%, #0071E3 48%, #3A8FF2 78%, #5FA8FF 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -130,9 +133,9 @@
 
 /* Accent — brand gradient */
 .btnAccent {
-  background: linear-gradient(90deg, #1A3A6E 0%, #0071E3 55%, #7FB7FF 100%);
+  background: linear-gradient(90deg, #1A3A6E 0%, #0071E3 52%, #5FA8FF 100%);
   color: #fff;
-  box-shadow: 0 8px 24px rgba(0,113,227,0.20);
+  box-shadow: 0 18px 42px rgba(0,113,227,0.18);
 }
 .btnAccent::before {
   content: "";
