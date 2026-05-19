@@ -6,14 +6,13 @@
   top: 16px; left: 16px; right: 16px;
   z-index: 100;
   height: 64px;
-  border-radius: 18px;
-  background: #FFFFFF;
-  backdrop-filter: none;
-  -webkit-backdrop-filter: none;
-  border: 1px solid rgba(15,16,20,0.08);
+  border-radius: 24px;
+  background: rgba(255,255,255,0.68);
+  backdrop-filter: blur(18px) saturate(160%);
+  -webkit-backdrop-filter: blur(18px) saturate(160%);
+  border: 1px solid rgba(15,16,20,0.06);
   box-shadow:
-    0 8px 32px rgba(15,16,20,0.06),
-    inset 0 1px 0 rgba(255,255,255,0.9);
+    0 10px 30px rgba(15,16,20,0.06);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -76,12 +75,12 @@
 /* Burger button — glass */
 .heroBurger {
   width: 44px; height: 44px;
-  border-radius: 12px;
-  background: rgba(255,255,255,0.62);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(255,255,255,0.9);
-  box-shadow: 0 2px 6px rgba(15,16,20,0.06), inset 0 1px 0 rgba(255,255,255,0.9);
+  border-radius: 18px;
+  background: rgba(255,255,255,0.72);
+  backdrop-filter: blur(16px) saturate(150%);
+  -webkit-backdrop-filter: blur(16px) saturate(150%);
+  border: 1px solid rgba(15,16,20,0.07);
+  box-shadow: 0 8px 20px rgba(15,16,20,0.08);
   display: grid; place-items: center;
   cursor: pointer;
   transition: transform .3s var(--ease-snap), background .25s var(--ease);
@@ -97,7 +96,7 @@
   position: absolute;
   left: 0; right: 0;
   height: 1.5px;
-  background: var(--ink);
+  background: #1A1C20;
   border-radius: 2px;
   transition: transform .35s var(--ease-snap), opacity .25s var(--ease), top .35s var(--ease-snap);
 }
