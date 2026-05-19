@@ -194,9 +194,9 @@
 .heroMenuOverlay {
   position: fixed; inset: 0;
   z-index: 99;
-  background: rgba(255,255,255,0.7);
-  backdrop-filter: blur(28px) saturate(140%);
-  -webkit-backdrop-filter: blur(28px) saturate(140%);
+  background: rgba(255,255,255,0.88);
+  backdrop-filter: blur(32px) saturate(180%);
+  -webkit-backdrop-filter: blur(32px) saturate(180%);
   opacity: 0;
   pointer-events: none;
   transition: opacity .4s var(--ease);
