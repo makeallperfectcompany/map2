@@ -67,7 +67,7 @@ export default function Header({ menuOpen, onBurgerClick }: HeaderProps) {
           </a>
 
           <a href="#" className={styles.overlayCta}>
-            Связаться
+            Обсудить проект
           </a>
         </nav>
       </div>
@@ -100,7 +100,7 @@ export default function Header({ menuOpen, onBurgerClick }: HeaderProps) {
         </nav>
 
         <div className={styles.navRight}>
-          <a href="#" className={styles.navCta}>Связаться</a>
+          <a href="#" className={styles.navCta}>Обсудить проект</a>
           <button
             className={`${styles.heroBurger}${menuOpen ? " " + styles.menuOpen : ""}`}
             onClick={onBurgerClick}
