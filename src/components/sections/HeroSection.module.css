@@ -65,10 +65,17 @@
   width: 100%;
   max-width: 1456px;
   padding: 140px 72px 80px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 64px;
+  display: flex;
+  flex-direction: column;
   align-items: center;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 880px;
 }
 
 .left > * { animation: fadeUp .9s var(--ease) both; }
@@ -328,22 +335,10 @@
     gap: 24px;
   }
 
-  /* Text centering */
-  .left {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .heroTitle { text-align: center; }
   .heroLead {
-    text-align: center;
     max-width: 480px;
-    margin-left: auto;
-    margin-right: auto;
   }
   .heroActions {
-    justify-content: center;
     margin-bottom: 20px;
   }
 
