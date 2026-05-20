@@ -47,19 +47,19 @@ export default function Header({ menuOpen, onBurgerClick }: HeaderProps) {
               <path d="M5 15L15 5M15 5H7M15 5V13" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
           </a>
-          <a href="#" className={styles.overlayItem}>
+          <a href="/jobs" className={styles.overlayItem}>
             Вакансии
             <svg className={styles.mArr} viewBox="0 0 20 20" fill="none">
               <path d="M5 15L15 5M15 5H7M15 5V13" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
           </a>
-          <a href="#" className={styles.overlayItem}>
+          <a href="/partners" className={styles.overlayItem}>
             Партнёрам
             <svg className={styles.mArr} viewBox="0 0 20 20" fill="none">
               <path d="M5 15L15 5M15 5H7M15 5V13" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
           </a>
-          <a href="#" className={styles.overlayItem}>
+          <a href="/contacts" className={styles.overlayItem}>
             Контакты
             <svg className={styles.mArr} viewBox="0 0 20 20" fill="none">
               <path d="M5 15L15 5M15 5H7M15 5V13" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/>
@@ -95,9 +95,9 @@ export default function Header({ menuOpen, onBurgerClick }: HeaderProps) {
           <a href="/reviews" className={styles.navLink}>Отзывы</a>
           <a href="/blog" className={styles.navLink}>Блог</a>
           <a href="#" className={styles.navLink}>О нас</a>
-          <a href="#" className={styles.navLink}>Вакансии</a>
-          <a href="#" className={styles.navLink}>Партнёрам</a>
-          <a href="#" className={styles.navLink}>Контакты</a>
+          <a href="/jobs" className={styles.navLink}>Вакансии</a>
+          <a href="/partners" className={styles.navLink}>Партнёрам</a>
+          <a href="/contacts" className={styles.navLink}>Контакты</a>
           <a href="#" className={styles.navLink}>Мерч</a>
         </nav>
 
