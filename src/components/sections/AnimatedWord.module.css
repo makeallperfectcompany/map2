@@ -1,6 +1,5 @@
 .container {
   display: inline;
-  position: relative;
 }
 
 .text {
@@ -10,16 +9,11 @@
   background-clip: text;
 }
 
-.cursorVisible::after {
-  content: "";
-  display: inline-block;
-  width: 2px;
-  height: 0.75em;
-  background: #0071E3;
-  margin-left: 2px;
-  vertical-align: text-bottom;
-  border-radius: 1px;
-  animation: cursorBlink 3.5s ease-in-out infinite;
+.cursor {
+  font-size: inherit;
+  line-height: inherit;
+  color: #0071E3;
+  margin-left: 1px;
 }
 
 @keyframes cursorBlink {
@@ -30,7 +24,7 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .cursorVisible::after {
+  .cursor {
     display: none;
   }
 }

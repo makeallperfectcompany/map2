@@ -21,13 +21,11 @@ type Phase = "typing" | "display" | "deleting" | "pause";
 export default function AnimatedWord() {
   const [text, setText] = useState("");
   const [phase, setPhase] = useState<Phase>("typing");
-  const [showCursor, setShowCursor] = useState(true);
   const indexRef = useRef(0);
   const fullTextRef = useRef(WORDS[0]);
 
   useEffect(() => {
     if (phase === "typing") {
-      setShowCursor(true);
       const target = fullTextRef.current;
       let i = 1;
       let timer: ReturnType<typeof setTimeout>;
@@ -45,11 +43,7 @@ export default function AnimatedWord() {
     }
 
     if (phase === "display") {
-      setShowCursor(true);
-      const timer = setTimeout(() => {
-        setShowCursor(false);
-        setTimeout(() => setPhase("deleting"), 200);
-      }, DISPLAY_MS);
+      const timer = setTimeout(() => setPhase("deleting"), DISPLAY_MS);
       return () => clearTimeout(timer);
     }
 
@@ -63,8 +57,7 @@ export default function AnimatedWord() {
           i--;
           timer = setTimeout(tick, DELETE_SPEED);
         } else {
-          setShowCursor(false);
-          setTimeout(() => setPhase("pause"), 150);
+          setPhase("pause");
         }
       };
       timer = setTimeout(tick, DELETE_SPEED);
@@ -83,8 +76,9 @@ export default function AnimatedWord() {
   }, [phase]);
 
   return (
-    <span className={`${styles.container} ${showCursor ? styles.cursorVisible : ""}`}>
+    <span className={styles.container}>
       <span className={styles.text}>{text}</span>
+      <span className={styles.cursor} />
     </span>
   );
 }
