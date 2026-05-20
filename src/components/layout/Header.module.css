@@ -126,9 +126,89 @@
   .heroBurger { width: 36px; height: 36px; }
 }
 
+/* =================================================================
+   OVERLAY — fullscreen navigation menu
+   ================================================================= */
+.overlay {
+  position: fixed; inset: 0;
+  z-index: 99;
+  background: #FFFFFF;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .4s var(--ease);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0 48px 60px;
+}
+.overlayOpen {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.overlayInner {
+  width: min(100% - 48px, 920px);
+  padding-top: clamp(120px, 16vh, 180px);
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  text-align: left;
+}
+.overlayItem {
+  text-decoration: none;
+  color: #0E0F12;
+  font-size: clamp(42px, 5vw, 72px);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.055em;
+  padding: 28px 8px;
+  border-bottom: 1px solid rgba(15,16,20,0.08);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: left;
+  transform: translateY(20px);
+  opacity: 0;
+  transition:
+    transform .35s var(--ease),
+    color .25s var(--ease);
+}
+.overlayItem:hover {
+  color: #1A3A6E;
+}
+.overlayItem .mArr {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  opacity: 0;
+  transform: translate(-8px, 0);
+  transition: opacity .3s var(--ease), transform .3s var(--ease);
+}
+.overlayItem:hover .mArr {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+.overlayOpen .overlayItem {
+  transform: translateY(0);
+  opacity: 1;
+}
+.overlayOpen .overlayItem:nth-child(1) { transition-delay: .12s; }
+.overlayOpen .overlayItem:nth-child(2) { transition-delay: .18s; }
+.overlayOpen .overlayItem:nth-child(3) { transition-delay: .24s; }
+.overlayOpen .overlayItem:nth-child(4) { transition-delay: .30s; }
+.overlayOpen .overlayItem:nth-child(5) { transition-delay: .36s; }
+
 @media (prefers-reduced-motion: reduce) {
-  .header, .header *, .header *::before, .header *::after {
+  .header, .header *, .header *::before, .header *::after,
+  .overlay, .overlay *, .overlayItem {
     animation-duration: .01ms !important;
     transition-duration: .01ms !important;
   }
+}
+
+@media (max-width: 640px) {
+  .overlay { padding: 0 24px 40px; }
+  .overlayInner { width: min(100%, 920px); padding-top: clamp(88px, 14vh, 140px); }
+  .overlayItem { font-size: clamp(38px, 12vw, 56px); padding: 22px 4px; }
 }

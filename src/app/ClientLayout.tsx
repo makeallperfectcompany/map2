@@ -20,10 +20,6 @@ export default function ClientLayout({
         menuOpen={menuOpen}
         onBurgerClick={handleBurgerClick}
       />
-      <div
-        className={`overlay ${menuOpen ? "overlay--visible" : ""}`}
-        onClick={handleBurgerClick}
-      />
       {children}
     </>
   );
