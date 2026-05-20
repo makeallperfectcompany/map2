@@ -84,6 +84,7 @@ export default function Header({ menuOpen, onBurgerClick }: HeaderProps) {
             aria-label="Меню"
             aria-expanded={menuOpen}
           >
+            <span className={styles.burgerLabel}>Меню</span>
             <span className={styles.burgerLines}>
               <span></span>
               <span></span>
