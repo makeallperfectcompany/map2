@@ -1,6 +1,12 @@
 export const clinicSeoAdsUxCase = {
   slug: "clinic-seo-ads-ux",
   url: "/cases/clinic-seo-ads-ux",
+  contentType: "case",
+  tags: ["SEO-аудит", "Заявки", "Конверсия", "UX"],
+  service: "SEO-продвижение",
+  industry: "Медицина",
+  priority: 80,
+  date: "20 мая 2026",
   seoTitle: "Кейс: рост заявок для региональной клиники — Make All Perfect",
   description:
     "Как Make All Perfect объединило SEO, рекламу и UX-доработки сайта, чтобы увеличить заявки для региональной клиники.",

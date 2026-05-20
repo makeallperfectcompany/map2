@@ -1,6 +1,12 @@
 export const wildberriesExternalTrafficCase = {
   slug: "wildberries-external-traffic",
   url: "/cases/wildberries-external-traffic",
+  contentType: "case",
+  tags: ["Wildberries", "Внешний трафик", "Конверсия", "Продажи"],
+  service: "Внешняя реклама для Wildberries",
+  industry: null,
+  priority: 100,
+  date: "20 мая 2026",
   seoTitle: "Кейс: рост продаж на Wildberries через внешний трафик — Make All Perfect",
   description:
     "Как Make All Perfect усилило продажи на Wildberries через внешний трафик, аналитику, рекламные каналы и оптимизацию карточек.",

@@ -4,6 +4,11 @@ export type Article = {
   seoTitle: string;
   description: string;
   category: string;
+  contentType: string;
+  tags: string[];
+  service: string | null;
+  industry: string | null;
+  priority: number;
   date: string;
   updatedAt: string;
   readingTime: string;

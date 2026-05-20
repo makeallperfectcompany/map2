@@ -1,6 +1,12 @@
 export const ecommerceSeoUxCase = {
   slug: "ecommerce-seo-ux",
   url: "/cases/ecommerce-seo-ux",
+  contentType: "case",
+  tags: ["SEO-аудит", "UX", "Конверсия", "Аналитика", "Товары для дома"],
+  service: "SEO-продвижение",
+  industry: "Товары для дома",
+  priority: 90,
+  date: "18 мая 2026",
   seoTitle: "Кейс: SEO и UX для интернет-магазина товаров для дома — Make All Perfect",
   description:
     "Как SEO, контент-маркетинг и UX-оптимизация помогли увеличить онлайн-продажи интернет-магазина товаров для дома.",

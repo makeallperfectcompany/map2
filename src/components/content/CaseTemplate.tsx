@@ -2,10 +2,17 @@ import Breadcrumbs from "@/components/navigation/Breadcrumbs";
 import styles from "./CaseTemplate.module.css";
 
 type CaseItem = {
+  slug: string;
   category: string;
   title: string;
   lead: string;
   cover: string;
+  contentType: string;
+  tags: string[];
+  service: string | null;
+  industry: string | null;
+  priority: number;
+  date: string;
   metrics: Array<{ value: string; label: string }>;
   facts: Array<{ label: string; value: string }>;
   sections: Array<{

@@ -1,6 +1,7 @@
 export const wildberriesExternalAdsClothingCase = {
   slug: "wildberries-external-ads-clothing",
   url: "/cases/wildberries-external-ads-clothing",
+  contentType: "case",
   seoTitle:
     "Кейс: внешняя реклама для Wildberries в нише одежды — Make All Perfect",
   description:

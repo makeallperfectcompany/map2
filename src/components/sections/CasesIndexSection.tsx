@@ -1,7 +1,7 @@
 import { cases } from "@/content/cases";
 import styles from "./CasesIndexSection.module.css";
 
-const filters = ["Все", "Маркетплейсы", "E-commerce", "Медицина", "SEO", "Реклама"];
+const filters = ["Все", ...Array.from(new Set(cases.map((c) => c.category)))];
 
 export default function CasesIndexSection() {
   const featured = cases[0];

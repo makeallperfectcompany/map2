@@ -1,7 +1,7 @@
 import styles from "./BlogIndexSection.module.css";
 import { articles } from "@/content/articles";
 
-const categories = ["Все", "Performance", "SEO", "Маркетплейсы", "SMM", "Сайты", "Аналитика"];
+const categories = ["Все", ...Array.from(new Set(articles.map((a) => a.category)))];
 
 const listedArticles = articles.map((a) => ({
   href: a.url,

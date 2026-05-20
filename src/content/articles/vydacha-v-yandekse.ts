@@ -1,6 +1,11 @@
 export const yandexSearchResultsArticle = {
   slug: "vydacha-v-yandekse",
   url: "/blog/vydacha-v-yandekse",
+  contentType: "article",
+  tags: ["Яндекс", "SEO-аудит", "Органическая выдача", "Коммерческие факторы"],
+  service: "SEO-продвижение",
+  industry: null,
+  priority: 100,
   seoTitle: "Выдача в Яндексе: как бизнесу попасть выше конкурентов",
   description:
     "Коротко разбираем, как устроена выдача в Яндексе, почему сайт может не расти в поиске и что нужно улучшать для стабильной органики.",

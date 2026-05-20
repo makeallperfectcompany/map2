@@ -1,4 +1,9 @@
 export const testArticle = {
+  contentType: "article",
+  tags: ["Аналитика", "Конверсия", "Продажи"],
+  service: null,
+  industry: null,
+  priority: 50,
   seoTitle: "Как построить маркетинговую систему, а не набор каналов — Make All Perfect",
   description:
     "Тестовая статья для нового блога Make All Perfect: как связать стратегию, трафик, сайт, контент и аналитику в единую систему роста.",
