@@ -14,16 +14,11 @@ export default function ClientLayout({
     setMenuOpen(!menuOpen);
   };
 
-  const handleNavClick = () => {
-    setMenuOpen(false);
-  };
-
   return (
     <>
       <Header
         menuOpen={menuOpen}
         onBurgerClick={handleBurgerClick}
-        onNavClick={handleNavClick}
       />
       <div
         className={`overlay ${menuOpen ? "overlay--visible" : ""}`}
