@@ -1,10 +1,11 @@
 .container {
   display: inline-block;
-  width: 7.2em;
-  padding-right: 0.3em;
+  width: 8em;
+  padding-right: 0.2em;
+  padding-bottom: 0.15em;
   text-align: left;
   overflow: visible;
-  vertical-align: bottom;
+  vertical-align: baseline;
   white-space: nowrap;
 }
 
