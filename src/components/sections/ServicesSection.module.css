@@ -7,9 +7,9 @@
 .container {
   position: relative;
   z-index: 1;
-  width: min(100%, 1232px);
+  width: min(100%, 1280px);
   margin: 0 auto;
-  padding: 72px 32px 64px;
+  padding: 64px 28px 56px;
   border-radius: 32px;
   border: 1px solid rgba(255, 255, 255, 0.08);
   background: #1D1D1F;
@@ -115,18 +115,18 @@
 
 .servicesGrid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 18px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
   align-items: stretch;
 }
 
 .serviceCard {
   position: relative;
-  min-height: 520px;
+  min-height: 440px;
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  padding: 32px;
+  padding: 24px 22px;
   border-radius: 20px;
   background: #2A2A2C;
   border: 1px solid rgba(255, 255, 255, 0.075);
@@ -265,7 +265,9 @@
     max-width: 760px;
     margin: 0;
   }
+}
 
+@media (max-width: 1024px) {
   .servicesGrid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
