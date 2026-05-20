@@ -1,5 +1,9 @@
+"use client";
+
+import { useState } from "react";
 import type { Metadata } from "next";
 import { Onest } from "next/font/google";
+import Header from "@/components/layout/Header";
 import "./globals.css";
 
 const onest = Onest({
@@ -30,9 +34,30 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const handleBurgerClick = () => {
+    setMenuOpen(!menuOpen);
+  };
+
+  const handleNavClick = () => {
+    setMenuOpen(false);
+  };
+
   return (
     <html lang="ru" className={onest.variable}>
-      <body>{children}</body>
+      <body>
+        <Header
+          menuOpen={menuOpen}
+          onBurgerClick={handleBurgerClick}
+          onNavClick={handleNavClick}
+        />
+        <div
+          className={`overlay ${menuOpen ? "overlay--visible" : ""}`}
+          onClick={handleBurgerClick}
+        />
+        {children}
+      </body>
     </html>
   );
 }
