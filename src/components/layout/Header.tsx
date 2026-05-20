@@ -41,7 +41,7 @@ export default function Header({ menuOpen, onBurgerClick }: HeaderProps) {
               <path d="M5 15L15 5M15 5H7M15 5V13" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
           </a>
-          <a href="#" className={styles.overlayItem}>
+          <a href="/about" className={styles.overlayItem}>
             О нас
             <svg className={styles.mArr} viewBox="0 0 20 20" fill="none">
               <path d="M5 15L15 5M15 5H7M15 5V13" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/>
@@ -89,7 +89,7 @@ export default function Header({ menuOpen, onBurgerClick }: HeaderProps) {
           <a href="/cases" className={styles.navLink}>Кейсы</a>
           <a href="/reviews" className={styles.navLink}>Отзывы</a>
           <a href="/blog" className={styles.navLink}>Блог</a>
-          <a href="#" className={styles.navLink}>О нас</a>
+          <a href="/about" className={styles.navLink}>О нас</a>
           <a href="/jobs" className={styles.navLink}>Вакансии</a>
           <a href="/partners" className={styles.navLink}>Партнёрам</a>
           <a href="/contacts" className={styles.navLink}>Контакты</a>

@@ -1,0 +1,451 @@
+.aboutPage {
+  background: #ffffff;
+  color: #0e0f12;
+}
+
+.container {
+  width: min(100%, 1232px);
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+.hero {
+  min-height: 780px;
+  display: flex;
+  align-items: center;
+  padding: 132px 0 88px;
+  background:
+    radial-gradient(circle at 78% 10%, rgba(127, 183, 255, 0.22), transparent 34%),
+    radial-gradient(circle at 18% 88%, rgba(0, 113, 227, 0.08), transparent 28%),
+    linear-gradient(180deg, #ffffff 0%, #f5f6f8 100%);
+  overflow: hidden;
+}
+
+.heroLabel,
+.sectionIntro span,
+.sectionHead span,
+.stickyTitle span,
+.principlesPanel span,
+.finalCtaInner > span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+  padding: 0 10px;
+  border-radius: 999px;
+  background: rgba(0, 113, 227, 0.07);
+  color: #0071e3;
+  font: 760 12px/1 Onest, Inter, system-ui, sans-serif;
+  letter-spacing: -0.01em;
+}
+
+.hero h1 {
+  max-width: 1060px;
+  margin: 24px 0 0;
+  font: 850 clamp(48px, 6vw, 92px)/1.01 Onest, Inter, system-ui, sans-serif;
+  letter-spacing: -0.075em;
+  text-wrap: balance;
+}
+
+.hero > .container > p {
+  max-width: 760px;
+  margin: 30px 0 0;
+  color: #5f636b;
+  font: 450 19px/1.62 Onest, Inter, system-ui, sans-serif;
+  letter-spacing: -0.02em;
+}
+
+.heroActions,
+.finalActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 34px;
+}
+
+.heroActions a,
+.finalActions a {
+  min-height: 52px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 22px;
+  border-radius: 14px;
+  text-decoration: none;
+  font: 760 15px/1 Onest, Inter, system-ui, sans-serif;
+}
+
+.heroActions a:first-child,
+.finalActions a:first-child {
+  color: #ffffff;
+  background: linear-gradient(135deg, #0066d8 0%, #4ea0ff 100%);
+  box-shadow: 0 16px 34px rgba(0, 113, 227, 0.2);
+}
+
+.heroActions a:last-child,
+.finalActions a:last-child {
+  color: #111419;
+  background: rgba(255, 255, 255, 0.84);
+  border: 1px solid rgba(15, 16, 20, 0.07);
+  box-shadow: 0 10px 26px rgba(15, 16, 20, 0.045);
+}
+
+.heroCards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 72px;
+}
+
+.heroCards article,
+.systemGrid article,
+.card,
+.stepCard,
+.principlesList article {
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.84);
+  border: 1px solid rgba(15, 16, 20, 0.065);
+  box-shadow: 0 18px 52px rgba(15, 16, 20, 0.052);
+}
+
+.heroCards article {
+  min-height: 174px;
+  padding: 24px;
+}
+
+.heroCards h3,
+.systemGrid h3,
+.card h3,
+.stepCard h3,
+.principlesList h3 {
+  margin: 0;
+  color: #0e0f12;
+  font: 780 22px/1.12 Onest, Inter, system-ui, sans-serif;
+  letter-spacing: -0.04em;
+}
+
+.heroCards p,
+.systemGrid p,
+.card p,
+.stepCard p,
+.principlesList p {
+  margin: 12px 0 0;
+  color: #5f636b;
+  font: 450 15px/1.55 Onest, Inter, system-ui, sans-serif;
+}
+
+.identitySection,
+.directionsSection,
+.approachSection,
+.reasonsSection,
+.principlesSection,
+.audienceSection,
+.trustSection {
+  padding: 88px 0 0;
+}
+
+.identityGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(420px, 0.95fr);
+  gap: 36px;
+  align-items: start;
+}
+
+.identityVisualColumn {
+  display: grid;
+  gap: 18px;
+}
+
+.logoPanel {
+  position: relative;
+  min-height: 420px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  border-radius: 34px;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 50% 12%, rgba(127, 183, 255, 0.18), transparent 32%),
+    linear-gradient(180deg, #fbfcfe 0%, #f1f4f8 100%);
+  border: 1px solid rgba(15, 16, 20, 0.06);
+  box-shadow: 0 24px 58px rgba(15, 16, 20, 0.06);
+}
+
+.logoGlow {
+  position: absolute;
+  inset: auto;
+  width: 72%;
+  height: 72%;
+  border-radius: 999px;
+  background: radial-gradient(circle, rgba(0, 113, 227, 0.08) 0%, rgba(0, 113, 227, 0) 72%);
+  filter: blur(10px);
+}
+
+.aboutLogo {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 420px);
+  height: auto;
+  object-fit: contain;
+}
+
+.sectionIntro h2,
+.sectionHead h2,
+.stickyTitle h2,
+.principlesPanel h2,
+.trustPanel h2,
+.finalCtaInner h2 {
+  margin: 18px 0 0;
+  font: 820 clamp(34px, 4.2vw, 58px)/1.06 Onest, Inter, system-ui, sans-serif;
+  letter-spacing: -0.058em;
+  text-wrap: balance;
+}
+
+.sectionIntro p,
+.stickyTitle p,
+.trustPanel p,
+.finalCtaInner p {
+  margin: 20px 0 0;
+  color: #5f636b;
+  font: 450 16px/1.62 Onest, Inter, system-ui, sans-serif;
+}
+
+.systemGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.systemGrid article {
+  min-height: 210px;
+  padding: 24px;
+}
+
+.sectionHead {
+  max-width: 860px;
+  margin-bottom: 30px;
+}
+
+.directionsGrid,
+.reasonsGrid,
+.audienceGrid {
+  display: grid;
+  gap: 16px;
+}
+
+.directionsGrid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.reasonsGrid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.audienceGrid {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.card {
+  min-height: 220px;
+  padding: 24px;
+}
+
+.approachLayout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.68fr) minmax(520px, 1fr);
+  gap: 42px;
+  align-items: start;
+}
+
+.stickyTitle {
+  position: sticky;
+  top: 110px;
+}
+
+.steps {
+  display: grid;
+  gap: 14px;
+}
+
+.stepCard {
+  display: grid;
+  grid-template-columns: 72px 1fr;
+  gap: 20px;
+  padding: 24px;
+}
+
+.stepCard small {
+  color: #0071e3;
+  font: 850 18px/1 Onest, Inter, system-ui, sans-serif;
+}
+
+.principlesPanel {
+  display: grid;
+  grid-template-columns: minmax(0, 0.78fr) minmax(520px, 1fr);
+  gap: 34px;
+  padding: 34px;
+  border-radius: 34px;
+  background:
+    radial-gradient(circle at 88% 8%, rgba(127, 183, 255, 0.17), transparent 34%),
+    linear-gradient(135deg, #f8fbff 0%, #eef5ff 100%);
+  border: 1px solid rgba(15, 16, 20, 0.06);
+  box-shadow: 0 22px 54px rgba(15, 16, 20, 0.06);
+}
+
+.principlesList {
+  display: grid;
+  gap: 12px;
+}
+
+.principlesList article {
+  padding: 22px;
+  background: rgba(255, 255, 255, 0.72);
+  box-shadow: none;
+}
+
+.trustPanel {
+  padding: 42px;
+  border-radius: 34px;
+  background:
+    radial-gradient(circle at 88% 8%, rgba(127, 183, 255, 0.14), transparent 36%),
+    rgba(255, 255, 255, 0.86);
+  border: 1px solid rgba(15, 16, 20, 0.065);
+  box-shadow: 0 20px 60px rgba(15, 16, 20, 0.055);
+}
+
+.trustPanel p {
+  max-width: 760px;
+}
+
+.trustWords {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 34px;
+}
+
+.trustWords span {
+  min-height: 96px;
+  display: flex;
+  align-items: center;
+  padding: 22px;
+  border-radius: 24px;
+  background: #161a1f;
+  color: #ffffff;
+  font: 820 clamp(24px, 3vw, 38px)/1 Onest, Inter, system-ui, sans-serif;
+  letter-spacing: -0.055em;
+}
+
+.finalCta {
+  padding: 88px 0 112px;
+}
+
+.finalCtaInner {
+  padding: 42px;
+  border-radius: 34px;
+  background:
+    radial-gradient(circle at 88% 12%, rgba(127, 183, 255, 0.22), transparent 36%),
+    linear-gradient(135deg, #f8fbff 0%, #eef5ff 100%);
+  border: 1px solid rgba(15, 16, 20, 0.06);
+  box-shadow: 0 22px 54px rgba(15, 16, 20, 0.06);
+}
+
+.finalCtaInner h2 {
+  max-width: 880px;
+}
+
+.finalCtaInner p {
+  max-width: 690px;
+}
+
+@media (max-width: 1180px) {
+  .directionsGrid,
+  .reasonsGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .audienceGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .identityGrid,
+  .approachLayout,
+  .principlesPanel {
+    grid-template-columns: 1fr;
+  }
+
+  .stickyTitle {
+    position: static;
+  }
+}
+
+@media (max-width: 760px) {
+  .container {
+    padding: 0 18px;
+  }
+
+  .hero {
+    min-height: auto;
+    padding: 112px 0 64px;
+  }
+
+  .hero h1 {
+    font-size: 40px;
+    line-height: 1.06;
+  }
+
+  .hero > .container > p {
+    font-size: 16px;
+  }
+
+  .heroActions,
+  .heroActions a,
+  .finalActions,
+  .finalActions a {
+    width: 100%;
+  }
+
+  .heroCards,
+  .systemGrid,
+  .directionsGrid,
+  .reasonsGrid,
+  .audienceGrid,
+  .trustWords {
+    grid-template-columns: 1fr;
+  }
+
+  .identitySection,
+  .directionsSection,
+  .approachSection,
+  .reasonsSection,
+  .principlesSection,
+  .audienceSection,
+  .trustSection {
+    padding-top: 64px;
+  }
+
+  .logoPanel {
+    min-height: 320px;
+    padding: 24px;
+    border-radius: 26px;
+  }
+
+  .aboutLogo {
+    width: min(100%, 280px);
+  }
+
+  .stepCard {
+    grid-template-columns: 1fr;
+  }
+
+  .principlesPanel,
+  .trustPanel,
+  .finalCtaInner {
+    padding: 22px;
+    border-radius: 26px;
+  }
+
+  .finalCta {
+    padding: 64px 0 78px;
+  }
+}
