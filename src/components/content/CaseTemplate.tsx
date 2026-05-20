@@ -7,7 +7,16 @@ type CaseItem = {
   cover: string;
   metrics: Array<{ value: string; label: string }>;
   facts: Array<{ label: string; value: string }>;
-  sections: Array<{ title: string; text: string; bullets?: string[] }>;
+  sections: Array<{
+    title: string;
+    text: string;
+    bullets?: string[];
+    imageAfter?: {
+      src: string;
+      alt: string;
+      caption?: string;
+    };
+  }>;
 };
 
 export default function CaseTemplate({ item }: { item: CaseItem }) {
@@ -78,6 +87,20 @@ export default function CaseTemplate({ item }: { item: CaseItem }) {
                         <li key={bullet}>{bullet}</li>
                       ))}
                     </ul>
+                  ) : null}
+
+                  {section.imageAfter ? (
+                    <figure className={styles.caseFigure}>
+                      <img
+                        src={section.imageAfter.src}
+                        alt={section.imageAfter.alt}
+                        loading="lazy"
+                        decoding="async"
+                      />
+                      {section.imageAfter.caption ? (
+                        <figcaption>{section.imageAfter.caption}</figcaption>
+                      ) : null}
+                    </figure>
                   ) : null}
                 </section>
               ))}
