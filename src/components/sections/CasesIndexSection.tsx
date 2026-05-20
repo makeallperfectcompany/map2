@@ -51,7 +51,7 @@ export default function CasesIndexSection() {
         <div className={styles.container}>
           <a className={styles.featuredCard} href={featured.url}>
             <div className={styles.featuredImage}>
-              <img src={featured.cover} alt="" loading="eager" decoding="async" />
+              <img src={featured.cover} alt={featured.title} loading="eager" decoding="async" />
             </div>
             <div className={styles.featuredContent}>
               <span className={styles.category}>{featured.category}</span>
@@ -82,7 +82,7 @@ export default function CasesIndexSection() {
             {filteredCases.map((item) => (
               <a className={styles.caseCard} href={item.url} key={item.slug}>
                 <div className={styles.cardImage}>
-                  <img src={item.cover} alt="" loading="lazy" decoding="async" />
+                  <img src={item.cover} alt={item.title} loading="lazy" decoding="async" />
                 </div>
                 <div className={styles.cardBody}>
                   <span className={styles.category}>{item.category}</span>

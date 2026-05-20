@@ -26,7 +26,7 @@ export default function HeroSection() {
           </p>
 
           <div className={styles.heroActions}>
-            <a className={`${styles.btn} ${styles.btnAccent}`} href="#">
+            <a className={`${styles.btn} ${styles.btnAccent}`} href="/contacts">
               <span className={styles.label}>Обсудить проект</span>
               <span className={styles.arrWrap}>
                 <svg className={`${styles.arr} ${styles.arrMain}`} viewBox="0 0 14 14" fill="none">
@@ -37,7 +37,7 @@ export default function HeroSection() {
                 </svg>
               </span>
             </a>
-            <a className={`${styles.btn} ${styles.btnGhost}`} href="#">
+            <a className={`${styles.btn} ${styles.btnGhost}`} href="/about">
               <span className={styles.label}>Смотреть подход</span>
               <span className={styles.arrWrap}>
                 <svg className={`${styles.arr} ${styles.arrMain}`} viewBox="0 0 14 14" fill="none">

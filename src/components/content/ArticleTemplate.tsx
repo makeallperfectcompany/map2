@@ -2,9 +2,47 @@ import Breadcrumbs from "@/components/navigation/Breadcrumbs";
 import type { Article } from "@/content/articles";
 import styles from "./ArticleTemplate.module.css";
 
+const BASE_URL = "https://map2.vercel.app";
+
 export default function ArticleTemplate({ article }: { article: Article }) {
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: article.title,
+    description: article.description,
+    image: article.cover ? `${BASE_URL}${article.cover}` : `${BASE_URL}/og-image.jpg`,
+    datePublished: article.date,
+    dateModified: article.updatedAt,
+    author: {
+      "@type": "Person",
+      name: article.author,
+      jobTitle: article.authorRole,
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Make All Perfect",
+      url: BASE_URL,
+    },
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": `${BASE_URL}${article.url}`,
+    },
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Главная", item: BASE_URL },
+      { "@type": "ListItem", position: 2, name: "Блог", item: `${BASE_URL}/blog` },
+      { "@type": "ListItem", position: 3, name: article.title, item: `${BASE_URL}${article.url}` },
+    ],
+  };
+
   return (
     <main className={styles.articlePage}>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <article>
         <header className={styles.hero}>
           <div className={styles.container}>
@@ -40,7 +78,7 @@ export default function ArticleTemplate({ article }: { article: Article }) {
         <div className={styles.coverWrap}>
           <div className={styles.container}>
             <div className={styles.cover}>
-              <img src={article.cover} alt="" loading="eager" decoding="async" />
+              <img src={article.cover} alt={article.title} loading="eager" decoding="async" />
             </div>
           </div>
         </div>

@@ -2,9 +2,46 @@ import Breadcrumbs from "@/components/navigation/Breadcrumbs";
 import type { CaseItem } from "@/content/cases";
 import styles from "./CaseTemplate.module.css";
 
+const BASE_URL = "https://map2.vercel.app";
+
 export default function CaseTemplate({ item }: { item: CaseItem }) {
+  const caseSchema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: item.title,
+    description: item.description,
+    image: item.cover ? `${BASE_URL}${item.cover}` : `${BASE_URL}/og-image.jpg`,
+    datePublished: item.date,
+    author: {
+      "@type": "Organization",
+      name: "Make All Perfect",
+      url: BASE_URL,
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Make All Perfect",
+      url: BASE_URL,
+    },
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": `${BASE_URL}${item.url}`,
+    },
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Главная", item: BASE_URL },
+      { "@type": "ListItem", position: 2, name: "Кейсы", item: `${BASE_URL}/cases` },
+      { "@type": "ListItem", position: 3, name: item.title, item: `${BASE_URL}${item.url}` },
+    ],
+  };
+
   return (
     <main className={styles.casePage}>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(caseSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <article>
         <header className={styles.hero}>
           <div className={styles.container}>
@@ -35,7 +72,7 @@ export default function CaseTemplate({ item }: { item: CaseItem }) {
         <div className={styles.coverWrap}>
           <div className={styles.container}>
             <div className={styles.cover}>
-              <img src={item.cover} alt="" loading="eager" decoding="async" />
+              <img src={item.cover} alt={`Кейс: ${item.title}`} loading="eager" decoding="async" />
             </div>
           </div>
         </div>

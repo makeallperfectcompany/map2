@@ -40,7 +40,7 @@ export default function CasesSection() {
               />
               <img
                 src="/assets/home/cases/cases-visual.webp"
-                alt=""
+                alt="Кейсы Make All Perfect — маркетинг, SEO, реклама, аналитика"
                 loading="lazy"
                 decoding="async"
               />
