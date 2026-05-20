@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import styles from "./BlogIndexSection.module.css";
 import { articles } from "@/content/articles";
 
@@ -18,12 +18,69 @@ const listedArticles = articles.map((a) => ({
 
 export default function BlogIndexSection() {
   const [activeCategory, setActiveCategory] = useState("Все");
+  const [page, setPage] = useState(0);
+  const PER_PAGE = 6;
 
-  const filteredArticles = activeCategory === "Все"
-    ? listedArticles
-    : listedArticles.filter((a) => a.category === activeCategory);
+  const filteredArticles = useMemo(() => {
+    const result = activeCategory === "Все"
+      ? listedArticles
+      : listedArticles.filter((a) => a.category === activeCategory);
+    return result;
+  }, [activeCategory]);
 
-  const featuredArticle = filteredArticles[0];
+  const totalPages = useMemo(() => Math.ceil(filteredArticles.length / PER_PAGE), [filteredArticles]);
+  const paginatedArticles = useMemo(
+    () => filteredArticles.slice(page * PER_PAGE, (page + 1) * PER_PAGE),
+    [filteredArticles, page]
+  );
+
+  // Reset to page 0 when filter changes
+  const handleCategoryChange = (category: string) => {
+    setActiveCategory(category);
+    setPage(0);
+  };
+
+  const renderPagination = () => {
+    if (totalPages <= 1) return null;
+    const pages: number[] = [];
+    for (let i = 0; i < totalPages; i++) {
+      if (totalPages <= 7 || i === 0 || i === totalPages - 1 || Math.abs(i - page) <= 1) {
+        pages.push(i);
+      } else if (pages[pages.length - 1] !== -1) {
+        pages.push(-1);
+      }
+    }
+
+    return (
+      <nav className={styles.pagination} aria-label="Пагинация статей">
+        {pages.map((p, idx) =>
+          p === -1 ? (
+            <span className={styles.pageEllipsis} key={`ellipsis-${idx}`}>…</span>
+          ) : (
+            <button
+              className={`${styles.pageButton} ${page === p ? styles.activePage : ""}`}
+              type="button"
+              key={p}
+              onClick={() => setPage(p)}
+              aria-current={page === p ? "page" : undefined}
+            >
+              {p + 1}
+            </button>
+          )
+        )}
+        {page < totalPages - 1 && (
+          <button
+            className={styles.pageArrow}
+            type="button"
+            onClick={() => setPage(page + 1)}
+            aria-label="Следующая страница"
+          >
+            →
+          </button>
+        )}
+      </nav>
+    );
+  };
 
   return (
     <main className={styles.blogPage}>
@@ -37,7 +94,12 @@ export default function BlogIndexSection() {
 
           <div className={styles.categoryBar} aria-label="Категории статей">
             {categories.map((category) => (
-              <button className={`${styles.categoryButton} ${activeCategory === category ? styles.activeCategory : ""}`} type="button" key={category} onClick={() => setActiveCategory(category)}>
+              <button
+                className={`${styles.categoryButton} ${activeCategory === category ? styles.activeCategory : ""}`}
+                type="button"
+                key={category}
+                onClick={() => handleCategoryChange(category)}
+              >
                 {category}
               </button>
             ))}
@@ -45,35 +107,12 @@ export default function BlogIndexSection() {
         </div>
       </section>
 
-      <section className={styles.featured} aria-label="Избранная статья">
-        <div className={styles.container}>
-          <a className={styles.featuredCard} href={featuredArticle.href}>
-            <div className={styles.featuredImage}>
-              <img src={featuredArticle.cover} alt="" loading="eager" decoding="async" />
-            </div>
-            <div className={styles.featuredContent}>
-              <div className={styles.articleMeta}>
-                <span>{featuredArticle.category}</span>
-                <span>{featuredArticle.date}</span>
-                <span>{featuredArticle.readingTime}</span>
-              </div>
-              <h2>{featuredArticle.title}</h2>
-              <p>{featuredArticle.description}</p>
-              <span className={styles.readLink}>Читать статью ↗</span>
-            </div>
-          </a>
-        </div>
-      </section>
-
       <section className={styles.articleGridSection} aria-label="Все статьи">
         <div className={styles.container}>
-          <div className={styles.sectionHead}>
-            <h2>Новые материалы</h2>
-            <a href="/blog/test-article">Все статьи →</a>
-          </div>
+          <h2 className={styles.gridTitle}>Новые материалы</h2>
 
           <div className={styles.articleGrid}>
-            {filteredArticles.map((article) => (
+            {paginatedArticles.map((article) => (
               <a className={styles.articleCard} href={article.href} key={`${article.category}-${article.title}`}>
                 <div className={styles.articleImage}>
                   <img src={article.cover} alt="" loading="lazy" decoding="async" />
@@ -89,6 +128,8 @@ export default function BlogIndexSection() {
               </a>
             ))}
           </div>
+
+          {renderPagination()}
 
           <div className={styles.blogCta}>
             <div>
