@@ -19,14 +19,10 @@ const PAUSE_MS = 300;
 type Phase = "typing" | "display" | "deleting" | "pause";
 
 export default function AnimatedWord() {
-  const [visible, setVisible] = useState(true);
   const [text, setText] = useState(WORDS[0]);
   const [phase, setPhase] = useState<Phase>("display");
   const indexRef = useRef(0);
   const fullTextRef = useRef(WORDS[0]);
-
-  // Find the widest word for layout stability
-  const longestWord = WORDS.reduce((a, b) => (a.length >= b.length ? a : b));
 
   useEffect(() => {
     if (phase === "typing") {
@@ -47,7 +43,6 @@ export default function AnimatedWord() {
     }
 
     if (phase === "display") {
-      setVisible(true);
       const timer = setTimeout(() => setPhase("deleting"), DISPLAY_MS);
       return () => clearTimeout(timer);
     }
@@ -70,7 +65,6 @@ export default function AnimatedWord() {
     }
 
     if (phase === "pause") {
-      setVisible(false);
       const timer = setTimeout(() => {
         const nextIdx = (indexRef.current + 1) % WORDS.length;
         indexRef.current = nextIdx;
@@ -81,15 +75,15 @@ export default function AnimatedWord() {
     }
   }, [phase]);
 
+  // Show full first word on mount
+  useEffect(() => {
+    setText(WORDS[0]);
+  }, []);
+
   return (
     <span className={styles.wrapper}>
-      <span className={styles.container} style={{ width: `${longestWord.length}ch` }}>
-        <span className={styles.ghost}>{longestWord}</span>
-        <span
-          className={`${styles.dynamicText} ${visible ? styles.visible : styles.hidden}`}
-        >
-          {text}
-        </span>
+      <span className={styles.container}>
+        <span className={styles.dynamicText}>{text}</span>
         <span className={styles.cursor} />
       </span>
     </span>

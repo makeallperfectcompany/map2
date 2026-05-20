@@ -1,59 +1,31 @@
 .wrapper {
   display: inline;
-  white-space: nowrap;
 }
 
 .container {
   display: inline-block;
   position: relative;
-  vertical-align: baseline;
-  /* Reserve space for the longest word to prevent layout shift */
-}
-
-.ghost {
-  visibility: hidden;
-  display: block;
-  background: linear-gradient(90deg, #1A3A6E 0%, #0071E3 48%, #3A8FF2 78%, #5FA8FF 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  pointer-events: none;
+  vertical-align: bottom;
+  overflow: visible;
 }
 
 .dynamicText {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: baseline;
+  display: inline;
   background: linear-gradient(90deg, #1A3A6E 0%, #0071E3 48%, #3A8FF2 78%, #5FA8FF 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  white-space: nowrap;
-}
-
-.visible {
-  opacity: 1;
-  transition: opacity 0.15s ease;
-}
-
-.hidden {
-  opacity: 0;
-  transition: opacity 0.1s ease;
 }
 
 .cursor {
   display: inline-block;
   width: 2.5px;
-  height: 0.8em;
+  height: 0.75em;
   background: linear-gradient(180deg, #0071E3 0%, #5FA8FF 100%);
   margin-left: 2px;
   vertical-align: baseline;
   border-radius: 1.5px;
   animation: cursorBlink 3.5s ease-in-out infinite;
-  position: relative;
-  top: 0.04em;
-  flex-shrink: 0;
 }
 
 @keyframes cursorBlink {
@@ -66,9 +38,5 @@
 @media (prefers-reduced-motion: reduce) {
   .cursor {
     display: none;
-  }
-  .dynamicText {
-    animation: none !important;
-    opacity: 1 !important;
   }
 }
