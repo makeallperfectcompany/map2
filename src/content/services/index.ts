@@ -1,4 +1,17 @@
-export const serviceGroups = [
+type ServiceGroup = {
+  readonly eyebrow: string;
+  readonly title: string;
+  readonly mutedTitle: string;
+  readonly bigMark: string;
+  readonly description: string;
+  readonly price: string;
+  readonly cta: string;
+  readonly href: string;
+  readonly featured?: boolean;
+  readonly services: readonly string[];
+};
+
+const RAW_GROUPS = [
   {
     eyebrow: "Комплексный рост",
     title: "Маркетинг полного цикла",
@@ -154,4 +167,6 @@ export const serviceGroups = [
       "Отзывы",
     ],
   },
-] as const;
+] as const satisfies readonly ServiceGroup[];
+
+export const serviceGroups = RAW_GROUPS;
