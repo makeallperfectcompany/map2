@@ -50,10 +50,11 @@
   color: #4c5057;
   font-size: 14px;
   font-weight: 500;
-  padding: 9px 16px;
+  padding: 9px 12px;
   border-radius: 10px;
   transition: color .25s var(--ease), background .25s var(--ease);
   position: relative;
+  white-space: nowrap;
 }
 .navLink:hover { color: var(--ink); background: rgba(255,255,255,0.6); }
 
