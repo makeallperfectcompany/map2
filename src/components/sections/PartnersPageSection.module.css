@@ -1,0 +1,529 @@
+.partnersPage {
+  background: #ffffff;
+  color: #0e0f12;
+}
+
+.container {
+  width: min(100%, 1232px);
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+.hero {
+  min-height: 760px;
+  display: flex;
+  align-items: center;
+  padding: 132px 0 96px;
+  background-color: #f5f6f8;
+  background-image:
+    linear-gradient(90deg, rgba(255,255,255,0.98) 0%, rgba(255,255,255,0.90) 34%, rgba(255,255,255,0.46) 58%, rgba(255,255,255,0.04) 100%),
+    url("/assets/partners/partners-hero-bg.webp");
+  background-repeat: no-repeat, no-repeat;
+  background-position: center, center;
+  background-size: cover, cover;
+}
+
+.heroContent {
+  max-width: 720px;
+}
+
+.eyebrow,
+.rewardCard span,
+.sectionHead span,
+.stickyTitle span,
+.benefitPanel span,
+.rulesCard span,
+.finalCtaInner span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+  padding: 0 10px;
+  border-radius: 999px;
+  background: rgba(0, 113, 227, 0.07);
+  color: #0071e3;
+  font: 760 12px/1 Onest, Inter, system-ui, sans-serif;
+  letter-spacing: -0.01em;
+}
+
+.hero h1 {
+  margin: 24px 0 0;
+  font: 850 clamp(46px, 5.4vw, 84px)/1.03 Onest, Inter, system-ui, sans-serif;
+  letter-spacing: -0.068em;
+  text-wrap: balance;
+}
+
+.hero p {
+  max-width: 620px;
+  margin: 28px 0 0;
+  color: #5f636b;
+  font: 450 18px/1.62 Onest, Inter, system-ui, sans-serif;
+  letter-spacing: -0.02em;
+}
+
+.heroActions,
+.finalActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 34px;
+}
+
+.heroActions a,
+.finalActions a {
+  min-height: 52px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 22px;
+  border-radius: 14px;
+  text-decoration: none;
+  font: 760 15px/1 Onest, Inter, system-ui, sans-serif;
+}
+
+.heroActions a:first-child,
+.finalActions a:first-child {
+  color: #fff;
+  background: linear-gradient(135deg, #0066d8 0%, #4ea0ff 100%);
+  box-shadow: 0 16px 34px rgba(0, 113, 227, 0.2);
+}
+
+.heroActions a:last-child,
+.finalActions a:last-child {
+  color: #111419;
+  background: rgba(255,255,255,0.84);
+  border: 1px solid rgba(15,16,20,0.07);
+  box-shadow: 0 10px 26px rgba(15,16,20,0.045);
+}
+
+.rewardSection,
+.audienceSection,
+.servicesSection,
+.processSection,
+.partnerBenefitsSection,
+.clientBenefitsSection,
+.formatsSection,
+.rulesSection,
+.faqSection {
+  padding: 88px 0 0;
+}
+
+.rewardCard {
+  display: grid;
+  grid-template-columns: minmax(0, 0.92fr) minmax(420px, 0.88fr);
+  gap: 28px;
+  padding: 34px;
+  border-radius: 34px;
+  background:
+    radial-gradient(circle at 88% 8%, rgba(127,183,255,0.18), transparent 34%),
+    linear-gradient(135deg, #f8fbff 0%, #eef5ff 100%);
+  border: 1px solid rgba(15,16,20,0.06);
+  box-shadow: 0 22px 54px rgba(15,16,20,0.06);
+}
+
+.rewardCard h2,
+.sectionHead h2,
+.stickyTitle h2,
+.benefitPanel h2,
+.rulesCard h2,
+.finalCtaInner h2 {
+  margin: 18px 0 0;
+  font: 820 clamp(34px, 4.2vw, 58px)/1.06 Onest, Inter, system-ui, sans-serif;
+  letter-spacing: -0.058em;
+  text-wrap: balance;
+}
+
+.rewardCard p,
+.sectionHead p,
+.stickyTitle p,
+.finalCtaInner p {
+  margin: 18px 0 0;
+  color: #5f636b;
+  font: 450 16px/1.58 Onest, Inter, system-ui, sans-serif;
+}
+
+.rewardMiniGrid {
+  display: grid;
+  gap: 12px;
+}
+
+.rewardMiniGrid article,
+.card,
+.serviceCard,
+.stepCard,
+.benefitPanel,
+.formatCard,
+.faqItem {
+  border-radius: 26px;
+  background: rgba(255,255,255,0.84);
+  border: 1px solid rgba(15,16,20,0.065);
+  box-shadow: 0 18px 52px rgba(15,16,20,0.052);
+}
+
+.rewardMiniGrid article {
+  padding: 22px;
+}
+
+.rewardMiniGrid h3,
+.card h3,
+.serviceCard h3,
+.stepCard h3,
+.formatCard h3,
+.faqItem h3 {
+  margin: 0;
+  color: #0e0f12;
+  font: 780 22px/1.12 Onest, Inter, system-ui, sans-serif;
+  letter-spacing: -0.04em;
+}
+
+.rewardMiniGrid p,
+.card p,
+.serviceCard p,
+.stepCard p,
+.formatCard p,
+.faqItem p {
+  margin: 12px 0 0;
+  color: #5f636b;
+  font: 450 15px/1.55 Onest, Inter, system-ui, sans-serif;
+}
+
+.sectionHead {
+  max-width: 860px;
+  margin-bottom: 30px;
+}
+
+.cardsGrid,
+.servicesGrid,
+.formatGrid,
+.faqList {
+  display: grid;
+  gap: 16px;
+}
+
+.cardsGrid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.servicesGrid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.card,
+.serviceCard,
+.formatCard,
+.faqItem {
+  padding: 24px;
+}
+
+.serviceCard {
+  min-height: 210px;
+}
+
+.processLayout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.68fr) minmax(520px, 1fr);
+  gap: 42px;
+  align-items: start;
+}
+
+.stickyTitle {
+  position: sticky;
+  top: 110px;
+}
+
+.steps {
+  display: grid;
+  gap: 14px;
+}
+
+.stepCard {
+  display: grid;
+  grid-template-columns: 72px 1fr;
+  gap: 20px;
+  padding: 24px;
+}
+
+.stepCard small,
+.formatCard small {
+  color: #0071e3;
+  font: 850 18px/1 Onest, Inter, system-ui, sans-serif;
+}
+
+.twoColumns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.benefitPanel {
+  padding: 30px;
+}
+
+.benefitPanel ul {
+  display: grid;
+  gap: 12px;
+  margin: 24px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.benefitPanel li,
+.rulesList p {
+  position: relative;
+  margin: 0;
+  padding-left: 22px;
+  color: #4c5057;
+  font: 450 15px/1.55 Onest, Inter, system-ui, sans-serif;
+}
+
+.benefitPanel li::before,
+.rulesList p::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.62em;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #0071e3;
+}
+
+.rulesCard {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(480px, 1fr);
+  gap: 28px;
+  padding: 34px;
+  border-radius: 34px;
+  background:
+    radial-gradient(circle at 88% 8%, rgba(127,183,255,0.15), transparent 34%),
+    rgba(255,255,255,0.88);
+  border: 1px solid rgba(15,16,20,0.065);
+  box-shadow: 0 20px 60px rgba(15,16,20,0.055);
+}
+
+.rulesList {
+  display: grid;
+  gap: 12px;
+}
+
+.finalCta {
+  padding: 88px 0 112px;
+}
+
+.finalCtaInner {
+  padding: 42px;
+  border-radius: 34px;
+  background:
+    radial-gradient(circle at 88% 12%, rgba(127,183,255,0.22), transparent 36%),
+    linear-gradient(135deg, #f8fbff 0%, #eef5ff 100%);
+  border: 1px solid rgba(15,16,20,0.06);
+  box-shadow: 0 22px 54px rgba(15,16,20,0.06);
+}
+
+.finalCtaInner h2 {
+  max-width: 920px;
+}
+
+.finalCtaInner p {
+  max-width: 720px;
+}
+
+@media (max-width: 1100px) {
+  .rewardCard,
+  .processLayout,
+  .rulesCard {
+    grid-template-columns: 1fr;
+  }
+
+  .servicesGrid,
+  .cardsGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .twoColumns {
+    grid-template-columns: 1fr;
+  }
+
+  .stickyTitle {
+    position: static;
+  }
+}
+
+@media (max-width: 760px) {
+  .container {
+    padding: 0 18px;
+  }
+
+  .hero {
+    min-height: 660px;
+    align-items: flex-start;
+    padding: 112px 0 52px;
+    background-image:
+      linear-gradient(180deg, rgba(255,255,255,0.98) 0%, rgba(255,255,255,0.86) 50%, rgba(255,255,255,0.28) 100%),
+      url("/assets/partners/partners-hero-bg.webp");
+  }
+
+  .hero h1 {
+    font-size: 40px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .heroActions,
+  .heroActions a,
+  .finalActions,
+  .finalActions a {
+    width: 100%;
+  }
+
+  .rewardSection,
+  .audienceSection,
+  .servicesSection,
+  .processSection,
+  .benefitsSection,
+  .formatsSection,
+  .rulesSection,
+  .faqSection {
+    padding-top: 64px;
+  }
+
+  .rewardCard,
+  .rulesCard,
+  .finalCtaInner {
+    padding: 22px;
+    border-radius: 26px;
+  }
+
+  .cardsGrid,
+  .servicesGrid,
+  .formatGrid,
+  .faqList {
+    grid-template-columns: 1fr;
+  }
+
+  .stepCard {
+    grid-template-columns: 1fr;
+  }
+
+  .finalCta {
+    padding: 64px 0 78px;
+  }
+}
+
+
+/* v2 exact structure: partner benefits and client benefits are separate page sections */
+.partnerBenefitsSection {
+  background:
+    radial-gradient(circle at 50% 0%, rgba(127,183,255,0.08), transparent 32%),
+    #ffffff;
+}
+
+.benefitGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.benefitCard {
+  min-height: 168px;
+  padding: 24px;
+  border-radius: 26px;
+  background: rgba(255,255,255,0.84);
+  border: 1px solid rgba(15,16,20,0.065);
+  box-shadow: 0 18px 52px rgba(15,16,20,0.052);
+}
+
+.benefitCard p {
+  position: relative;
+  margin: 0;
+  padding-left: 22px;
+  color: #4c5057;
+  font: 450 15px/1.55 Onest, Inter, system-ui, sans-serif;
+}
+
+.benefitCard p::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.62em;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #0071e3;
+}
+
+.clientBenefitsCard {
+  display: grid;
+  grid-template-columns: minmax(0, 0.88fr) minmax(420px, 1fr);
+  gap: 30px;
+  align-items: start;
+  padding: 34px;
+  border-radius: 34px;
+  background:
+    radial-gradient(circle at 88% 8%, rgba(127,183,255,0.17), transparent 34%),
+    linear-gradient(135deg, #f8fbff 0%, #eef5ff 100%);
+  border: 1px solid rgba(15,16,20,0.06);
+  box-shadow: 0 22px 54px rgba(15,16,20,0.06);
+}
+
+.clientBenefitsCard h2 {
+  margin: 18px 0 0;
+  font: 820 clamp(34px, 4.2vw, 58px)/1.06 Onest, Inter, system-ui, sans-serif;
+  letter-spacing: -0.058em;
+  text-wrap: balance;
+}
+
+.clientBenefitsCard p {
+  margin: 18px 0 0;
+  color: #5f636b;
+  font: 450 16px/1.58 Onest, Inter, system-ui, sans-serif;
+}
+
+.clientBenefitsCard ul {
+  display: grid;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.clientBenefitsCard li {
+  position: relative;
+  margin: 0;
+  padding-left: 22px;
+  color: #4c5057;
+  font: 450 15px/1.55 Onest, Inter, system-ui, sans-serif;
+}
+
+.clientBenefitsCard li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.62em;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #0071e3;
+}
+
+@media (max-width: 1100px) {
+  .benefitGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .clientBenefitsCard {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 760px) {
+  .benefitGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .clientBenefitsCard {
+    padding: 22px;
+    border-radius: 26px;
+  }
+}
