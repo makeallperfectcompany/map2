@@ -11,6 +11,7 @@
 
 .dynamicText {
   display: inline;
+  margin-right: 3px;
   background: linear-gradient(90deg, #1A3A6E 0%, #0071E3 48%, #3A8FF2 78%, #5FA8FF 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -19,12 +20,10 @@
 
 .cursor {
   display: inline-block;
-  width: 2.5px;
-  height: 0.75em;
+  width: 2px;
+  height: 0.7em;
   background: linear-gradient(180deg, #0071E3 0%, #5FA8FF 100%);
-  margin-left: 2px;
-  vertical-align: baseline;
-  border-radius: 1.5px;
+  border-radius: 1px;
   animation: cursorBlink 3.5s ease-in-out infinite;
 }
 
