@@ -167,6 +167,7 @@ const RAW_GROUPS = [
       "Отзывы",
     ],
   },
-] as const satisfies readonly ServiceGroup[];
+] as const;
 
-export const serviceGroups = RAW_GROUPS;
+export type { ServiceGroup };
+export const serviceGroups = RAW_GROUPS as readonly ServiceGroup[];
