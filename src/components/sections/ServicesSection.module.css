@@ -1,32 +1,7 @@
 .servicesSection {
   position: relative;
   padding: 118px 0 112px;
-  overflow: hidden;
-  background:
-    radial-gradient(circle at 26% 8%, rgba(20, 78, 156, 0.28), transparent 34%),
-    radial-gradient(circle at 78% 28%, rgba(86, 143, 226, 0.08), transparent 32%),
-    linear-gradient(180deg, #11171f 0%, #121820 42%, #0c1117 100%);
   color: #ffffff;
-}
-
-.servicesSection::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background:
-    linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px),
-    linear-gradient(180deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
-  background-size: 112px 112px;
-  opacity: 0.14;
-  pointer-events: none;
-}
-
-.servicesSection::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(circle at 50% 110%, rgba(255, 255, 255, 0.08), transparent 45%);
-  pointer-events: none;
 }
 
 .container {
@@ -34,7 +9,13 @@
   z-index: 1;
   width: min(100%, 1232px);
   margin: 0 auto;
-  padding: 0 32px;
+  padding: 64px 48px 56px;
+  border-radius: 32px;
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  background:
+    radial-gradient(circle at 26% 8%, rgba(20, 78, 156, 0.28), transparent 34%),
+    radial-gradient(circle at 78% 28%, rgba(86, 143, 226, 0.08), transparent 32%),
+    linear-gradient(180deg, #11171f 0%, #121820 42%, #0c1117 100%);
 }
 
 .servicesIntro {
@@ -284,7 +265,8 @@
   }
 
   .container {
-    padding: 0 18px;
+    padding: 40px 18px 36px;
+    border-radius: 24px;
   }
 
   .servicesIntro {
