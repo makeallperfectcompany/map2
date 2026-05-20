@@ -1,4 +1,5 @@
 export const testArticle = {
+  isDraft: true,
   contentType: "article",
   tags: ["Аналитика", "Конверсия", "Продажи"],
   service: null,
@@ -57,41 +58,29 @@ export const testArticle = {
   },
   relatedArticles: [
     {
-      title: "Что считать в SEO, чтобы видеть вклад в продажи",
-      description: "Метрики, которые помогают отличить органический рост от красивых, но бесполезных отчётов.",
-      href: "/blog/test-article",
+      title: "Выдача в Яндексе: как бизнесу попасть выше конкурентов",
+      description: "Разбираем, как устроена выдача в Яндексе, почему сайт может не расти в поиске и что нужно улучшать для стабильной органики.",
+      href: "/blog/vydacha-v-yandekse",
       label: "SEO",
-    },
-    {
-      title: "Внешний трафик для Wildberries и Ozon",
-      description: "Как внешние каналы влияют на продажи, органику карточек и устойчивость бизнеса.",
-      href: "/blog/test-article",
-      label: "Маркетплейсы",
-    },
-    {
-      title: "Как понять, что сайт теряет заявки",
-      description: "Разбираем слабые места посадочных страниц, форм и пользовательского пути.",
-      href: "/blog/test-article",
-      label: "Сайты",
     },
   ],
   relatedCases: [
     {
       title: "Рост продаж на Wildberries через внешний трафик",
       description: "+87% заказов, 2,8% ДРР и рост органики карточек.",
-      href: "/cases",
+      href: "/cases/wildberries-external-traffic",
       label: "Маркетплейсы",
     },
     {
       title: "SEO и UX для интернет-магазина товаров для дома",
       description: "+125% продаж и рост конверсии после перестройки структуры.",
-      href: "/cases",
+      href: "/cases/ecommerce-seo-ux",
       label: "E-commerce",
     },
     {
       title: "Рост заявок для региональной клиники",
       description: "SEO, реклама и UX-доработки в единой системе привлечения пациентов.",
-      href: "/cases",
+      href: "/cases/clinic-seo-ads-ux",
       label: "Медицина",
     },
   ],

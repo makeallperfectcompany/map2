@@ -11,6 +11,7 @@ const onest = Onest({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://map2.vercel.app"),
   title: "Make All Perfect — маркетинг полного цикла",
   description:
     "Мы объединяем стратегию, дизайн, рекламу, контент и аналитику в единую систему роста бизнеса.",

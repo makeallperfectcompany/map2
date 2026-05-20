@@ -78,34 +78,6 @@
   gap: 18px;
 }
 
-.filters {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-  gap: 8px;
-}
-
-.filter {
-  height: 42px;
-  padding: 0 16px;
-  border: 1px solid rgba(15, 16, 20, 0.07);
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.72);
-  color: #4c5057;
-  font: 650 14px/1 Onest, Inter, system-ui, sans-serif;
-  letter-spacing: -0.01em;
-  box-shadow: 0 8px 22px rgba(15, 16, 20, 0.035), inset 0 1px 0 rgba(255,255,255,0.88);
-  backdrop-filter: blur(14px) saturate(150%);
-  -webkit-backdrop-filter: blur(14px) saturate(150%);
-  cursor: default;
-}
-
-.activeFilter {
-  background: #161a1f;
-  color: #ffffff;
-  border-color: rgba(15,16,20,0.12);
-}
-
 .allCasesLink {
   display: inline-flex;
   align-items: center;
@@ -326,10 +298,6 @@
     align-items: flex-start;
   }
 
-  .filters {
-    justify-content: flex-start;
-  }
-
   .grid {
     grid-template-columns: 1fr;
   }
@@ -364,24 +332,6 @@
   .lead {
     margin-top: 20px;
     font-size: 17px;
-  }
-
-  .filters {
-    width: calc(100% + 40px);
-    margin-left: -20px;
-    padding: 0 20px 4px;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    justify-content: flex-start;
-    scrollbar-width: none;
-  }
-
-  .filters::-webkit-scrollbar {
-    display: none;
-  }
-
-  .filter {
-    flex: 0 0 auto;
   }
 
   .visualCard {

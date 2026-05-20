@@ -1,42 +1,6 @@
 import Breadcrumbs from "@/components/navigation/Breadcrumbs";
+import type { Article } from "@/content/articles";
 import styles from "./ArticleTemplate.module.css";
-
-type RelatedItem = {
-  title: string;
-  description: string;
-  href: string;
-  label: string;
-};
-
-type Article = {
-  category: string;
-  date: string;
-  updatedAt: string;
-  readingTime: string;
-  author: string;
-  authorRole: string;
-  title: string;
-  description: string;
-  cover: string;
-  takeaways: string[];
-  content: {
-    intro: string;
-    sections: Array<{
-      title: string;
-      text: string;
-      bullets?: string[];
-      imageAfter?: {
-        src: string;
-        alt: string;
-        caption?: string;
-      };
-      quoteAfter?: boolean;
-      ctaAfter?: boolean;
-    }>;
-  };
-  relatedArticles: RelatedItem[];
-  relatedCases: RelatedItem[];
-};
 
 export default function ArticleTemplate({ article }: { article: Article }) {
   return (

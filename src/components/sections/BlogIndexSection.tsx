@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import { useState } from "react";
 import styles from "./BlogIndexSection.module.css";
 import { articles } from "@/content/articles";
 
@@ -17,7 +17,7 @@ const listedArticles = articles.map((a) => ({
 }));
 
 export default function BlogIndexSection() {
-  const [activeCategory, setActiveCategory] = React.useState("Все");
+  const [activeCategory, setActiveCategory] = useState("Все");
 
   const filteredArticles = activeCategory === "Все"
     ? listedArticles
@@ -37,7 +37,7 @@ export default function BlogIndexSection() {
           </p>
 
           <div className={styles.categoryBar} aria-label="Категории статей">
-            {categories.map((category, index) => (
+            {categories.map((category) => (
               <button className={`${styles.categoryButton} ${activeCategory === category ? styles.activeCategory : ""}`} type="button" key={category} onClick={() => setActiveCategory(category)}>
                 {category}
               </button>

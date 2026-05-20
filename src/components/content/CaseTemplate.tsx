@@ -1,31 +1,6 @@
 import Breadcrumbs from "@/components/navigation/Breadcrumbs";
+import type { CaseItem } from "@/content/cases";
 import styles from "./CaseTemplate.module.css";
-
-type CaseItem = {
-  slug: string;
-  category: string;
-  title: string;
-  lead: string;
-  cover: string;
-  contentType: string;
-  tags: string[];
-  service: string | null;
-  industry: string | null;
-  priority: number;
-  date: string;
-  metrics: Array<{ value: string; label: string }>;
-  facts: Array<{ label: string; value: string }>;
-  sections: Array<{
-    title: string;
-    text: string;
-    bullets?: string[];
-    imageAfter?: {
-      src: string;
-      alt: string;
-      caption?: string;
-    };
-  }>;
-};
 
 export default function CaseTemplate({ item }: { item: CaseItem }) {
   return (

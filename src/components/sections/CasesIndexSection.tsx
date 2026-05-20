@@ -1,13 +1,13 @@
 "use client";
 
-import React from "react";
+import { useState } from "react";
 import { cases } from "@/content/cases";
 import styles from "./CasesIndexSection.module.css";
 
 const filters = ["Все", ...Array.from(new Set(cases.map((c) => c.category)))];
 
 export default function CasesIndexSection() {
-  const [activeFilter, setActiveFilter] = React.useState("Все");
+  const [activeFilter, setActiveFilter] = useState("Все");
 
   const filteredCases = activeFilter === "Все"
     ? cases
@@ -27,7 +27,7 @@ export default function CasesIndexSection() {
           </p>
 
           <div className={styles.filterBar} aria-label="Фильтры кейсов">
-            {filters.map((filter, index) => (
+            {filters.map((filter) => (
               <button
                 className={`${styles.filterButton} ${activeFilter === filter ? styles.activeFilter : ""}`}
                 type="button"

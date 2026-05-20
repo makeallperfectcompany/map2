@@ -6,7 +6,7 @@ export const yandexSearchResultsArticle = {
   service: "SEO-продвижение",
   industry: null,
   priority: 100,
-  seoTitle: "Выдача в Яндексе: как бизнесу попасть выше конкурентов",
+  seoTitle: "Выдача в Яндексе: как бизнесу попасть выше конкурентов — Make All Perfect",
   description:
     "Коротко разбираем, как устроена выдача в Яндексе, почему сайт может не расти в поиске и что нужно улучшать для стабильной органики.",
   category: "SEO",
@@ -68,43 +68,24 @@ export const yandexSearchResultsArticle = {
       },
     ],
   },
-  relatedArticles: [
-    {
-      title: "Что считать в SEO, чтобы видеть вклад в продажи",
-      description: "Метрики, которые помогают отличить органический рост от красивых, но бесполезных отчётов.",
-      href: "/blog/test-article",
-      label: "SEO",
-    },
-    {
-      title: "Как понять, что сайт теряет заявки",
-      description: "Разбираем слабые места посадочных страниц, форм и пользовательского пути.",
-      href: "/blog/kak-ponyat-chto-sait-teryaet-zayavki",
-      label: "Сайты",
-    },
-    {
-      title: "Маркетинговая система вместо набора каналов",
-      description: "Как связать стратегию, трафик, сайт, контент и аналитику в одну систему роста.",
-      href: "/blog/test-article",
-      label: "Performance",
-    },
-  ],
+  relatedArticles: [],
   relatedCases: [
     {
       title: "SEO и UX для интернет-магазина товаров для дома",
       description: "+125% продаж и рост конверсии после перестройки структуры.",
-      href: "/cases",
+      href: "/cases/ecommerce-seo-ux",
       label: "E-commerce",
     },
     {
       title: "Рост заявок для региональной клиники",
       description: "SEO, реклама и UX-доработки в единой системе привлечения пациентов.",
-      href: "/cases",
+      href: "/cases/clinic-seo-ads-ux",
       label: "Медицина",
     },
     {
       title: "Рост продаж на Wildberries через внешний трафик",
       description: "+87% заказов, 2,8% ДРР и рост органики карточек.",
-      href: "/cases",
+      href: "/cases/wildberries-external-traffic",
       label: "Маркетплейсы",
     },
   ],

@@ -49,11 +49,19 @@ export type Article = {
 import { testArticle as rawTestArticle } from "./test-article";
 import { yandexSearchResultsArticle } from "./vydacha-v-yandekse";
 
+const buildArticle = (a: Record<string, unknown>): Article => ({
+  ...a,
+} as Article);
+
 export const articles: Article[] = [
-  {
+  buildArticle({
     ...rawTestArticle,
     slug: "test-article",
     url: "/blog/test-article",
-  },
-  yandexSearchResultsArticle as Article,
+    tags: rawTestArticle.tags ?? ["Аналитика", "Конверсия", "Продажи"],
+    service: rawTestArticle.service ?? null,
+    industry: rawTestArticle.industry ?? null,
+    priority: rawTestArticle.priority ?? 50,
+  }),
+  buildArticle(yandexSearchResultsArticle),
 ];

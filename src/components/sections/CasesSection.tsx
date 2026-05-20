@@ -1,30 +1,5 @@
+import { cases } from "@/content/cases";
 import styles from "./CasesSection.module.css";
-
-const filters = ["Все", "Маркетплейсы", "E-commerce", "Услуги", "Медицина"];
-
-const cases = [
-  {
-    category: "Маркетплейсы",
-    title: "Рост продаж на Wildberries через внешний трафик",
-    description:
-      "Собрали связку из аналитики, рекламных каналов и оптимизации карточек, чтобы увеличить заказы и снизить зависимость от внутренней рекламы.",
-    metrics: ["+87% заказов", "2,8% ДРР", "31 млн ₽ продаж"],
-  },
-  {
-    category: "E-commerce",
-    title: "SEO и UX для интернет-магазина товаров для дома",
-    description:
-      "Перестроили структуру, усилили коммерческие страницы и улучшили путь пользователя от поиска до покупки.",
-    metrics: ["+125% продаж", "+15 500 визитов", "3,1% конверсия"],
-  },
-  {
-    category: "Медицина",
-    title: "Рост заявок для региональной клиники",
-    description:
-      "Объединили SEO, рекламу и UX-доработки сайта в единую систему привлечения пациентов.",
-    metrics: ["×3,2 заявки", "CPL 450 ₽", "3,8% конверсия"],
-  },
-];
 
 const summary = [
   "30+ проектов в работе и развитии",
@@ -50,18 +25,7 @@ export default function CasesSection() {
           </div>
 
           <div className={styles.topActions}>
-            <div className={styles.filters} aria-label="Фильтры кейсов">
-              {filters.map((filter, index) => (
-                <button
-                  className={`${styles.filter} ${index === 0 ? styles.activeFilter : ""}`}
-                  type="button"
-                  key={filter}
-                >
-                  {filter}
-                </button>
-              ))}
-            </div>
-            <a className={styles.allCasesLink} href="#contacts">
+            <a className={styles.allCasesLink} href="/cases">
               Смотреть все кейсы <span>↗</span>
             </a>
           </div>
@@ -88,19 +52,19 @@ export default function CasesSection() {
           </div>
 
           <div className={styles.caseList}>
-            {cases.map((item) => (
-              <article className={styles.caseCard} key={item.title}>
+            {cases.slice(0, 3).map((item) => (
+              <article className={styles.caseCard} key={item.slug}>
                 <div className={styles.caseCategory}>{item.category}</div>
                 <h3>{item.title}</h3>
-                <p>{item.description}</p>
+                <p>{item.lead}</p>
                 <div className={styles.metricGrid}>
-                  {item.metrics.map((metric) => (
-                    <span className={styles.metricPill} key={metric}>
-                      {metric}
+                  {item.metrics.slice(0, 3).map((metric) => (
+                    <span className={styles.metricPill} key={metric.label}>
+                      {metric.value} {metric.label}
                     </span>
                   ))}
                 </div>
-                <a className={styles.caseLink} href="#contacts">
+                <a className={styles.caseLink} href={item.url}>
                   Разобрать кейс <span>→</span>
                 </a>
               </article>
