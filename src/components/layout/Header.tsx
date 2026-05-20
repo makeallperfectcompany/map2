@@ -71,6 +71,9 @@ export default function Header({ menuOpen, onBurgerClick }: HeaderProps) {
               <path d="M5 15L15 5M15 5H7M15 5V13" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
           </a>
+          <a href="#" className={styles.overlayCta}>
+            Связаться
+          </a>
         </nav>
       </div>
       <header className={`${styles.header}${menuOpen ? " " + styles.menuOpen : ""}`}>
