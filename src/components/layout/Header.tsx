@@ -92,7 +92,10 @@ export default function Header({ menuOpen, onBurgerClick }: HeaderProps) {
           <a href="/reviews" className={styles.navLink}>Отзывы</a>
           <a href="/blog" className={styles.navLink}>Блог</a>
           <a href="#" className={styles.navLink}>О нас</a>
+          <a href="#" className={styles.navLink}>Вакансии</a>
+          <a href="#" className={styles.navLink}>Партнёрам</a>
           <a href="#" className={styles.navLink}>Контакты</a>
+          <a href="#" className={styles.navLink}>Мерч</a>
         </nav>
 
         <div className={styles.navRight}>
