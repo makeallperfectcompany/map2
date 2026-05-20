@@ -1,0 +1,15 @@
+.divider {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .divider {
+    display: block;
+    width: 100vw;
+    height: 240px;
+    background-image: url("/images/hero/hero-logo-mob.webp");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+  }
+}

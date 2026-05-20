@@ -271,28 +271,9 @@
   .heroActions { gap: 10px; }
   .btn { padding: 14px 18px; font-size: 13.5px; }
 }
+
 @media (max-width: 375px) {
   .heroTitle { font-size: 28px; letter-spacing: -0.04em; }
   .heroInner { padding: 76px 14px 28px; }
   .btn { padding: 12px 16px; font-size: 13px; }
 }
-
-/* Mobile-only brand divider */
-.mobileHeroDivider {
-  display: none;
-}
-
-@media (max-width: 768px) {
-  .mobileHeroDivider {
-    display: block;
-    width: 100vw;
-    height: 240px;
-    margin: 24px calc(-50vw + 50%) 0;
-    background-image: url("/images/hero/hero-logo-mob.webp");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: contain;
-  }
-}
-
-/* prefers-reduced-motion is handled globally in globals.css */

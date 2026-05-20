@@ -49,9 +49,6 @@ export default function HeroSection() {
               </span>
             </a>
           </div>
-
-          {/* Mobile-only brand divider */}
-          <div className={styles.mobileHeroDivider} />
         </div>
       </div>
     </section>
