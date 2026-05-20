@@ -25,7 +25,7 @@ export default function Header({ menuOpen, onBurgerClick }: HeaderProps) {
 
       <nav className={styles.headerNav} aria-label="primary">
         <a href="#" className={styles.navLink}>Услуги</a>
-        <a href="#" className={styles.navLink}>Кейсы</a>
+        <a href="/cases" className={styles.navLink}>Кейсы</a>
         <a href="/blog" className={styles.navLink}>Блог</a>
         <a href="#" className={styles.navLink}>Команда</a>
       </nav>
