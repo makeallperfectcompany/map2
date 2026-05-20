@@ -6,42 +6,14 @@
   .divider {
     display: block;
     width: 100%;
-    height: 200px;
-    margin-top: 24px;
-    margin-bottom: 28px;
+    height: clamp(210px, 55vw, 260px);
+    margin-top: 22px;
+    margin-bottom: 22px;
     border-radius: 28px;
     overflow: hidden;
     background-image: url("/images/hero/hero-logo-mob.webp");
     background-repeat: no-repeat;
     background-position: center center;
-    background-size: 135% auto;
-  }
-}
-
-@media (max-width: 430px) {
-  .divider {
-    height: 200px;
-    background-size: 140% auto;
-  }
-}
-
-@media (max-width: 390px) {
-  .divider {
-    height: 190px;
-    background-size: 150% auto;
-  }
-}
-
-@media (max-width: 375px) {
-  .divider {
-    height: 180px;
-    background-size: 155% auto;
-  }
-}
-
-@media (max-width: 360px) {
-  .divider {
-    height: 170px;
-    background-size: 160% auto;
+    background-size: cover;
   }
 }
