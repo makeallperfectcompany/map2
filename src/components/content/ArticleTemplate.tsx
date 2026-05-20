@@ -24,6 +24,11 @@ type Article = {
       title: string;
       text: string;
       bullets?: string[];
+      imageAfter?: {
+        src: string;
+        alt: string;
+        caption?: string;
+      };
       quoteAfter?: boolean;
       ctaAfter?: boolean;
     }>;
@@ -120,6 +125,20 @@ export default function ArticleTemplate({ article }: { article: Article }) {
                         <li key={bullet}>{bullet}</li>
                       ))}
                     </ul>
+                  ) : null}
+
+                  {section.imageAfter ? (
+                    <figure className={styles.articleFigure}>
+                      <img
+                        src={section.imageAfter.src}
+                        alt={section.imageAfter.alt}
+                        loading="lazy"
+                        decoding="async"
+                      />
+                      {section.imageAfter.caption ? (
+                        <figcaption>{section.imageAfter.caption}</figcaption>
+                      ) : null}
+                    </figure>
                   ) : null}
 
                   {section.quoteAfter ? (

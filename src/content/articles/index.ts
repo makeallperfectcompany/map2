@@ -18,6 +18,11 @@ export type Article = {
       title: string;
       text: string;
       bullets?: string[];
+      imageAfter?: {
+        src: string;
+        alt: string;
+        caption?: string;
+      };
       quoteAfter?: boolean;
       ctaAfter?: boolean;
     }>;
@@ -37,6 +42,7 @@ export type Article = {
 };
 
 import { testArticle as rawTestArticle } from "./test-article";
+import { yandexSearchResultsArticle } from "./vydacha-v-yandekse";
 
 export const articles: Article[] = [
   {
@@ -44,4 +50,5 @@ export const articles: Article[] = [
     slug: "test-article",
     url: "/blog/test-article",
   },
+  yandexSearchResultsArticle as Article,
 ];
