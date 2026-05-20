@@ -19,13 +19,15 @@ const PAUSE_MS = 300;
 type Phase = "typing" | "display" | "deleting" | "pause";
 
 export default function AnimatedWord() {
-  const [text, setText] = useState(WORDS[0]);
-  const [phase, setPhase] = useState<Phase>("display");
+  const [text, setText] = useState("");
+  const [phase, setPhase] = useState<Phase>("typing");
+  const [showCursor, setShowCursor] = useState(true);
   const indexRef = useRef(0);
   const fullTextRef = useRef(WORDS[0]);
 
   useEffect(() => {
     if (phase === "typing") {
+      setShowCursor(true);
       const target = fullTextRef.current;
       let i = 1;
       let timer: ReturnType<typeof setTimeout>;
@@ -43,7 +45,11 @@ export default function AnimatedWord() {
     }
 
     if (phase === "display") {
-      const timer = setTimeout(() => setPhase("deleting"), DISPLAY_MS);
+      setShowCursor(true);
+      const timer = setTimeout(() => {
+        setShowCursor(false);
+        setTimeout(() => setPhase("deleting"), 200);
+      }, DISPLAY_MS);
       return () => clearTimeout(timer);
     }
 
@@ -57,7 +63,8 @@ export default function AnimatedWord() {
           i--;
           timer = setTimeout(tick, DELETE_SPEED);
         } else {
-          setPhase("pause");
+          setShowCursor(false);
+          setTimeout(() => setPhase("pause"), 150);
         }
       };
       timer = setTimeout(tick, DELETE_SPEED);
@@ -75,17 +82,9 @@ export default function AnimatedWord() {
     }
   }, [phase]);
 
-  // Show full first word on mount
-  useEffect(() => {
-    setText(WORDS[0]);
-  }, []);
-
   return (
-    <span className={styles.wrapper}>
-      <span className={styles.container}>
-        <span className={styles.dynamicText}>{text}</span>
-        <span className={styles.cursor} />
-      </span>
+    <span className={`${styles.container} ${showCursor ? styles.cursorVisible : ""}`}>
+      <span className={styles.text}>{text}</span>
     </span>
   );
 }
