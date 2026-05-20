@@ -1,5 +1,0 @@
-allowBuilds:
-  sharp: set this to true or false
-  unrs-resolver: set this to true or false
-minimumReleaseAgeExclude:
-  - '@types/react@19.2.15'
