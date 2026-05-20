@@ -1,24 +1,16 @@
-.wrapper {
-  display: inline;
-}
-
 .text {
   background: linear-gradient(90deg, #1A3A6E 0%, #0071E3 48%, #3A8FF2 78%, #5FA8FF 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  animation: cursorBlink 3.5s ease-in-out infinite;
 }
 
-@keyframes cursorBlink {
-  0%, 100% { opacity: 1; }
-  45% { opacity: 1; }
-  50% { opacity: 0; }
-  95% { opacity: 0; }
+.in {
+  opacity: 1;
+  transition: opacity 0.45s ease;
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .text {
-    animation: none;
-  }
+.out {
+  opacity: 0;
+  transition: opacity 0.35s ease;
 }
