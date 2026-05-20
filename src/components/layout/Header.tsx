@@ -73,16 +73,18 @@ export default function Header({ menuOpen, onBurgerClick }: HeaderProps) {
       </div>
       <header className={`${styles.header}${menuOpen ? " " + styles.menuOpen : ""}`}>
         <a href="/" className={styles.brand}>
-          <Image
-            className={styles.brandLogo}
-            src="/assets/home/hero/logo-header.webp"
-            alt="Make All Perfect logo"
-            width={34}
-            height={34}
-            priority
-          />
-          <span>Make All Perfect</span>
-          <span className={styles.brandYear}>since 2017</span>
+          <span className={styles.brandTop}>
+            <Image
+              className={styles.brandLogo}
+              src="/assets/home/hero/logo-header.webp"
+              alt="Make All Perfect logo"
+              width={34}
+              height={34}
+              priority
+            />
+            <span>Make All Perfect</span>
+          </span>
+          <small className={styles.brandYear}>Since 2017</small>
         </a>
 
         <nav className={styles.headerNav} aria-label="primary">

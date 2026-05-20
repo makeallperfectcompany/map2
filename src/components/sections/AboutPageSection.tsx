@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Breadcrumbs from "@/components/navigation/Breadcrumbs";
 import {
   approachSteps,
   audience,
@@ -15,7 +16,13 @@ export default function AboutPageSection() {
     <main className={styles.aboutPage}>
       <section className={styles.hero} aria-labelledby="about-title">
         <div className={styles.container}>
-          <div className={styles.heroLabel}>Strategy · Performance · SEO · Marketplaces · Analytics</div>
+          <Breadcrumbs
+            items={[
+              { label: "Главная", href: "/" },
+              { label: "О нас" },
+            ]}
+          />
+
           <h1 id="about-title">
             Make All Perfect — маркетинг полного цикла для брендов, которые хотят расти системно
           </h1>
