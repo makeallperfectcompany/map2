@@ -19,8 +19,8 @@ const PAUSE_MS = 300;
 type Phase = "typing" | "display" | "deleting" | "pause";
 
 export default function AnimatedWord() {
-  const [text, setText] = useState("");
-  const [phase, setPhase] = useState<Phase>("typing");
+  const [text, setText] = useState(WORDS[0]);
+  const [phase, setPhase] = useState<Phase>("display");
   const indexRef = useRef(0);
   const fullTextRef = useRef(WORDS[0]);
 
