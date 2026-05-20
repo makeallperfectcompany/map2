@@ -29,13 +29,13 @@
   background: linear-gradient(
     115deg,
     transparent 20%,
-    rgba(255, 255, 255, 0.2) 40%,
-    rgba(255, 255, 255, 0.45) 50%,
-    rgba(255, 255, 255, 0.2) 60%,
+    rgba(255, 255, 255, 0.12) 40%,
+    rgba(255, 255, 255, 0.22) 50%,
+    rgba(255, 255, 255, 0.12) 60%,
     transparent 80%
   );
   background-size: 200% 100%;
-  animation: heroShimmer 4s ease-in-out infinite;
+  animation: heroShimmer 8s ease-in-out infinite;
   pointer-events: none;
 }
 
