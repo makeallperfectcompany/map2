@@ -54,7 +54,7 @@
   font-weight: 850;
   font-size: clamp(60px, 5.35vw, 86px);
   line-height: 0.98;
-  letter-spacing: -0.065em;
+  letter-spacing: -0.02em;
   color: var(--ink);
   margin: 0 0 30px;
 }
