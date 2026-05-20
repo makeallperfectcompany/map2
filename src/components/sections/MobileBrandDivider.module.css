@@ -20,7 +20,7 @@
 
   /* Float — мягкое покачивание логотипа */
   .divider {
-    animation: logoFloat 5s ease-in-out infinite;
+    animation: logoFloat 7s ease-in-out infinite;
   }
 
   /* Shimmer — световой блик по стеклянной поверхности */
@@ -30,15 +30,15 @@
     inset: 0;
     border-radius: 28px;
     background: linear-gradient(
-      105deg,
-      transparent 30%,
-      rgba(255, 255, 255, 0.08) 45%,
-      rgba(255, 255, 255, 0.15) 50%,
-      rgba(255, 255, 255, 0.08) 55%,
-      transparent 70%
+      115deg,
+      transparent 25%,
+      rgba(255, 255, 255, 0.12) 42%,
+      rgba(255, 255, 255, 0.22) 50%,
+      rgba(255, 255, 255, 0.12) 58%,
+      transparent 75%
     );
-    background-size: 300% 100%;
-    animation: shimmer 4s ease-in-out infinite;
+    background-size: 200% 100%;
+    animation: shimmer 6s ease-in-out infinite;
     pointer-events: none;
   }
 }
@@ -48,16 +48,19 @@
     background-position-y: calc(50% - 0px);
   }
   50% {
-    background-position-y: calc(50% - 5px);
+    background-position-y: calc(50% - 10px);
   }
 }
 
 @keyframes shimmer {
   0% {
-    background-position: 300% 0;
+    background-position: 200% 0;
+  }
+  50% {
+    background-position: -50% 0;
   }
   100% {
-    background-position: -300% 0;
+    background-position: 200% 0;
   }
 }
 
