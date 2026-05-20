@@ -1,5 +1,14 @@
+.container {
+  display: inline-block;
+  width: 7.2em;
+  text-align: left;
+  overflow: visible;
+  vertical-align: bottom;
+  white-space: nowrap;
+}
+
 .text {
-  padding-right: 0.12em;
+  display: inline-block;
   background: linear-gradient(90deg, #1A3A6E 0%, #0071E3 48%, #3A8FF2 78%, #5FA8FF 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
