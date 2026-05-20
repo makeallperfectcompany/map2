@@ -1,3 +1,6 @@
+"use client";
+
+import { useRef, useState } from "react";
 import Breadcrumbs from "@/components/navigation/Breadcrumbs";
 import {
   approachSteps,
@@ -11,6 +14,13 @@ import {
 import styles from "./AboutPageSection.module.css";
 
 export default function AboutPageSection() {
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [videoPlayed, setVideoPlayed] = useState(false);
+
+  const handlePlay = () => {
+    setVideoPlayed(true);
+    videoRef.current?.play();
+  };
   return (
     <main className={styles.aboutPage}>
       <section className={styles.hero} aria-labelledby="about-title">
@@ -69,17 +79,38 @@ export default function AboutPageSection() {
             <div className={styles.identityVisualColumn}>
               <div className={styles.logoPanel}>
                 <div className={styles.logoGlow} aria-hidden="true" />
-                <video
-                  src="/video/intro-compressed.mp4"
-                  className={styles.aboutLogo}
-                  autoPlay
-                  muted={false}
-                  loop
-                  playsInline
-                  controls
-                  preload="metadata"
-                  aria-label="Презентационное видео Make All Perfect"
-                />
+                <div className={styles.videoWrapper}>
+                  <video
+                    ref={videoRef}
+                    src="/video/intro-compressed.mp4"
+                    className={styles.aboutVideo}
+                    playsInline
+                    preload="metadata"
+                    poster="/video/intro-poster.jpg"
+                    aria-label="Презентационное видео Make All Perfect"
+                  />
+                  {!videoPlayed && (
+                    <button
+                      className={styles.playOverlay}
+                      onClick={handlePlay}
+                      aria-label="Воспроизвести видео"
+                    >
+                      <svg
+                        width="64"
+                        height="64"
+                        viewBox="0 0 64 64"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <circle cx="32" cy="32" r="32" fill="white" fillOpacity="0.95" />
+                        <path
+                          d="M26 20L44 32L26 44V20Z"
+                          fill="#0071e3"
+                        />
+                      </svg>
+                    </button>
+                  )}
+                </div>
               </div>
 
               <div className={styles.systemGrid}>
