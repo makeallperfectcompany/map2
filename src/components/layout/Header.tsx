@@ -50,7 +50,7 @@ export default function Header({ menuOpen, onBurgerClick }: HeaderProps) {
         </nav>
       </div>
       <header className={`${styles.header}${menuOpen ? " " + styles.menuOpen : ""}`}>
-        <a href="#" className={styles.brand}>
+        <a href="/" className={styles.brand}>
           <Image
             className={styles.brandLogo}
             src="/assets/home/hero/logo-header.webp"
