@@ -42,12 +42,6 @@ export default function Header({ menuOpen, onBurgerClick }: HeaderProps) {
             </svg>
           </a>
           <a href="#" className={styles.overlayItem}>
-            Команда
-            <svg className={styles.mArr} viewBox="0 0 20 20" fill="none">
-              <path d="M5 15L15 5M15 5H7M15 5V13" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/>
-            </svg>
-          </a>
-          <a href="#" className={styles.overlayItem}>
             О нас
             <svg className={styles.mArr} viewBox="0 0 20 20" fill="none">
               <path d="M5 15L15 5M15 5H7M15 5V13" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/>
