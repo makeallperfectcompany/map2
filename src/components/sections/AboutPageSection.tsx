@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Breadcrumbs from "@/components/navigation/Breadcrumbs";
 import {
   approachSteps,
@@ -70,14 +69,17 @@ export default function AboutPageSection() {
             <div className={styles.identityVisualColumn}>
               <div className={styles.logoPanel}>
                 <div className={styles.logoGlow} aria-hidden="true" />
-                <Image
-                    src="/images/about/about-glass-logo.webp"
-                    alt="Фирменный стеклянный знак Make All Perfect"
-                    width={860}
-                    height={860}
-                    className={styles.aboutLogo}
-                    priority
-                  />
+                <video
+                  src="/video/intro-compressed.mp4"
+                  className={styles.aboutLogo}
+                  autoPlay
+                  muted={false}
+                  loop
+                  playsInline
+                  controls
+                  preload="metadata"
+                  aria-label="Презентационное видео Make All Perfect"
+                />
               </div>
 
               <div className={styles.systemGrid}>
