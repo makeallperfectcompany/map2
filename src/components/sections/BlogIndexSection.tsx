@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useMemo } from "react";
+import Breadcrumbs from "@/components/navigation/Breadcrumbs";
 import styles from "./BlogIndexSection.module.css";
 import { articles } from "@/content/articles";
 
@@ -86,6 +87,12 @@ export default function BlogIndexSection() {
     <main className={styles.blogPage}>
       <section className={styles.hero} aria-labelledby="blog-title">
         <div className={styles.container}>
+          <Breadcrumbs
+            items={[
+              { label: "Главная", href: "/" },
+              { label: "Блог" },
+            ]}
+          />
           <h1 id="blog-title">Статьи о маркетинге, который работает на рост</h1>
           <p>
             Практика, аналитика и разборы по рекламе, SEO, маркетплейсам, контенту,

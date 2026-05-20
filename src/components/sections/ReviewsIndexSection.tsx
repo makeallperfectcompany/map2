@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Breadcrumbs from "@/components/navigation/Breadcrumbs";
 import { reviews, type ReviewItem } from "@/content/reviews";
 import styles from "./ReviewsIndexSection.module.css";
 
@@ -93,6 +94,12 @@ export default function ReviewsIndexSection() {
       <section className={styles.hero} aria-labelledby="reviews-title">
         <div className={styles.container}>
           <div className={styles.heroContent}>
+            <Breadcrumbs
+              items={[
+                { label: "Главная", href: "/" },
+                { label: "Отзывы и письма" },
+              ]}
+            />
             <div className={styles.eyebrow}>Доверие создаёт результаты</div>
             <h1 id="reviews-title">Отзывы и благодарственные письма клиентов</h1>
             <p>

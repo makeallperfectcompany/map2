@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Breadcrumbs from "@/components/navigation/Breadcrumbs";
 import { cases } from "@/content/cases";
 import styles from "./CasesIndexSection.module.css";
 
@@ -19,6 +20,12 @@ export default function CasesIndexSection() {
     <main className={styles.casesPage}>
       <section className={styles.hero} aria-labelledby="cases-title">
         <div className={styles.container}>
+          <Breadcrumbs
+            items={[
+              { label: "Главная", href: "/" },
+              { label: "Кейсы" },
+            ]}
+          />
           <h1 id="cases-title">Проекты, где маркетинг виден в цифрах</h1>
           <p>
             Показываем, как стратегия, реклама, SEO, сайты, контент и аналитика превращаются
