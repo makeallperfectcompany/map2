@@ -82,6 +82,7 @@ export default function Header({ menuOpen, onBurgerClick }: HeaderProps) {
             priority
           />
           <span>Make All Perfect</span>
+          <span className={styles.brandYear}>since 2017</span>
         </a>
 
         <nav className={styles.headerNav} aria-label="primary">

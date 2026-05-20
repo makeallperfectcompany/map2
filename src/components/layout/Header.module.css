@@ -40,6 +40,25 @@
     drop-shadow(0 4px 10px rgba(15,16,20,0.10))
     drop-shadow(0 1px 0 rgba(255,255,255,0.75));
 }
+.brandYear {
+  position: relative;
+  padding-left: 10px;
+  margin-left: 2px;
+  color: #8a8f97;
+  font: 630 11px/1 Onest, Inter, system-ui, sans-serif;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+.brandYear::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 13px;
+  background: rgba(15,16,20,0.10);
+}
 
 .headerNav {
   display: flex; gap: 4px;
