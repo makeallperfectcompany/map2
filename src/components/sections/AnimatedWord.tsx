@@ -5,10 +5,10 @@ import styles from "./AnimatedWord.module.css";
 
 const WORDS = [
   "лидировать",
-  "масштабировать",
   "развиваться",
   "расти",
   "побеждать",
+  "управлять",
 ];
 
 const DISPLAY_MS = 2400;
