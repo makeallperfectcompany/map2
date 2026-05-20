@@ -1,3 +1,4 @@
+import Breadcrumbs from "@/components/navigation/Breadcrumbs";
 import styles from "./CaseTemplate.module.css";
 
 type CaseItem = {
@@ -25,7 +26,14 @@ export default function CaseTemplate({ item }: { item: CaseItem }) {
       <article>
         <header className={styles.hero}>
           <div className={styles.container}>
-
+            <Breadcrumbs
+              items={[
+                { label: "Главная", href: "/" },
+                { label: "Кейсы", href: "/cases" },
+                { label: item.category },
+                { label: item.title },
+              ]}
+            />
 
             <span className={styles.category}>{item.category}</span>
             <h1>{item.title}</h1>

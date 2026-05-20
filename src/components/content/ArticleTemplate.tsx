@@ -1,3 +1,4 @@
+import Breadcrumbs from "@/components/navigation/Breadcrumbs";
 import styles from "./ArticleTemplate.module.css";
 
 type RelatedItem = {
@@ -43,7 +44,14 @@ export default function ArticleTemplate({ article }: { article: Article }) {
       <article>
         <header className={styles.hero}>
           <div className={styles.container}>
-
+            <Breadcrumbs
+              items={[
+                { label: "Главная", href: "/" },
+                { label: "Блог", href: "/blog" },
+                { label: article.category },
+                { label: article.title },
+              ]}
+            />
 
             <div className={styles.meta}>
               <span>{article.category}</span>
