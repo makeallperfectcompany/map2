@@ -17,8 +17,6 @@
   object-position: center right;
   z-index: 0;
   user-select: none; pointer-events: none;
-  transform: scale(0.7);
-  transform-origin: right center;
 }
 .heroSection::before {
   content: "";
