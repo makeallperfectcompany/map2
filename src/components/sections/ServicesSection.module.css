@@ -11,11 +11,11 @@
   margin: 0 auto;
   padding: 64px 48px 56px;
   border-radius: 32px;
-  border: 1px solid rgba(255, 255, 255, 0.10);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   background:
-    radial-gradient(circle at 26% 8%, rgba(20, 78, 156, 0.28), transparent 34%),
-    radial-gradient(circle at 78% 28%, rgba(86, 143, 226, 0.08), transparent 32%),
-    linear-gradient(180deg, #11171f 0%, #121820 42%, #0c1117 100%);
+    radial-gradient(circle at 22% 6%, rgba(20, 78, 156, 0.20), transparent 36%),
+    radial-gradient(circle at 72% 24%, rgba(86, 143, 226, 0.06), transparent 34%),
+    linear-gradient(180deg, #12151c 0%, #13171f 48%, #0e1117 100%);
 }
 
 .servicesIntro {
@@ -55,7 +55,7 @@
 
 .servicesIntro h2 span {
   display: block;
-  color: rgba(255, 255, 255, 0.48);
+  color: #ffffff;
 }
 
 .servicesIntro > p {
