@@ -25,6 +25,18 @@
   to   { opacity: 1; transform: translateY(0); }
 }
 
+/* Hide header on scroll down (mobile only) */
+.headerHidden {
+  transform: translateY(-120%);
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+@media (min-width: 1024px) {
+  .headerHidden {
+    transform: none;
+  }
+}
+
 .brand {
   display: flex; align-items: center; gap: 10px;
   text-decoration: none; color: var(--ink);

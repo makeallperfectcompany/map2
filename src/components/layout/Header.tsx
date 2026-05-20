@@ -1,5 +1,6 @@
 "use client";
 
+import { useRef, useState, useEffect, useCallback } from "react";
 import Image from "next/image";
 import styles from "./Header.module.css";
 
@@ -9,6 +10,38 @@ interface HeaderProps {
 }
 
 export default function Header({ menuOpen, onBurgerClick }: HeaderProps) {
+  const [hidden, setHidden] = useState(false);
+  const lastScrollY = useRef(0);
+  const ticking = useRef(false);
+
+  const handleScroll = useCallback(() => {
+    if (ticking.current) return;
+    ticking.current = true;
+
+    requestAnimationFrame(() => {
+      const currentY = window.scrollY;
+      const isMobile = window.innerWidth < 1024;
+
+      if (isMobile && currentY > 60) {
+        if (currentY > lastScrollY.current) {
+          setHidden(true);
+        } else {
+          setHidden(false);
+        }
+      }
+
+      lastScrollY.current = currentY;
+      ticking.current = false;
+    });
+  }, []);
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [handleScroll]);
+
+  const headerClass = `${styles.header}${menuOpen ? " " + styles.menuOpen : ""}${hidden ? " " + styles.headerHidden : ""}`;
+
   return (
     <>
       <div
@@ -71,7 +104,7 @@ export default function Header({ menuOpen, onBurgerClick }: HeaderProps) {
           </a>
         </nav>
       </div>
-      <header className={`${styles.header}${menuOpen ? " " + styles.menuOpen : ""}`}>
+      <header className={headerClass}>
         <a href="/" className={styles.brand}>
           <Image
             className={styles.brandLogo}
