@@ -25,13 +25,7 @@ export default function CaseTemplate({ item }: { item: CaseItem }) {
       <article>
         <header className={styles.hero}>
           <div className={styles.container}>
-            <nav className={styles.breadcrumbs} aria-label="Хлебные крошки">
-              <a href="/">Главная</a>
-              <span>/</span>
-              <a href="/cases">Кейсы</a>
-              <span>/</span>
-              <span>{item.category}</span>
-            </nav>
+
 
             <span className={styles.category}>{item.category}</span>
             <h1>{item.title}</h1>

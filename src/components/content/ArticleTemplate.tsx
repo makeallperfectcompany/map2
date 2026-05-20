@@ -43,13 +43,7 @@ export default function ArticleTemplate({ article }: { article: Article }) {
       <article>
         <header className={styles.hero}>
           <div className={styles.container}>
-            <nav className={styles.breadcrumbs} aria-label="Хлебные крошки">
-              <a href="/">Главная</a>
-              <span>/</span>
-              <a href="/blog">Блог</a>
-              <span>/</span>
-              <span>{article.category}</span>
-            </nav>
+
 
             <div className={styles.meta}>
               <span>{article.category}</span>

@@ -17,20 +17,6 @@
     linear-gradient(180deg, #ffffff 0%, #f5f6f8 100%);
 }
 
-.breadcrumbs {
-  display: inline-flex;
-  align-items: center;
-  gap: 9px;
-  margin-bottom: 28px;
-  color: #86868b;
-  font: 650 13px/1 Onest, Inter, system-ui, sans-serif;
-}
-
-.breadcrumbs a {
-  color: #4c5057;
-  text-decoration: none;
-}
-
 .meta {
   display: flex;
   justify-content: center;
