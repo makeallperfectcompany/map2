@@ -29,7 +29,6 @@ export default function BlogIndexSection() {
     <main className={styles.blogPage}>
       <section className={styles.hero} aria-labelledby="blog-title">
         <div className={styles.container}>
-          <div className={styles.eyebrow}>Блог Make All Perfect</div>
           <h1 id="blog-title">Статьи о маркетинге, который работает на рост</h1>
           <p>
             Практика, аналитика и разборы по рекламе, SEO, маркетплейсам, контенту,

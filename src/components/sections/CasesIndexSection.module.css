@@ -17,23 +17,7 @@
     linear-gradient(180deg, #ffffff 0%, #f5f6f8 100%);
 }
 
-.eyebrow {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  margin-bottom: 24px;
-  color: #1a3a6e;
-  font: 700 14px/1.2 Onest, Inter, system-ui, sans-serif;
-}
 
-.eyebrow::before {
-  content: "";
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: #0071e3;
-  box-shadow: 0 0 24px rgba(0, 113, 227, 0.28);
-}
 
 .hero h1 {
   max-width: 940px;

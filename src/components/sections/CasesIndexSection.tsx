@@ -19,7 +19,6 @@ export default function CasesIndexSection() {
     <main className={styles.casesPage}>
       <section className={styles.hero} aria-labelledby="cases-title">
         <div className={styles.container}>
-          <div className={styles.eyebrow}>Кейсы Make All Perfect</div>
           <h1 id="cases-title">Проекты, где маркетинг виден в цифрах</h1>
           <p>
             Показываем, как стратегия, реклама, SEO, сайты, контент и аналитика превращаются
