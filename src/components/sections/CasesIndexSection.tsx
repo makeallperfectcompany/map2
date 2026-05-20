@@ -3,8 +3,6 @@ import styles from "./CasesIndexSection.module.css";
 
 const filters = ["Все", ...Array.from(new Set(cases.map((c) => c.category)))];
 
-"use client";
-
 import React from "react";
 
 export default function CasesIndexSection() {

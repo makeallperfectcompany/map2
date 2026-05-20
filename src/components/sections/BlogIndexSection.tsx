@@ -13,8 +13,6 @@ const listedArticles = articles.map((a) => ({
   readingTime: a.readingTime,
 }));
 
-"use client";
-
 import React from "react";
 
 export default function BlogIndexSection() {
