@@ -1,11 +1,22 @@
+import { notFound } from "next/navigation";
 import ArticleTemplate from "@/components/content/ArticleTemplate";
-import { testArticle } from "@/content/articles/test-article";
+import { articles } from "@/content/articles";
 
-export const metadata = {
-  title: testArticle.seoTitle,
-  description: testArticle.description,
-};
+export async function generateStaticParams() {
+  return articles.map((article) => ({ slug: article.slug }));
+}
 
-export default function ArticlePage() {
-  return <ArticleTemplate article={testArticle} />;
+export async function generateMetadata({ params }) {
+  const article = articles.find((a) => a.slug === params.slug);
+  if (!article) return {};
+  return {
+    title: article.seoTitle,
+    description: article.description,
+  };
+}
+
+export default function ArticlePage({ params }) {
+  const article = articles.find((a) => a.slug === params.slug);
+  if (!article) notFound();
+  return <ArticleTemplate article={article} />;
 }
