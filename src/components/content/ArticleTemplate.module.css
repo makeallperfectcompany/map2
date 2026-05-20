@@ -378,6 +378,9 @@
   margin-top: 34px;
   padding: 30px;
   border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   background:
     radial-gradient(circle at 88% 12%, rgba(127,183,255,0.20), transparent 36%),
     linear-gradient(135deg, #1a3a6e 0%, #081f3f 100%);
@@ -406,14 +409,27 @@
   letter-spacing: -0.04em;
 }
 
-.inlineCta a,
-.finalCta a {
+.inlineCta a {
   flex: 0 0 auto;
   min-height: 52px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   padding: 0 22px;
+  border-radius: 999px;
+  background: #ffffff;
+  color: #111419;
+  text-decoration: none;
+  font: 750 15px/1 Onest, Inter, system-ui, sans-serif;
+}
+
+.finalCta a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 52px;
+  padding: 0 22px;
+  margin-top: 12px;
   border-radius: 999px;
   background: #ffffff;
   color: #111419;
