@@ -1,4 +1,4 @@
-.container {
+.wrapper {
   display: inline;
 }
 
@@ -7,13 +7,7 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-}
-
-.cursor {
-  font-size: inherit;
-  line-height: inherit;
-  color: #0071E3;
-  margin-left: 1px;
+  animation: cursorBlink 3.5s ease-in-out infinite;
 }
 
 @keyframes cursorBlink {
@@ -24,7 +18,7 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .cursor {
-    display: none;
+  .text {
+    animation: none;
   }
 }

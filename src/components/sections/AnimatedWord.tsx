@@ -76,9 +76,8 @@ export default function AnimatedWord() {
   }, [phase]);
 
   return (
-    <span className={styles.container}>
-      <span className={styles.text}>{text}</span>
-      <span className={styles.cursor} />
+    <span className={styles.wrapper}>
+      <span className={styles.text}>{text}﻿|</span>
     </span>
   );
 }
