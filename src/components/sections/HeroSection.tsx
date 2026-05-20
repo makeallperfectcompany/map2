@@ -1,4 +1,5 @@
 import Image from "next/image";
+import AnimatedWord from "./AnimatedWord";
 import styles from "./HeroSection.module.css";
 
 export default function HeroSection() {
@@ -18,7 +19,7 @@ export default function HeroSection() {
       <div className={styles.heroInner}>
         <div className={styles.left}>
           <h1 className={styles.heroTitle}>
-            Маркетинг полного цикла для брендов, которые хотят <span className={styles.highlight}>лидировать</span>
+            Маркетинг полного цикла для брендов, которые хотят <AnimatedWord />
           </h1>
 
           <p className={styles.heroLead}>
