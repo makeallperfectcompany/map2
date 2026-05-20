@@ -1,9 +1,10 @@
+"use client";
+
+import React from "react";
 import { cases } from "@/content/cases";
 import styles from "./CasesIndexSection.module.css";
 
 const filters = ["Все", ...Array.from(new Set(cases.map((c) => c.category)))];
-
-import React from "react";
 
 export default function CasesIndexSection() {
   const [activeFilter, setActiveFilter] = React.useState("Все");

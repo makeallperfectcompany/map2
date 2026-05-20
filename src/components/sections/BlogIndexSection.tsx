@@ -1,3 +1,6 @@
+"use client";
+
+import React from "react";
 import styles from "./BlogIndexSection.module.css";
 import { articles } from "@/content/articles";
 
@@ -12,8 +15,6 @@ const listedArticles = articles.map((a) => ({
   cover: a.cover,
   readingTime: a.readingTime,
 }));
-
-import React from "react";
 
 export default function BlogIndexSection() {
   const [activeCategory, setActiveCategory] = React.useState("Все");
