@@ -13,8 +13,16 @@ const listedArticles = articles.map((a) => ({
   readingTime: a.readingTime,
 }));
 
+import React from "react";
+
 export default function BlogIndexSection() {
-  const featuredArticle = listedArticles[0];
+  const [activeCategory, setActiveCategory] = React.useState("Все");
+
+  const filteredArticles = activeCategory === "Все"
+    ? listedArticles
+    : listedArticles.filter((a) => a.category === activeCategory);
+
+  const featuredArticle = filteredArticles[0];
 
   return (
     <main className={styles.blogPage}>
@@ -29,7 +37,7 @@ export default function BlogIndexSection() {
 
           <div className={styles.categoryBar} aria-label="Категории статей">
             {categories.map((category, index) => (
-              <button className={`${styles.categoryButton} ${index === 0 ? styles.activeCategory : ""}`} type="button" key={category}>
+              <button className={`${styles.categoryButton} ${activeCategory === category ? styles.activeCategory : ""}`} type="button" key={category} onClick={() => setActiveCategory(category)}>
                 {category}
               </button>
             ))}
@@ -65,7 +73,7 @@ export default function BlogIndexSection() {
           </div>
 
           <div className={styles.articleGrid}>
-            {listedArticles.map((article) => (
+            {filteredArticles.map((article) => (
               <a className={styles.articleCard} href={article.href} key={`${article.category}-${article.title}`}>
                 <div className={styles.articleImage}>
                   <img src={article.cover} alt="" loading="lazy" decoding="async" />

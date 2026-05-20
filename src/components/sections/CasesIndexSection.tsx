@@ -3,8 +3,16 @@ import styles from "./CasesIndexSection.module.css";
 
 const filters = ["Все", ...Array.from(new Set(cases.map((c) => c.category)))];
 
+import React from "react";
+
 export default function CasesIndexSection() {
-  const featured = cases[0];
+  const [activeFilter, setActiveFilter] = React.useState("Все");
+
+  const filteredCases = activeFilter === "Все"
+    ? cases
+    : cases.filter((c) => c.category === activeFilter);
+
+  const featured = filteredCases[0];
 
   return (
     <main className={styles.casesPage}>
@@ -20,9 +28,10 @@ export default function CasesIndexSection() {
           <div className={styles.filterBar} aria-label="Фильтры кейсов">
             {filters.map((filter, index) => (
               <button
-                className={`${styles.filterButton} ${index === 0 ? styles.activeFilter : ""}`}
+                className={`${styles.filterButton} ${activeFilter === filter ? styles.activeFilter : ""}`}
                 type="button"
                 key={filter}
+                onClick={() => setActiveFilter(filter)}
               >
                 {filter}
               </button>
@@ -63,7 +72,7 @@ export default function CasesIndexSection() {
           </div>
 
           <div className={styles.caseGrid}>
-            {cases.map((item) => (
+            {filteredCases.map((item) => (
               <a className={styles.caseCard} href={item.url} key={item.slug}>
                 <div className={styles.cardImage}>
                   <img src={item.cover} alt="" loading="lazy" decoding="async" />
