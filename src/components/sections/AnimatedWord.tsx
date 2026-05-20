@@ -11,29 +11,73 @@ const WORDS = [
   "управлять",
 ];
 
-const DISPLAY_MS = 2400;
-const FADE_MS = 450;
+const TYPE_SPEED = 70;
+const DELETE_SPEED = 45;
+const DISPLAY_MS = 2200;
+const PAUSE_MS = 300;
+
+type Phase = "typing" | "display" | "deleting" | "pause";
 
 export default function AnimatedWord() {
-  const [index, setIndex] = useState(0);
-  const [visible, setVisible] = useState(true);
+  const [text, setText] = useState("");
+  const [phase, setPhase] = useState<Phase>("typing");
+  const indexRef = useRef(0);
+  const fullTextRef = useRef(WORDS[0]);
 
   useEffect(() => {
-    if (visible) {
-      const timer = setTimeout(() => setVisible(false), DISPLAY_MS);
-      return () => clearTimeout(timer);
-    } else {
-      const timer = setTimeout(() => {
-        setIndex((i) => (i + 1) % WORDS.length);
-        setVisible(true);
-      }, FADE_MS);
+    if (phase === "typing") {
+      const target = fullTextRef.current;
+      let i = 1;
+      let timer: ReturnType<typeof setTimeout>;
+      const tick = () => {
+        if (i <= target.length) {
+          setText(target.slice(0, i));
+          i++;
+          timer = setTimeout(tick, TYPE_SPEED);
+        } else {
+          setPhase("display");
+        }
+      };
+      timer = setTimeout(tick, TYPE_SPEED);
       return () => clearTimeout(timer);
     }
-  }, [visible]);
+
+    if (phase === "display") {
+      const timer = setTimeout(() => setPhase("deleting"), DISPLAY_MS);
+      return () => clearTimeout(timer);
+    }
+
+    if (phase === "deleting") {
+      const current = text;
+      let i = current.length - 1;
+      let timer: ReturnType<typeof setTimeout>;
+      const tick = () => {
+        if (i >= 0) {
+          setText(current.slice(0, i));
+          i--;
+          timer = setTimeout(tick, DELETE_SPEED);
+        } else {
+          setPhase("pause");
+        }
+      };
+      timer = setTimeout(tick, DELETE_SPEED);
+      return () => clearTimeout(timer);
+    }
+
+    if (phase === "pause") {
+      const timer = setTimeout(() => {
+        const nextIdx = (indexRef.current + 1) % WORDS.length;
+        indexRef.current = nextIdx;
+        fullTextRef.current = WORDS[nextIdx];
+        setPhase("typing");
+      }, PAUSE_MS);
+      return () => clearTimeout(timer);
+    }
+  }, [phase]);
 
   return (
-    <span className={`${styles.text} ${visible ? styles.in : styles.out}`}>
-      {WORDS[index]}
+    <span className={styles.text}>
+      {text}
     </span>
   );
 }

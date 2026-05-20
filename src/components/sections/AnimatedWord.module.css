@@ -5,13 +5,3 @@
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
-
-.in {
-  opacity: 1;
-  transition: opacity 0.45s ease;
-}
-
-.out {
-  opacity: 0;
-  transition: opacity 0.35s ease;
-}
