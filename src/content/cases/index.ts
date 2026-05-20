@@ -1,7 +1,10 @@
 export type CaseItem = {
   slug: string;
+  url: string;
   category: string;
   title: string;
+  seoTitle: string;
+  description: string;
   lead: string;
   cover: string;
   contentType: string;
