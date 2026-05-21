@@ -170,15 +170,6 @@
   flex-wrap: wrap;
 }
 
-.yandexRating {
-  display: inline-flex;
-  transition: opacity 180ms ease;
-}
-
-.yandexRating:hover {
-  opacity: 0.7;
-}
-
 .yandexRatingImage {
   width: 234px;
   height: auto;

@@ -78,21 +78,14 @@ export default function Footer() {
 
         <div className={styles.bottom}>
           <div className={styles.bottomLeft}>
-            <a
-              className={styles.yandexRating}
-              href="https://yandex.ru/maps/org/make_all_perfect/190852529964/reviews/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Image
-                src="/images/yandex-rating.webp"
-                alt="Рейтинг Make All Perfect на Яндекс Картах — 4.9"
-                width={0}
-                height={0}
-                sizes="234px"
-                className={styles.yandexRatingImage}
-              />
-            </a>
+            <Image
+              src="/images/yandex-rating.webp"
+              alt="Рейтинг Make All Perfect на Яндекс Картах — 4.9"
+              width={0}
+              height={0}
+              sizes="234px"
+              className={styles.yandexRatingImage}
+            />
             <span>© {new Date().getFullYear()} Make All Perfect. Все права защищены.</span>
           </div>
         </div>
