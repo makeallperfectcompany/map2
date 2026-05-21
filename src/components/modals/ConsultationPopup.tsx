@@ -19,7 +19,7 @@ export default function ConsultationPopup({ isOpen, onClose }: ConsultationPopup
   const closeButtonRef = useRef<HTMLButtonElement>(null);
 
   const [name, setName] = useState("");
-  const [contact, setContact] = useState("");
+  const [contact, onContactChange, setContact] = usePhoneMask("");
   const [isConsentChecked, setIsConsentChecked] = useState(true);
   const [consentError, setConsentError] = useState("");
   const [formState, setFormState] = useState<FormState>("idle");
@@ -183,9 +183,9 @@ export default function ConsultationPopup({ isOpen, onClose }: ConsultationPopup
                     <span>Телефон</span>
                     <input
                       value={contact}
-                      onChange={(event) => setContact(event.target.value)}
+                      onChange={onContactChange}
                       autoComplete="tel"
-                      placeholder="+7 или @username"
+                      placeholder="+7 (999) 999-99-99"
                       required
                     />
                   </label>
