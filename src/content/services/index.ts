@@ -161,5 +161,98 @@ const RAW_GROUPS = [
   },
 ] as const;
 
+// ── 4 карточки для главной (ТЗ от 21.05.2026) ──
+export type HomeServiceCard = {
+  readonly badgeLabel: string;
+  readonly abbreviation: "ADS" | "SEO" | "WEB" | "MP";
+  readonly accentColor: string;
+  readonly title: string;
+  readonly mutedTitle: string;
+  readonly description: string;
+  readonly tags: readonly string[];
+  readonly price: string;
+  readonly cta: string;
+  readonly href: string;
+};
+
+export const homeServiceCards: readonly HomeServiceCard[] = [
+  {
+    badgeLabel: "Трафик",
+    abbreviation: "ADS",
+    accentColor: "#6FB7FF",
+    title: "Контекстная и таргетированная реклама",
+    mutedTitle: "с контролем ROMI",
+    description:
+      "Запускаем и оптимизируем Яндекс Директ, VK, Google Ads, Avito, Telegram Ads и таргет под продажи.",
+    tags: [
+      "Контекстная реклама",
+      "Яндекс Директ",
+      "Google Ads",
+      "Таргетированная реклама",
+      "Telegram Ads",
+    ],
+    price: "от 50 000 ₽",
+    cta: "Подробнее",
+    href: "/services/reklama",
+  },
+  {
+    badgeLabel: "Органика",
+    abbreviation: "SEO",
+    accentColor: "#30D158",
+    title: "SEO и поисковая видимость",
+    mutedTitle: "в Яндексе, Google и AI",
+    description:
+      "Улучшаем структуру, контент, скорость, индексацию и конверсию сайта, чтобы органика работала как долгосрочный актив.",
+    tags: [
+      "SEO",
+      "Локальное SEO‑продвижение",
+      "SEO в Google",
+      "SEO в Яндекс",
+      "SEO аудит сайта",
+    ],
+    price: "от 80 000 ₽",
+    cta: "Подробнее",
+    href: "/services/seo",
+  },
+  {
+    badgeLabel: "Платформа",
+    abbreviation: "WEB",
+    accentColor: "#FF9F0A",
+    title: "Создание и разработка сайтов",
+    mutedTitle: "под задачи бизнеса",
+    description:
+      "Создаём сайты, лендинги, интерфейсы и AI-инструменты, которые поддерживают рекламу, SEO, аналитику и продажи.",
+    tags: [
+      "Создание сайтов",
+      "React (JavaScript)",
+      "WordPress",
+      "Tilda",
+      "Редизайн сайтов",
+    ],
+    price: "от 120 000 ₽",
+    cta: "Подробнее",
+    href: "/services/sozdanie-saytov",
+  },
+  {
+    badgeLabel: "Маркетплейсы",
+    abbreviation: "MP",
+    accentColor: "#FF453A",
+    title: "Wildberries, Ozon и внешний трафик",
+    mutedTitle: "для роста продаж",
+    description:
+      "Усиливаем карточки, внутреннюю и внешнюю рекламу на маркетплейсах, чтобы расти не только в рекламе, но и в органике.",
+    tags: [
+      "Продвижение на маркетплейсах",
+      "Внутренняя реклама",
+      "Внешняя реклама WB",
+      "Внешняя реклама Ozon",
+      "Карточки товаров",
+    ],
+    price: "от 70 000 ₽",
+    cta: "Подробнее",
+    href: "/services/marketplaces",
+  },
+] as const;
+
 export type { ServiceGroup };
 export const serviceGroups = RAW_GROUPS as readonly ServiceGroup[];

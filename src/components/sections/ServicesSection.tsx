@@ -1,4 +1,4 @@
-import { serviceGroups } from "@/content/services";
+import { homeServiceCards } from "@/content/services";
 import OpenConsultationButton from "@/components/forms/OpenConsultationButton";
 import styles from "./ServicesSection.module.css";
 
@@ -26,41 +26,53 @@ export default function ServicesSection() {
           </p>
         </div>
 
-        <div className={styles.servicesGrid} aria-label="Ключевые направления услуг">
-          {serviceGroups.map((service) => (
-            <article
-              className={`${styles.serviceCard} ${service.featured ? styles.featuredCard : ""}`}
-              key={service.title}
-            >
-              <div className={styles.cardEyebrow}>{service.eyebrow}</div>
+        <div className={styles.servicesScroll}>
+          <div className={styles.servicesGrid} aria-label="Ключевые направления услуг">
+            {homeServiceCards.map((card) => (
+              <article
+                className={styles.serviceCard}
+                key={card.abbreviation}
+                style={{ "--accent": card.accentColor } as React.CSSProperties}
+              >
+                {/* 1. Бейдж */}
+                <div className={styles.badge}>{card.badgeLabel}</div>
 
-              <h3>
-                {service.title}
-                <span>{service.mutedTitle}</span>
-              </h3>
+                {/* 2. Заголовок */}
+                <div className={styles.titleSlot}>
+                  <h3>
+                    {card.title}
+                    <span>{card.mutedTitle}</span>
+                  </h3>
+                </div>
 
-              <div className={styles.bigMark}>{service.bigMark}</div>
+                {/* 3. Аббревиатура */}
+                <div className={styles.abbreviation}>{card.abbreviation}</div>
 
-              <p>{service.description}</p>
+                {/* 4. Описание */}
+                <div className={styles.descriptionSlot}>
+                  <p>{card.description}</p>
+                </div>
 
-              <div className={styles.chips} aria-label={`Услуги направления ${service.title}`}>
-                {service.services.map((item) => (
-                  <a
-                    key={item}
-                    href={`/services/${encodeURIComponent(item.toLowerCase())}`}
-                    className={styles.chipLink}
-                  >
-                    {item}
+                {/* 5. Теги */}
+                <div className={styles.tagsSlot}>
+                  {card.tags.map((tag) => (
+                    <span key={tag}>{tag}</span>
+                  ))}
+                </div>
+
+                {/* 6. Футер: цена + CTA */}
+                <div className={styles.footer}>
+                  <span className={styles.price}>{card.price}</span>
+                  <a href={card.href} className={styles.cta}>
+                    {card.cta}
+                    <svg width="13" height="13" viewBox="0 0 13 13" fill="none" aria-hidden="true">
+                      <path d="M1 12L12 1M12 1H4M12 1V9" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
                   </a>
-                ))}
-              </div>
-
-              <div className={styles.cardBottom}>
-                <span>{service.price}</span>
-                <a href={service.href}>{service.cta} →</a>
-              </div>
-            </article>
-          ))}
+                </div>
+              </article>
+            ))}
+          </div>
         </div>
       </div>
     </section>
