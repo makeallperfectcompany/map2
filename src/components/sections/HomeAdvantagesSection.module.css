@@ -232,5 +232,6 @@
 
   .visualCard {
     border-radius: 26px;
+    margin-left: -12px;
   }
 }
