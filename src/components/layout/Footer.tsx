@@ -86,10 +86,10 @@ export default function Footer() {
             >
               <Image
                 src="/images/yandex-rating.webp"
-                alt="Рейтинг Make All Perfect на Яндекс Картах — 5.0"
+                alt="Рейтинг Make All Perfect на Яндекс Картах — 4.9"
                 width={0}
                 height={0}
-                sizes="180px"
+                sizes="234px"
                 className={styles.yandexRatingImage}
               />
             </a>

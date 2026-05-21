@@ -151,12 +151,11 @@ export default function ReviewsIndexSection() {
             >
               <img
                 src="/images/yandex-rating.webp"
-                alt="Рейтинг Make All Perfect на Яндекс Картах — 5.0"
+                alt="Рейтинг Make All Perfect на Яндекс Картах — 4.9"
                 loading="lazy"
                 decoding="async"
                 className={styles.yandexRatingImg}
               />
-              <span>Оставить отзыв на Яндекс Картах →</span>
             </a>
           </div>
 
