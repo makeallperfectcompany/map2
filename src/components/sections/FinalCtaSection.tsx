@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { finalCta } from "@/content/home/final-cta";
 import styles from "./FinalCtaSection.module.css";
 
@@ -52,7 +53,7 @@ export default function FinalCtaSection() {
                   <div className={styles.messengers}>
                     {finalCta.messengers.items.map((item) => (
                       <Link className={styles.messengerButton} href={item.href} key={item.label}>
-                        <img src={item.icon} alt="" aria-hidden="true" />
+                        <Image src={item.icon} alt="" aria-hidden="true" width={24} height={24} />
                         <span>{item.label}</span>
                       </Link>
                     ))}
