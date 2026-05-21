@@ -104,14 +104,6 @@
   letter-spacing: -0.012em;
 }
 
-.messengerIcon {
-  width: 20px;
-  height: 20px;
-  flex: 0 0 auto;
-  object-fit: contain;
-  display: block;
-}
-
 .formSide > p {
   display: block;
 }
@@ -132,23 +124,11 @@
   display: block;
 }
 
-.messengerBlock {
-  margin-top: 16px;
-}
-
-.messengerBlock .messengerTitle {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  color: #1d1d1f;
-  font: 750 15px/1.1 Onest, Inter, system-ui, sans-serif;
-  letter-spacing: -0.02em;
-}
-
-.messengerBlock .messengerTitle span {
-  color: #62666d;
-  font-weight: 500;
-  font-size: 13px;
+.messengerButtonImg {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
 }
 
 .actionGrid {
@@ -159,33 +139,20 @@
 }
 
 .actionButton {
-  min-height: 48px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  padding: 0 12px;
-  border-radius: 14px;
-  color: #1d1d1f;
-  background: #ffffff;
-  border: 1px solid rgba(29, 29, 31, 0.08);
-  box-shadow: 0 8px 20px rgba(15, 16, 20, 0.03);
+  display: flex;
+  align-items: stretch;
+  border: 0;
+  background: none;
   text-decoration: none;
-  font: 760 13px/1 Onest, Inter, system-ui, sans-serif;
-  letter-spacing: -0.01em;
-  transition: transform 160ms ease, border-color 160ms ease, box-shadow 160ms ease;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(15, 16, 20, 0.03);
+  transition: transform 160ms ease, box-shadow 160ms ease;
 }
 
 .actionButton:hover {
   transform: translateY(-1px);
-  border-color: rgba(0, 113, 227, 0.22);
   box-shadow: 0 12px 24px rgba(15, 16, 20, 0.055);
-}
-
-.actionButton svg {
-  width: 20px;
-  height: 20px;
-  flex: 0 0 auto;
 }
 
 .formBlock {
@@ -383,15 +350,6 @@
   }
 
   .actionButton {
-    min-height: 44px;
-    font-size: 12px;
-    gap: 8px;
-    padding: 0 10px;
-  }
-
-  .actionButton svg {
-    width: 18px;
-    height: 18px;
   }
 
   .field input {

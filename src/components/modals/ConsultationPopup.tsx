@@ -156,8 +156,13 @@ export default function ConsultationPopup({ isOpen, onClose }: ConsultationPopup
                       target={action.href.startsWith("http") ? "_blank" : undefined}
                       rel={action.href.startsWith("http") ? "noreferrer" : undefined}
                     >
-                      <ActionIcon type={action.type} />
-                      <span>{action.label}</span>
+                      <img
+                        className={styles.messengerButtonImg}
+                        src={`/images/icons/messenger-buttons/${action.type}.png`}
+                        alt={action.label}
+                        width="160"
+                        height="53"
+                      />
                     </a>
                   ))}
                 </div>
@@ -219,12 +224,5 @@ export default function ConsultationPopup({ isOpen, onClose }: ConsultationPopup
         )}
       </div>
     </div>
-  );
-}
-
-function ActionIcon({ type }: { type: string }) {
-  const src = `/images/icons/messengers/${type}.webp`;
-  return (
-    <img src={src} alt="" aria-hidden="true" width="20" height="20" className={styles.messengerIcon} />
   );
 }
