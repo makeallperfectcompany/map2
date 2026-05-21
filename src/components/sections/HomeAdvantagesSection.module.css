@@ -225,33 +225,12 @@
   }
 
   .visualCard {
-    display: flex;
-    justify-content: center;
-    overflow: hidden;
-  }
-
-  .visualCard img {
-    max-width: none;
-    width: 460px;
-    height: auto;
+    display: none;
   }
 }
 
 @media (max-width: 430px) {
   .sectionHeader h2 {
     font-size: 34px;
-  }
-
-  .visualCard {
-    border-radius: 26px;
-    display: flex;
-    justify-content: center;
-    overflow: hidden;
-  }
-
-  .visualCard img {
-    max-width: none;
-    width: 460px;
-    height: auto;
   }
 }
