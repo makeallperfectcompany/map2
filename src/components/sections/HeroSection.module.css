@@ -107,8 +107,8 @@
   text-align: left;
   min-width: 0.1em;
   overflow: hidden;
-  padding-bottom: 0.12em;
-  margin-bottom: -0.12em;
+  padding-bottom: 0.25em;
+  margin-bottom: -0.25em;
 }
 
 .dynamicWord {
