@@ -28,21 +28,23 @@ export default function ServicesSection() {
 
         <div className={styles.servicesGrid} aria-label="Ключевые направления услуг">
           {serviceGroups.map((service) => (
-            <article
-              className={`${styles.serviceCard} ${service.featured ? styles.featuredCard : ""}`}
-              key={service.title}
-            >
+            <article className={styles.serviceCard} key={service.title}>
+              {/* Зона 1: Лейбл */}
               <div className={styles.cardEyebrow}>{service.eyebrow}</div>
 
+              {/* Зона 2: Заголовок */}
               <h3>
                 {service.title}
                 <span>{service.mutedTitle}</span>
               </h3>
 
+              {/* Зона 3: Аббревиатура */}
               <div className={styles.bigMark}>{service.bigMark}</div>
 
+              {/* Зона 4: Описание */}
               <p>{service.description}</p>
 
+              {/* Зона 5: Теги */}
               <div className={styles.chips} aria-label={`Услуги направления ${service.title}`}>
                 {service.services.map((item) => (
                   <a
@@ -55,6 +57,7 @@ export default function ServicesSection() {
                 ))}
               </div>
 
+              {/* Зона 6: Футер */}
               <div className={styles.cardBottom}>
                 <span>{service.price}</span>
                 <a href={service.href}>{service.cta} →</a>
