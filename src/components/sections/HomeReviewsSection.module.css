@@ -173,7 +173,6 @@
 .mobileScroller { display: none; }
 
 .reviewCard {
-  min-height: 390px;
   display: grid;
   grid-template-rows: auto 1fr auto;
   padding: 26px;
@@ -208,7 +207,7 @@
   font: 720 20px/1.36 Onest, Inter, system-ui, sans-serif;
   letter-spacing: -0.042em;
   display: -webkit-box;
-  -webkit-line-clamp: 5;
+  -webkit-line-clamp: 8;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
