@@ -1,7 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { featuredReviews } from "@/content/home/homeReviews";
+import { featuredReviews } from "@/content/reviews";
 import styles from "./HomeReviewsSection.module.css";
 
 const REVIEWS_PER_PAGE = 3;

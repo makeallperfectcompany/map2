@@ -1,5 +1,6 @@
 export type ReviewItem =
   | {
+      featured?: boolean;
       type: "review";
       id: string;
       name: string;
@@ -13,6 +14,7 @@ export type ReviewItem =
       relatedCaseUrl?: string;
     }
   | {
+      featured?: boolean;
       type: "letter";
       id: string;
       title: string;
@@ -31,6 +33,7 @@ export const reviews: ReviewItem[] = [
   {
     type: "review",
     id: "ivan-nazarov",
+    featured: true,
     name: "Иван Назаров",
     role: "Генеральный директор компании",
     rating: 5,
@@ -44,6 +47,7 @@ export const reviews: ReviewItem[] = [
   {
     type: "review",
     id: "aleksandr-smirnov",
+    featured: true,
     name: "Александр Смирнов",
     role: "Собственник сети стоматологических клиник",
     rating: 5,
@@ -72,6 +76,7 @@ export const reviews: ReviewItem[] = [
   {
     type: "review",
     id: "artem-zhuravlev",
+    featured: true,
     name: "Артем Журавлев",
     role: "Генеральный директор ООО «Карельский Дом»",
     rating: 5,
@@ -85,6 +90,7 @@ export const reviews: ReviewItem[] = [
   {
     type: "review",
     id: "gennadiy-kuznetsov",
+    featured: true,
     name: "Геннадий Кузнецов",
     role: "Владелец компании",
     rating: 5,
@@ -98,6 +104,7 @@ export const reviews: ReviewItem[] = [
   {
     type: "review",
     id: "emira-edelweiss",
+    featured: true,
     name: "Эмира Эдельвейн",
     role: "Директор по маркетингу",
     rating: 5,
@@ -125,6 +132,7 @@ export const reviews: ReviewItem[] = [
   {
     type: "review",
     id: "oleg-sergeev",
+    featured: true,
     name: "Олег Сергеев",
     role: "Маркетолог в компании «ЭкоПродукт»",
     rating: 5,
