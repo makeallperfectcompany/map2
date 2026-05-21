@@ -219,9 +219,7 @@ export default function ConsultationPopup({ isOpen, onClose }: ConsultationPopup
               </div>
             </div>
 
-            <aside className={styles.visualSide} aria-hidden="true">
-              <div className={styles.visualSurface} />
-            </aside>
+            <aside className={styles.visualSide} aria-hidden="true" />
           </>
         )}
       </div>
