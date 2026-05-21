@@ -139,13 +139,11 @@
   text-decoration: none;
   border-radius: 14px;
   overflow: hidden;
-  box-shadow: 0 8px 20px rgba(15, 16, 20, 0.03);
-  transition: transform 160ms ease, box-shadow 160ms ease;
+  transition: transform 160ms ease;
 }
 
 .actionButton:hover {
   transform: translateY(-1px);
-  box-shadow: 0 12px 24px rgba(15, 16, 20, 0.055);
 }
 
 .formBlock {
@@ -160,6 +158,11 @@
   color: #1d1d1f;
   font: 750 15px/1.1 Onest, Inter, system-ui, sans-serif;
   letter-spacing: -0.02em;
+}
+
+.form {
+  display: grid;
+  gap: 20px;
 }
 
 .field {
