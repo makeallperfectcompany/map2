@@ -223,6 +223,18 @@
   .advantageCard {
     min-height: auto;
   }
+
+  .visualCard {
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .visualCard img {
+    max-width: none;
+    width: 460px;
+    height: auto;
+  }
 }
 
 @media (max-width: 430px) {
