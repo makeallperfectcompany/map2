@@ -292,7 +292,7 @@
 
 @media (max-width: 768px) {
   .casesSection {
-    padding: 72px 0;
+    padding: 72px 0 48px;
   }
 
   .container {
@@ -338,7 +338,7 @@
 
 @media (max-width: 480px) {
   .casesSection {
-    padding: 62px 0;
+    padding: 72px 0 48px;
   }
 
   .container {
