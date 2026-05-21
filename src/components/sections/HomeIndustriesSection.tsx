@@ -20,13 +20,15 @@ export default function HomeIndustriesSection() {
 
           <aside className={styles.mainCard}>
             <div className={styles.mainCardContent}>
-              <span className={styles.mainCardKicker}>{homeIndustries.mainCard.label}</span>
-              <h3>{homeIndustries.mainCard.title}</h3>
-              <ul className={styles.mainCardBullets}>
-                {homeIndustries.mainCard.bullets.slice(1).map((bullet) => (
-                  <li key={bullet} className={styles.mainCardBullet}>{bullet}</li>
-                ))}
-              </ul>
+              <div className={styles.mainCardTop}>
+                <span className={styles.mainCardKicker}>{homeIndustries.mainCard.label}</span>
+                <h3>{homeIndustries.mainCard.title}</h3>
+                <ul className={styles.mainCardBullets}>
+                  {homeIndustries.mainCard.bullets.slice(1).map((bullet) => (
+                    <li key={bullet} className={styles.mainCardBullet}>{bullet}</li>
+                  ))}
+                </ul>
+              </div>
 
               <ul className={styles.mainCardStats}>
                 {homeIndustries.mainCard.stats.map((stat) => (
