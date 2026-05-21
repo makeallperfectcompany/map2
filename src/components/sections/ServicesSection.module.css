@@ -201,7 +201,8 @@
   min-height: 78px;
 }
 
-.chips span {
+.chips span,
+.chips .chipLink {
   min-height: 31px;
   display: inline-flex;
   align-items: center;
@@ -212,21 +213,31 @@
   border: 1px solid rgba(255, 255, 255, 0.075);
   font: 650 12px/1 Onest, Inter, system-ui, sans-serif;
   white-space: nowrap;
+  text-decoration: none;
+  transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
 }
 
-.chips .moreChip {
-  color: #9dccff;
-  background: rgba(122, 183, 255, 0.10);
-  border-color: rgba(122, 183, 255, 0.18);
+.chips .chipLink:hover {
+  background: rgba(255, 255, 255, 0.13);
+  border-color: rgba(255, 255, 255, 0.20);
+  color: #ffffff;
+  transform: translateY(-1px);
 }
 
-.featuredCard .chips span {
+.chips .chipLink:focus-visible {
+  outline: 2px solid #6FB7FF;
+  outline-offset: 2px;
+}
+
+.featuredCard .chips span,
+.featuredCard .chipLink {
   background: rgba(255, 255, 255, 0.09);
   border-color: rgba(255, 255, 255, 0.10);
 }
 
-.featuredCard .chips .moreChip {
-  color: #ffffff;
+.featuredCard .chipLink:hover {
+  background: rgba(255, 255, 255, 0.18);
+  border-color: rgba(255, 255, 255, 0.25);
 }
 
 .cardBottom {
