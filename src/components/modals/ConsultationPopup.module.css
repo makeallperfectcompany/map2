@@ -326,10 +326,10 @@
 }
 
 .visualSide {
-  background-image: url("/images/modals/make-all-perfect-glass-logo.webp");
+  background-image: url("/images/modals/logo-glass.webp");
   background-repeat: no-repeat;
   background-position: 50% 40%;
-  background-size: 75% auto;
+  background-size: 60% auto;
 }
 
 .statePanel {
