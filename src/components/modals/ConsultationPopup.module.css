@@ -104,6 +104,14 @@
   letter-spacing: -0.012em;
 }
 
+.messengerIcon {
+  width: 20px;
+  height: 20px;
+  flex: 0 0 auto;
+  object-fit: contain;
+  display: block;
+}
+
 .formSide > p {
   display: block;
 }
@@ -178,7 +186,6 @@
   width: 20px;
   height: 20px;
   flex: 0 0 auto;
-  fill: #0071e3;
 }
 
 .formBlock {

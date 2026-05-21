@@ -223,25 +223,8 @@ export default function ConsultationPopup({ isOpen, onClose }: ConsultationPopup
 }
 
 function ActionIcon({ type }: { type: string }) {
-  if (type === "telegram") {
-    return (
-      <svg viewBox="0 0 24 24" aria-hidden="true">
-        <path d="M21.7 3.4 18.4 20c-.2.9-.8 1.1-1.5.7l-4.7-3.5-2.3 2.2c-.3.3-.5.5-1 .5l.4-4.9 8.8-8c.4-.3-.1-.5-.6-.2L6.5 13.6 1.8 12.1c-1-.3-1-1 .2-1.5L20.4 3.2c.9-.3 1.6.2 1.3.2Z" />
-      </svg>
-    );
-  }
-
-  if (type === "whatsapp") {
-    return (
-      <svg viewBox="0 0 24 24" aria-hidden="true">
-        <path d="M12 2a9.7 9.7 0 0 0-8.4 14.6L2.4 22l5.6-1.2A9.8 9.8 0 1 0 12 2Zm0 17.8a7.8 7.8 0 0 1-4-1.1l-.3-.2-3.3.7.7-3.2-.2-.3A7.8 7.8 0 1 1 12 19.8Zm4.4-5.8c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.6.1-.2.3-.7.8-.8 1-.2.2-.3.2-.6.1a6.3 6.3 0 0 1-3.1-2.7c-.2-.3 0-.4.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.1-.6-1.4-.8-1.9-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.1s.9 2.5 1 2.6c.1.2 1.8 2.8 4.4 3.9.6.3 1.1.4 1.5.5.6.2 1.2.2 1.6.1.5-.1 1.4-.6 1.6-1.1.2-.6.2-1 .1-1.1-.1-.1-.3-.2-.5-.3Z" />
-      </svg>
-    );
-  }
-
+  const src = `/images/icons/messengers/${type}.webp`;
   return (
-    <svg viewBox="0 0 24 24" aria-hidden="true">
-      <path d="M12 2.8c5.1 0 9.2 3.6 9.2 8.1S17.1 19 12 19c-.7 0-1.4-.1-2.1-.2l-4.2 2.4.8-3.9A7.6 7.6 0 0 1 2.8 11C2.8 6.4 6.9 2.8 12 2.8Zm-4.2 6.4v4.7h1.5v-2.2l1.6 2.2h1.3l1.6-2.2v2.2h1.5V9.2h-1.4l-2.3 3.1-2.3-3.1H7.8Zm8.7 0v4.7h1.5V9.2h-1.5Z" />
-    </svg>
+    <img src={src} alt="" aria-hidden="true" width="20" height="20" className={styles.messengerIcon} />
   );
 }
