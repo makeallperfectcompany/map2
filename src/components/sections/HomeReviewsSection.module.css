@@ -409,7 +409,7 @@
 @media (max-width: 1120px) {
   .headerGrid { grid-template-columns: 1fr; }
   .summaryCard { min-height: 0; }
-  .summaryVisual { aspect-ratio: 16 / 9; }
+  .summaryVisual { aspect-ratio: 16 / 9; margin-top: -24px; }
   .reviewsGrid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
