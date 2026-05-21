@@ -145,6 +145,14 @@
 
 /* ── Сетка карточек: 4 в ряд ── */
 
+.servicesGridWrap {
+  position: relative;
+}
+
+.scrollHint {
+  display: none;
+}
+
 .servicesGrid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -417,19 +425,20 @@
     -webkit-overflow-scrolling: touch;
   }
 
-  /* ── Градиент-подсказка скролла ── */
-  .servicesGrid::after {
-    content: "";
-    position: sticky;
-    right: 0;
-    top: 0;
-    flex: 0 0 56px;
-    min-width: 56px;
-    align-self: stretch;
-    background: linear-gradient(to right, transparent, rgba(29, 29, 31, 0.92));
-    pointer-events: none;
-    border-radius: 0 16px 16px 0;
-    z-index: 2;
+  .scrollHint {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 4px;
+    margin-top: 12px;
+    color: rgba(255,255,255,0.4);
+    font: 500 12px/1 Onest, Inter, system-ui, sans-serif;
+    animation: hintPulse 2s ease-in-out infinite;
+  }
+
+  @keyframes hintPulse {
+    0%, 100% { opacity: 0.4; }
+    50% { opacity: 0.9; }
   }
 
   .servicesGrid::-webkit-scrollbar {
