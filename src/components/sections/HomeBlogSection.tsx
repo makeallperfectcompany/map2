@@ -29,7 +29,7 @@ export default function HomeBlogSection() {
 
         <div className={styles.postsGrid}>
           {homeBlog.posts.map((post, index) => (
-            <article className={`${styles.postCard} ${index === 0 ? styles.featuredPost : ""}`} key={post.title}>
+            <article className={styles.postCard} key={post.title}>
               <Link className={styles.postLink} href={post.href} aria-label={post.title}>
                 <div className={styles.postVisual} aria-hidden="true">
                   <span className={styles.postNumber}>{String(index + 1).padStart(2, "0")}</span>

@@ -152,8 +152,11 @@
     linear-gradient(180deg, #f5f5f7 0%, #ffffff 100%);
 }
 
-.featuredPost .postVisual {
-  min-height: 220px;
+.postVisual {
+  position: relative;
+  min-height: 180px;
+  border-radius: 20px;
+  overflow: hidden;
   background:
     radial-gradient(circle at 80% 10%, rgba(0, 113, 227, 0.28), transparent 32%),
     linear-gradient(180deg, #1d1d1f 0%, #12151b 100%);
@@ -165,10 +168,6 @@
   top: 26px;
   color: #0071e3;
   font: 820 13px/1 JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, monospace;
-}
-
-.featuredPost .postNumber {
-  color: #69b6ff;
 }
 
 .visualLineOne,
@@ -287,9 +286,8 @@
     grid-template-columns: 0.46fr 0.54fr;
   }
 
-  .postVisual,
-  .featuredPost .postVisual {
-    min-height: 100%;
+  .postVisual {
+    min-height: 120px;
   }
 }
 
@@ -327,9 +325,8 @@
     display: flex;
   }
 
-  .postVisual,
-  .featuredPost .postVisual {
-    min-height: 174px;
+  .postVisual {
+    min-height: 140px;
   }
 
   .postContent {
