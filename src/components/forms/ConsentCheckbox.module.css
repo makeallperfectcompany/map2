@@ -1,1 +1,82 @@
-.consent{display:grid;gap:8px;margin-top:16px}.label{display:grid;grid-template-columns:20px minmax(0,1fr);gap:10px;align-items:flex-start;color:#86868b;font:500 12px/1.45 Onest,Inter,system-ui,sans-serif;letter-spacing:-.01em;cursor:pointer}.label input{position:absolute;inline-size:1px;block-size:1px;opacity:0;pointer-events:none}.box{width:20px;height:20px;border-radius:7px;border:1px solid rgba(29,29,31,.16);background:#fff;box-shadow:0 8px 20px rgba(15,16,20,.04);transition:background 160ms ease,border-color 160ms ease,box-shadow 160ms ease}.label input:checked+.box{border-color:#0071e3;background:#0071e3;box-shadow:0 8px 20px rgba(0,113,227,.16)}.label input:checked+.box::after{content:"";display:block;width:8px;height:5px;margin:5px auto 0;border-left:2px solid #fff;border-bottom:2px solid #fff;transform:rotate(-45deg)}.label input:focus-visible+.box{outline:3px solid rgba(0,113,227,.18);outline-offset:2px}.text a{color:#0071e3;text-decoration:none}.text a:hover{text-decoration:underline}.errorState .box{border-color:rgba(210,54,54,.45)}.error{margin:0;color:#bf3434;font:600 12px/1.35 Onest,Inter,system-ui,sans-serif;letter-spacing:-.01em}@media(max-width:760px){.label{font-size:12px;line-height:1.42}}
+.consent {
+  display: grid;
+  gap: 8px;
+  margin-top: 18px;
+}
+
+.label {
+  display: grid;
+  grid-template-columns: 20px minmax(0, 1fr);
+  gap: 12px;
+  align-items: flex-start;
+  color: #74777d;
+  font: 500 13px/1.42 Onest, Inter, system-ui, sans-serif;
+  letter-spacing: -0.012em;
+  cursor: pointer;
+}
+
+.label input {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.box {
+  width: 20px;
+  height: 20px;
+  border-radius: 6px;
+  border: 1px solid rgba(29, 29, 31, 0.14);
+  background: #ffffff;
+  box-shadow: 0 8px 20px rgba(15, 16, 20, 0.04);
+  transition: background 160ms ease, border-color 160ms ease, box-shadow 160ms ease;
+}
+
+.label input:checked + .box {
+  border-color: #0071e3;
+  background: #0071e3;
+  box-shadow: 0 8px 20px rgba(0, 113, 227, 0.16);
+}
+
+.label input:checked + .box::after {
+  content: "";
+  display: block;
+  width: 8px;
+  height: 5px;
+  margin: 5px auto 0;
+  border-left: 2px solid #ffffff;
+  border-bottom: 2px solid #ffffff;
+  transform: rotate(-45deg);
+}
+
+.label input:focus-visible + .box {
+  outline: 3px solid rgba(0, 113, 227, 0.18);
+  outline-offset: 2px;
+}
+
+.text a {
+  color: #0071e3;
+  text-decoration: none;
+}
+
+.text a:hover {
+  text-decoration: underline;
+}
+
+.errorState .box {
+  border-color: rgba(210, 54, 54, 0.45);
+}
+
+.error {
+  margin: 0;
+  color: #bf3434;
+  font: 650 12px/1.35 Onest, Inter, system-ui, sans-serif;
+  letter-spacing: -0.01em;
+}
+
+@media (max-width: 760px) {
+  .label {
+    font-size: 12px;
+  }
+}

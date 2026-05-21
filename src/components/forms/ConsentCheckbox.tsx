@@ -12,7 +12,7 @@ export default function ConsentCheckbox({
   checked,
   onChange,
   error,
-  id = "personal-data-consent",
+  id = "consultation-consent",
 }: ConsentCheckboxProps) {
   return (
     <div className={styles.consent}>

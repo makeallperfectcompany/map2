@@ -1,0 +1,518 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: grid;
+  place-items: center;
+  padding: 16px;
+  background: rgba(12, 17, 23, 0.48);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  animation: overlayIn 220ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.modal {
+  position: relative;
+  width: min(100%, 1120px);
+  max-height: calc(100dvh - 32px);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(360px, 0.76fr);
+  overflow: hidden;
+  border-radius: 34px;
+  background: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.76);
+  box-shadow: 0 34px 110px rgba(12, 17, 23, 0.32);
+  animation: modalIn 280ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.closeButton {
+  position: absolute;
+  top: 22px;
+  right: 22px;
+  z-index: 5;
+  width: 42px;
+  height: 42px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: 999px;
+  color: #1d1d1f;
+  background: rgba(255, 255, 255, 0.78);
+  box-shadow: 0 12px 26px rgba(15, 16, 20, 0.06);
+  cursor: pointer;
+  font: 460 28px/1 Onest, Inter, system-ui, sans-serif;
+}
+
+.closeButton:focus-visible {
+  outline: 3px solid rgba(0, 113, 227, 0.22);
+  outline-offset: 2px;
+}
+
+.closeLabel {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+}
+
+.formSide {
+  padding: 34px 38px 30px;
+}
+
+.eyebrow {
+  display: inline-flex;
+  min-height: 34px;
+  align-items: center;
+  gap: 9px;
+  padding: 0 13px;
+  border-radius: 999px;
+  color: #62666d;
+  background: #ffffff;
+  border: 1px solid rgba(29, 29, 31, 0.08);
+  box-shadow: 0 10px 26px rgba(15, 16, 20, 0.035);
+  font: 650 13px/1 Onest, Inter, system-ui, sans-serif;
+  letter-spacing: -0.01em;
+}
+
+.eyebrow span {
+  width: 9px;
+  height: 9px;
+  border-radius: 999px;
+  background: #0071e3;
+  box-shadow: 0 0 16px rgba(0, 113, 227, 0.34);
+}
+
+.formSide h2,
+.statePanel h2 {
+  max-width: 620px;
+  margin: 22px 0 0;
+  color: #1d1d1f;
+  font: 850 clamp(34px, 4vw, 52px)/1.02 Onest, Inter, system-ui, sans-serif;
+  letter-spacing: -0.072em;
+  text-wrap: balance;
+}
+
+.formSide > p,
+.statePanel p {
+  max-width: 570px;
+  margin: 12px 0 0;
+  color: #62666d;
+  font: 450 15px/1.45 Onest, Inter, system-ui, sans-serif;
+  letter-spacing: -0.018em;
+}
+
+.schedule {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 14px;
+  color: #62666d;
+  font: 620 13px/1.35 Onest, Inter, system-ui, sans-serif;
+}
+
+.schedule span {
+  width: 20px;
+  height: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  color: #86868b;
+  border: 1px solid rgba(29, 29, 31, 0.10);
+  font-size: 13px;
+}
+
+.sectionBlock {
+  margin-top: 12px;
+  padding: 16px;
+  border-radius: 20px;
+  background: linear-gradient(180deg, #ffffff 0%, #fbfbfc 100%);
+  border: 1px solid rgba(29, 29, 31, 0.08);
+  box-shadow: 0 14px 34px rgba(15, 16, 20, 0.035);
+}
+
+.formBlock {
+  margin-top: 16px;
+}
+
+.sectionHeading h3 {
+  margin: 0;
+  color: #1d1d1f;
+  font: 780 17px/1.08 Onest, Inter, system-ui, sans-serif;
+  letter-spacing: -0.03em;
+}
+
+.sectionHeading p {
+  margin: 7px 0 0;
+  color: #62666d;
+  font: 500 13px/1.4 Onest, Inter, system-ui, sans-serif;
+  letter-spacing: -0.012em;
+}
+
+.actionGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.actionButton {
+  min-height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 0 12px;
+  border-radius: 14px;
+  color: #1d1d1f;
+  background: #ffffff;
+  border: 1px solid rgba(29, 29, 31, 0.08);
+  box-shadow: 0 10px 24px rgba(15, 16, 20, 0.035);
+  text-decoration: none;
+  font: 760 13px/1 Onest, Inter, system-ui, sans-serif;
+  letter-spacing: -0.01em;
+  transition: transform 160ms ease, border-color 160ms ease, box-shadow 160ms ease;
+}
+
+.actionButton:hover {
+  transform: translateY(-1px);
+  border-color: rgba(0, 113, 227, 0.22);
+  box-shadow: 0 16px 32px rgba(15, 16, 20, 0.055);
+}
+
+.actionButton svg {
+  width: 22px;
+  height: 22px;
+  flex: 0 0 auto;
+  fill: #0071e3;
+}
+
+.form {
+  display: grid;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.field {
+  position: relative;
+  display: grid;
+}
+
+.field span {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+}
+
+.field input {
+  width: 100%;
+  height: 48px;
+  border: 1px solid rgba(29, 29, 31, 0.08);
+  border-radius: 16px;
+  background: #ffffff;
+  color: #1d1d1f;
+  padding: 0 15px;
+  font: 560 14px/1.2 Onest, Inter, system-ui, sans-serif;
+  outline: none;
+  box-shadow: 0 10px 24px rgba(15, 16, 20, 0.025);
+  transition: border-color 160ms ease, box-shadow 160ms ease;
+}
+
+.field input::placeholder {
+  color: #a1a1a6;
+}
+
+.field input:focus {
+  border-color: rgba(0, 113, 227, 0.42);
+  box-shadow: 0 0 0 4px rgba(0, 113, 227, 0.10);
+}
+
+.primaryButton {
+  min-height: 52px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: 16px;
+  color: #ffffff;
+  background: linear-gradient(135deg, #0066d8 0%, #4ea0ff 100%);
+  box-shadow: 0 16px 34px rgba(0, 113, 227, 0.20);
+  cursor: pointer;
+  font: 800 15px/1 Onest, Inter, system-ui, sans-serif;
+  letter-spacing: -0.012em;
+  transition: transform 160ms ease, box-shadow 160ms ease, opacity 160ms ease;
+}
+
+.primaryButton:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 20px 40px rgba(0, 113, 227, 0.24);
+}
+
+.primaryButton:disabled {
+  cursor: default;
+  opacity: 0.72;
+  transform: none;
+}
+
+.formError {
+  margin: 0;
+  color: #bf3434;
+  font: 650 13px/1.4 Onest, Inter, system-ui, sans-serif;
+}
+
+.urgentBox {
+  display: grid;
+  gap: 8px;
+  align-items: start;
+  margin-top: 14px;
+  min-height: 62px;
+  padding: 14px 16px;
+  border-radius: 18px;
+  background: linear-gradient(180deg, #ffffff 0%, #fbfbfc 100%);
+  border: 1px solid rgba(29, 29, 31, 0.08);
+  box-shadow: 0 12px 28px rgba(15, 16, 20, 0.035);
+}
+
+.urgentBox span {
+  color: #62666d;
+  font: 680 13px/1.3 Onest, Inter, system-ui, sans-serif;
+}
+
+.urgentBox a {
+  color: #1d1d1f;
+  text-decoration: none;
+  font: 820 20px/1.12 Onest, Inter, system-ui, sans-serif;
+  letter-spacing: -0.04em;
+}
+
+.visualSide {
+  position: relative;
+  min-height: 100%;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 70% 20%, rgba(0, 113, 227, 0.08), transparent 28%),
+    linear-gradient(180deg, #f7f8fa 0%, #eef1f5 100%);
+  border-left: 1px solid rgba(29, 29, 31, 0.06);
+}
+
+.visualSurface {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  border-radius: 0 34px 34px 0;
+}
+
+.visualSurface::before,
+.visualSurface::after {
+  content: "";
+  position: absolute;
+  inset: auto -20% 12% -20%;
+  height: 40%;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.95);
+  box-shadow: 0 -18px 60px rgba(255, 255, 255, 0.82);
+  transform: rotate(-8deg);
+}
+
+.visualSurface::after {
+  inset: 4% -28% auto -12%;
+  height: 34%;
+  transform: rotate(-16deg);
+  opacity: 0.72;
+}
+
+.logoImage {
+  position: absolute;
+  width: 68%;
+  height: auto;
+  right: 12%;
+  top: 20%;
+  object-fit: contain;
+  filter:
+    drop-shadow(0 30px 42px rgba(31, 55, 83, 0.12))
+    drop-shadow(0 2px 8px rgba(255, 255, 255, 0.8));
+}
+
+.statePanel {
+  grid-column: 1 / -1;
+  min-height: 560px;
+  display: grid;
+  place-items: center;
+  align-content: center;
+  padding: 56px;
+  text-align: center;
+}
+
+.successIcon {
+  width: 72px;
+  height: 72px;
+  margin-bottom: 4px;
+  border-radius: 999px;
+  background: radial-gradient(circle at 30% 20%, #7fbfff, #0071e3);
+  box-shadow: 0 20px 44px rgba(0, 113, 227, 0.22);
+}
+
+.successIcon::after {
+  content: "";
+  display: block;
+  width: 26px;
+  height: 14px;
+  margin: 24px auto 0;
+  border-left: 4px solid #ffffff;
+  border-bottom: 4px solid #ffffff;
+  transform: rotate(-45deg);
+}
+
+.statePanel .primaryButton {
+  width: min(100%, 260px);
+  margin-top: 28px;
+}
+
+@keyframes overlayIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes modalIn {
+  from { opacity: 0; transform: translateY(18px) scale(0.98); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@media (max-width: 1020px) {
+  .modal {
+    grid-template-columns: 1fr;
+  }
+
+  .visualSide {
+    min-height: 320px;
+    border-left: 0;
+    border-top: 1px solid rgba(29, 29, 31, 0.06);
+  }
+
+  .visualSurface {
+    border-radius: 0 0 34px 34px;
+  }
+
+  .logoImage {
+    width: min(54%, 360px);
+    top: 7%;
+    right: 22%;
+  }
+}
+
+@media (max-width: 700px) {
+  .overlay {
+    align-items: end;
+    padding: 10px;
+  }
+
+  .modal {
+    width: 100%;
+    max-height: calc(100dvh - 20px);
+    border-radius: 28px;
+  }
+
+  .formSide {
+    padding: 30px 20px 20px;
+  }
+
+  .formSide h2,
+  .statePanel h2 {
+    font-size: 30px;
+    line-height: 1.04;
+  }
+
+  .formSide > p,
+  .statePanel p {
+    font-size: 15px;
+  }
+
+  .closeButton {
+    top: 12px;
+    right: 12px;
+  }
+
+  .actionGrid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .actionButton {
+    min-height: 54px;
+  }
+
+  .visualSide {
+    display: none;
+  }
+
+  .logoImage {
+    width: min(70%, 300px);
+    top: 8%;
+    right: 14%;
+  }
+
+  .urgentBox a {
+    font-size: 20px;
+  }
+
+  .statePanel {
+    min-height: 460px;
+    padding: 34px 22px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .overlay,
+  .modal,
+  .primaryButton,
+  .actionButton,
+  .field input {
+    animation: none;
+    transition: none;
+  }
+}
+
+
+@media (max-height: 780px) and (min-width: 701px) {
+  .formSide {
+    padding: 28px 34px 26px;
+  }
+
+  .formSide h2,
+  .statePanel h2 {
+    margin-top: 16px;
+    font-size: 42px;
+  }
+
+  .formSide > p,
+  .statePanel p {
+    margin-top: 9px;
+    font-size: 14px;
+  }
+
+  .schedule {
+    margin-top: 10px;
+  }
+
+  .sectionBlock {
+    margin-top: 12px;
+    padding: 14px;
+  }
+
+  .field input {
+    height: 44px;
+  }
+
+  .primaryButton {
+    min-height: 48px;
+  }
+
+  .urgentBox {
+    margin-top: 10px;
+    min-height: 56px;
+    padding: 12px 14px;
+  }
+}
