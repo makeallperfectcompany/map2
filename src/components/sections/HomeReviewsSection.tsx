@@ -117,6 +117,20 @@ export default function HomeReviewsSection() {
               Мы не обещаем магию и не прячем работу за красивыми отчётами. Показываем,
               что делаем, почему это важно и как каждый шаг влияет на заявки, продажи и рост бизнеса.
             </p>
+            <a
+              href="https://yandex.ru/maps/org/make_all_perfect/190852529964/reviews/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.yandexRatingLinkHeader}
+            >
+              <img
+                src="/images/yandex-rating.webp"
+                alt="Рейтинг Make All Perfect на Яндекс Картах — 4.9"
+                loading="lazy"
+                decoding="async"
+                className={styles.yandexRatingImgHeader}
+              />
+            </a>
           </div>
 
           <aside className={styles.summaryCard}>
@@ -139,20 +153,6 @@ export default function HomeReviewsSection() {
                 Смотреть все отзывы →
               </a>
             </div>
-            <a
-              href="https://yandex.ru/maps/org/make_all_perfect/190852529964/reviews/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.yandexRatingLink}
-            >
-              <img
-                src="/images/yandex-rating.webp"
-                alt="Рейтинг Make All Perfect на Яндекс Картах — 4.9"
-                loading="lazy"
-                decoding="async"
-                className={styles.yandexRatingImg}
-              />
-            </a>
           </aside>
         </div>
 
