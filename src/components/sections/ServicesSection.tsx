@@ -43,8 +43,7 @@ export default function ServicesSection() {
           </div>
         </div>
 
-        <div className={styles.servicesGridWrap}>
-          <div className={styles.servicesGrid} aria-label="Ключевые направления услуг">
+        <div className={styles.servicesGrid} aria-label="Ключевые направления услуг">
           {serviceGroups.map((service) => (
             <article className={styles.serviceCard} key={service.title}>
               {/* Зона 1: Лейбл */}
