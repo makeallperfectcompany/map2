@@ -1,13 +1,6 @@
 import { cases } from "@/content/cases";
 import styles from "./CasesSection.module.css";
 
-const summary = [
-  "30+ проектов в работе и развитии",
-  "5 направлений в одной системе",
-  "SEO, реклама, дизайн, контент и аналитика",
-  "От стратегии до масштабирования",
-];
-
 export default function CasesSection() {
   return (
     <section className={styles.casesSection} id="cases" aria-labelledby="cases-title">
@@ -72,14 +65,6 @@ export default function CasesSection() {
           </div>
         </div>
 
-        <div className={styles.summaryRail} aria-label="Общие преимущества работы">
-          {summary.map((item, index) => (
-            <div className={styles.summaryItem} key={item}>
-              <span>{String(index + 1).padStart(2, "0")}</span>
-              <strong>{item}</strong>
-            </div>
-          ))}
-        </div>
       </div>
     </section>
   );
