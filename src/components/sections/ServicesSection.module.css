@@ -355,7 +355,7 @@
   .servicesSection {
     margin: 0 12px;
     border-radius: 24px;
-    padding: 72px 16px 48px;
+    padding: 48px 16px 40px;
   }
 
   .container {
@@ -365,16 +365,16 @@
   }
 
   .servicesIntro {
-    margin-bottom: 30px;
+    margin-bottom: 24px;
   }
 
   .servicesIntro h2 {
-    font-size: 38px;
+    font-size: 34px;
     line-height: 1.02;
   }
 
   .introRight p {
-    font-size: 15px;
+    font-size: 14px;
   }
 
   .factsRow {
@@ -405,13 +405,14 @@
     width: 100%;
   }
 
+  /* ── Горизонтальный скролл карточек ── */
   .servicesGrid {
     display: flex;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
-    gap: 12px;
-    padding: 2px 18px 16px;
-    margin: 0 -18px;
+    gap: 10px;
+    padding: 4px 4px 16px;
+    margin: 0 -4px;
     -webkit-overflow-scrolling: touch;
   }
 
@@ -419,32 +420,70 @@
     display: none;
   }
 
+  /* ── Карточка: 280px, компактная ── */
   .serviceCard {
-    flex: 0 0 min(320px, 80vw);
+    flex: 0 0 280px;
     scroll-snap-align: start;
+    padding: 14px 12px 12px;
+    gap: 6px;
+    border-radius: 16px;
   }
 
-  .serviceCard {
-    padding: 16px 14px 12px;
-    gap: 6px;
+  .cardEyebrow {
+    min-height: 22px;
+    height: 22px;
+    font-size: 10px;
   }
 
   .serviceCard h3 {
-    font-size: 25px;
-    min-height: 72px;
+    font-size: 22px;
+    line-height: 1.08;
+    min-height: 58px;
   }
 
   .bigMark {
-    font-size: 46px;
-    min-height: 40px;
-    height: 40px;
+    font-size: 40px;
+    min-height: 36px;
+    height: 36px;
   }
 
   .serviceCard:nth-child(1) .bigMark {
-    font-size: 50px;
+    font-size: 44px;
   }
 
   .serviceCard p {
+    font-size: 12px;
+    line-height: 1.5;
+    min-height: 0;
+  }
+
+  /* ── Чипсы: 2 строки, мелкий размер ── */
+  .chips {
+    max-height: 72px;
+    overflow: hidden;
+    gap: 5px;
+  }
+
+  .chips span,
+  .chips .chipLink {
+    min-height: 24px;
+    padding: 0 8px;
+    font-size: 11px;
+    white-space: normal;
+    word-break: break-word;
+  }
+
+  /* ── Футер: компактнее ── */
+  .cardBottom {
+    padding-top: 8px;
+    gap: 8px;
+  }
+
+  .cardBottom span {
+    font-size: 11px;
+  }
+
+  .cardBottom a {
     font-size: 13px;
   }
 
@@ -455,11 +494,13 @@
 
 @media (max-width: 430px) {
   .servicesSection {
-    padding: 72px 12px 48px;
+    margin: 0 8px;
+    border-radius: 20px;
+    padding: 40px 12px 32px;
   }
 
   .servicesIntro h2 {
-    font-size: 30px;
+    font-size: 28px;
   }
 
   .factsRow {
@@ -467,47 +508,7 @@
   }
 
   .factValue {
-    font-size: 18px;
-  }
-
-  .serviceCard {
-    padding: 14px 12px 10px;
-    gap: 5px;
-  }
-
-  .cardEyebrow {
-    min-height: 24px;
-    height: 24px;
-    font-size: 10px;
-  }
-
-  .serviceCard h3 {
-    font-size: 22px;
-    line-height: 1.08;
-    min-height: 70px;
-  }
-
-  .bigMark {
-    font-size: 38px;
-    min-height: 36px;
-    height: 36px;
-  }
-
-  .serviceCard:nth-child(1) .bigMark {
-    font-size: 42px;
-  }
-
-  .serviceCard p {
-    font-size: 12px;
-    line-height: 1.5;
-    min-height: 54px;
-  }
-
-  .chips span,
-  .chips .chipLink {
-    min-height: 26px;
-    padding: 0 8px;
-    font-size: 11px;
+    font-size: 17px;
   }
 }
 
