@@ -1,4 +1,3 @@
-import OpenConsultationButton from "@/components/forms/OpenConsultationButton";
 import styles from "./NotFoundPageSection.module.css";
 
 export default function NotFoundPageSection() {
@@ -18,20 +17,11 @@ export default function NotFoundPageSection() {
             <h1 id="not-found-title">Не нашли эту страницу</h1>
             <p>
               Похоже, адрес изменился, ссылка устарела или раздел был перенесён.
-              Вернитесь на главную, откройте кейсы или напишите нам — поможем
-              быстро найти нужную информацию.
+              Вернитесь на главную — поможем быстро найти нужную информацию.
             </p>
 
             <div className={styles.actions}>
               <a href="/">На главную</a>
-              <a href="/cases">Смотреть кейсы</a>
-              <OpenConsultationButton as="a" href="/contacts">Связаться</OpenConsultationButton>
-            </div>
-
-            <div className={styles.quickLinks} aria-label="Быстрые ссылки">
-              <a href="/services">Услуги</a>
-              <a href="/blog">Блог</a>
-              <a href="/about">О нас</a>
             </div>
           </div>
         </div>

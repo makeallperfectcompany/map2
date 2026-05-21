@@ -75,61 +75,24 @@
 }
 
 .actions a {
-  min-height: 54px;
+  min-height: 62px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0 24px;
-  border-radius: 16px;
+  padding: 0 48px;
+  border-radius: 20px;
   text-decoration: none;
-  font: 760 15px/1 Onest, Inter, system-ui, sans-serif;
+  font: 780 18px/1 Onest, Inter, system-ui, sans-serif;
+  letter-spacing: -0.01em;
+  color: #ffffff;
+  background: linear-gradient(135deg, #0f4fae 0%, #4f92ef 100%);
+  box-shadow: 0 18px 40px rgba(0, 113, 227, 0.22);
   transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease;
 }
 
-.actions a:first-child {
-  color: #ffffff;
-  background: linear-gradient(135deg, #0f4fae 0%, #4f92ef 100%);
-  box-shadow: 0 14px 30px rgba(0, 113, 227, 0.16);
-}
-
-.actions a:nth-child(2) {
-  color: #1d1d1f;
-  background: rgba(255, 255, 255, 0.82);
-  border: 1px solid rgba(29, 29, 31, 0.08);
-  box-shadow: 0 10px 22px rgba(15, 16, 20, 0.04);
-}
-
-.actions a:nth-child(3) {
-  color: #3e4652;
-  background: transparent;
-  border: 1px solid transparent;
-  padding-left: 8px;
-  padding-right: 8px;
-}
-
 .actions a:hover {
-  transform: translateY(-2px);
-}
-
-.quickLinks {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-top: 26px;
-}
-
-.quickLinks a {
-  min-height: 36px;
-  display: inline-flex;
-  align-items: center;
-  padding: 0 13px;
-  border-radius: 999px;
-  color: #244980;
-  background: rgba(255, 255, 255, 0.70);
-  border: 1px solid rgba(0, 113, 227, 0.10);
-  text-decoration: none;
-  font: 720 13px/1 Onest, Inter, system-ui, sans-serif;
-  box-shadow: 0 10px 24px rgba(15,16,20,0.03);
+  transform: translateY(-3px);
+  box-shadow: 0 24px 48px rgba(0, 113, 227, 0.30);
 }
 
 .glassCardOne,
@@ -236,17 +199,5 @@
 
   .content p { font-size: 16px; }
 
-  .actions,
-  .actions a { width: 100%; }
-
-  .actions a:nth-child(3) {
-    width: auto;
-    justify-content: flex-start;
-    padding-left: 0;
-  }
-
-  .quickLinks a {
-    flex: 1 1 auto;
-    justify-content: center;
-  }
+  .actions a { width: auto; }
 }
