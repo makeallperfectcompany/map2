@@ -57,8 +57,8 @@
 }
 
 .formSide {
-  padding: 30px 32px 26px;
-  overflow: hidden;
+  padding: 30px 32px 30px;
+  overflow: visible;
 }
 
 .eyebrow {
@@ -138,9 +138,9 @@
   background: none;
   text-decoration: none;
   border-radius: 10px;
-  overflow: hidden;
   width: 100px;
   height: 34px;
+  padding: 2px;
   transition: transform 160ms ease;
 }
 
