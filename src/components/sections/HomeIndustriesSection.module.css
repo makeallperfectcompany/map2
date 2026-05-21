@@ -188,18 +188,17 @@
 }
 
 .cardIcon {
-  width: 120px;
-  height: 120px;
+  width: 96px;
+  height: 96px;
   display: grid;
   place-items: center;
 }
 
 .cardIcon img {
-  width: 120px;
-  height: 120px;
+  width: 96px;
+  height: 96px;
   object-fit: contain;
   display: block;
-  border-radius: 24px;
 }
 
 .industryCard h3 {
