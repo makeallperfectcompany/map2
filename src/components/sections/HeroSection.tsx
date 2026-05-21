@@ -20,7 +20,7 @@ export default function HeroSection() {
       <div className={styles.heroInner}>
         <div className={styles.left}>
           <h1 className={styles.heroTitle}>
-            Продвижение сайтов для брендов, которые хотят <AnimatedWord />
+            Продвижение сайтов и брендов, которые хотят <AnimatedWord />
           </h1>
 
           <p className={styles.heroLead}>
