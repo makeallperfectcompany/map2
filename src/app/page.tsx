@@ -4,6 +4,7 @@ import MobileBrandDivider from "@/components/sections/MobileBrandDivider";
 import ServicesSection from "@/components/sections/ServicesSection";
 import HomeAdvantagesSection from "@/components/sections/HomeAdvantagesSection";
 import CasesSection from "@/components/sections/CasesSection";
+import HomeReviewsSection from "@/components/sections/HomeReviewsSection";
 
 export const metadata: Metadata = {
   title: "Make All Perfect — маркетинг полного цикла",
@@ -44,6 +45,7 @@ export default function HomePage() {
       <ServicesSection />
       <HomeAdvantagesSection />
       <CasesSection />
+      <HomeReviewsSection />
     </main>
   );
 }
