@@ -29,11 +29,6 @@ export default function HomeAboutSection() {
                 playsInline
                 aria-label="Видео о Make All Perfect"
               />
-
-              <div className={styles.videoCaption}>
-                <span>{homeAbout.video.title}</span>
-                <p>{homeAbout.video.caption}</p>
-              </div>
             </div>
 
             <div className={styles.bullets}>
