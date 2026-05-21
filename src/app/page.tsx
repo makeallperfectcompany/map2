@@ -7,6 +7,7 @@ import HomeIndustriesSection from "@/components/sections/HomeIndustriesSection";
 import HomeTechnologiesSection from "@/components/sections/HomeTechnologiesSection";
 import HomeAboutSection from "@/components/sections/HomeAboutSection";
 import HomeBlogSection from "@/components/sections/HomeBlogSection";
+import HomeFaqSection from "@/components/sections/HomeFaqSection";
 import CasesSection from "@/components/sections/CasesSection";
 import HomeReviewsSection from "@/components/sections/HomeReviewsSection";
 
@@ -54,6 +55,7 @@ export default function HomePage() {
       <HomeTechnologiesSection />
       <HomeAboutSection />
       <HomeBlogSection />
+      <HomeFaqSection />
     </main>
   );
 }
