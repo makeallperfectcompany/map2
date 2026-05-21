@@ -120,17 +120,25 @@ export default function HomeReviewsSection() {
           </div>
 
           <aside className={styles.summaryCard}>
-            <div className={styles.summaryGlow} aria-hidden="true" />
-            <span>Client trust</span>
-            <h3>Не просто «всё понравилось»</h3>
-            <p>
-              На главной показываем избранные отзывы. Все отзывы хранятся в одном файле,
-              поэтому этот блок и страница отзывов могут использовать общий источник данных.
-            </p>
-
-            <a className={styles.allReviewsLink} href="/reviews">
-              Смотреть все отзывы
-            </a>
+            <div className={styles.summaryVisual} aria-hidden="true">
+              <img
+                src="/images/home/reviews/summary-visual.webp"
+                alt=""
+                className={styles.summaryVisualImg}
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div className={styles.summaryContent}>
+              <span>Social proof</span>
+              <h3>Доверие нельзя купить — его надо заработать</h3>
+              <p>
+                Каждый отзыв — это реальный проект, измеримый результат и человек, который доверил нам свой бизнес.
+              </p>
+              <a className={styles.allReviewsLink} href="/reviews">
+                Смотреть все отзывы →
+              </a>
+            </div>
           </aside>
         </div>
 
