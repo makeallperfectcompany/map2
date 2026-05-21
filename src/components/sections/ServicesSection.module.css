@@ -46,9 +46,11 @@
 .servicesIntro h2 {
   max-width: 720px;
   margin: 28px 0 0;
-  font: 850 clamp(46px, 5.8vw, 82px)/0.98 Onest, Inter, system-ui, sans-serif;
-  letter-spacing: -0.076em;
+  font: 800 clamp(46px, 5.8vw, 82px)/0.98 Onest, Inter, system-ui, sans-serif;
+  letter-spacing: -0.03em;
   text-wrap: balance;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .servicesIntro h2 span {
