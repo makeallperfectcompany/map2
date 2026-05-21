@@ -164,6 +164,7 @@
 }
 
 .industryCard {
+  position: relative;
   min-height: 384px;
   display: flex;
   flex-direction: column;
@@ -176,39 +177,39 @@
 
 .cardTop {
   display: flex;
-  align-items: flex-start;
-  gap: 12px;
+  flex-direction: column;
+  gap: 10px;
+  padding-right: 108px; /* leave room for the icon */
 }
 
 .cardNumber {
   color: #0071e3;
   font: 780 13px/1 JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, monospace;
   letter-spacing: -0.01em;
-  flex-shrink: 0;
-  padding-top: 4px;
 }
 
 .cardTop h3 {
-  flex: 1;
   margin: 0;
   color: #1d1d1f;
-  font: 820 28px/1.06 Onest, Inter, system-ui, sans-serif;
-  letter-spacing: -0.058em;
-  text-wrap: balance;
-  min-width: 0;
+  font: 820 26px/1.12 Onest, Inter, system-ui, sans-serif;
+  letter-spacing: -0.052em;
+  overflow-wrap: break-word;
+  hyphens: auto;
 }
 
 .cardIcon {
-  width: 96px;
-  height: 96px;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  width: 80px;
+  height: 80px;
   display: grid;
   place-items: center;
-  flex-shrink: 0;
 }
 
 .cardIcon img {
-  width: 96px;
-  height: 96px;
+  width: 80px;
+  height: 80px;
   object-fit: contain;
   display: block;
 }
@@ -297,18 +298,25 @@
     border-radius: 26px;
   }
 
+  .cardTop {
+    padding-right: 92px;
+  }
+
   .cardTop h3 {
-    font-size: 24px;
+    font-size: 22px;
+    line-height: 1.14;
   }
 
   .cardIcon {
-    width: 80px;
-    height: 80px;
+    top: 24px;
+    right: 24px;
+    width: 72px;
+    height: 72px;
   }
 
   .cardIcon img {
-    width: 80px;
-    height: 80px;
+    width: 72px;
+    height: 72px;
   }
 }
 
@@ -321,17 +329,22 @@
     font-size: 26px;
   }
 
+  .cardTop {
+    padding-right: 76px;
+  }
+
   .cardTop h3 {
-    font-size: 22px;
+    font-size: 20px;
+    line-height: 1.15;
   }
 
   .cardIcon {
-    width: 76px;
-    height: 76px;
+    width: 64px;
+    height: 64px;
   }
 
   .cardIcon img {
-    width: 76px;
-    height: 76px;
+    width: 64px;
+    height: 64px;
   }
 }
