@@ -137,7 +137,7 @@ export default function ConsultationPopup({ isOpen, onClose }: ConsultationPopup
               <p id={descriptionId}>{consultationPopup.description}</p>
 
               <div className={styles.schedule}>
-                <span aria-hidden="true">◷</span>
+                <img className={styles.scheduleIcon} src="/images/icons/clock-icon.webp" alt="" aria-hidden="true" width="18" height="18" />
                 {consultationPopup.schedule}
               </div>
 

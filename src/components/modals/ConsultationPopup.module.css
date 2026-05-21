@@ -117,16 +117,11 @@
   font: 620 13px/1.35 Onest, Inter, system-ui, sans-serif;
 }
 
-.schedule span {
+.scheduleIcon {
   width: 18px;
   height: 18px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 999px;
-  color: #86868b;
-  border: 1px solid rgba(29, 29, 31, 0.10);
-  font-size: 11px;
+  flex: 0 0 auto;
+  display: block;
 }
 
 .messengerBlock {
