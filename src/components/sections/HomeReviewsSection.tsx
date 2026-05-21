@@ -40,6 +40,13 @@ function ReviewPopup({ review, onClose }: { review: ReviewItem; onClose: () => v
         <button type="button" className={styles.closeButton} onClick={onClose} aria-label="Закрыть">
           ✕
         </button>
+        <div className={styles.popupStars} aria-label="Оценка 5 из 5">
+          <StarIcon />
+          <StarIcon />
+          <StarIcon />
+          <StarIcon />
+          <StarIcon />
+        </div>
         <blockquote>{review.text}</blockquote>
         <footer>
           <Avatar src={"avatar" in review ? review.avatar : undefined} name={name} />
