@@ -173,9 +173,10 @@
 .mobileScroller { display: none; }
 
 .reviewCard {
+  min-height: 380px;
   display: grid;
   grid-template-rows: auto 1fr auto;
-  padding: 26px;
+  padding: 24px 26px 20px;
   border-radius: 30px;
   background: rgba(255, 255, 255, 0.88);
   border: 1px solid rgba(29, 29, 31, 0.065);
@@ -202,22 +203,23 @@
 }
 
 .reviewCard blockquote {
-  margin: 34px 0 30px;
+  margin: 24px 0 24px;
   color: #1d1d1f;
-  font: 720 20px/1.36 Onest, Inter, system-ui, sans-serif;
-  letter-spacing: -0.042em;
+  font: 700 17px/1.45 Onest, Inter, system-ui, sans-serif;
+  letter-spacing: -0.018em;
   display: -webkit-box;
-  -webkit-line-clamp: 8;
+  -webkit-line-clamp: 6;
   -webkit-box-orient: vertical;
   overflow: hidden;
+  min-height: 0;
 }
 
 .reviewCard footer {
   display: grid;
   grid-template-columns: auto 1fr auto;
   align-items: center;
-  gap: 12px;
-  padding-top: 18px;
+  gap: 10px;
+  padding-top: 14px;
   margin-top: 0;
   border-top: 1px solid rgba(29, 29, 31, 0.07);
 }
