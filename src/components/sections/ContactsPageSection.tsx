@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from "react";
 import {
   contactFaq,
   contacts,
@@ -6,9 +9,25 @@ import {
   serviceTopics,
   socialLinks,
 } from "@/content/contacts";
+import ConsentCheckbox, { CONSENT_REQUIRED_ERROR } from "@/components/forms/ConsentCheckbox";
 import styles from "./ContactsPageSection.module.css";
 
 export default function ContactsPageSection() {
+  const [isConsentChecked, setIsConsentChecked] = useState(false);
+  const [consentError, setConsentError] = useState("");
+
+  function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+
+    if (!isConsentChecked) {
+      setConsentError(CONSENT_REQUIRED_ERROR);
+      return;
+    }
+
+    setConsentError("");
+    // Form submit logic (CRM / API) stays here
+  }
+
   return (
     <main className={styles.contactsPage}>
       <section className={styles.hero} aria-labelledby="contacts-title">
@@ -59,7 +78,7 @@ export default function ContactsPageSection() {
               <span>Оставить заявку</span>
               <h2>Коротко опишите задачу — мы вернёмся с понятным следующим шагом</h2>
 
-              <form className={styles.contactForm}>
+              <form className={styles.contactForm} onSubmit={handleSubmit}>
                 <label>
                   <span>Имя</span>
                   <input type="text" name="name" placeholder="Как к вам обращаться" />
@@ -86,11 +105,16 @@ export default function ContactsPageSection() {
                   ))}
                 </div>
 
-                <button type="submit">Отправить заявку</button>
+                <ConsentCheckbox
+                  checked={isConsentChecked}
+                  onChange={(checked) => {
+                    setIsConsentChecked(checked);
+                    if (checked) setConsentError("");
+                  }}
+                  error={consentError}
+                />
 
-                <small>
-                  Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности.
-                </small>
+                <button type="submit">Отправить заявку</button>
               </form>
             </div>
 
