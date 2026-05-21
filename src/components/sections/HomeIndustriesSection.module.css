@@ -144,11 +144,32 @@
   text-wrap: balance;
 }
 
-.mainCardContent p {
-  margin: 14px 0 0;
+.mainCardBullets {
+  list-style: none;
+  margin: 16px 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.mainCardBullet {
+  position: relative;
+  padding-left: 22px;
   color: rgba(255, 255, 255, 0.72);
-  font: 500 17px/1.5 Onest, Inter, system-ui, sans-serif;
+  font: 500 16px/1.5 Onest, Inter, system-ui, sans-serif;
   letter-spacing: -0.014em;
+}
+
+.mainCardBullet::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #a7ccfb;
 }
 
 .mainCardStats {

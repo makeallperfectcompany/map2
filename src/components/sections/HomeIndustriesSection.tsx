@@ -22,7 +22,11 @@ export default function HomeIndustriesSection() {
             <div className={styles.mainCardContent}>
               <span className={styles.mainCardKicker}>{homeIndustries.mainCard.label}</span>
               <h3>{homeIndustries.mainCard.title}</h3>
-              <p>{homeIndustries.mainCard.text}</p>
+              <ul className={styles.mainCardBullets}>
+                {homeIndustries.mainCard.bullets.slice(1).map((bullet) => (
+                  <li key={bullet} className={styles.mainCardBullet}>{bullet}</li>
+                ))}
+              </ul>
 
               <ul className={styles.mainCardStats}>
                 {homeIndustries.mainCard.stats.map((stat) => (
