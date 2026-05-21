@@ -1,8 +1,3 @@
-/* ═══════════════════════════════════════════════════════════
-   ServicesSection — 4 карточки с фиксированной сеткой
-   ТЗ от 21.05.2026
-   ═══════════════════════════════════════════════════════════ */
-
 .servicesSection {
   position: relative;
   margin: 0 24px;
@@ -20,8 +15,6 @@
   margin: 0 auto;
   padding: 0;
 }
-
-/* ── Верхняя секция (интро) ── */
 
 .servicesIntro {
   display: grid;
@@ -123,185 +116,156 @@
 .introActions a:last-child:hover { color: #ffffff; }
 .introActions a:last-child:hover::after { transform: scaleX(1); }
 
-/* ── Сетка карточек ── */
-
 .servicesGrid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 14px;
-  align-items: start;
+  align-items: stretch;
 }
 
-/* ── Карточка: фиксированная сетка ── */
-
 .serviceCard {
-  --accent: #6FB7FF;
-
-  display: grid;
-  grid-template-rows: 24px 62px 36px 94px 56px auto;
-  row-gap: 8px;
-  padding: 14px 12px 12px;
+  position: relative;
+  min-height: 440px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding: 24px 22px;
   border-radius: 20px;
   background: #2A2A2C;
-  border: 0.5px solid rgba(255, 255, 255, 0.075);
+  border: 1px solid rgba(255, 255, 255, 0.075);
   box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, 0.045),
     0 22px 70px rgba(0, 0, 0, 0.18);
-  transition: transform 180ms ease, border-color 180ms ease, border-width 180ms ease, padding 180ms ease;
-  text-decoration: none;
+  transition: transform 240ms ease, border-color 240ms ease, box-shadow 240ms ease;
 }
 
-/* ── Секция 1: Бейдж (24px) ── */
+.serviceCard:hover {
+  transform: translateY(-4px);
+  border-color: rgba(111, 183, 255, 0.22);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.06),
+    0 30px 86px rgba(0, 0, 0, 0.26);
+}
 
-.badge {
-  height: 24px;
-  display: inline-flex;
-  align-items: center;
-  gap: 7px;
-  padding: 3px 7px;
-  border: 0.5px solid rgba(255, 255, 255, 0.10);
-  border-radius: 999px;
-  color: rgba(255, 255, 255, 0.52);
-  font: 760 11px/1 JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, monospace;
+.featuredCard {
+  background: linear-gradient(135deg, #1A3A6E 0%, #0A1F3D 100%);
+  border-color: rgba(111, 183, 255, 0.18);
+}
+
+.cardEyebrow {
+  color: rgba(255, 255, 255, 0.42);
+  font: 760 12px/1 JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, monospace;
   text-transform: uppercase;
-  letter-spacing: 0.10em;
-  justify-self: start;
-  white-space: nowrap;
+  letter-spacing: 0.12em;
 }
 
-.badge::before {
-  content: "";
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: var(--accent);
-  flex-shrink: 0;
-}
-
-/* ── Секция 2: Заголовок (62px) ── */
-
-.titleSlot {
-  height: 62px;
-  overflow: hidden;
-}
-
-.titleSlot h3 {
-  margin: 0;
+.serviceCard h3 {
+  margin: 30px 0 0;
+  max-width: 430px;
   color: #ffffff;
-  font: 850 clamp(18px, 1.4vw, 20px)/1.4 Onest, Inter, system-ui, sans-serif;
-  letter-spacing: -0.04em;
+  font: 850 33px/1.04 Onest, Inter, system-ui, sans-serif;
+  letter-spacing: -0.062em;
 }
 
-.titleSlot h3 span {
+.serviceCard h3 span {
   display: block;
-  color: rgba(255, 255, 255, 0.48);
-  font-weight: 440;
+  color: rgba(255, 255, 255, 0.52);
 }
 
-/* ── Секция 3: Аббревиатура (36px) ── */
-
-.abbreviation {
-  height: 36px;
-  display: flex;
-  align-items: center;
-  color: var(--accent);
-  font: 850 30px/1 Onest, Inter, system-ui, sans-serif;
-  letter-spacing: -0.06em;
+.bigMark {
+  margin-top: 26px;
+  color: #6FB7FF;
+  font: 850 72px/0.9 Onest, Inter, system-ui, sans-serif;
+  letter-spacing: -0.075em;
 }
 
-/* ── Секция 4: Описание (94px) ── */
-
-.descriptionSlot {
-  height: 94px;
-  overflow: hidden;
+.featuredCard .bigMark {
+  color: #ffffff;
+  font-size: 80px;
 }
 
-.descriptionSlot p {
-  margin: 0;
-  color: rgba(255, 255, 255, 0.56);
-  font: 430 14px/1.55 Onest, Inter, system-ui, sans-serif;
+.serviceCard p {
+  max-width: 440px;
+  margin: 24px 0 0;
+  color: rgba(255, 255, 255, 0.60);
+  font: 430 15px/1.6 Onest, Inter, system-ui, sans-serif;
   letter-spacing: -0.012em;
 }
 
-/* ── Секция 5: Теги (56px) ── */
-
-.tagsSlot {
-  height: 56px;
-  overflow: hidden;
+.chips {
   display: flex;
   flex-wrap: wrap;
   align-content: flex-start;
-  gap: 6px;
+  gap: 8px;
+  margin-top: 24px;
+  min-height: 78px;
 }
 
-.tagsSlot span {
-  min-height: 27px;
+.chips span,
+.chips .chipLink {
+  min-height: 31px;
   display: inline-flex;
   align-items: center;
-  padding: 0 9px;
+  padding: 0 10px;
   border-radius: 999px;
-  color: rgba(255, 255, 255, 0.72);
+  color: rgba(255, 255, 255, 0.78);
   background: rgba(255, 255, 255, 0.066);
-  border: 1px solid rgba(255, 255, 255, 0.065);
-  font: 640 11px/1 Onest, Inter, system-ui, sans-serif;
+  border: 1px solid rgba(255, 255, 255, 0.075);
+  font: 650 12px/1 Onest, Inter, system-ui, sans-serif;
   white-space: nowrap;
+  text-decoration: none;
+  transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
 }
 
-/* ── Секция 6: Футер (auto) ── */
+.chips .chipLink:hover {
+  background: rgba(255, 255, 255, 0.13);
+  border-color: rgba(255, 255, 255, 0.20);
+  color: #ffffff;
+  transform: translateY(-1px);
+}
 
-.footer {
+.chips .chipLink:focus-visible {
+  outline: 2px solid #6FB7FF;
+  outline-offset: 2px;
+}
+
+.featuredCard .chips span,
+.featuredCard .chipLink {
+  background: rgba(255, 255, 255, 0.09);
+  border-color: rgba(255, 255, 255, 0.10);
+}
+
+.featuredCard .chipLink:hover {
+  background: rgba(255, 255, 255, 0.18);
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
+.cardBottom {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 10px;
-  padding-top: 9px;
-  border-top: 0.5px solid rgba(255, 255, 255, 0.08);
+  gap: 14px;
+  margin-top: auto;
+  padding-top: 26px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-.price {
-  color: rgba(255, 255, 255, 0.40);
-  font: 700 12px/1 JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, monospace;
+.cardBottom span {
+  color: rgba(255, 255, 255, 0.42);
+  font: 700 13px/1 JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, monospace;
   text-transform: uppercase;
   letter-spacing: 0.04em;
-  white-space: nowrap;
-  flex-shrink: 0;
 }
 
-.cta {
-  color: var(--accent);
+.cardBottom a {
+  color: #6FB7FF;
+  text-decoration: none;
   font: 780 14px/1 Onest, Inter, system-ui, sans-serif;
   letter-spacing: -0.01em;
-  text-decoration: none;
-  flex-shrink: 0;
-  display: inline-flex;
-  align-items: center;
-  gap: 3px;
 }
 
-/* ── Состояния ── */
-
-/* hover */
-.serviceCard:hover {
-  transform: translateY(-2px);
-  border-color: rgba(255, 255, 255, 0.18);
-  box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.06),
-    0 28px 78px rgba(0, 0, 0, 0.24);
-}
-
-/* active — border растёт на 1px, padding компенсирует */
-.serviceCard:active {
-  border-width: 1.5px;
-  border-color: var(--accent);
-  padding: 13px 11px 11px;
-}
-
-/* ── Адаптив ── */
-
-@media (max-width: 1199px) {
-  .servicesGrid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
+.featuredCard .cardBottom a {
+  color: #ffffff;
 }
 
 @media (max-width: 1180px) {
@@ -317,7 +281,13 @@
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1024px) {
+  .servicesGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
   .servicesSection {
     margin: 0 12px;
     border-radius: 24px;
@@ -328,6 +298,7 @@
     width: 100%;
     padding: 0;
     margin: 0;
+    border-radius: 0;
   }
 
   .servicesIntro {
@@ -352,73 +323,38 @@
     width: 100%;
   }
 
-  /* горизонтальный скролл-снап */
-  .servicesScroll {
-    display: flex;
-    gap: 12px;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-    padding-bottom: 4px;
-    margin: 0 -18px;
-    padding-left: 18px;
-    padding-right: 18px;
-  }
-
   .servicesGrid {
-    display: contents;
+    grid-template-columns: 1fr;
+    gap: 14px;
   }
 
-  .servicesScroll .serviceCard {
-    flex: 0 0 82vw;
-    max-width: 340px;
-    scroll-snap-align: start;
+  .serviceCard {
+    min-height: auto;
+    padding: 26px;
   }
 
   .serviceCard:hover {
     transform: none;
   }
-}
 
-@media (max-width: 430px) {
-  .servicesSection {
-    padding: 40px 14px 32px;
+  .serviceCard h3 {
+    font-size: 31px;
   }
 
-  .servicesIntro h2 {
-    font-size: 34px;
+  .bigMark {
+    font-size: 62px;
   }
 
-  .serviceCard {
-    grid-template-rows: 24px 58px 34px 90px 52px auto;
-    row-gap: 7px;
-    padding: 12px 10px 10px;
+  .featuredCard .bigMark {
+    font-size: 68px;
   }
 
-  .serviceCard:active {
-    padding: 11px 9px 9px;
+  .chips {
+    min-height: 0;
   }
 
-  .titleSlot {
-    height: 58px;
-  }
-
-  .titleSlot h3 {
-    font-size: 17px;
-    line-height: 1.35;
-  }
-
-  .abbreviation {
-    height: 34px;
-    font-size: 27px;
-  }
-
-  .descriptionSlot {
-    height: 90px;
-  }
-
-  .tagsSlot {
-    height: 52px;
+  .cardBottom {
+    margin-top: 28px;
   }
 }
 
