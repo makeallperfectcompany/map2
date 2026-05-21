@@ -78,8 +78,6 @@ export default function Footer() {
 
         <div className={styles.bottom}>
           <span>© {new Date().getFullYear()} Make All Perfect</span>
-          <Link href="/privacy-policy">Политика конфиденциальности</Link>
-          <Link href="/personal-data-consent">Согласие на обработку персональных данных</Link>
         </div>
       </div>
     </footer>
