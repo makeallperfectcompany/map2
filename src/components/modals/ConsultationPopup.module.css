@@ -325,16 +325,11 @@
   opacity: 0.72;
 }
 
-.logoImage {
-  position: absolute;
-  width: 68%;
-  height: auto;
-  right: 12%;
-  top: 20%;
-  object-fit: contain;
-  filter:
-    drop-shadow(0 30px 42px rgba(31, 55, 83, 0.12))
-    drop-shadow(0 2px 8px rgba(255, 255, 255, 0.8));
+.visualSide {
+  background-image: url("/images/modals/make-all-perfect-glass-logo.webp");
+  background-repeat: no-repeat;
+  background-position: 50% 40%;
+  background-size: 75% auto;
 }
 
 .statePanel {

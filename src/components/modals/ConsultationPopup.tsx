@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { useEffect, useId, useRef, useState } from "react";
 import ConsentCheckbox, { CONSENT_REQUIRED_ERROR } from "@/components/forms/ConsentCheckbox";
 import { consultationPopup } from "@/content/forms/consultationPopup";
@@ -221,16 +220,7 @@ export default function ConsultationPopup({ isOpen, onClose }: ConsultationPopup
             </div>
 
             <aside className={styles.visualSide} aria-hidden="true">
-              <div className={styles.visualSurface}>
-                <Image
-                  className={styles.logoImage}
-                  src="/images/modals/make-all-perfect-glass-logo.png"
-                  alt=""
-                  width={900}
-                  height={900}
-                  priority={false}
-                />
-              </div>
+              <div className={styles.visualSurface} />
             </aside>
           </>
         )}
