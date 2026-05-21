@@ -48,7 +48,7 @@ export default function CasesSection() {
                   ))}
                 </div>
                 <a className={styles.caseLink} href={item.url}>
-                  Разобрать кейс <span>→</span>
+                  Перейти в кейс <span>→</span>
                 </a>
               </div>
             </article>
