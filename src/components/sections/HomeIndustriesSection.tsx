@@ -14,14 +14,15 @@ export default function HomeIndustriesSection() {
           </div>
 
           <aside className={styles.mainCard}>
-            <div className={styles.mainVisualShell} aria-hidden="true">
-              <img className={styles.mainVisualImage} src={homeIndustries.mainCard.image} alt="" />
-            </div>
-
             <div className={styles.mainCardContent}>
-              <span>{homeIndustries.mainCard.label}</span>
+              <span className={styles.mainCardKicker}>{homeIndustries.mainCard.label}</span>
               <h3>{homeIndustries.mainCard.title}</h3>
               <p>{homeIndustries.mainCard.text}</p>
+              <ul className={styles.mainCardStats}>
+                <li><strong>6+</strong><span>отраслей</span></li>
+                <li><strong>120+</strong><span>проектов</span></li>
+                <li><strong>8 лет</strong><span>опыта</span></li>
+              </ul>
             </div>
           </aside>
         </div>
