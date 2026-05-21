@@ -39,8 +39,8 @@ export default function CasesSection() {
               />
             </picture>
             <div className={styles.visualBadge}>
-              <span>12+ направлений</span>
-              <strong>Performance / SEO / Design / Analytics</strong>
+              <span>30+ направлений</span>
+              <strong>Performance / SEO / Design / Analytics / E-com</strong>
             </div>
           </div>
 
