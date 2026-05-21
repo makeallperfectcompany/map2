@@ -24,13 +24,13 @@ function ReviewPopup({ review, onClose }: { review: ReviewItem; onClose: () => v
         <button type="button" className={styles.closeButton} onClick={onClose} aria-label="Закрыть">
           ✕
         </button>
-        <blockquote>{review.text ?? review.quote}</blockquote>
+        <blockquote>{review.text}</blockquote>
         <footer>
           <div className={styles.avatar} aria-hidden="true">
-            {(review.name ?? review.author ?? "?").slice(0, 1)}
+            {(review.name ?? review.name ?? "?").slice(0, 1)}
           </div>
           <div>
-            <strong>{review.name ?? review.author}</strong>
+            <strong>{review.name ?? review.name}</strong>
             <span>{review.role}</span>
           </div>
         </footer>
@@ -40,8 +40,8 @@ function ReviewPopup({ review, onClose }: { review: ReviewItem; onClose: () => v
 }
 
 function ReviewFooter({ review, onExpand }: { review: ReviewItem; onExpand: () => void }) {
-  const text = review.text ?? review.quote ?? "";
-  const name = review.name ?? review.author ?? "";
+  const text = review.text ?? "";
+  const name = review.name ?? review.name ?? "";
   const isLong = text.length > 200;
 
   return (
@@ -141,7 +141,7 @@ export default function HomeReviewsSection() {
                   </span>
                 </div>
 
-                <blockquote>{review.text ?? review.quote}</blockquote>
+                <blockquote>{review.text}</blockquote>
 
                 <ReviewFooter review={review} onExpand={() => setPopupReview(review)} />
               </article>
@@ -163,7 +163,7 @@ export default function HomeReviewsSection() {
                 <span className={styles.index}>{String(index + 1).padStart(2, "0")}</span>
               </div>
 
-              <blockquote>{review.text ?? review.quote}</blockquote>
+              <blockquote>{review.text}</blockquote>
 
               <ReviewFooter review={review} onExpand={() => setPopupReview(review)} />
             </article>
