@@ -369,31 +369,33 @@
     font-size: 18px;
   }
 
-  /* Мессенджеры: одна колонка, иконка + текст */
+  /* Мессенджеры: 3 в ряд, компактные пилюли */
   .messengers {
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
     gap: 8px;
   }
 
   .messengerButton {
-    flex: none;
-    width: 100%;
-    height: auto;
-    min-height: 44px;
+    flex: 0 0 calc(33.33% - 6px);
+    width: calc(33.33% - 6px);
+    height: 30px;
+    min-height: 30px;
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 10px;
-    padding: 0 16px;
-    border-radius: 12px;
+    justify-content: center;
+    gap: 5px;
+    padding: 0 8px;
+    border-radius: 999px;
     background: #ffffff;
     border: 1px solid rgba(29, 29, 31, 0.08);
     box-shadow: 0 2px 8px rgba(15, 16, 20, 0.06);
   }
 
   .messengerButton img {
-    width: 24px;
-    height: 24px;
+    width: 16px;
+    height: 16px;
     object-fit: contain;
     flex-shrink: 0;
   }
@@ -405,10 +407,10 @@
     height: auto;
     overflow: visible;
     clip-path: none;
-    white-space: normal;
+    white-space: nowrap;
     color: #1d1d1f;
-    font: 650 15px/1 Onest, Inter, system-ui, sans-serif;
-    letter-spacing: -0.018em;
+    font: 650 11px/1 Onest, Inter, system-ui, sans-serif;
+    letter-spacing: -0.01em;
   }
 
   /* Форма: одна колонка */
@@ -461,46 +463,19 @@
     border-radius: 18px;
   }
 
-  /* Мессенджеры: одна колонка, иконка + текст */
+  /* Мессенджеры: 3 в ряд, компактные пилюли */
   .messengers {
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
     gap: 8px;
   }
 
   .messengerButton {
-    flex: none;
-    width: 100%;
-    height: auto;
-    min-height: 44px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 10px;
-    padding: 0 14px;
-    border-radius: 12px;
-    background: #ffffff;
-    border: 1px solid rgba(29, 29, 31, 0.08);
-    box-shadow: 0 2px 8px rgba(15, 16, 20, 0.06);
-  }
-
-  .messengerButton img {
-    width: 24px;
-    height: 24px;
-    object-fit: contain;
-    flex-shrink: 0;
-  }
-
-  /* Текст мессенджера — видимый на мобилке */
-  .messengerButton span {
-    position: static;
-    width: auto;
-    height: auto;
-    overflow: visible;
-    clip-path: none;
-    white-space: normal;
-    color: #1d1d1f;
-    font: 650 15px/1 Onest, Inter, system-ui, sans-serif;
-    letter-spacing: -0.018em;
+    flex: 0 0 calc(33.33% - 6px);
+    width: calc(33.33% - 6px);
+    height: 28px;
+    min-height: 28px;
+    padding: 0 8px;
   }
 
   .form input[type="text"],
@@ -532,19 +507,17 @@
     font-size: 11.5px;
   }
 
-  /* Мессенджеры: одна колонка, иконка + текст */
+  /* Мессенджеры: 3 в ряд — самые узкие */
   .messengers {
-    flex-direction: column;
     gap: 6px;
   }
 
   .messengerButton {
-    flex: none;
-    width: 100%;
-    height: auto;
-    min-height: 44px;
-    padding: 0 12px;
-    gap: 8px;
+    flex: 0 0 calc(33.33% - 4px);
+    width: calc(33.33% - 4px);
+    height: 28px;
+    min-height: 28px;
+    padding: 0 6px;
   }
 
   .form input[type="text"],
