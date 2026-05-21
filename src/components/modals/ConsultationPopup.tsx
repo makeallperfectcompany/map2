@@ -2,6 +2,7 @@
 
 import { useEffect, useId, useRef, useState } from "react";
 import ConsentCheckbox, { CONSENT_REQUIRED_ERROR } from "@/components/forms/ConsentCheckbox";
+import { usePhoneMask } from "@/hooks/usePhoneMask";
 import { consultationPopup } from "@/content/forms/consultationPopup";
 import styles from "./ConsultationPopup.module.css";
 
