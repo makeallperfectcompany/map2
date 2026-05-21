@@ -217,7 +217,6 @@
   align-content: flex-start;
   gap: 7px;
   padding-top: 2px;
-  flex-grow: 1;
 }
 
 .chips span,
