@@ -198,6 +198,23 @@ export default function HomeReviewsSection() {
       {popupReview && (
         <ReviewPopup review={popupReview} onClose={() => setPopupReview(null)} />
       )}
+
+      <div className={styles.yandexRatingRow}>
+        <a
+          href="https://yandex.ru/maps/org/make_all_perfect/190852529964/reviews/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={styles.yandexRatingLink}
+        >
+          <img
+            src="/images/yandex-rating.webp"
+            alt="Рейтинг Make All Perfect на Яндекс Картах — 4.9"
+            loading="lazy"
+            decoding="async"
+            className={styles.yandexRatingImg}
+          />
+        </a>
+      </div>
     </section>
   );
 }
