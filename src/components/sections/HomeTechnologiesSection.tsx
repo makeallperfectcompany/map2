@@ -51,6 +51,7 @@ export default function HomeTechnologiesSection() {
             </article>
           ))}
         </div>
+        <div className={styles.scrollHint}>→ Листайте</div>
       </div>
     </section>
   );
