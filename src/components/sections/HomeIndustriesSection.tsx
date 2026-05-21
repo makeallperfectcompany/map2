@@ -32,15 +32,13 @@ export default function HomeIndustriesSection() {
             <article className={styles.industryCard} key={industry.title}>
               <div className={styles.cardTop}>
                 <span className={styles.cardNumber}>{String(index + 1).padStart(2, "0")}</span>
+                <h3>{industry.title}</h3>
                 <div className={styles.cardIcon} aria-hidden="true">
                   <img src={industry.icon} alt="" />
                 </div>
               </div>
 
-              <div className={styles.cardText}>
-                <h3>{industry.title}</h3>
-                <p>{industry.text}</p>
-              </div>
+              <p>{industry.text}</p>
 
               <div className={styles.tags}>
                 {industry.tags.map((tag) => (

@@ -176,16 +176,26 @@
 
 .cardTop {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 14px;
-  min-height: 96px;
+  align-items: flex-start;
+  gap: 12px;
 }
 
 .cardNumber {
   color: #0071e3;
   font: 780 13px/1 JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, monospace;
   letter-spacing: -0.01em;
+  flex-shrink: 0;
+  padding-top: 4px;
+}
+
+.cardTop h3 {
+  flex: 1;
+  margin: 0;
+  color: #1d1d1f;
+  font: 820 28px/1.06 Onest, Inter, system-ui, sans-serif;
+  letter-spacing: -0.058em;
+  text-wrap: balance;
+  min-width: 0;
 }
 
 .cardIcon {
@@ -193,6 +203,7 @@
   height: 96px;
   display: grid;
   place-items: center;
+  flex-shrink: 0;
 }
 
 .cardIcon img {
@@ -202,19 +213,7 @@
   display: block;
 }
 
-.cardText {
-  margin-top: 56px;
-}
-
-.cardText h3 {
-  margin: 0;
-  color: #1d1d1f;
-  font: 820 28px/1.06 Onest, Inter, system-ui, sans-serif;
-  letter-spacing: -0.058em;
-  text-wrap: balance;
-}
-
-.cardText p {
+.industryCard > p {
   margin: 24px 0 0;
   color: #62666d;
   font: 450 15px/1.58 Onest, Inter, system-ui, sans-serif;
@@ -298,12 +297,18 @@
     border-radius: 26px;
   }
 
-  .cardText {
-    margin-top: 40px;
+  .cardTop h3 {
+    font-size: 24px;
   }
 
-  .cardText h3 {
-    font-size: 26px;
+  .cardIcon {
+    width: 80px;
+    height: 80px;
+  }
+
+  .cardIcon img {
+    width: 80px;
+    height: 80px;
   }
 }
 
@@ -316,21 +321,17 @@
     font-size: 26px;
   }
 
-  .cardText {
-    margin-top: 34px;
-  }
-
-  .cardText h3 {
-    font-size: 24px;
+  .cardTop h3 {
+    font-size: 22px;
   }
 
   .cardIcon {
-    width: 88px;
-    height: 88px;
+    width: 76px;
+    height: 76px;
   }
 
   .cardIcon img {
-    width: 88px;
-    height: 88px;
+    width: 76px;
+    height: 76px;
   }
 }
