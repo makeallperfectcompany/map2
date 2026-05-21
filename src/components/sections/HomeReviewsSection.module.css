@@ -443,25 +443,8 @@
   .reviewCard blockquote { font-size: 18px; }
 }
 
-.yandexRatingRow {
-  display: flex;
-  justify-content: center;
-  margin-top: 48px;
-  padding: 0 32px;
-}
-
-.yandexRatingLink {
-  display: inline-flex;
-  text-decoration: none;
-  transition: opacity 180ms ease;
-}
-
-.yandexRatingLink:hover {
-  opacity: 0.8;
-}
-
+.yandexRatingRow,
+.yandexRatingLink,
 .yandexRatingImg {
-  width: 260px;
-  height: auto;
-  display: block;
+  display: none;
 }
