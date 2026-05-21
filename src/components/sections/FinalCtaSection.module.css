@@ -212,17 +212,15 @@
   border-radius: 17px;
   color: #ffffff;
   background: linear-gradient(135deg, #0b4a9c 0%, #0071e3 58%, #4ca3ff 100%);
-  box-shadow: 0 20px 48px rgba(0, 113, 227, 0.25);
   font: 800 16px/1 Onest, Inter, system-ui, sans-serif;
   letter-spacing: -0.018em;
   cursor: pointer;
-  transition: transform 180ms ease, box-shadow 180ms ease, filter 180ms ease;
+  transition: transform 180ms ease, filter 180ms ease;
 }
 
 .form button:hover {
   transform: translateY(-1px);
   filter: saturate(1.04);
-  box-shadow: 0 24px 58px rgba(0, 113, 227, 0.30);
 }
 
 .note {
@@ -241,7 +239,7 @@
   gap: 10px;
   align-items: start;
   margin-top: 4px;
-  color: rgba(98, 102, 109, 0.76);
+  color: #62666d;
   font: 450 11.5px/1.32 Onest, Inter, system-ui, sans-serif;
   letter-spacing: -0.01em;
 }
@@ -251,6 +249,17 @@
   height: 18px;
   margin: 0;
   accent-color: #0071e3;
+}
+
+.agreement a {
+  color: #0071e3;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: opacity 160ms ease;
+}
+
+.agreement a:hover {
+  opacity: 0.75;
 }
 
 @media (max-width: 1180px) {
