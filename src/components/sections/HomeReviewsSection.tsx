@@ -94,14 +94,14 @@ export default function HomeReviewsSection() {
                   <span className={styles.index}>{String(activePage * REVIEWS_PER_PAGE + index + 1).padStart(2, "0")}</span>
                 </div>
 
-                <blockquote>{review.quote}</blockquote>
+                <blockquote>{review.text}</blockquote>
 
                 <footer>
                   <div className={styles.avatar} aria-hidden="true">
-                    {review.author.slice(0, 1)}
+                    {review.name.slice(0, 1)}
                   </div>
                   <div>
-                    <strong>{review.author}</strong>
+                    <strong>{review.name}</strong>
                     <span>{review.role}</span>
                   </div>
                 </footer>
@@ -124,14 +124,14 @@ export default function HomeReviewsSection() {
                 <span className={styles.index}>{String(index + 1).padStart(2, "0")}</span>
               </div>
 
-              <blockquote>{review.quote}</blockquote>
+              <blockquote>{review.text}</blockquote>
 
               <footer>
                 <div className={styles.avatar} aria-hidden="true">
-                  {review.author.slice(0, 1)}
+                  {review.name.slice(0, 1)}
                 </div>
                 <div>
-                  <strong>{review.author}</strong>
+                  <strong>{review.name}</strong>
                   <span>{review.role}</span>
                 </div>
               </footer>
