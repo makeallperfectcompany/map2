@@ -169,6 +169,8 @@ export const reviews: ReviewItem[] = [
   },
 ];
 
+export const featuredReviews = reviews.filter((r) => r.featured);
+
 export const reviewTabs = [
   { label: "Все", value: "all" },
   { label: "Отзывы", value: "review" },
