@@ -169,6 +169,15 @@
   transition: transform 240ms ease, border-color 240ms ease, box-shadow 240ms ease;
 }
 
+/* featured карточка — фирменный тёмно-синий градиент */
+.serviceCard:first-child {
+  background:
+    radial-gradient(circle at 86% 14%, rgba(0, 113, 227, 0.40), transparent 50%),
+    radial-gradient(circle at 16% 86%, rgba(0, 113, 227, 0.18), transparent 38%),
+    linear-gradient(180deg, #0a2240 0%, #071530 100%);
+  border-color: rgba(255, 255, 255, 0.10);
+}
+
 .serviceCard:hover {
   transform: translateY(-4px);
   border-color: rgba(111, 183, 255, 0.22);
