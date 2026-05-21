@@ -156,12 +156,13 @@
     0 30px 86px rgba(0, 0, 0, 0.26);
 }
 
-/* ── Зона 1: Лейбл ── */
+/* ── Зона 1: Лейбл — фикс. высота (1 строка) ── */
 
 .cardEyebrow {
   display: flex;
   align-items: center;
   min-height: 28px;
+  height: 28px;
   color: rgba(255, 255, 255, 0.42);
   font: 760 11px/1 JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, monospace;
   text-transform: uppercase;
@@ -169,10 +170,11 @@
   white-space: nowrap;
 }
 
-/* ── Зона 2: Заголовок ── */
+/* ── Зона 2: Заголовок + подзаголовок — фикс. высота (под MP: 2 строки) ── */
 
 .serviceCard h3 {
   margin: 0;
+  min-height: 82px;
   color: #ffffff;
   font: 840 28px/1.06 Onest, Inter, system-ui, sans-serif;
   letter-spacing: -0.05em;
@@ -183,12 +185,13 @@
   color: rgba(255, 255, 255, 0.52);
 }
 
-/* ── Зона 3: Аббревиатура ── */
+/* ── Зона 3: Аббревиатура — фикс. высота (1 строка) ── */
 
 .bigMark {
   display: flex;
   align-items: center;
   min-height: 48px;
+  height: 48px;
   color: #6FB7FF;
   font: 850 54px/0.9 Onest, Inter, system-ui, sans-serif;
   letter-spacing: -0.07em;
@@ -200,16 +203,17 @@
   font-size: 58px;
 }
 
-/* ── Зона 4: Описание ── */
+/* ── Зона 4: Описание — фикс. высота (3 строки) ── */
 
 .serviceCard p {
   margin: 0;
+  min-height: 66px;
   color: rgba(255, 255, 255, 0.60);
   font: 430 14px/1.55 Onest, Inter, system-ui, sans-serif;
   letter-spacing: -0.012em;
 }
 
-/* ── Зона 5: Теги — ВСЕ видны, без обрезания ── */
+/* ── Зона 5: Чипсы — высота плавает ── */
 
 .chips {
   display: flex;
@@ -217,6 +221,7 @@
   align-content: flex-start;
   gap: 7px;
   padding-top: 2px;
+  /* height не фиксируем — у карточек разное количество чипсов */
 }
 
 .chips span,
@@ -359,11 +364,13 @@
 
   .serviceCard h3 {
     font-size: 25px;
+    min-height: 72px;
   }
 
   .bigMark {
     font-size: 46px;
     min-height: 40px;
+    height: 40px;
   }
 
   .serviceCard:nth-child(1) .bigMark {
@@ -395,17 +402,20 @@
 
   .cardEyebrow {
     min-height: 24px;
+    height: 24px;
     font-size: 10px;
   }
 
   .serviceCard h3 {
     font-size: 22px;
     line-height: 1.08;
+    min-height: 70px;
   }
 
   .bigMark {
     font-size: 38px;
     min-height: 36px;
+    height: 36px;
   }
 
   .serviceCard:nth-child(1) .bigMark {
@@ -415,6 +425,7 @@
   .serviceCard p {
     font-size: 12px;
     line-height: 1.5;
+    min-height: 54px;
   }
 
   .chips span,
