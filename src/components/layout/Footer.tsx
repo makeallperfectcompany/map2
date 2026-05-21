@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { getFooterGroups } from "@/content/navigation/siteMap";
+import { serviceGroups } from "@/content/services/index";
 import styles from "./Footer.module.css";
 
 const contacts = {
@@ -42,6 +43,15 @@ export default function Footer() {
               <a href={`mailto:${contacts.email}`}>{contacts.email}</a>
               <a href={contacts.phoneHref}>{contacts.phone}</a>
               <span>{contacts.schedule}</span>
+            </div>
+
+            <div className={styles.serviceChipsBlock}>
+              <h3 className={styles.serviceChipsTitle}>Услуги</h3>
+              <div className={styles.serviceChips}>
+                {serviceGroups.flatMap((g) => g.services).map((s) => (
+                  <span key={s} className={styles.serviceChip}>{s}</span>
+                ))}
+              </div>
             </div>
           </div>
 
