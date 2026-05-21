@@ -3,6 +3,7 @@ import HeroSection from "@/components/sections/HeroSection";
 import MobileBrandDivider from "@/components/sections/MobileBrandDivider";
 import ServicesSection from "@/components/sections/ServicesSection";
 import HomeAdvantagesSection from "@/components/sections/HomeAdvantagesSection";
+import HomeIndustriesSection from "@/components/sections/HomeIndustriesSection";
 import CasesSection from "@/components/sections/CasesSection";
 import HomeReviewsSection from "@/components/sections/HomeReviewsSection";
 
@@ -44,6 +45,7 @@ export default function HomePage() {
       <MobileBrandDivider />
       <ServicesSection />
       <HomeAdvantagesSection />
+      <HomeIndustriesSection />
       <CasesSection />
       <HomeReviewsSection />
     </main>

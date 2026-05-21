@@ -1,0 +1,324 @@
+.industriesSection {
+  position: relative;
+  overflow: hidden;
+  padding: 112px 0;
+  color: #1d1d1f;
+  background:
+    radial-gradient(circle at 84% 10%, rgba(0, 113, 227, 0.08), transparent 30%),
+    linear-gradient(180deg, #ffffff 0%, #f5f5f7 100%);
+}
+
+.industriesSection::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.74), transparent 44%),
+    radial-gradient(circle at 8% 92%, rgba(134, 134, 139, 0.10), transparent 30%);
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 1232px);
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+.headerGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.98fr) minmax(360px, 0.62fr);
+  gap: 28px;
+  align-items: stretch;
+  margin-bottom: 34px;
+}
+
+.sectionHeader {
+  max-width: 900px;
+}
+
+.sectionLabel {
+  display: inline-flex;
+  min-height: 32px;
+  align-items: center;
+  padding: 0 12px;
+  border-radius: 999px;
+  color: #0071e3;
+  background: rgba(0, 113, 227, 0.07);
+  border: 1px solid rgba(0, 113, 227, 0.10);
+  font: 760 12px/1 Onest, Inter, system-ui, sans-serif;
+  letter-spacing: -0.01em;
+}
+
+.kicker {
+  margin: 22px 0 0;
+  color: #86868b;
+  font: 720 15px/1.2 Onest, Inter, system-ui, sans-serif;
+  letter-spacing: -0.018em;
+}
+
+.sectionHeader h2 {
+  max-width: 940px;
+  margin: 14px 0 0;
+  color: #1d1d1f;
+  font: 850 clamp(42px, 5.2vw, 78px)/1.02 Onest, Inter, system-ui, sans-serif;
+  letter-spacing: -0.076em;
+  text-wrap: balance;
+}
+
+.description {
+  max-width: 760px;
+  margin: 24px 0 0;
+  color: #62666d;
+  font: 450 18px/1.62 Onest, Inter, system-ui, sans-serif;
+  letter-spacing: -0.02em;
+}
+
+.mainCard {
+  position: relative;
+  overflow: hidden;
+  min-height: 360px;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  gap: 18px;
+  padding: 20px;
+  border-radius: 34px;
+  color: #fff;
+  background:
+    radial-gradient(circle at 86% 12%, rgba(0, 113, 227, 0.34), transparent 34%),
+    linear-gradient(180deg, #18212c 0%, #10161f 100%);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  box-shadow: 0 24px 70px rgba(15, 16, 20, 0.12);
+}
+
+.mainVisualShell {
+  position: relative;
+  overflow: hidden;
+  min-height: 168px;
+  border-radius: 26px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.10), rgba(255, 255, 255, 0.04));
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.mainVisualShell::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(circle at 78% 20%, rgba(0, 113, 227, 0.12), transparent 34%);
+}
+
+.mainVisualImage {
+  position: absolute;
+  inset: 8px;
+  width: calc(100% - 16px);
+  height: calc(100% - 16px);
+  object-fit: contain;
+  object-position: center;
+}
+
+.mainCardContent {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  align-content: end;
+  padding: 4px 10px 10px;
+}
+
+.mainCardContent > span {
+  color: rgba(255, 255, 255, 0.62);
+  font: 760 12px/1 JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.mainCardContent h3 {
+  max-width: 380px;
+  margin: 22px 0 0;
+  color: #fff;
+  font: 850 38px/1.02 Onest, Inter, system-ui, sans-serif;
+  letter-spacing: -0.066em;
+  text-wrap: balance;
+}
+
+.mainCardContent p {
+  margin: 18px 0 0;
+  color: rgba(255, 255, 255, 0.72);
+  font: 450 15px/1.58 Onest, Inter, system-ui, sans-serif;
+  letter-spacing: -0.014em;
+}
+
+.industriesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.industryCard {
+  min-height: 360px;
+  display: grid;
+  align-content: space-between;
+  padding: 28px;
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.88);
+  border: 1px solid rgba(29, 29, 31, 0.065);
+  box-shadow: 0 16px 48px rgba(15, 16, 20, 0.045);
+}
+
+.cardTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.cardNumber {
+  color: #0071e3;
+  font: 780 13px/1 JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, monospace;
+  letter-spacing: -0.01em;
+}
+
+.cardIcon {
+  width: 56px;
+  height: 56px;
+  border-radius: 18px;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.95), rgba(245, 245, 247, 0.88));
+  border: 1px solid rgba(0, 113, 227, 0.12);
+  box-shadow: 0 14px 30px rgba(0, 113, 227, 0.08);
+}
+
+.cardIcon img {
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
+  display: block;
+}
+
+.industryCard h3 {
+  margin: 42px 0 0;
+  color: #1d1d1f;
+  font: 820 28px/1.06 Onest, Inter, system-ui, sans-serif;
+  letter-spacing: -0.058em;
+  text-wrap: balance;
+}
+
+.industryCard p {
+  margin: 18px 0 0;
+  color: #62666d;
+  font: 450 15px/1.58 Onest, Inter, system-ui, sans-serif;
+  letter-spacing: -0.014em;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 26px;
+}
+
+.tags span {
+  min-height: 32px;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 11px;
+  border-radius: 999px;
+  color: #3e4652;
+  background: #f5f5f7;
+  border: 1px solid rgba(29, 29, 31, 0.06);
+  font: 660 12px/1 Onest, Inter, system-ui, sans-serif;
+}
+
+@media (max-width: 1120px) {
+  .headerGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .mainCard {
+    min-height: 260px;
+  }
+
+  .mainVisualShell {
+    min-height: 220px;
+  }
+
+  .industriesGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  .industriesSection {
+    padding: 72px 0;
+  }
+
+  .container {
+    padding: 0 18px;
+  }
+
+  .sectionHeader h2 {
+    font-size: 38px;
+    line-height: 1.04;
+  }
+
+  .description {
+    font-size: 16px;
+  }
+
+  .mainCard {
+    min-height: auto;
+    padding: 18px;
+    border-radius: 28px;
+  }
+
+  .mainVisualShell {
+    min-height: 180px;
+    border-radius: 22px;
+  }
+
+  .mainCardContent {
+    padding: 2px 4px 8px;
+  }
+
+  .mainCardContent h3 {
+    font-size: 32px;
+  }
+
+  .industriesGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .industryCard {
+    min-height: auto;
+    padding: 24px;
+    border-radius: 26px;
+  }
+
+  .industryCard h3 {
+    margin-top: 34px;
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 430px) {
+  .sectionHeader h2 {
+    font-size: 34px;
+  }
+
+  .mainVisualShell {
+    min-height: 160px;
+  }
+
+  .cardIcon {
+    width: 52px;
+    height: 52px;
+  }
+
+  .cardIcon img {
+    width: 30px;
+    height: 30px;
+  }
+}
