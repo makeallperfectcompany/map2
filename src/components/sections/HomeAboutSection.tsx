@@ -22,11 +22,12 @@ export default function HomeAboutSection() {
             <div className={styles.videoCard}>
               <video
                 className={styles.videoPlayer}
-                src="/video/intro.mp4"
+                src="/video/intro-compressed.mp4"
                 autoPlay
                 muted
                 loop
                 playsInline
+                preload="auto"
                 aria-label="Видео о Make All Perfect"
               />
             </div>
