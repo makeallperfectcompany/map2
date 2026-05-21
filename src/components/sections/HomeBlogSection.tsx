@@ -13,9 +13,6 @@ export default function HomeBlogSection() {
             <p>{homeBlog.description}</p>
           </div>
 
-          <Link className={styles.desktopCta} href={homeBlog.cta.href}>
-            {homeBlog.cta.label}
-          </Link>
         </div>
 
         <div className={styles.navRow} aria-label="Категории блога">
@@ -63,9 +60,6 @@ export default function HomeBlogSection() {
           ))}
         </div>
 
-        <Link className={styles.mobileCta} href={homeBlog.cta.href}>
-          {homeBlog.cta.label}
-        </Link>
       </div>
     </section>
   );
