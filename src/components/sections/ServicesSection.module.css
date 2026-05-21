@@ -1,13 +1,12 @@
 /* ═══════════════════════════════════════════════════════════
-   ServicesSection — 8 карточек, сверхкомпактный режим
-   Все 8 видны без скролла на десктопе
+   ServicesSection — 8 карточек, все услуги видны и кликабельны
    ═══════════════════════════════════════════════════════════ */
 
 .servicesSection {
   position: relative;
   margin: 0 24px;
   border-radius: 32px;
-  padding: 40px 28px 36px;
+  padding: 56px 32px 56px;
   color: #F5F5F7;
   background: #1D1D1F;
   border: 1px solid rgba(255, 255, 255, 0.08);
@@ -21,39 +20,39 @@
   padding: 0;
 }
 
-/* ── Верхняя секция (интро) — ужато ── */
+/* ── Верхняя секция (интро) ── */
 
 .servicesIntro {
   display: grid;
   grid-template-columns: minmax(0, 0.95fr) minmax(320px, 0.52fr);
   align-items: start;
-  gap: 36px;
-  margin-bottom: 36px;
+  gap: 40px;
+  margin-bottom: 44px;
 }
 
 .kicker {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
+  gap: 8px;
   color: #6FB7FF;
-  font: 760 14px/1 Onest, Inter, system-ui, sans-serif;
+  font: 780 15px/1 Onest, Inter, system-ui, sans-serif;
   letter-spacing: -0.02em;
 }
 
 .kicker::before {
   content: "";
-  width: 6px;
-  height: 6px;
+  width: 7px;
+  height: 7px;
   border-radius: 2px;
   background: #6FB7FF;
   transform: rotate(45deg);
-  box-shadow: 0 0 14px rgba(111, 183, 255, 0.72);
+  box-shadow: 0 0 16px rgba(111, 183, 255, 0.72);
 }
 
 .servicesIntro h2 {
   max-width: 720px;
-  margin: 14px 0 0;
-  font: 800 clamp(38px, 4.2vw, 54px)/0.98 Onest, Inter, system-ui, sans-serif;
+  margin: 18px 0 0;
+  font: 800 clamp(40px, 4.8vw, 60px)/0.98 Onest, Inter, system-ui, sans-serif;
   letter-spacing: -0.03em;
   text-wrap: balance;
   -webkit-font-smoothing: antialiased;
@@ -67,9 +66,9 @@
 
 .servicesIntro > p {
   max-width: 430px;
-  margin: 52px 0 0;
+  margin: 62px 0 0;
   color: rgba(245, 245, 247, 0.65);
-  font: 430 15px/1.5 Onest, Inter, system-ui, sans-serif;
+  font: 440 16px/1.55 Onest, Inter, system-ui, sans-serif;
   letter-spacing: -0.02em;
 }
 
@@ -78,25 +77,25 @@
   align-items: center;
   flex-wrap: wrap;
   gap: 12px;
-  margin-top: 18px;
+  margin-top: 22px;
 }
 
 .introActions a {
-  min-height: 44px;
+  min-height: 48px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   text-decoration: none;
   border-radius: 999px;
-  font: 740 14px/1 Onest, Inter, system-ui, sans-serif;
+  font: 750 14px/1 Onest, Inter, system-ui, sans-serif;
   letter-spacing: -0.01em;
 }
 
 .introActions a:first-child {
-  padding: 0 22px;
+  padding: 0 24px;
   color: #121820;
   background: #ffffff;
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.18);
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.18);
 }
 
 .introActions a:last-child {
@@ -128,66 +127,53 @@
 .servicesGrid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 12px;
+  gap: 14px;
+  align-items: stretch;
 }
 
-/* ── Карточка: сверхкомпактная сетка ──
-   Зона 1 — лейбл (26px)
-   Зона 2 — заголовок (100px)
-   Зона 3 — аббревиатура (52px)
-   Зона 4 — описание (56px)
-   Зона 5 — теги (50px)
-   Зона 6 — футер (auto)
-   gap: 6px между зонами
-   padding: 16px 16px 12px
-   Итого: 16+26+6+100+6+52+6+56+6+50+6+auto+12 ≈ 348px
-   ═══════════════════════════════════════════════════════════ */
+/* ── Карточка: flexbox, контент сам определяет высоту ── */
 
 .serviceCard {
-  display: grid;
-  grid-template-rows: 26px 100px 52px 56px 50px auto;
-  row-gap: 6px;
-  padding: 16px 16px 12px;
-  border-radius: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 20px 18px 14px;
+  border-radius: 20px;
   background: #2A2A2C;
   border: 1px solid rgba(255, 255, 255, 0.075);
   box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, 0.045),
-    0 16px 50px rgba(0, 0, 0, 0.18);
+    0 22px 70px rgba(0, 0, 0, 0.18);
   transition: transform 240ms ease, border-color 240ms ease, box-shadow 240ms ease;
-  overflow: hidden;
 }
 
 .serviceCard:hover {
-  transform: translateY(-3px);
+  transform: translateY(-4px);
   border-color: rgba(111, 183, 255, 0.22);
   box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, 0.06),
-    0 22px 64px rgba(0, 0, 0, 0.26);
+    0 30px 86px rgba(0, 0, 0, 0.26);
 }
 
-/* ── Зона 1: Лейбл (26px) ── */
+/* ── Зона 1: Лейбл ── */
 
 .cardEyebrow {
-  height: 26px;
   display: flex;
   align-items: center;
+  min-height: 28px;
   color: rgba(255, 255, 255, 0.42);
-  font: 740 11px/1 JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, monospace;
+  font: 760 11px/1 JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, monospace;
   text-transform: uppercase;
-  letter-spacing: 0.10em;
-  overflow: hidden;
+  letter-spacing: 0.11em;
   white-space: nowrap;
 }
 
-/* ── Зона 2: Заголовок (100px) ── */
+/* ── Зона 2: Заголовок ── */
 
 .serviceCard h3 {
-  height: 100px;
   margin: 0;
-  overflow: hidden;
   color: #ffffff;
-  font: 820 27px/1.06 Onest, Inter, system-ui, sans-serif;
+  font: 840 28px/1.06 Onest, Inter, system-ui, sans-serif;
   letter-spacing: -0.05em;
 }
 
@@ -196,57 +182,52 @@
   color: rgba(255, 255, 255, 0.52);
 }
 
-/* ── Зона 3: Аббревиатура (52px) ── */
+/* ── Зона 3: Аббревиатура ── */
 
 .bigMark {
-  height: 52px;
   display: flex;
   align-items: center;
-  overflow: hidden;
+  min-height: 48px;
   color: #6FB7FF;
-  font: 840 52px/0.9 Onest, Inter, system-ui, sans-serif;
+  font: 850 54px/0.9 Onest, Inter, system-ui, sans-serif;
   letter-spacing: -0.07em;
 }
 
 /* featured card — белая аббревиатура */
 .serviceCard:nth-child(1) .bigMark {
   color: #ffffff;
-  font-size: 56px;
+  font-size: 58px;
 }
 
-/* ── Зона 4: Описание (56px, 2 строки) ── */
+/* ── Зона 4: Описание ── */
 
 .serviceCard p {
-  height: 56px;
   margin: 0;
-  overflow: hidden;
   color: rgba(255, 255, 255, 0.60);
-  font: 420 13px/1.5 Onest, Inter, system-ui, sans-serif;
+  font: 430 14px/1.55 Onest, Inter, system-ui, sans-serif;
   letter-spacing: -0.012em;
 }
 
-/* ── Зона 5: Теги (50px, 1 строка с переносом) ── */
+/* ── Зона 5: Теги — ВСЕ видны, без обрезания ── */
 
 .chips {
-  height: 50px;
-  overflow: hidden;
   display: flex;
   flex-wrap: wrap;
-  align-content: flex-start;
-  gap: 6px;
+  gap: 7px;
+  padding-top: 2px;
 }
 
 .chips span,
 .chips .chipLink {
-  min-height: 27px;
+  min-height: 29px;
   display: inline-flex;
   align-items: center;
-  padding: 0 8px;
+  padding: 0 10px;
   border-radius: 999px;
   color: rgba(255, 255, 255, 0.78);
   background: rgba(255, 255, 255, 0.066);
   border: 1px solid rgba(255, 255, 255, 0.075);
-  font: 630 11px/1 Onest, Inter, system-ui, sans-serif;
+  font: 640 12px/1 Onest, Inter, system-ui, sans-serif;
   white-space: nowrap;
   text-decoration: none;
   transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
@@ -276,20 +257,21 @@
   border-color: rgba(255, 255, 255, 0.25);
 }
 
-/* ── Зона 6: Футер (auto, прижат к низу через grid) ── */
+/* ── Зона 6: Футер — прижат к низу ── */
 
 .cardBottom {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 10px;
-  padding-top: 10px;
+  gap: 12px;
+  padding-top: 12px;
+  margin-top: auto;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .cardBottom span {
   color: rgba(255, 255, 255, 0.42);
-  font: 680 12px/1 JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, monospace;
+  font: 700 13px/1 JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, monospace;
   text-transform: uppercase;
   letter-spacing: 0.04em;
   white-space: nowrap;
@@ -298,7 +280,7 @@
 .cardBottom a {
   color: #6FB7FF;
   text-decoration: none;
-  font: 760 13px/1 Onest, Inter, system-ui, sans-serif;
+  font: 780 14px/1 Onest, Inter, system-ui, sans-serif;
   letter-spacing: -0.01em;
   white-space: nowrap;
 }
@@ -312,8 +294,8 @@
 @media (max-width: 1180px) {
   .servicesIntro {
     grid-template-columns: 1fr;
-    gap: 14px;
-    margin-bottom: 32px;
+    gap: 16px;
+    margin-bottom: 36px;
   }
 
   .servicesIntro > p {
@@ -332,7 +314,7 @@
   .servicesSection {
     margin: 0 12px;
     border-radius: 24px;
-    padding: 40px 16px 32px;
+    padding: 44px 16px 36px;
   }
 
   .container {
@@ -342,16 +324,16 @@
   }
 
   .servicesIntro {
-    margin-bottom: 28px;
+    margin-bottom: 30px;
   }
 
   .servicesIntro h2 {
-    font-size: 36px;
+    font-size: 38px;
     line-height: 1.02;
   }
 
   .servicesIntro > p {
-    font-size: 14px;
+    font-size: 15px;
   }
 
   .introActions {
@@ -369,9 +351,8 @@
   }
 
   .serviceCard {
-    grid-template-rows: 26px 100px 52px 56px 50px auto;
-    row-gap: 6px;
-    padding: 14px 14px 10px;
+    padding: 16px 14px 12px;
+    gap: 6px;
   }
 
   .serviceCard h3 {
@@ -380,6 +361,7 @@
 
   .bigMark {
     font-size: 46px;
+    min-height: 40px;
   }
 
   .serviceCard:nth-child(1) .bigMark {
@@ -397,54 +379,47 @@
 
 @media (max-width: 430px) {
   .servicesSection {
-    padding: 32px 12px 24px;
+    padding: 36px 12px 28px;
   }
 
   .servicesIntro h2 {
-    font-size: 28px;
+    font-size: 30px;
   }
 
   .serviceCard {
-    grid-template-rows: 24px 90px 46px 52px 48px auto;
-    row-gap: 5px;
     padding: 14px 12px 10px;
+    gap: 5px;
   }
 
   .cardEyebrow {
-    height: 24px;
+    min-height: 24px;
     font-size: 10px;
   }
 
   .serviceCard h3 {
-    height: 90px;
     font-size: 22px;
     line-height: 1.08;
   }
 
   .bigMark {
-    height: 46px;
-    font-size: 40px;
+    font-size: 38px;
+    min-height: 36px;
   }
 
   .serviceCard:nth-child(1) .bigMark {
-    font-size: 44px;
+    font-size: 42px;
   }
 
   .serviceCard p {
-    height: 52px;
     font-size: 12px;
     line-height: 1.5;
   }
 
-  .chips {
-    height: 48px;
-  }
-
   .chips span,
   .chips .chipLink {
-    min-height: 24px;
-    padding: 0 7px;
-    font-size: 10px;
+    min-height: 26px;
+    padding: 0 8px;
+    font-size: 11px;
   }
 }
 
