@@ -77,7 +77,7 @@ export default function Footer() {
         </div>
 
         <div className={styles.bottom}>
-          <span>© {new Date().getFullYear()} Make All Perfect</span>
+          <span>© {new Date().getFullYear()} Make All Perfect. Все права защищены.</span>
         </div>
       </div>
     </footer>
