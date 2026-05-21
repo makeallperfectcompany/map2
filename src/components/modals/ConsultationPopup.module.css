@@ -281,6 +281,96 @@
   to { opacity: 1; transform: translateY(0) scale(1); }
 }
 
+@media (max-width: 760px) {
+  .formSide {
+    padding: 20px 20px 24px;
+  }
+
+  .formSide h2,
+  .statePanel h2 {
+    font-size: clamp(22px, 5vw, 30px);
+    margin-top: 8px;
+  }
+
+  .formSide > p,
+  .statePanel p {
+    font-size: 13px;
+    margin-top: 4px;
+  }
+
+  .eyebrow {
+    font-size: 12px;
+    min-height: 26px;
+    padding: 0 10px;
+  }
+
+  .schedule {
+    font-size: 12px;
+    margin-top: 6px;
+  }
+
+  .messengerBlock {
+    margin-top: 12px;
+  }
+
+  .messengerBlock .messengerTitle {
+    font-size: 14px;
+  }
+
+  .actionGrid {
+    margin-top: 8px;
+    gap: 8px;
+  }
+
+  .actionButton {
+    width: 88px;
+    height: 30px;
+  }
+
+  .formBlock {
+    margin-top: 12px;
+    padding-top: 12px;
+    gap: 10px;
+  }
+
+  .formBlockTitle {
+    font-size: 14px;
+  }
+
+  .form {
+    gap: 8px;
+  }
+
+  .field input {
+    height: 40px;
+    font-size: 14px;
+    padding: 0 12px;
+  }
+
+  .primaryButton {
+    min-height: 42px;
+    font-size: 14px;
+  }
+
+  .urgentBox {
+    margin-top: 10px;
+    padding: 10px 14px;
+  }
+
+  .urgentBox span {
+    font-size: 12px;
+  }
+
+  .urgentBox a {
+    font-size: 16px;
+  }
+
+  .statePanel {
+    padding: 30px 20px;
+    min-height: 280px;
+  }
+}
+
 @media (max-width: 480px) {
   .overlay {
     padding: 0;
