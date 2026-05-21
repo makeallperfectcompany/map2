@@ -67,6 +67,7 @@ export const footerGroups: FooterGroup[] = [
       servicePages.find((item) => item.href === "/services/vneshniy-trafik-na-marketpleysy")!,
       servicePages.find((item) => item.href === "/services/smm")!,
       servicePages.find((item) => item.href === "/services/online-reputation-pr")!,
+      servicePages.find((item) => item.href === "/services/crm-marketing")!,
     ],
   },
   {
