@@ -75,32 +75,32 @@
   letter-spacing: -0.02em;
 }
 
-.mainCardBullets {
+.bulletList {
   list-style: none;
-  margin: 20px 0 0;
+  margin: 24px 0 0;
   padding: 0;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 12px;
 }
 
-.mainCardBullets li {
+.bullet {
   position: relative;
-  padding-left: 20px;
-  color: rgba(255, 255, 255, 0.82);
-  font: 500 14px/1.5 Onest, Inter, system-ui, sans-serif;
-  letter-spacing: -0.01em;
+  padding-left: 22px;
+  color: #1d1d1f;
+  font: 550 15px/1.5 Onest, Inter, system-ui, sans-serif;
+  letter-spacing: -0.014em;
 }
 
-.mainCardBullets li::before {
+.bullet::before {
   content: "";
   position: absolute;
   left: 0;
   top: 7px;
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   border-radius: 50%;
-  background: #6FB7FF;
+  background: #0071e3;
   flex-shrink: 0;
 }
 
@@ -190,6 +190,46 @@
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 14px;
+}
+
+/* ── Плашка с доп. нишами ── */
+
+.extraNichesCard {
+  margin-top: 14px;
+  padding: 28px 32px 32px;
+  border-radius: 30px;
+  background:
+    radial-gradient(circle at 86% 12%, rgba(0, 113, 227, 0.34), transparent 44%),
+    radial-gradient(circle at 14% 88%, rgba(0, 113, 227, 0.14), transparent 38%),
+    linear-gradient(180deg, #18212c 0%, #10161f 100%);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  box-shadow: 0 24px 70px rgba(15, 16, 20, 0.12);
+}
+
+.extraNichesHeader {
+  color: rgba(255, 255, 255, 0.52);
+  font: 550 14px/1 Onest, Inter, system-ui, sans-serif;
+  letter-spacing: -0.01em;
+  margin-bottom: 16px;
+}
+
+.extraNichesChips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.extraChip {
+  min-height: 32px;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 14px;
+  border-radius: 999px;
+  color: rgba(255, 255, 255, 0.82);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  font: 550 12px/1 Onest, Inter, system-ui, sans-serif;
+  letter-spacing: -0.01em;
 }
 
 .industryCard {
@@ -285,10 +325,28 @@
   }
 }
 
+@media (max-width: 1120px) {
+  .extraNichesCard {
+    padding: 24px;
+  }
+}
+
 @media (max-width: 760px) {
   .industriesSection {
     padding: 72px 0;
   }
+
+  .extraNichesCard {
+    padding: 20px 18px;
+    border-radius: 24px;
+  }
+
+  .extraChip {
+    min-height: 28px;
+    padding: 0 10px;
+    font-size: 11px;
+  }
+}
 
   .container {
     padding: 0 18px;

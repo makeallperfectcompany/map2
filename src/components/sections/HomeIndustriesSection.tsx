@@ -11,6 +11,11 @@ export default function HomeIndustriesSection() {
             <p className={styles.kicker}>{homeIndustries.kicker}</p>
             <h2>{homeIndustries.title}</h2>
             <p className={styles.description}>{homeIndustries.description}</p>
+            <ul className={styles.bulletList}>
+              {homeIndustries.bullets.map((bullet) => (
+                <li key={bullet} className={styles.bullet}>{bullet}</li>
+              ))}
+            </ul>
           </div>
 
           <aside className={styles.mainCard}>
@@ -18,11 +23,7 @@ export default function HomeIndustriesSection() {
               <span className={styles.mainCardKicker}>{homeIndustries.mainCard.label}</span>
               <h3>{homeIndustries.mainCard.title}</h3>
               <p>{homeIndustries.mainCard.text}</p>
-              <ul className={styles.mainCardBullets}>
-                {homeIndustries.bullets.map((bullet) => (
-                  <li key={bullet}>{bullet}</li>
-                ))}
-              </ul>
+
               <ul className={styles.mainCardStats}>
                 {homeIndustries.mainCard.stats.map((stat) => (
                   <li key={stat.label}>
@@ -56,6 +57,15 @@ export default function HomeIndustriesSection() {
             </article>
           ))}
         </div>
+
+        <aside className={styles.extraNichesCard}>
+          <div className={styles.extraNichesHeader}>Также работаем в нишах:</div>
+          <div className={styles.extraNichesChips}>
+            {homeIndustries.extraNiches.map((niche) => (
+              <span key={niche} className={styles.extraChip}>{niche}</span>
+            ))}
+          </div>
+        </aside>
       </div>
     </section>
   );
