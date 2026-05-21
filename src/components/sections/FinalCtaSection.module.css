@@ -350,14 +350,13 @@
   }
 
   .messengers {
-    display: grid;
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
     gap: 10px;
   }
 
   .messengerButton {
     width: 100%;
-    max-width: 120px;
   }
 
   .form {
