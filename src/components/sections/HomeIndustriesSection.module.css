@@ -199,6 +199,7 @@
   height: 96px;
   object-fit: contain;
   display: block;
+  mix-blend-mode: multiply;
 }
 
 .industryCard h3 {
