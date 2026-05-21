@@ -359,6 +359,9 @@
   color: #1d1d1f;
   font: 760 14px/1.1 Onest, Inter, system-ui, sans-serif;
   letter-spacing: -0.018em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .reviewCard footer span {
@@ -367,6 +370,9 @@
   color: #86868b;
   font: 560 12px/1.25 Onest, Inter, system-ui, sans-serif;
   letter-spacing: -0.01em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .dots {
