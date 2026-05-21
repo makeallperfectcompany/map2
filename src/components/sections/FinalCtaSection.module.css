@@ -242,6 +242,17 @@
   accent-color: #0071e3;
 }
 
+.agreement a {
+  color: #0071e3;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: opacity 160ms ease;
+}
+
+.agreement a:hover {
+  opacity: 0.75;
+}
+
 .successState {
   padding: 50px 40px;
   text-align: center;
