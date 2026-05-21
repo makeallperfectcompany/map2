@@ -141,10 +141,10 @@ export default function ConsultationPopup({ isOpen, onClose }: ConsultationPopup
                 {consultationPopup.schedule}
               </div>
 
-              <div className={styles.sectionBlock}>
-                <div className={styles.sectionHeading}>
-                  <h3>{consultationPopup.messengerTitle}</h3>
-                  <p>{consultationPopup.messengerDescription}</p>
+              <div className={styles.messengerBlock}>
+                <div className={styles.messengerTitle}>
+                  {consultationPopup.messengerTitle}
+                  <span>{consultationPopup.messengerDescription}</span>
                 </div>
 
                 <div className={styles.actionGrid} aria-label="Быстрые способы связи">
@@ -163,13 +163,10 @@ export default function ConsultationPopup({ isOpen, onClose }: ConsultationPopup
                 </div>
               </div>
 
-              <div className={`${styles.sectionBlock} ${styles.formBlock}`}>
-                <div className={styles.sectionHeading}>
-                  <h3>{consultationPopup.formTitle}</h3>
-                  <p>{consultationPopup.formDescription}</p>
-                </div>
+              <div className={styles.formBlock}>
+                <span className={styles.formBlockTitle}>{consultationPopup.formTitle}</span>
 
-                <form className={styles.form} onSubmit={handleSubmit}>
+                  <form className={styles.form} onSubmit={handleSubmit}>
                   <label className={styles.field}>
                     <span>Имя</span>
                     <input
@@ -218,8 +215,6 @@ export default function ConsultationPopup({ isOpen, onClose }: ConsultationPopup
                 <a href={consultationPopup.urgentPhoneHref}>{consultationPopup.urgentPhone}</a>
               </div>
             </div>
-
-            <aside className={styles.visualSide} aria-hidden="true" />
           </>
         )}
       </div>
