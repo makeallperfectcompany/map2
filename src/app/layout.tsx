@@ -50,7 +50,7 @@ export const metadata: Metadata = {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Make All Perfect — маркетинговое агентство полного цикла",
+        alt: "Make All Perfect — маркетинговое агентство полного цикла | Стеклянный куб — символ прозрачности и системности",
       },
     ],
   },
