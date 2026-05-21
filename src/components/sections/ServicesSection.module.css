@@ -307,7 +307,7 @@
 }
 
 .cardBottom span {
-  color: rgba(255, 255, 255, 0.42);
+  color: rgba(255, 255, 255, 0.85);
   font: 700 13px/1 JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, monospace;
   text-transform: uppercase;
   letter-spacing: 0.04em;
