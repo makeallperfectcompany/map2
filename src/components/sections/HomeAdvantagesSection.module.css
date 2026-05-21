@@ -1,0 +1,236 @@
+.advantagesSection {
+  position: relative;
+  overflow: hidden;
+  padding: 112px 0;
+  color: #1d1d1f;
+  background:
+    radial-gradient(circle at 84% 12%, rgba(0, 113, 227, 0.08), transparent 30%),
+    linear-gradient(180deg, #ffffff 0%, #f5f5f7 100%);
+}
+
+.advantagesSection::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.74), transparent 34%),
+    radial-gradient(circle at 20% 100%, rgba(134, 134, 139, 0.10), transparent 28%);
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 1232px);
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+.sectionHeader {
+  max-width: 980px;
+  margin-bottom: 46px;
+}
+
+.sectionLabel {
+  display: inline-flex;
+  min-height: 32px;
+  align-items: center;
+  padding: 0 12px;
+  border-radius: 999px;
+  color: #0071e3;
+  background: rgba(0, 113, 227, 0.07);
+  border: 1px solid rgba(0, 113, 227, 0.10);
+  font: 760 12px/1 Onest, Inter, system-ui, sans-serif;
+  letter-spacing: -0.01em;
+}
+
+.kicker {
+  margin: 22px 0 0;
+  color: #86868b;
+  font: 720 15px/1.2 Onest, Inter, system-ui, sans-serif;
+  letter-spacing: -0.018em;
+}
+
+.sectionHeader h2 {
+  max-width: 940px;
+  margin: 14px 0 0;
+  color: #1d1d1f;
+  font: 850 clamp(42px, 5.2vw, 78px)/1.02 Onest, Inter, system-ui, sans-serif;
+  letter-spacing: -0.076em;
+  text-wrap: balance;
+}
+
+.description {
+  max-width: 760px;
+  margin: 24px 0 0;
+  color: #62666d;
+  font: 450 18px/1.62 Onest, Inter, system-ui, sans-serif;
+  letter-spacing: -0.02em;
+}
+
+.advantagesLayout {
+  display: grid;
+  grid-template-columns: minmax(360px, 0.88fr) minmax(0, 1.12fr);
+  gap: 22px;
+  align-items: stretch;
+}
+
+.visualCard {
+  position: sticky;
+  top: 96px;
+  min-height: 620px;
+  overflow: hidden;
+  border-radius: 36px;
+  background: #ffffff;
+  border: 1px solid rgba(29, 29, 31, 0.065);
+  box-shadow: 0 28px 80px rgba(15, 16, 20, 0.08);
+}
+
+.visualCard img {
+  object-fit: cover;
+}
+
+.contentColumn {
+  display: grid;
+  gap: 14px;
+}
+
+.mainCard {
+  min-height: 284px;
+  display: grid;
+  align-content: end;
+  padding: 34px;
+  border-radius: 34px;
+  color: #ffffff;
+  background:
+    radial-gradient(circle at 88% 18%, rgba(0, 113, 227, 0.36), transparent 34%),
+    linear-gradient(180deg, #18212c 0%, #10161f 100%);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  box-shadow: 0 26px 68px rgba(15, 16, 20, 0.12);
+}
+
+.mainCard > span {
+  color: rgba(255, 255, 255, 0.62);
+  font: 760 12px/1 JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, monospace;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.mainCard h3 {
+  max-width: 640px;
+  margin: 20px 0 0;
+  color: #ffffff;
+  font: 850 clamp(34px, 3.6vw, 56px)/1.02 Onest, Inter, system-ui, sans-serif;
+  letter-spacing: -0.068em;
+  text-wrap: balance;
+}
+
+.mainCard p {
+  max-width: 620px;
+  margin: 20px 0 0;
+  color: rgba(255, 255, 255, 0.72);
+  font: 450 16px/1.58 Onest, Inter, system-ui, sans-serif;
+  letter-spacing: -0.016em;
+}
+
+.cardsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.advantageCard {
+  min-height: 238px;
+  display: grid;
+  align-content: space-between;
+  padding: 26px;
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.84);
+  border: 1px solid rgba(29, 29, 31, 0.065);
+  box-shadow: 0 16px 44px rgba(15, 16, 20, 0.045);
+}
+
+.cardNumber {
+  color: #0071e3;
+  font: 780 13px/1 JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, monospace;
+  letter-spacing: -0.01em;
+}
+
+.advantageCard h3 {
+  margin: 30px 0 0;
+  color: #1d1d1f;
+  font: 820 24px/1.08 Onest, Inter, system-ui, sans-serif;
+  letter-spacing: -0.052em;
+  text-wrap: balance;
+}
+
+.advantageCard p {
+  margin: 18px 0 0;
+  color: #62666d;
+  font: 450 14px/1.56 Onest, Inter, system-ui, sans-serif;
+  letter-spacing: -0.012em;
+}
+
+@media (max-width: 1120px) {
+  .advantagesLayout {
+    grid-template-columns: 1fr;
+  }
+
+  .visualCard {
+    position: relative;
+    top: auto;
+    min-height: auto;
+    aspect-ratio: 16 / 9;
+  }
+}
+
+@media (max-width: 760px) {
+  .advantagesSection {
+    padding: 72px 0;
+  }
+
+  .container {
+    padding: 0 18px;
+  }
+
+  .sectionHeader {
+    margin-bottom: 30px;
+  }
+
+  .sectionHeader h2 {
+    font-size: 38px;
+    line-height: 1.04;
+  }
+
+  .description {
+    font-size: 16px;
+  }
+
+  .cardsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .mainCard {
+    min-height: auto;
+    padding: 28px;
+    border-radius: 28px;
+  }
+
+  .mainCard h3 {
+    font-size: 34px;
+  }
+
+  .advantageCard {
+    min-height: auto;
+  }
+}
+
+@media (max-width: 430px) {
+  .sectionHeader h2 {
+    font-size: 34px;
+  }
+
+  .visualCard {
+    border-radius: 26px;
+  }
+}

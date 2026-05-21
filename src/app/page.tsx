@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import HeroSection from "@/components/sections/HeroSection";
 import MobileBrandDivider from "@/components/sections/MobileBrandDivider";
 import ServicesSection from "@/components/sections/ServicesSection";
+import HomeAdvantagesSection from "@/components/sections/HomeAdvantagesSection";
 import CasesSection from "@/components/sections/CasesSection";
 
 export const metadata: Metadata = {
@@ -41,6 +42,7 @@ export default function HomePage() {
       <HeroSection />
       <MobileBrandDivider />
       <ServicesSection />
+      <HomeAdvantagesSection />
       <CasesSection />
     </main>
   );
