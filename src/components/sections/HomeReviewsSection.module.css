@@ -175,7 +175,7 @@
 .reviewCard {
   min-height: 390px;
   display: grid;
-  align-content: space-between;
+  grid-template-rows: auto 1fr auto;
   padding: 26px;
   border-radius: 30px;
   background: rgba(255, 255, 255, 0.88);
@@ -219,6 +219,7 @@
   align-items: center;
   gap: 12px;
   padding-top: 18px;
+  margin-top: 0;
   border-top: 1px solid rgba(29, 29, 31, 0.07);
 }
 
