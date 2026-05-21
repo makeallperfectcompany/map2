@@ -1,11 +1,5 @@
-import NotFoundPageSection from "@/components/sections/NotFoundPageSection";
-
-export const metadata = {
-  title: "Страница не найдена | Make All Perfect",
-  description:
-    "Страница не найдена. Вернитесь на главную Make All Perfect, откройте кейсы или свяжитесь с командой агентства.",
-};
+import NotFoundPage from "@/components/pages/NotFoundPage";
 
 export default function NotFound() {
-  return <NotFoundPageSection />;
+  return <NotFoundPage />;
 }
