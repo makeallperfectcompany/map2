@@ -79,8 +79,8 @@
   flex-direction: column;
   border-radius: 34px;
   background:
-    radial-gradient(circle at 92% 8%, rgba(0, 113, 227, 0.10), transparent 34%),
-    linear-gradient(180deg, #18212c 0%, #10161f 100%);
+    radial-gradient(circle at 92% 8%, rgba(0, 113, 227, 0.28), transparent 34%),
+    linear-gradient(180deg, #0a2240 0%, #071530 100%);
   border: 1px solid rgba(255, 255, 255, 0.08);
   box-shadow: 0 24px 70px rgba(15, 16, 20, 0.12);
 }
