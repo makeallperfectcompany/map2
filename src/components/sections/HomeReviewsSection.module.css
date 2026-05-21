@@ -173,9 +173,8 @@
 .mobileScroller { display: none; }
 
 .reviewCard {
-  min-height: 380px;
-  display: grid;
-  grid-template-rows: auto 1fr auto;
+  display: flex;
+  flex-direction: column;
   padding: 24px 26px 20px;
   border-radius: 30px;
   background: rgba(255, 255, 255, 0.88);
@@ -207,11 +206,12 @@
   color: #1d1d1f;
   font: 700 17px/1.45 Onest, Inter, system-ui, sans-serif;
   letter-spacing: -0.018em;
+  /* 6 lines * 17px * 1.45 = ~148px */
+  height: 148px;
   display: -webkit-box;
   -webkit-line-clamp: 6;
   -webkit-box-orient: vertical;
   overflow: hidden;
-  min-height: 0;
 }
 
 .reviewCard footer {
@@ -220,7 +220,7 @@
   align-items: center;
   gap: 10px;
   padding-top: 14px;
-  margin-top: 0;
+  margin-top: auto;
   border-top: 1px solid rgba(29, 29, 31, 0.07);
 }
 
