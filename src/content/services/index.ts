@@ -40,7 +40,7 @@ const RAW_GROUPS = [
     bigMark: "SEO",
     description:
       "Выводим в топ Яндекса, Google и AI-поиска. Органика работает на вас 24/7 — без оплаты за каждый клик.",
-    price: "ОТ 80 000 ₽",
+    price: "ОТ 50 000 ₽",
     cta: "Подробнее",
     href: "/services/seo",
     services: [
@@ -61,7 +61,7 @@ const RAW_GROUPS = [
     bigMark: "WEB",
     description:
       "Проектируем и строим сайты, которые работают в связке с рекламой и SEO. Не просто дизайн — рабочий инструмент продаж.",
-    price: "ОТ 120 000 ₽",
+    price: "ОТ 70 000 ₽",
     cta: "Подробнее",
     href: "/services/sozdanie-saytov",
     services: [
@@ -81,7 +81,7 @@ const RAW_GROUPS = [
     bigMark: "MP",
     description:
       "Растём на маркетплейсах системно: оптимизируем карточки, запускаем рекламу внутри и приводим внешний трафик.",
-    price: "ОТ 70 000 ₽",
+    price: "ОТ 50 000 ₽",
     cta: "Подробнее",
     href: "/services/marketplaces",
     services: [
@@ -116,7 +116,7 @@ const RAW_GROUPS = [
     bigMark: "CRM",
     description:
       "Настраиваем систему повторных продаж. Email, CRM и автоворонки превращают клиента в постоянного.",
-    price: "ОТ 60 000 ₽",
+    price: "ОТ 40 000 ₽",
     cta: "Подробнее",
     href: "/services/crm-marketing",
     services: [
@@ -132,7 +132,7 @@ const RAW_GROUPS = [
     bigMark: "SMM",
     description:
       "Строим присутствие бренда в соцсетях и YouTube. Контент, инфлюенсеры и охваты — в одной системе.",
-    price: "ОТ 60 000 ₽",
+    price: "ОТ 10 000 ₽",
     cta: "Подробнее",
     href: "/services/smm",
     services: [
