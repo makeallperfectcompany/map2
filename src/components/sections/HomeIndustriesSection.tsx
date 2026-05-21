@@ -11,11 +11,6 @@ export default function HomeIndustriesSection() {
             <p className={styles.kicker}>{homeIndustries.kicker}</p>
             <h2>{homeIndustries.title}</h2>
             <p className={styles.description}>{homeIndustries.description}</p>
-            <ul className={styles.bullets}>
-              {homeIndustries.bullets.map((bullet) => (
-                <li key={bullet} className={styles.bullet}>{bullet}</li>
-              ))}
-            </ul>
           </div>
 
           <aside className={styles.mainCard}>
@@ -23,6 +18,11 @@ export default function HomeIndustriesSection() {
               <span className={styles.mainCardKicker}>{homeIndustries.mainCard.label}</span>
               <h3>{homeIndustries.mainCard.title}</h3>
               <p>{homeIndustries.mainCard.text}</p>
+              <ul className={styles.mainCardBullets}>
+                {homeIndustries.bullets.map((bullet) => (
+                  <li key={bullet}>{bullet}</li>
+                ))}
+              </ul>
               <ul className={styles.mainCardStats}>
                 {homeIndustries.mainCard.stats.map((stat) => (
                   <li key={stat.label}>

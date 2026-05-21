@@ -75,32 +75,32 @@
   letter-spacing: -0.02em;
 }
 
-.bullets {
+.mainCardBullets {
   list-style: none;
-  margin: 24px 0 0;
+  margin: 20px 0 0;
   padding: 0;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 10px;
 }
 
-.bullet {
+.mainCardBullets li {
   position: relative;
-  padding-left: 22px;
-  color: #1d1d1f;
-  font: 550 15px/1.5 Onest, Inter, system-ui, sans-serif;
-  letter-spacing: -0.014em;
+  padding-left: 20px;
+  color: rgba(255, 255, 255, 0.82);
+  font: 500 14px/1.5 Onest, Inter, system-ui, sans-serif;
+  letter-spacing: -0.01em;
 }
 
-.bullet::before {
+.mainCardBullets li::before {
   content: "";
   position: absolute;
   left: 0;
   top: 7px;
-  width: 9px;
-  height: 9px;
+  width: 8px;
+  height: 8px;
   border-radius: 50%;
-  background: #0071e3;
+  background: #6FB7FF;
   flex-shrink: 0;
 }
 
