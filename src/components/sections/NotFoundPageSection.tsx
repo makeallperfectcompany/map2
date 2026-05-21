@@ -1,3 +1,4 @@
+import OpenConsultationButton from "@/components/forms/OpenConsultationButton";
 import styles from "./NotFoundPageSection.module.css";
 
 export default function NotFoundPageSection() {
@@ -24,7 +25,7 @@ export default function NotFoundPageSection() {
             <div className={styles.actions}>
               <a href="/">На главную</a>
               <a href="/cases">Смотреть кейсы</a>
-              <a href="/contacts">Связаться</a>
+              <OpenConsultationButton as="a" href="/contacts">Связаться</OpenConsultationButton>
             </div>
 
             <div className={styles.quickLinks} aria-label="Быстрые ссылки">

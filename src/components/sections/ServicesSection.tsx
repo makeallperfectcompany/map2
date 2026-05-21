@@ -1,4 +1,5 @@
 import { serviceGroups } from "@/content/services";
+import OpenConsultationButton from "@/components/forms/OpenConsultationButton";
 import styles from "./ServicesSection.module.css";
 
 export default function ServicesSection() {
@@ -14,7 +15,7 @@ export default function ServicesSection() {
             </h2>
 
             <div className={styles.introActions}>
-              <a href="/contacts">Подобрать связку услуг</a>
+              <OpenConsultationButton as="a" href="/contacts">Подобрать связку услуг</OpenConsultationButton>
               <a href="/about">Как мы работаем ›</a>
             </div>
           </div>

@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef, useState } from "react";
+import OpenConsultationButton from "@/components/forms/OpenConsultationButton";
 import Breadcrumbs from "@/components/navigation/Breadcrumbs";
 import {
   approachSteps,
@@ -42,7 +43,7 @@ export default function AboutPageSection() {
             получать заявки, продажи и управляемый результат.
           </p>
           <div className={styles.heroActions}>
-            <a href="/contacts">Обсудить проект</a>
+            <OpenConsultationButton as="a" href="/contacts">Обсудить проект</OpenConsultationButton>
             <a href="/cases">Смотреть кейсы</a>
           </div>
 
@@ -256,7 +257,7 @@ export default function AboutPageSection() {
               и предложим понятный следующий шаг.
             </p>
             <div className={styles.finalActions}>
-              <a href="/contacts">Обсудить проект</a>
+              <OpenConsultationButton as="a" href="/contacts">Обсудить проект</OpenConsultationButton>
               <a href="/cases">Смотреть кейсы</a>
             </div>
           </div>

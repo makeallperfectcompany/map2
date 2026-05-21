@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import CookieNotice from "@/components/common/CookieNotice";
+import { PopupProvider } from "@/components/modals/PopupProvider";
 
 export default function ClientLayout({
   children,
@@ -28,7 +29,7 @@ export default function ClientLayout({
   }, [menuOpen]);
 
   return (
-    <>
+    <PopupProvider>
       <Header
         menuOpen={menuOpen}
         onBurgerClick={handleBurgerClick}
@@ -36,6 +37,6 @@ export default function ClientLayout({
       {children}
       <Footer />
       <CookieNotice />
-    </>
+    </PopupProvider>
   );
 }

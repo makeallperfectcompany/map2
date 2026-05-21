@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import OpenConsultationButton from "@/components/forms/OpenConsultationButton";
 import Breadcrumbs from "@/components/navigation/Breadcrumbs";
 import { reviews, type ReviewItem } from "@/content/reviews";
 import styles from "./ReviewsIndexSection.module.css";
@@ -107,7 +108,7 @@ export default function ReviewsIndexSection() {
               благодарственные письма подтверждают экспертизу, системный подход и результат.
             </p>
             <div className={styles.heroActions}>
-              <a href="/#contacts">Обсудить проект</a>
+              <OpenConsultationButton as="a" href="/contacts">Обсудить проект</OpenConsultationButton>
               <a href="/cases">Смотреть кейсы</a>
             </div>
           </div>
@@ -146,7 +147,7 @@ export default function ReviewsIndexSection() {
               <span>Обсудим ваш проект?</span>
               <strong>Расскажите о задаче — предложим решения, которые дадут измеримый результат.</strong>
             </div>
-            <a href="/#contacts">Обсудить проект</a>
+            <OpenConsultationButton as="a" href="/contacts">Обсудить проект</OpenConsultationButton>
           </div>
         </div>
       </section>

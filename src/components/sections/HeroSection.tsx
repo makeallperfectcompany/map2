@@ -1,5 +1,6 @@
 import Image from "next/image";
 import AnimatedWord from "./AnimatedWord";
+import OpenConsultationButton from "@/components/forms/OpenConsultationButton";
 import styles from "./HeroSection.module.css";
 
 export default function HeroSection() {
@@ -27,7 +28,7 @@ export default function HeroSection() {
           </p>
 
           <div className={styles.heroActions}>
-            <a className={`${styles.btn} ${styles.btnAccent}`} href="/contacts">
+            <OpenConsultationButton as="a" className={`${styles.btn} ${styles.btnAccent}`}>
               <span className={styles.label}>Обсудить проект</span>
               <span className={styles.arrWrap}>
                 <svg className={`${styles.arr} ${styles.arrMain}`} viewBox="0 0 14 14" fill="none">
@@ -37,7 +38,7 @@ export default function HeroSection() {
                   <path d="M3 11L11 3M11 3H4M11 3V10" stroke="white" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
               </span>
-            </a>
+            </OpenConsultationButton>
             <a className={`${styles.btn} ${styles.btnGhost}`} href="/about">
               <span className={styles.label}>Смотреть подход</span>
               <span className={styles.arrWrap}>
