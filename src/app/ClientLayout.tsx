@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import CookieNotice from "@/components/common/CookieNotice";
 
 export default function ClientLayout({
   children,
@@ -34,6 +35,7 @@ export default function ClientLayout({
       />
       {children}
       <Footer />
+      <CookieNotice />
     </>
   );
 }

@@ -1,0 +1,132 @@
+.overlay {
+  position: fixed;
+  z-index: 9999;
+  inset: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.card {
+  pointer-events: auto;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  max-width: 760px;
+  width: calc(100% - 32px);
+  margin-bottom: 28px;
+  padding: 18px 22px 18px 24px;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(0, 0, 0, 0.07);
+  box-shadow:
+    0 12px 40px rgba(15, 16, 20, 0.08),
+    0 2px 6px rgba(15, 16, 20, 0.04);
+  animation: cookieIn 0.4s ease-out both;
+}
+
+.cardHidden {
+  animation: cookieOut 0.3s ease-in both;
+}
+
+.card p {
+  flex: 1;
+  margin: 0;
+  color: #4d535c;
+  font: 500 13px/1.55 Onest, Inter, system-ui, sans-serif;
+  letter-spacing: -0.01em;
+}
+
+.card a {
+  color: #0071e3;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.card a:hover {
+  text-decoration: underline;
+}
+
+.button {
+  flex-shrink: 0;
+  min-height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 22px;
+  border: none;
+  border-radius: 12px;
+  background: #1d1d1f;
+  color: #ffffff;
+  font: 700 13px/1 Onest, Inter, system-ui, sans-serif;
+  letter-spacing: -0.01em;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.15s ease;
+}
+
+.button:hover {
+  background: #2d2d2f;
+  transform: translateY(-1px);
+}
+
+.button:focus-visible {
+  outline: 2px solid #0071e3;
+  outline-offset: 2px;
+}
+
+@keyframes cookieIn {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes cookieOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+}
+
+@media (max-width: 600px) {
+  .card {
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 16px 18px;
+    margin-bottom: 14px;
+    width: calc(100% - 24px);
+    border-radius: 18px;
+  }
+
+  .card p {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+
+  .button {
+    width: 100%;
+    min-height: 44px;
+    font-size: 14px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card {
+    animation: none;
+  }
+  .cardHidden {
+    animation: none;
+    opacity: 0;
+  }
+}
