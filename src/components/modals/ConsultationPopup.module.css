@@ -126,20 +126,21 @@
 .actionGrid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 10px;
+  gap: 8px;
   margin-top: 10px;
 }
 
 .actionButton {
   display: flex;
-  align-items: stretch;
+  align-items: center;
   justify-content: center;
   border: 0;
   background: none;
   text-decoration: none;
-  border-radius: 14px;
+  border-radius: 10px;
   overflow: hidden;
-  max-width: 180px;
+  width: 100px;
+  height: 34px;
   margin: 0 auto;
   transition: transform 160ms ease;
 }
@@ -149,9 +150,11 @@
 }
 
 .messengerButtonImg {
-  width: 100%;
-  height: auto;
+  width: 100px;
+  height: 34px;
   display: block;
+  object-fit: contain;
+  object-position: center;
 }
 
 .formBlock {
