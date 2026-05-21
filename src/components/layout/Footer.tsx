@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { getFooterGroups } from "@/content/navigation/siteMap";
 import styles from "./Footer.module.css";
 
@@ -18,7 +19,14 @@ export default function Footer() {
         <div className={styles.top}>
           <div className={styles.brand}>
             <Link className={styles.logo} href="/" aria-label="Make All Perfect — на главную">
-              <span className={styles.logoMark}>M</span>
+              <Image
+                src="/assets/home/hero/logo-header.webp"
+                alt="Make All Perfect"
+                width={0}
+                height={0}
+                sizes="42px"
+                className={styles.logoImage}
+              />
               <span>
                 <strong>Make All Perfect</strong>
                 <em>SINCE 2017</em>

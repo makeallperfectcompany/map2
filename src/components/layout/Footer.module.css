@@ -28,17 +28,11 @@
   text-decoration: none;
 }
 
-.logoMark {
+.logoImage {
   width: 42px;
   height: 42px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
   border-radius: 14px;
-  color: #ffffff;
-  background: #1d1d1f;
-  font: 850 20px/1 Inter, Onest, system-ui, sans-serif;
-  letter-spacing: -0.06em;
+  object-fit: cover;
 }
 
 .logo strong {
@@ -202,10 +196,6 @@
     padding: 0 18px;
   }
 
-  .logoMark {
-    width: 40px;
-    height: 40px;
-  }
 
   .bottom {
     display: grid;
