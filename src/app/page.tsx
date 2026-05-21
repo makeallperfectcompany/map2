@@ -8,6 +8,7 @@ import HomeTechnologiesSection from "@/components/sections/HomeTechnologiesSecti
 import HomeAboutSection from "@/components/sections/HomeAboutSection";
 import HomeBlogSection from "@/components/sections/HomeBlogSection";
 import HomeFaqSection from "@/components/sections/HomeFaqSection";
+import FinalCtaSection from "@/components/sections/FinalCtaSection";
 import CasesSection from "@/components/sections/CasesSection";
 import HomeReviewsSection from "@/components/sections/HomeReviewsSection";
 
@@ -56,6 +57,7 @@ export default function HomePage() {
       <HomeAboutSection />
       <HomeBlogSection />
       <HomeFaqSection />
+      <FinalCtaSection />
     </main>
   );
 }
