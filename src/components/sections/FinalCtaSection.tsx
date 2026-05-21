@@ -2,13 +2,14 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { usePhoneMask } from "@/hooks/usePhoneMask";
 import Image from "next/image";
 import { finalCta } from "@/content/home/final-cta";
 import styles from "./FinalCtaSection.module.css";
 
 export default function FinalCtaSection() {
   const [name, setName] = useState("");
-  const [phone, setPhone] = useState("");
+  const [phone, onPhoneChange] = usePhoneMask("");
   const [consent, setConsent] = useState(true);
   const [formState, setFormState] = useState<"idle" | "loading" | "success" | "error">("idle");
 
@@ -84,7 +85,7 @@ export default function FinalCtaSection() {
                       placeholder={finalCta.form.phonePlaceholder}
                       autoComplete="tel"
                       value={phone}
-                      onChange={(e) => setPhone(e.target.value)}
+                      onChange={onPhoneChange}
                       required
                     />
                   </label>
