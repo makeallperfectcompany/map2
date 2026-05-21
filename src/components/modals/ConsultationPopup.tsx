@@ -159,8 +159,8 @@ export default function ConsultationPopup({ isOpen, onClose }: ConsultationPopup
                         className={styles.messengerButtonImg}
                         src={`/images/icons/messenger-buttons/${action.type}.png`}
                         alt={action.label}
-                        width="160"
-                        height="53"
+                        width="320"
+                        height="106"
                       />
                     </a>
                   ))}
