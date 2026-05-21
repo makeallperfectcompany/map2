@@ -66,18 +66,20 @@ function ReviewFooter({ review, onExpand }: { review: ReviewItem; onExpand: () =
   const isLong = text.length > 200;
 
   return (
-    <footer>
-      <Avatar src={"avatar" in review ? review.avatar : undefined} name={name} />
-      <div>
-        <strong>{name}</strong>
-        <span>{review.role}</span>
-      </div>
+    <>
       {isLong && (
         <button type="button" className={styles.expandButton} onClick={onExpand}>
           Читать полностью →
         </button>
       )}
-    </footer>
+      <footer>
+        <Avatar src={"avatar" in review ? review.avatar : undefined} name={name} />
+        <div>
+          <strong>{name}</strong>
+          <span>{review.role}</span>
+        </div>
+      </footer>
+    </>
   );
 }
 
