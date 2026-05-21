@@ -417,20 +417,15 @@
 .yandexRatingLink {
   display: inline-flex;
   text-decoration: none;
-  border-radius: 12px;
-  background: #ffffff;
-  padding: 8px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
-  transition: box-shadow 180ms ease;
+  transition: opacity 180ms ease;
 }
 
 .yandexRatingLink:hover {
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.10);
+  opacity: 0.8;
 }
 
 .yandexRatingImg {
   width: 260px;
   height: auto;
-  border-radius: 6px;
   display: block;
 }
