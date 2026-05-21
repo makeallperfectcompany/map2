@@ -209,9 +209,18 @@
     padding: 0 18px;
   }
 
-
   .bottom {
     display: grid;
     gap: 12px;
+  }
+
+  .bottomLeft {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .yandexRatingImage {
+    width: 180px;
   }
 }
