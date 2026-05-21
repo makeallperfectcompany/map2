@@ -116,32 +116,23 @@
 }
 
 .messengerButton {
-  min-height: 52px;
-  min-width: 150px;
   display: inline-flex;
   align-items: center;
-  justify-content: center;
-  gap: 9px;
-  padding: 0 18px;
-  border-radius: 16px;
-  color: #1d1d1f;
-  background: rgba(255, 255, 255, 0.84);
-  border: 1px solid rgba(29, 29, 31, 0.075);
-  box-shadow: 0 12px 34px rgba(15, 16, 20, 0.045);
-  font: 760 14px/1 Onest, Inter, system-ui, sans-serif;
+  gap: 8px;
+  color: #0071e3;
+  font: 600 15px/1 Onest, Inter, system-ui, sans-serif;
   letter-spacing: -0.018em;
   text-decoration: none;
-  transition: transform 180ms ease, box-shadow 180ms ease;
+  transition: opacity 160ms ease;
 }
 
 .messengerButton:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 16px 42px rgba(15, 16, 20, 0.07);
+  opacity: 0.72;
 }
 
 .messengerButton img {
-  width: 24px;
-  height: 24px;
+  width: 28px;
+  height: 28px;
   object-fit: contain;
 }
 
