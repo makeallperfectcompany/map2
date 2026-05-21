@@ -2,6 +2,7 @@
 
 import { useRef, useState, useEffect, useCallback } from "react";
 import Image from "next/image";
+import { useConsultationPopup } from "@/components/modals/PopupProvider";
 import styles from "./Header.module.css";
 
 interface HeaderProps {
@@ -13,6 +14,7 @@ export default function Header({ menuOpen, onBurgerClick }: HeaderProps) {
   const [hidden, setHidden] = useState(false);
   const lastScrollY = useRef(0);
   const ticking = useRef(false);
+  const { openConsultation } = useConsultationPopup();
 
   const handleScroll = useCallback(() => {
     if (ticking.current) return;
@@ -99,9 +101,9 @@ export default function Header({ menuOpen, onBurgerClick }: HeaderProps) {
             </svg>
           </a>
 
-          <a href="#" className={styles.overlayCta}>
+          <button className={styles.overlayCta} onClick={openConsultation}>
             Обсудить проект
-          </a>
+          </button>
         </nav>
       </div>
       <header className={headerClass}>
@@ -133,7 +135,7 @@ export default function Header({ menuOpen, onBurgerClick }: HeaderProps) {
         </nav>
 
         <div className={styles.navRight}>
-          <a href="#" className={styles.navCta}>Обсудить проект</a>
+          <button className={styles.navCta} onClick={openConsultation}>Обсудить проект</button>
           <button
             className={`${styles.heroBurger}${menuOpen ? " " + styles.menuOpen : ""}`}
             onClick={onBurgerClick}

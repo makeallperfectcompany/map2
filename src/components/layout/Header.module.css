@@ -95,6 +95,8 @@
   background: rgba(255,255,255,0.5);
   border: 1px solid rgba(15,16,20,0.08);
   transition: background .25s var(--ease), transform .25s var(--ease);
+  cursor: pointer;
+  font-family: inherit;
 }
 .navCta:hover { background: #fff; transform: translateY(-1px); }
 
@@ -244,16 +246,18 @@
   padding: 12px 32px;
   background: #0E0F12;
   color: #fff;
-  text-decoration: none;
+  border: 0;
   font-size: 15px;
   font-weight: 650;
   line-height: 1.2;
+  font-family: inherit;
   border-radius: 12px;
   width: fit-content;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
+  cursor: pointer;
   transition: transform .3s var(--ease), background .25s var(--ease);
   transform: translateY(20px);
   opacity: 0;
