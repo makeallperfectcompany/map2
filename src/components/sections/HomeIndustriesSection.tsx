@@ -37,8 +37,10 @@ export default function HomeIndustriesSection() {
                 </div>
               </div>
 
-              <h3>{industry.title}</h3>
-              <p>{industry.text}</p>
+              <div className={styles.cardText}>
+                <h3>{industry.title}</h3>
+                <p>{industry.text}</p>
+              </div>
 
               <div className={styles.tags}>
                 {industry.tags.map((tag) => (

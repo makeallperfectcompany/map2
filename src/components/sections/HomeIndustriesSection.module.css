@@ -164,10 +164,10 @@
 }
 
 .industryCard {
-  min-height: 360px;
-  display: grid;
-  align-content: space-between;
-  padding: 28px;
+  min-height: 384px;
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
   border-radius: 30px;
   background: rgba(255, 255, 255, 0.88);
   border: 1px solid rgba(29, 29, 31, 0.065);
@@ -201,16 +201,20 @@
   display: block;
 }
 
-.industryCard h3 {
-  margin: 42px 0 0;
+.cardText {
+  margin-top: 56px;
+}
+
+.cardText h3 {
+  margin: 0;
   color: #1d1d1f;
   font: 820 28px/1.06 Onest, Inter, system-ui, sans-serif;
   letter-spacing: -0.058em;
   text-wrap: balance;
 }
 
-.industryCard p {
-  margin: 18px 0 0;
+.cardText p {
+  margin: 24px 0 0;
   color: #62666d;
   font: 450 15px/1.58 Onest, Inter, system-ui, sans-serif;
   letter-spacing: -0.014em;
@@ -220,7 +224,8 @@
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  margin-top: 26px;
+  margin-top: auto;
+  padding-top: 28px;
 }
 
 .tags span {
@@ -292,8 +297,11 @@
     border-radius: 26px;
   }
 
-  .industryCard h3 {
-    margin-top: 34px;
+  .cardText {
+    margin-top: 40px;
+  }
+
+  .cardText h3 {
     font-size: 26px;
   }
 }
@@ -305,6 +313,14 @@
 
   .mainCardContent h3 {
     font-size: 26px;
+  }
+
+  .cardText {
+    margin-top: 34px;
+  }
+
+  .cardText h3 {
+    font-size: 24px;
   }
 
   .cardIcon {
