@@ -407,6 +407,7 @@
 
   /* ── Горизонтальный скролл карточек ── */
   .servicesGrid {
+    position: relative;
     display: flex;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
@@ -414,6 +415,21 @@
     padding: 4px 4px 16px;
     margin: 0 -4px;
     -webkit-overflow-scrolling: touch;
+  }
+
+  /* ── Градиент-подсказка скролла ── */
+  .servicesGrid::after {
+    content: "";
+    position: sticky;
+    right: 0;
+    top: 0;
+    flex: 0 0 56px;
+    min-width: 56px;
+    align-self: stretch;
+    background: linear-gradient(to right, transparent, rgba(29, 29, 31, 0.92));
+    pointer-events: none;
+    border-radius: 0 16px 16px 0;
+    z-index: 2;
   }
 
   .servicesGrid::-webkit-scrollbar {
@@ -457,11 +473,11 @@
     min-height: 0;
   }
 
-  /* ── Чипсы: 2 строки, мелкий размер ── */
+  /* ── Чипсы: все теги видны, переносятся на новые строки ── */
   .chips {
-    max-height: 72px;
-    overflow: hidden;
     gap: 5px;
+    max-height: none;
+    overflow: visible;
   }
 
   .chips span,
