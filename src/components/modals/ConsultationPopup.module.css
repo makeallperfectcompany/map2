@@ -183,9 +183,9 @@
 
 .formBlock {
   display: grid;
-  gap: 12px;
-  margin-top: 18px;
-  padding-top: 18px;
+  gap: 18px;
+  margin-top: 20px;
+  padding-top: 20px;
   border-top: 1px solid rgba(29, 29, 31, 0.06);
 }
 
