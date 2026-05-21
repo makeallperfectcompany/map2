@@ -10,20 +10,37 @@ export default function ServicesSection() {
           <div className={styles.introLeft}>
             <div className={styles.kicker}>Услуги</div>
             <h2 id="services-title">
-              Меньше хаоса.
-              <span>Больше управляемого роста.</span>
+              8 направлений. Одна система.
+              <span>Ваш рост.</span>
             </h2>
 
             <div className={styles.introActions}>
               <OpenConsultationButton as="a" href="/contacts">Подобрать связку услуг</OpenConsultationButton>
-              <a href="/about">Как мы работаем ›</a>
             </div>
           </div>
 
-          <p>
-            Подключаем нужные направления под задачу бизнеса: от стратегии и сайта
-            до рекламных связок, контента, аналитики и масштабирования.
-          </p>
+          <div className={styles.introRight}>
+            <p>
+              Собираем только те инструменты, которые нужны вашему бизнесу прямо сейчас. Без лишнего — только то, что даёт результат.
+            </p>
+
+            <div className={styles.factsRow}>
+              <div className={styles.fact}>
+                <span className={styles.factValue}>С 2017 года</span>
+                <span className={styles.factLabel}>на рынке</span>
+              </div>
+              <div className={styles.factSeparator} />
+              <div className={styles.fact}>
+                <span className={styles.factValue}>Полный комплекс</span>
+                <span className={styles.factLabel}>8 направлений</span>
+              </div>
+              <div className={styles.factSeparator} />
+              <div className={styles.fact}>
+                <span className={styles.factValue}>400+</span>
+                <span className={styles.factLabel}>реализованных проектов</span>
+              </div>
+            </div>
+          </div>
         </div>
 
         <div className={styles.servicesGrid} aria-label="Ключевые направления услуг">

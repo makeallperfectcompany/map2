@@ -64,12 +64,57 @@
   color: rgba(245, 245, 247, 0.55);
 }
 
-.servicesIntro > p {
-  max-width: 430px;
+/* ── Правая колонка ── */
+
+.introRight {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.introRight p {
   margin: 62px 0 0;
+  max-width: 430px;
   color: rgba(245, 245, 247, 0.65);
   font: 440 16px/1.55 Onest, Inter, system-ui, sans-serif;
   letter-spacing: -0.02em;
+}
+
+/* ── Факты ── */
+
+.factsRow {
+  display: flex;
+  align-items: stretch;
+  gap: 0;
+  margin-top: 28px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.fact {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.factValue {
+  color: #F5F5F7;
+  font: 840 22px/1.1 Onest, Inter, system-ui, sans-serif;
+  letter-spacing: -0.03em;
+}
+
+.factLabel {
+  color: rgba(245, 245, 247, 0.45);
+  font: 440 12px/1.3 Onest, Inter, system-ui, sans-serif;
+  letter-spacing: -0.01em;
+}
+
+.factSeparator {
+  width: 1px;
+  margin: 0 16px;
+  background: rgba(255, 255, 255, 0.08);
+  flex-shrink: 0;
 }
 
 .introActions {
@@ -91,36 +136,12 @@
   letter-spacing: -0.01em;
 }
 
-.introActions a:first-child {
+.introActions a {
   padding: 0 24px;
   color: #121820;
   background: #ffffff;
   box-shadow: 0 14px 32px rgba(0, 0, 0, 0.18);
 }
-
-.introActions a:last-child {
-  padding: 0;
-  color: rgba(245, 245, 247, 0.85);
-  background: transparent;
-  position: relative;
-  gap: 0 6px;
-}
-
-.introActions a:last-child::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 6px;
-  height: 1px;
-  background: rgba(245, 245, 247, 0.85);
-  transform: scaleX(0);
-  transform-origin: center;
-  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.introActions a:last-child:hover { color: #ffffff; }
-.introActions a:last-child:hover::after { transform: scaleX(1); }
 
 /* ── Сетка карточек: 4 в ряд ── */
 
@@ -305,9 +326,13 @@
     margin-bottom: 36px;
   }
 
-  .servicesIntro > p {
+  .introRight p {
     max-width: 760px;
     margin: 0;
+  }
+
+  .factsRow {
+    margin-top: 20px;
   }
 }
 
@@ -339,16 +364,35 @@
     line-height: 1.02;
   }
 
-  .servicesIntro > p {
+  .introRight p {
     font-size: 15px;
   }
 
+  .factsRow {
+    flex-wrap: wrap;
+    gap: 12px 0;
+    margin-top: 16px;
+    padding-top: 16px;
+  }
+
+  .fact {
+    flex: 0 0 calc(50% - 8px);
+  }
+
+  .fact:nth-child(3) {
+    flex: 0 0 100%;
+  }
+
+  .factSeparator {
+    display: none;
+  }
+
   .introActions {
-    display: grid;
+    display: flex;
     gap: 10px;
   }
 
-  .introActions a:first-child {
+  .introActions a {
     width: 100%;
   }
 
@@ -393,6 +437,14 @@
 
   .servicesIntro h2 {
     font-size: 30px;
+  }
+
+  .factsRow {
+    gap: 10px 0;
+  }
+
+  .factValue {
+    font-size: 18px;
   }
 
   .serviceCard {
