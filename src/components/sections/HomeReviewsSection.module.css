@@ -414,7 +414,7 @@
 }
 
 @media (max-width: 760px) {
-  .reviewsSection { padding: 72px 0; }
+  .reviewsSection { padding: 72px 0 48px; }
   .container { padding: 0 18px; }
   .sectionHeader { text-align: center; }
   .sectionHeader h2 { font-size: 38px; line-height: 1.04; }
