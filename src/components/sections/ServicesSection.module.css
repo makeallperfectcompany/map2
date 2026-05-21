@@ -145,14 +145,6 @@
 
 /* ── Сетка карточек: 4 в ряд ── */
 
-.servicesGridWrap {
-  position: relative;
-}
-
-.scrollHint {
-  display: none;
-}
-
 .servicesGrid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));

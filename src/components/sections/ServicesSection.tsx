@@ -82,7 +82,6 @@ export default function ServicesSection() {
             </article>
           ))}
         </div>
-        <div className={styles.scrollHint}>→ Листайте</div>
       </div>
     </section>
   );

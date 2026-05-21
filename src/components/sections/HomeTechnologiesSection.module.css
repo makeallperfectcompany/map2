@@ -122,14 +122,6 @@
   letter-spacing: -0.016em;
 }
 
-.cardsGridWrap {
-  position: relative;
-}
-
-.scrollHint {
-  display: none;
-}
-
 .cardsGrid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));

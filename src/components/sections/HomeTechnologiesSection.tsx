@@ -26,7 +26,6 @@ export default function HomeTechnologiesSection() {
           </div>
         </div>
 
-        <div className={styles.cardsGridWrap}>
         <div className={styles.cardsGrid}>
           {homeTechnologies.cards.map((card) => (
             <article
@@ -52,8 +51,6 @@ export default function HomeTechnologiesSection() {
             </article>
           ))}
         </div>
-        <div className={styles.scrollHint}>→ Листайте</div>
-      </div>
       </div>
     </section>
   );
