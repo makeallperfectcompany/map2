@@ -296,7 +296,7 @@
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     gap: 12px;
-    padding: 2px 0 16px;
+    padding: 2px 18px 16px;
     margin: 66px 0 0;
     -webkit-overflow-scrolling: touch;
   }
