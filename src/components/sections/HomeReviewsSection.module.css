@@ -416,8 +416,10 @@
 @media (max-width: 760px) {
   .reviewsSection { padding: 72px 0; }
   .container { padding: 0 18px; }
+  .sectionHeader { text-align: center; }
   .sectionHeader h2 { font-size: 38px; line-height: 1.04; }
   .description { font-size: 16px; }
+  .yandexRatingLinkHeader { justify-content: center; width: 100%; }
   .reviewsViewport, .carouselHeader, .dots { display: none; }
   .mobileScroller {
     display: grid;
