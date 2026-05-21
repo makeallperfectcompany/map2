@@ -17,7 +17,7 @@
   max-height: min(calc(100dvh - 28px), 700px);
   display: grid;
   grid-template-columns: 1fr;
-  overflow: hidden;
+  overflow-y: auto;
   border-radius: 32px;
   background: #ffffff;
   border: 1px solid rgba(255, 255, 255, 0.76);
