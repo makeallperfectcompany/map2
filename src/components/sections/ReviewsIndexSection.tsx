@@ -142,6 +142,24 @@ export default function ReviewsIndexSection() {
             </div>
           ) : null}
 
+          <div className={styles.yandexRatingRow}>
+            <a
+              href="https://yandex.ru/maps/org/make_all_perfect/190852529964/reviews/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.yandexRatingLink}
+            >
+              <img
+                src="/images/yandex-rating.webp"
+                alt="Рейтинг Make All Perfect на Яндекс Картах — 5.0"
+                loading="lazy"
+                decoding="async"
+                className={styles.yandexRatingImg}
+              />
+              <span>Оставить отзыв на Яндекс Картах →</span>
+            </a>
+          </div>
+
           <div className={styles.reviewsCta}>
             <div>
               <span>Обсудим ваш проект?</span>

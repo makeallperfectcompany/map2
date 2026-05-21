@@ -17,7 +17,23 @@ function StarIcon() {
   );
 }
 
+function Avatar({ src, name }: { src?: string; name: string }) {
+  if (src) {
+    return (
+      <div className={styles.avatarImageWrapper}>
+        <img src={src} alt={name} className={styles.avatarImage} loading="lazy" />
+      </div>
+    );
+  }
+  return (
+    <div className={styles.avatar} aria-hidden="true">
+      {name.slice(0, 1)}
+    </div>
+  );
+}
+
 function ReviewPopup({ review, onClose }: { review: ReviewItem; onClose: () => void }) {
+  const name = review.name ?? "";
   return (
     <div className={styles.overlay} onClick={onClose}>
       <div className={styles.popupCard} onClick={(e) => e.stopPropagation()}>
@@ -26,11 +42,9 @@ function ReviewPopup({ review, onClose }: { review: ReviewItem; onClose: () => v
         </button>
         <blockquote>{review.text}</blockquote>
         <footer>
-          <div className={styles.avatar} aria-hidden="true">
-            {(review.name ?? review.name ?? "?").slice(0, 1)}
-          </div>
+          <Avatar src={"avatar" in review ? review.avatar : undefined} name={name} />
           <div>
-            <strong>{review.name ?? review.name}</strong>
+            <strong>{name}</strong>
             <span>{review.role}</span>
           </div>
         </footer>
@@ -41,14 +55,12 @@ function ReviewPopup({ review, onClose }: { review: ReviewItem; onClose: () => v
 
 function ReviewFooter({ review, onExpand }: { review: ReviewItem; onExpand: () => void }) {
   const text = review.text ?? "";
-  const name = review.name ?? review.name ?? "";
+  const name = review.name ?? "";
   const isLong = text.length > 200;
 
   return (
     <footer>
-      <div className={styles.avatar} aria-hidden="true">
-        {name.slice(0, 1)}
-      </div>
+      <Avatar src={"avatar" in review ? review.avatar : undefined} name={name} />
       <div>
         <strong>{name}</strong>
         <span>{review.role}</span>
