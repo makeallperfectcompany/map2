@@ -75,6 +75,35 @@
   letter-spacing: -0.02em;
 }
 
+.bullets {
+  list-style: none;
+  margin: 24px 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.bullet {
+  position: relative;
+  padding-left: 22px;
+  color: #1d1d1f;
+  font: 550 15px/1.5 Onest, Inter, system-ui, sans-serif;
+  letter-spacing: -0.014em;
+}
+
+.bullet::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 7px;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #0071e3;
+  flex-shrink: 0;
+}
+
 .mainCard {
   position: relative;
   overflow: hidden;
@@ -147,7 +176,7 @@
 
 .mainCardStats strong {
   color: #fff;
-  font: 850 32px/1 Onest, Inter, system-ui, sans-serif;
+  font: 850 28px/1 Onest, Inter, system-ui, sans-serif;
   letter-spacing: -0.05em;
 }
 

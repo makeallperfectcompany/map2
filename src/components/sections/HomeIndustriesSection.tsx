@@ -11,6 +11,11 @@ export default function HomeIndustriesSection() {
             <p className={styles.kicker}>{homeIndustries.kicker}</p>
             <h2>{homeIndustries.title}</h2>
             <p className={styles.description}>{homeIndustries.description}</p>
+            <ul className={styles.bullets}>
+              {homeIndustries.bullets.map((bullet) => (
+                <li key={bullet} className={styles.bullet}>{bullet}</li>
+              ))}
+            </ul>
           </div>
 
           <aside className={styles.mainCard}>
@@ -19,9 +24,12 @@ export default function HomeIndustriesSection() {
               <h3>{homeIndustries.mainCard.title}</h3>
               <p>{homeIndustries.mainCard.text}</p>
               <ul className={styles.mainCardStats}>
-                <li><strong>6+</strong><span>отраслей</span></li>
-                <li><strong>120+</strong><span>проектов</span></li>
-                <li><strong>8 лет</strong><span>опыта</span></li>
+                {homeIndustries.mainCard.stats.map((stat) => (
+                  <li key={stat.label}>
+                    <strong>{stat.value}</strong>
+                    <span>{stat.label}</span>
+                  </li>
+                ))}
               </ul>
             </div>
           </aside>
