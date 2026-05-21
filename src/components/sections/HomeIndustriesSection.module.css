@@ -183,12 +183,8 @@
 .cardIcon {
   width: 56px;
   height: 56px;
-  border-radius: 18px;
   display: grid;
   place-items: center;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.95), rgba(245, 245, 247, 0.88));
-  border: 1px solid rgba(0, 113, 227, 0.12);
-  box-shadow: 0 14px 30px rgba(0, 113, 227, 0.08);
 }
 
 .cardIcon img {

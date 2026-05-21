@@ -45,9 +45,9 @@ export default function HomePage() {
       <MobileBrandDivider />
       <ServicesSection />
       <HomeAdvantagesSection />
-      <HomeIndustriesSection />
       <CasesSection />
       <HomeReviewsSection />
+      <HomeIndustriesSection />
     </main>
   );
 }
