@@ -17,17 +17,17 @@ export const finalCta = {
       {
         label: "Telegram",
         href: "https://t.me/makeallperfectcompany",
-        icon: "/images/icons/messengers/telegram.webp",
+        icon: "/images/messengers/telegram.webp",
       },
       {
         label: "WhatsApp",
         href: "https://wa.me/74950181815",
-        icon: "/images/icons/messengers/whatsapp.webp",
+        icon: "/images/messengers/whatsapp.webp",
       },
       {
         label: "MAX",
         href: "#",
-        icon: "/images/icons/messengers/max.webp",
+        icon: "/images/messengers/max.webp",
       },
     ],
   },

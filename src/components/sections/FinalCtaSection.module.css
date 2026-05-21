@@ -84,68 +84,87 @@
   position: relative;
   width: min(100%, 1260px);
   margin-top: 70px;
-  padding: 18px;
-  border-radius: 28px;
-  background: rgba(255, 255, 255, 0.76);
+  padding: 24px;
+  border-radius: 32px;
+  background: rgba(255, 255, 255, 0.80);
   border: 1px solid rgba(29, 29, 31, 0.07);
   box-shadow:
     0 28px 84px rgba(15, 16, 20, 0.10),
-    inset 0 1px 0 rgba(255, 255, 255, 0.82);
-  backdrop-filter: blur(22px);
+    inset 0 1px 0 rgba(255, 255, 255, 0.86);
+  backdrop-filter: blur(24px);
 }
 
 .messengerBlock {
   display: grid;
-  grid-template-columns: 180px minmax(0, 1fr);
-  gap: 14px;
+  grid-template-columns: 250px minmax(0, 1fr);
+  gap: 22px;
   align-items: center;
-  padding: 0 0 14px;
+  padding-bottom: 22px;
 }
 
 .messengerBlock > span {
   display: block;
+  max-width: 230px;
   color: #1d1d1f;
-  font: 780 16px/1.2 Onest, Inter, system-ui, sans-serif;
-  letter-spacing: -0.032em;
+  font: 850 22px/1.08 Onest, Inter, system-ui, sans-serif;
+  letter-spacing: -0.055em;
 }
 
 .messengers {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
+  align-items: center;
 }
 
 .messengerButton {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  color: #0071e3;
-  font: 600 15px/1 Onest, Inter, system-ui, sans-serif;
-  letter-spacing: -0.018em;
+  position: relative;
+  overflow: hidden;
+  flex: 0 0 auto;
+  width: clamp(72px, 7.2vw, 96px);
+  display: block;
+  border-radius: 10px;
   text-decoration: none;
-  transition: opacity 160ms ease;
+  border: 1px solid rgba(29, 29, 31, 0.05);
+  background: rgba(255, 255, 255, 0.72);
+  box-shadow: 0 8px 22px rgba(15, 16, 20, 0.05);
+  transition: transform 180ms ease, box-shadow 180ms ease, filter 180ms ease;
 }
 
 .messengerButton:hover {
-  opacity: 0.72;
+  transform: translateY(-1px);
+  filter: saturate(1.02);
+  box-shadow: 0 12px 26px rgba(15, 16, 20, 0.08);
 }
 
 .messengerButton img {
-  width: 28px;
-  height: 28px;
+  width: 100%;
+  height: auto;
+  display: block;
+  aspect-ratio: 2048 / 686;
   object-fit: contain;
+  object-position: center;
+}
+
+.messengerButton span {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
 }
 
 .divider {
   height: 1px;
-  margin: 0 0 14px;
+  margin: 0 0 18px;
   background: linear-gradient(90deg, transparent, rgba(29, 29, 31, 0.10), transparent);
 }
 
 .form {
   display: grid;
   grid-template-columns: minmax(190px, 1fr) minmax(210px, 1fr) minmax(220px, 0.82fr);
-  gap: 12px;
+  gap: 10px;
   align-items: end;
 }
 
@@ -193,10 +212,11 @@
   border-radius: 17px;
   color: #ffffff;
   background: linear-gradient(135deg, #0b4a9c 0%, #0071e3 58%, #4ca3ff 100%);
+  box-shadow: 0 20px 48px rgba(0, 113, 227, 0.25);
   font: 800 16px/1 Onest, Inter, system-ui, sans-serif;
   letter-spacing: -0.018em;
   cursor: pointer;
-  transition: transform 180ms ease, filter 180ms ease;
+  transition: transform 180ms ease, box-shadow 180ms ease, filter 180ms ease;
 }
 
 .form button:hover {
@@ -221,7 +241,7 @@
   gap: 10px;
   align-items: start;
   margin-top: 4px;
-  color: #62666d;
+  color: rgba(98, 102, 109, 0.76);
   font: 450 11.5px/1.32 Onest, Inter, system-ui, sans-serif;
   letter-spacing: -0.01em;
 }
@@ -231,36 +251,6 @@
   height: 18px;
   margin: 0;
   accent-color: #0071e3;
-}
-
-.agreement a {
-  color: #0071e3;
-  text-decoration: underline;
-  text-underline-offset: 2px;
-  transition: opacity 160ms ease;
-}
-
-.agreement a:hover {
-  opacity: 0.75;
-}
-
-.successState {
-  padding: 50px 40px;
-  text-align: center;
-}
-
-.successState strong {
-  display: block;
-  color: #1d1d1f;
-  font: 800 28px/1.2 Onest, Inter, system-ui, sans-serif;
-  letter-spacing: -0.05em;
-}
-
-.successState p {
-  margin: 16px 0 0;
-  color: #62666d;
-  font: 500 17px/1.5 Onest, Inter, system-ui, sans-serif;
-  letter-spacing: -0.018em;
 }
 
 @media (max-width: 1180px) {
@@ -280,6 +270,15 @@
 
   .formCard {
     margin-top: 52px;
+  }
+
+  .messengerBlock {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .messengerBlock > span {
+    max-width: none;
   }
 
   .form {
@@ -337,18 +336,19 @@
     border-radius: 26px;
   }
 
-  .messengerBlock {
-    grid-template-columns: 1fr;
+  .messengerBlock > span {
+    font-size: 21px;
   }
 
   .messengers {
     display: grid;
     grid-template-columns: 1fr;
+    gap: 10px;
   }
 
   .messengerButton {
-    justify-content: flex-start;
-    padding: 0 18px;
+    width: 100%;
+    max-width: 120px;
   }
 
   .form {
@@ -370,5 +370,60 @@
   .sectionLabel {
     min-height: 32px;
     font-size: 12px;
+  }
+}
+
+/* v7 compact messenger buttons: не растягивать плашки на всю ширину */
+.messengers {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  gap: 10px !important;
+}
+
+.messengerButton {
+  flex: 0 0 124px !important;
+  width: 124px !important;
+  height: 42px !important;
+  min-height: 42px !important;
+  max-width: 124px !important;
+  border-radius: 10px !important;
+  box-shadow: 0 8px 20px rgba(15, 16, 20, 0.045) !important;
+}
+
+.messengerButton img {
+  width: 124px !important;
+  height: 42px !important;
+  min-height: 42px !important;
+  aspect-ratio: auto !important;
+  object-fit: cover !important;
+  object-position: center !important;
+}
+
+.messengerBlock {
+  grid-template-columns: 250px minmax(0, 1fr);
+  gap: 18px;
+}
+
+@media (max-width: 760px) {
+  .messengers {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 8px !important;
+  }
+
+  .messengerButton {
+    flex-basis: 112px !important;
+    width: 112px !important;
+    height: 38px !important;
+    min-height: 38px !important;
+    max-width: 112px !important;
+  }
+
+  .messengerButton img {
+    width: 112px !important;
+    height: 38px !important;
+    min-height: 38px !important;
   }
 }
