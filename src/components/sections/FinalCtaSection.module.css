@@ -94,6 +94,7 @@
   backdrop-filter: blur(24px);
 }
 
+/* ─── Мессенджеры: десктоп ─────────────────────────────────────────── */
 .messengerBlock {
   display: grid;
   grid-template-columns: 250px minmax(0, 1fr);
@@ -117,11 +118,14 @@
   align-items: center;
 }
 
+/* Кнопка мессенджера: картинка-баннер фиксированной высоты */
 .messengerButton {
   position: relative;
   overflow: hidden;
-  flex: 0 0 auto;
-  width: clamp(72px, 7.2vw, 96px);
+  flex: 0 0 124px;
+  width: 124px;
+  height: 42px;
+  min-height: 42px;
   display: block;
   border-radius: 10px;
   text-decoration: none;
@@ -139,13 +143,13 @@
 
 .messengerButton img {
   width: 100%;
-  height: auto;
+  height: 100%;
   display: block;
-  aspect-ratio: 2048 / 686;
-  object-fit: contain;
+  object-fit: cover;
   object-position: center;
 }
 
+/* Текст внутри кнопки — визуально скрыт (доступен скринридерам) */
 .messengerButton span {
   position: absolute;
   width: 1px;
@@ -161,6 +165,7 @@
   background: linear-gradient(90deg, transparent, rgba(29, 29, 31, 0.10), transparent);
 }
 
+/* ─── Форма: десктоп ────────────────────────────────────────────────── */
 .form {
   display: grid;
   grid-template-columns: minmax(190px, 1fr) minmax(210px, 1fr) minmax(220px, 0.82fr);
@@ -234,10 +239,10 @@
 .agreement {
   grid-column: 3 / 4;
   grid-row: 2 / 3;
-  display: grid;
-  grid-template-columns: 18px minmax(0, 1fr);
+  display: flex;
+  flex-direction: row;
   gap: 10px;
-  align-items: start;
+  align-items: flex-start;
   margin-top: 4px;
   color: #62666d;
   font: 450 11.5px/1.32 Onest, Inter, system-ui, sans-serif;
@@ -245,6 +250,7 @@
 }
 
 .agreement input {
+  flex: 0 0 18px;
   width: 18px;
   height: 18px;
   margin: 0;
@@ -262,6 +268,7 @@
   opacity: 0.75;
 }
 
+/* ─── ≤1180px ──────────────────────────────────────────────────────── */
 @media (max-width: 1180px) {
   .finalCtaSection {
     padding: 0 20px 96px;
@@ -304,6 +311,11 @@
     grid-row: auto;
   }
 
+  .agreement {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
   .background {
     background-position: 64% center;
   }
@@ -315,39 +327,7 @@
   }
 }
 
-/* ─── Десктоп: компактные кнопки мессенджеров ─────────────────────── */
-.messengers {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 10px;
-}
-
-.messengerButton {
-  flex: 0 0 124px;
-  width: 124px;
-  height: 42px;
-  min-height: 42px;
-  max-width: 124px;
-  border-radius: 10px;
-  box-shadow: 0 8px 20px rgba(15, 16, 20, 0.045);
-}
-
-.messengerButton img {
-  width: 124px;
-  height: 42px;
-  aspect-ratio: auto;
-  object-fit: cover;
-  object-position: center;
-}
-
-.messengerBlock {
-  grid-template-columns: 250px minmax(0, 1fr);
-  gap: 18px;
-}
-
-/* ─── ≤760px ───────────────────────────────────────────────────────── */
+/* ─── ≤760px (планшеты) ────────────────────────────────────────────── */
 @media (max-width: 760px) {
   .finalCtaSection {
     padding: 0 12px 64px;
@@ -355,12 +335,10 @@
 
   .container {
     border-radius: 24px;
-    overflow: hidden;
   }
 
   .content {
     padding: 40px 16px 24px;
-    gap: 0;
   }
 
   .copy h2 {
@@ -381,7 +359,6 @@
     border-radius: 20px;
   }
 
-  /* Мессенджеры: стек в одну колонку */
   .messengerBlock {
     grid-template-columns: 1fr;
     gap: 12px;
@@ -392,37 +369,43 @@
     font-size: 18px;
   }
 
+  /* Мессенджеры: flex-wrap, кнопки по 2 в ряд */
   .messengers {
-    flex-wrap: wrap;
     gap: 8px;
   }
 
   .messengerButton {
     flex: 0 0 calc(50% - 4px);
     width: calc(50% - 4px);
-    max-width: none;
-    height: 40px;
-    min-height: 40px;
-  }
-
-  .messengerButton img {
-    width: 100%;
-    height: 40px;
+    height: 34px;
+    min-height: 34px;
   }
 
   /* Форма: одна колонка */
   .form {
     grid-template-columns: 1fr;
+    gap: 10px;
   }
 
   .form button,
   .note,
   .agreement {
     grid-column: 1 / 2;
+    grid-row: auto;
+  }
+
+  .form button {
+    width: 100%;
+  }
+
+  .agreement {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 10px;
   }
 }
 
-/* ─── ≤480px ───────────────────────────────────────────────────────── */
+/* ─── ≤480px (мобилки) ─────────────────────────────────────────────── */
 @media (max-width: 480px) {
   .finalCtaSection {
     padding: 0 8px 56px;
@@ -448,10 +431,16 @@
     border-radius: 18px;
   }
 
-  /* Мессенджеры: 2 в ряд или растягиваем */
+  /* Мессенджеры: flex wrap, 2 в ряд */
+  .messengers {
+    gap: 8px;
+  }
+
   .messengerButton {
-    flex: 1 1 calc(50% - 4px);
-    max-width: calc(50% - 4px);
+    flex: 0 0 calc(50% - 4px);
+    width: calc(50% - 4px);
+    height: 34px;
+    min-height: 34px;
   }
 
   .form input[type="text"],
@@ -472,7 +461,7 @@
   }
 }
 
-/* ─── ≤430px ───────────────────────────────────────────────────────── */
+/* ─── ≤430px (мелкие мобилки) ─────────────────────────────────────── */
 @media (max-width: 430px) {
   .copy h2 {
     font-size: 28px;
@@ -483,17 +472,24 @@
     font-size: 11.5px;
   }
 
-  /* Мессенджеры: по одному в строку на очень узких */
-  .messengerButton {
-    flex: 1 1 100%;
-    max-width: 100%;
-    width: 100%;
-    height: 42px;
-    min-height: 42px;
+  /* Мессенджеры: на самых узких — тоже 2 в ряд */
+  .messengers {
+    gap: 6px;
   }
 
-  .messengerButton img {
-    width: 100%;
-    height: 42px;
+  .messengerButton {
+    flex: 0 0 calc(50% - 3px);
+    width: calc(50% - 3px);
+    height: 34px;
+    min-height: 34px;
+  }
+
+  .form input[type="text"],
+  .form input[type="tel"] {
+    height: 48px;
+  }
+
+  .form button {
+    height: 48px;
   }
 }
