@@ -1,7 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { featuredReviews } from "@/content/reviews";
+import { featuredReviews, type ReviewItem } from "@/content/reviews";
 import styles from "./HomeReviewsSection.module.css";
 
 const REVIEWS_PER_PAGE = 3;
@@ -17,14 +17,59 @@ function StarIcon() {
   );
 }
 
+function ReviewPopup({ review, onClose }: { review: ReviewItem; onClose: () => void }) {
+  return (
+    <div className={styles.overlay} onClick={onClose}>
+      <div className={styles.popupCard} onClick={(e) => e.stopPropagation()}>
+        <button type="button" className={styles.closeButton} onClick={onClose} aria-label="Закрыть">
+          ✕
+        </button>
+        <blockquote>{review.text ?? review.quote}</blockquote>
+        <footer>
+          <div className={styles.avatar} aria-hidden="true">
+            {(review.name ?? review.author ?? "?").slice(0, 1)}
+          </div>
+          <div>
+            <strong>{review.name ?? review.author}</strong>
+            <span>{review.role}</span>
+          </div>
+        </footer>
+      </div>
+    </div>
+  );
+}
+
+function ReviewFooter({ review, onExpand }: { review: ReviewItem; onExpand: () => void }) {
+  const text = review.text ?? review.quote ?? "";
+  const name = review.name ?? review.author ?? "";
+  const isLong = text.length > 200;
+
+  return (
+    <footer>
+      <div className={styles.avatar} aria-hidden="true">
+        {name.slice(0, 1)}
+      </div>
+      <div>
+        <strong>{name}</strong>
+        <span>{review.role}</span>
+      </div>
+      {isLong && (
+        <button type="button" className={styles.expandButton} onClick={onExpand}>
+          Читать полностью →
+        </button>
+      )}
+    </footer>
+  );
+}
+
 export default function HomeReviewsSection() {
+  const [popupReview, setPopupReview] = useState<ReviewItem | null>(null);
+
   const pages = useMemo(() => {
     const result = [];
-
     for (let index = 0; index < featuredReviews.length; index += REVIEWS_PER_PAGE) {
       result.push(featuredReviews.slice(index, index + REVIEWS_PER_PAGE));
     }
-
     return result;
   }, []);
 
@@ -91,20 +136,14 @@ export default function HomeReviewsSection() {
                     <StarIcon />
                     <StarIcon />
                   </div>
-                  <span className={styles.index}>{String(activePage * REVIEWS_PER_PAGE + index + 1).padStart(2, "0")}</span>
+                  <span className={styles.index}>
+                    {String(activePage * REVIEWS_PER_PAGE + index + 1).padStart(2, "0")}
+                  </span>
                 </div>
 
-                <blockquote>{review.text}</blockquote>
+                <blockquote>{review.text ?? review.quote}</blockquote>
 
-                <footer>
-                  <div className={styles.avatar} aria-hidden="true">
-                    {review.name.slice(0, 1)}
-                  </div>
-                  <div>
-                    <strong>{review.name}</strong>
-                    <span>{review.role}</span>
-                  </div>
-                </footer>
+                <ReviewFooter review={review} onExpand={() => setPopupReview(review)} />
               </article>
             ))}
           </div>
@@ -124,17 +163,9 @@ export default function HomeReviewsSection() {
                 <span className={styles.index}>{String(index + 1).padStart(2, "0")}</span>
               </div>
 
-              <blockquote>{review.text}</blockquote>
+              <blockquote>{review.text ?? review.quote}</blockquote>
 
-              <footer>
-                <div className={styles.avatar} aria-hidden="true">
-                  {review.name.slice(0, 1)}
-                </div>
-                <div>
-                  <strong>{review.name}</strong>
-                  <span>{review.role}</span>
-                </div>
-              </footer>
+              <ReviewFooter review={review} onExpand={() => setPopupReview(review)} />
             </article>
           ))}
         </div>
@@ -151,6 +182,10 @@ export default function HomeReviewsSection() {
           ))}
         </div>
       </div>
+
+      {popupReview && (
+        <ReviewPopup review={popupReview} onClose={() => setPopupReview(null)} />
+      )}
     </section>
   );
 }
