@@ -406,8 +406,22 @@
   }
 
   .servicesGrid {
-    grid-template-columns: 1fr;
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
     gap: 12px;
+    padding: 2px 18px 16px;
+    margin: 0 -18px;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .servicesGrid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .serviceCard {
+    flex: 0 0 min(320px, 80vw);
+    scroll-snap-align: start;
   }
 
   .serviceCard {
