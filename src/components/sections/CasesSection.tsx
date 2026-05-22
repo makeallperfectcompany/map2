@@ -1,10 +1,11 @@
 import { cases } from "@/content/cases";
+import { Container } from "@/components/ui/Container/Container";
 import styles from "./CasesSection.module.css";
 
 export default function CasesSection() {
   return (
     <section className={styles.casesSection} id="cases" aria-labelledby="cases-title">
-      <div className={styles.container}>
+      <Container>
         <div className={styles.top}>
           <div className={styles.copy}>
             <div className={styles.eyebrow}>Кейсы</div>
@@ -53,7 +54,7 @@ export default function CasesSection() {
           ))}
         </div>
 
-      </div>
+      </Container>
     </section>
   );
 }
