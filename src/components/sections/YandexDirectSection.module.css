@@ -104,6 +104,7 @@
   position: relative;
   overflow: hidden;
   margin: 0 24px;
+  margin-top: 16px;
   border-radius: 34px;
   min-height: 640px;
   padding: 72px 68px 44px;
