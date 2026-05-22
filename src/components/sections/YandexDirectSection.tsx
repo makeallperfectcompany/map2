@@ -25,9 +25,9 @@ function Arrow() {
 function Hero() {
   return (
     <section className={styles.hero}>
+      <div className={styles.heroOverlay} aria-hidden="true" />
       <div className={styles.heroBody}>
         <div className={styles.heroCopy}>
-          <Label>{heroInfo.label}</Label>
           <h1>{heroInfo.title}</h1>
           <p>{heroInfo.text}</p>
           <div className={styles.heroActions}>
