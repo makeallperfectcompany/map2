@@ -1,10 +1,11 @@
 import { homeAbout } from "@/content/home/about";
+import { Container } from "@/components/ui/Container/Container";
 import styles from "./HomeAboutSection.module.css";
 
 export default function HomeAboutSection() {
   return (
     <section className={styles.aboutSection}>
-      <div className={styles.container}>
+      <Container className={styles.inner}>
         <div className={styles.grid}>
           <div className={styles.content}>
             <span className={styles.sectionLabel}>{homeAbout.label}</span>
@@ -43,7 +44,7 @@ export default function HomeAboutSection() {
             </div>
           </div>
         </div>
-      </div>
+      </Container>
     </section>
   );
 }
