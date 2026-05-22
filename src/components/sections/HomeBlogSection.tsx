@@ -1,11 +1,12 @@
 import Link from "next/link";
 import { homeBlog } from "@/content/home/blog";
+import { Container } from "@/components/ui/Container/Container";
 import styles from "./HomeBlogSection.module.css";
 
 export default function HomeBlogSection() {
   return (
     <section className={styles.blogSection}>
-      <div className={styles.container}>
+      <Container className={styles.inner}>
         <div className={styles.header}>
           <div>
             <span className={styles.sectionLabel}>{homeBlog.label}</span>
@@ -46,7 +47,7 @@ export default function HomeBlogSection() {
           ))}
         </div>
 
-      </div>
+      </Container>
     </section>
   );
 }
