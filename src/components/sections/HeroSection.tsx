@@ -32,23 +32,6 @@ export default function HeroSection() {
             и&nbsp;выстраивать продвижение под реальные цели бизнеса.
           </p>
 
-          <div className={styles.heroStats}>
-            <div className={styles.heroStat}>
-              <span className={styles.heroStatValue}>С 2017</span>
-              <span className={styles.heroStatLabel}>с вами</span>
-            </div>
-            <div className={styles.heroStatDivider} />
-            <div className={styles.heroStat}>
-              <span className={styles.heroStatValue}>8</span>
-              <span className={styles.heroStatLabel}>направлений</span>
-            </div>
-            <div className={styles.heroStatDivider} />
-            <div className={styles.heroStat}>
-              <span className={styles.heroStatValue}>400+</span>
-              <span className={styles.heroStatLabel}>проектов</span>
-            </div>
-          </div>
-
           <div className={styles.heroActions}>
             <OpenConsultationButton as="a" className={`${styles.btn} ${styles.btnAccent}`}>
               <span className={styles.label}>Получить консультацию</span>
@@ -73,6 +56,24 @@ export default function HeroSection() {
                 </svg>
               </span>
             </Link>
+          </div>
+
+          {/* Mobile: блок принципов — после кнопок */}
+          <div className={styles.heroPrinciplesMobile} aria-label="Принципы работы">
+            <div><i aria-hidden="true" /><span>Не продаём лишние услуги</span></div>
+            <div><i aria-hidden="true" /><span>Полная прозрачность в работе</span></div>
+            <div><i aria-hidden="true" /><span>Решения на основе аналитики</span></div>
+          </div>
+        </div>
+
+        {/* Desktop: блок принципов — справа, под логотипом */}
+        <div className={styles.right}>
+          <div className={styles.heroPrinciplesDesktop} aria-label="Принципы работы">
+            <span>Не продаём лишние услуги</span>
+            <i aria-hidden="true" />
+            <span>Полная прозрачность в работе</span>
+            <i aria-hidden="true" />
+            <span>Решения на основе аналитики</span>
           </div>
         </div>
       </div>

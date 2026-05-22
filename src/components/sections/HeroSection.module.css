@@ -111,9 +111,53 @@
 }
 
 /* =================================================================
-   HERO STATS — showing on all screen sizes now
+   RIGHT COLUMN — desktop principles block
    ================================================================= */
-.heroStats {
+.right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+  height: 100%;
+  padding-bottom: 40px;
+}
+
+.heroPrinciplesDesktop {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 18px 28px;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.68);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(29, 29, 31, 0.08);
+  box-shadow: 0 4px 20px rgba(15, 16, 20, 0.05);
+  width: fit-content;
+  max-width: 100%;
+}
+
+.heroPrinciplesDesktop span {
+  font-size: 14px;
+  font-weight: 500;
+  color: #1d1d1f;
+  white-space: nowrap;
+  line-height: 1.4;
+}
+
+.heroPrinciplesDesktop i {
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #0071E3;
+  flex-shrink: 0;
+}
+
+/* =================================================================
+   MOBILE PRINCIPLES — hidden on desktop
+   ================================================================= */
+.heroPrinciplesMobile {
   display: none;
 }
 
@@ -300,6 +344,50 @@
     margin-bottom: 0;
   }
 
+  /* Hide desktop principles on tablet/mobile, show mobile version */
+  .right { display: none; }
+  .heroPrinciplesDesktop { display: none; }
+}
+
+/* Show mobile principles on tablet and below (≤1024px) */
+@media (max-width: 1024px) {
+  .heroPrinciplesMobile {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    margin-top: 20px;
+    padding: 18px 20px;
+    border-radius: 22px;
+    background: rgba(255, 255, 255, 0.72);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(29, 29, 31, 0.08);
+    box-shadow: 0 4px 20px rgba(15, 16, 20, 0.05);
+    text-align: left;
+  }
+
+  .heroPrinciplesMobile > div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .heroPrinciplesMobile > div i {
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: #0071E3;
+    flex-shrink: 0;
+  }
+
+  .heroPrinciplesMobile > div span {
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1.5;
+    color: #1d1d1f;
+  }
 }
 @media (max-width: 768px) {
   .heroSection { min-height: unset; align-items: flex-start; margin-bottom: 30px; }
@@ -308,10 +396,6 @@
   .heroLead { font-size: 15px; max-width: 480px; margin-bottom: 22px; }
   .heroActions { margin-bottom: 0; gap: 12px; }
   .btn { min-width: 0; padding: 16px 22px; font-size: 14.5px; }
-
-  .heroStats {
-    display: none;
-  }
 }
 @media (max-width: 640px) {
   .heroTitle { font-size: 36px; }
