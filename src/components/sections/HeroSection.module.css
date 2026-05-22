@@ -239,6 +239,29 @@
 @media (min-width: 1600px) {
   .heroInner { padding: 160px 80px 100px; max-width: 1580px; }
 }
+
+/* =================================================================
+   LAPTOP VIEWPORT — compact layout for 1024–1536px width & ≤920px height
+   (MacBook 13", 14", 15", most 1080p/1440p laptops with browser chrome)
+   ================================================================= */
+@media (min-width: 1024px) and (max-height: 920px) {
+  .heroInner {
+    padding-top: 110px;
+    padding-bottom: 48px;
+  }
+  .heroTitle {
+    font-size: clamp(52px, 4.8vw, 78px);
+    margin-bottom: 24px;
+  }
+  .heroLead {
+    margin-bottom: 32px;
+  }
+  .btn {
+    padding: 15px 22px;
+    min-width: 210px;
+  }
+}
+
 @media (max-width: 1280px) {
   .heroInner { padding: 130px 48px 60px; gap: 48px; }
 }
