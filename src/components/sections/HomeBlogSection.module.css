@@ -207,7 +207,7 @@
 .readMore {
   display: inline-flex;
   align-items: center;
-  margin-top: auto;
+  margin-top: 24px;
   padding: 10px 20px;
   border-radius: 14px;
   background: linear-gradient(90deg, #1A3A6E 0%, #0071E3 52%, #5FA8FF 100%);
