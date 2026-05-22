@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 import OpenConsultationButton from "@/components/forms/OpenConsultationButton";
 import styles from "./HeroSection.module.css";
@@ -20,16 +21,20 @@ export default function HeroSection() {
       <div className={styles.heroInner}>
         <div className={styles.left}>
           <h1 className={styles.heroTitle}>
-            Продвижение сайтов и брендов, которые хотят роста
+            Продвижение сайтов и&nbsp;брендов,
+            <br />усиленное технологиями
+            <br /><span className={styles.highlight}>Make All Perfect</span>
           </h1>
 
           <p className={styles.heroLead}>
-            Мы объединяем стратегию, дизайн, рекламу, контент и аналитику в единую систему роста бизнеса.
+            Объединяем экспертизу команды, собственное ПО и&nbsp;AI-инструменты,
+            чтобы быстрее находить точки роста, точнее принимать решения
+            и&nbsp;выстраивать продвижение под реальные цели бизнеса.
           </p>
 
           <div className={styles.heroActions}>
             <OpenConsultationButton as="a" className={`${styles.btn} ${styles.btnAccent}`}>
-              <span className={styles.label}>Обсудить проект</span>
+              <span className={styles.label}>Получить консультацию</span>
               <span className={styles.arrWrap}>
                 <svg className={`${styles.arr} ${styles.arrMain}`} viewBox="0 0 14 14" fill="none">
                   <path d="M3 11L11 3M11 3H4M11 3V10" stroke="white" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"/>
@@ -39,8 +44,9 @@ export default function HeroSection() {
                 </svg>
               </span>
             </OpenConsultationButton>
-            <a className={`${styles.btn} ${styles.btnGhost}`} href="/about">
-              <span className={styles.label}>Смотреть подход</span>
+
+            <Link href="/cases" className={`${styles.btn} ${styles.btnGhost}`}>
+              <span className={styles.label}>Смотреть кейсы</span>
               <span className={styles.arrWrap}>
                 <svg className={`${styles.arr} ${styles.arrMain}`} viewBox="0 0 14 14" fill="none">
                   <path d="M3 11L11 3M11 3H4M11 3V10" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"/>
@@ -49,7 +55,7 @@ export default function HeroSection() {
                   <path d="M3 11L11 3M11 3H4M11 3V10" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
               </span>
-            </a>
+            </Link>
           </div>
         </div>
       </div>
