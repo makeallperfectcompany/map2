@@ -131,6 +131,7 @@ export default function BlogIndexSection() {
                   </div>
                   <h3>{article.title}</h3>
                   <p>{article.description}</p>
+                  <span className={styles.readMore}>Открыть →</span>
                 </div>
               </a>
             ))}
