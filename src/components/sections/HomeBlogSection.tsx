@@ -40,6 +40,7 @@ export default function HomeBlogSection() {
                 </div>
                 <h3>{post.title}</h3>
                 <p>{post.excerpt}</p>
+                <span className={styles.readMore}>Открыть →</span>
               </div>
             </a>
           ))}
