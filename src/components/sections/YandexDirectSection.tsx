@@ -26,29 +26,29 @@ function Arrow() {
 function Hero() {
   return (
     <section className={styles.hero}>
-      <div className={styles.heroOverlay} aria-hidden="true" />
-      <div className={styles.heroBody}>
-        <div className={styles.heroCopy}>
+      <div className={styles.heroContent}>
+        <div className={styles.heroText}>
+          <span className={styles.label}>{heroInfo.label}</span>
           <h1>{heroInfo.title}</h1>
           <p>{heroInfo.text}</p>
           <div className={styles.heroActions}>
             <a className={styles.btnPrimary} href={heroInfo.primaryCta.href}>
-              {heroInfo.primaryCta.text} <Arrow />
+              {heroInfo.primaryCta.text} ↗
             </a>
-            <a className={`${styles.btnSecondary} ${styles.heroBtnSecondary}`} href={heroInfo.secondaryCta.href}>
-              {heroInfo.secondaryCta.text} <Arrow />
+            <a className={styles.heroBtnSecondary} href={heroInfo.secondaryCta.href}>
+              {heroInfo.secondaryCta.text} ↗
             </a>
           </div>
+          <ul className={styles.heroBenefits}>
+            {heroInfo.benefits.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
         </div>
         <div className={styles.heroVisual}>
-          <img
-            className={styles.heroImage}
-            src="/images/services/yandex-direct/hero.webp"
-            alt=""
-          />
+          <img src="/images/services/yandex-direct/hero.webp" alt="" />
         </div>
       </div>
-
     </section>
   );
 }

@@ -103,74 +103,102 @@
 .hero {
   position: relative;
   overflow: hidden;
+  margin: 0 24px;
+  border-radius: 34px;
+  min-height: 640px;
+  padding: 72px 68px 44px;
+  background:
+    radial-gradient(circle at 82% 36%, rgba(0, 113, 227, 0.08), transparent 30%),
+    linear-gradient(118deg, #ffffff 0%, #ffffff 47%, #f6f9fc 100%);
+}
+.heroContent {
+  display: grid;
+  grid-template-columns: minmax(460px, 0.92fr) minmax(450px, 1.08fr);
+  align-items: center;
+  gap: 28px;
+  min-height: 520px;
+}
+.heroText {
+  position: relative;
+  z-index: 2;
+}
+.heroText .label {
+  margin-bottom: 24px;
+}
+.heroText h1 {
+  max-width: 610px;
   margin: 0;
-  border-radius: 0;
-  padding-top: 120px;
-  padding-right: 68px;
-  padding-bottom: 56px;
-  padding-left: 68px;
-}
-.heroBody {
-  position: relative;
-  z-index: 1;
-  max-width: 1100px;
-  margin: 0 auto;
-}
-.heroCopy {
-  max-width: 580px;
-  position: relative;
-  z-index: 1;
-}
-
-.heroOverlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    80deg,
-    rgba(23, 25, 29, 0.85) 0%,
-    rgba(0, 0, 0, 0.5) 50%,
-    transparent 100%
-  );
-  z-index: 0;
-}
-
-.heroCopy h1 {
-  font: 690 clamp(42px, 4.5vw, 62px)/0.96 Onest, Inter, system-ui, sans-serif;
+  color: #1d1d1f;
+  font-size: clamp(56px, 4.8vw, 70px);
+  line-height: 0.96;
   letter-spacing: -0.075em;
-  color: #fff;
+  font-weight: 680;
+  text-wrap: balance;
 }
-.heroCopy p {
+.heroText p {
   max-width: 520px;
-  margin-top: 26px;
+  margin: 24px 0 0;
+  color: #727783;
   font: 450 16px/1.6 Onest, Inter, system-ui, sans-serif;
-  color: rgba(255, 255, 255, 0.85);
 }
 .heroActions {
   display: flex;
   gap: 12px;
-  margin-top: 29px;
+  margin-top: 30px;
 }
-.heroVisual {
-  position: absolute;
-  inset: 0;
+.heroBtnSecondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  height: 52px;
+  padding: 0 24px;
+  border-radius: 999px;
+  background: #fff;
+  color: #1d1d1f;
+  font: 750 14px/1 Onest, Inter, system-ui, sans-serif;
+  text-decoration: none;
+  border: 1px solid rgba(29, 29, 31, 0.08);
+  transition: transform 0.25s ease;
 }
-.heroImage {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center right;
-}
+.heroBtnSecondary:hover { transform: translateY(-2px); }
 .heroBenefits {
   display: flex;
-  gap: 30px;
+  gap: 24px;
   padding: 0;
-  margin: 38px 0 0;
+  margin: 36px 0 0;
   list-style: none;
   color: #4e5560;
   font: 450 12px/1 Onest, Inter, system-ui, sans-serif;
 }
+.heroBenefits li {
+  position: relative;
+  padding-left: 14px;
+}
+.heroBenefits li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 4px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #0071e3;
+}
+.heroVisual {
+  position: relative;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.heroVisual img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: right center;
+  display: block;
+}
+
 .heroBenefits li {
   position: relative;
   padding-left: 15px;
@@ -781,9 +809,9 @@
 
 /* ── Responsive ──────────────────────────────── */
 @media (max-width: 1024px) {
-  .heroBody { flex-direction: column; }
-  .heroVisual { width: 100%; min-height: 340px; }
-  .hero { padding: 56px 32px 28px; }
+  .heroContent { grid-template-columns: 1fr; min-height: auto; }
+  .heroVisual { height: 340px; }
+  .hero { margin: 0 24px; padding: 56px 32px 40px; min-height: auto; }
   .niches { grid-template-columns: 1fr; gap: 24px; padding: 56px 32px; }
   .howGrid { grid-template-columns: 1fr; }
   .flowVisual { min-height: 320px; }
@@ -800,13 +828,15 @@
 
 @media (max-width: 640px) {
   .hero, .darkSection, .softSection, .casesSection, .niches,
-  .section { margin-left: 0; margin-right: 0; }
-  .hero { padding: 38px 22px 28px; }
-  .heroCopy h1 { font-size: clamp(36px, 11vw, 44px); }
+  .section { margin-left: 16px; margin-right: 16px; }
+  .hero { padding: 36px 22px 28px; border-radius: 25px; min-height: auto; }
+  .heroContent { grid-template-columns: 1fr; min-height: auto; gap: 16px; }
+  .heroText h1 { font-size: clamp(36px, 11vw, 44px); }
+  .heroText p { margin-top: 18px; font-size: 15px; }
   .heroActions { flex-direction: column; }
   .heroActions a { width: 100%; justify-content: center; }
-  .heroVisual { min-height: 220px; }
-  .heroBenefits { flex-direction: column; gap: 14px; }
+  .heroBenefits { flex-direction: column; gap: 12px; margin-top: 24px; }
+  .heroVisual { height: 200px; }
   .niches { padding: 42px 22px; border-radius: 25px; }
   .section { padding: 54px 22px; }
   .servicesGrid { grid-template-columns: 1fr; }
