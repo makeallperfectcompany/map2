@@ -11,6 +11,7 @@ import {
   expertiseData,
   faqData,
 } from "@/content/services/yandexDirect";
+import HomeIndustriesSection from "@/components/sections/HomeIndustriesSection";
 import styles from "./YandexDirectSection.module.css";
 
 function Label({ children }: { children: React.ReactNode }) {
@@ -52,24 +53,7 @@ function Hero() {
 }
 
 function Niches() {
-  const niches = [
-    "E-commerce", "Медицина", "Строительство", "B2B",
-    "Образование", "Локальные услуги", "Недвижимость", "Маркетплейсы",
-  ];
-  return (
-    <section className={styles.niches}>
-      <div>
-        <Label>Опыт в нишах</Label>
-        <h2>Реклама должна учитывать экономику именно вашего бизнеса</h2>
-      </div>
-      <div>
-        <p>Подход к рекламным кампаниям отличается для интернет-магазина, клиники, строительной компании или B2B-услуги. Мы начинаем с продукта, спроса, географии, среднего чека и целевой стоимости обращения.</p>
-        <div className={styles.pills}>
-          {niches.map((item) => <span key={item}>{item}</span>)}
-        </div>
-      </div>
-    </section>
-  );
+  return <HomeIndustriesSection />;
 }
 
 function HowItWorks() {
