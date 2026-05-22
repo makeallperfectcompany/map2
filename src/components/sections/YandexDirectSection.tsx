@@ -12,6 +12,7 @@ import {
   faqData,
 } from "@/content/services/yandexDirect";
 import HomeIndustriesSection from "@/components/sections/HomeIndustriesSection";
+import FinalCtaSection from "@/components/sections/FinalCtaSection";
 import styles from "./YandexDirectSection.module.css";
 
 function Label({ children }: { children: React.ReactNode }) {
@@ -337,6 +338,7 @@ export default function YandexDirectSection() {
       <Fit />
       <Expertise />
       <Faq />
+      <FinalCtaSection />
     </main>
   );
 }
