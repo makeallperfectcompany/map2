@@ -28,7 +28,6 @@ function Hero() {
     <section className={styles.hero}>
       <div className={styles.heroContent}>
         <div className={styles.heroText}>
-          <span className={styles.label}>{heroInfo.label}</span>
           <h1>{heroInfo.title}</h1>
           <p>{heroInfo.text}</p>
           <div className={styles.heroActions}>
