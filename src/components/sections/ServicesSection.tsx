@@ -31,13 +31,18 @@ export default function ServicesSection() {
               </div>
               <div className={styles.factSeparator} />
               <div className={styles.fact}>
-                <span className={styles.factValue}>Более 500 кейсов</span>
-                <span className={styles.factLabel}>в разных нишах</span>
+                <span className={styles.factValue}>800+</span>
+                <span className={styles.factLabel}>проектов в сфере услуг</span>
               </div>
               <div className={styles.factSeparator} />
               <div className={styles.fact}>
-                <span className={styles.factValue}>400+</span>
-                <span className={styles.factLabel}>реализованных проектов</span>
+                <span className={styles.factValue}>200+</span>
+                <span className={styles.factLabel}>проектов в e-commerce</span>
+              </div>
+              <div className={styles.factSeparator} />
+              <div className={styles.fact}>
+                <span className={styles.factValue}>100+</span>
+                <span className={styles.factLabel}>B2B-проектов</span>
               </div>
             </div>
           </div>
