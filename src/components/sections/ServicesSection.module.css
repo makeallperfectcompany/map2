@@ -19,9 +19,6 @@
 .container {
   position: relative;
   z-index: 1;
-  width: min(100%, 1232px);
-  margin: 0 auto;
-  padding: 0;
 }
 
 /* ── Верхняя секция (интро) ── */

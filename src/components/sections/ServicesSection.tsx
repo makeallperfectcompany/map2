@@ -1,11 +1,12 @@
 import { serviceGroups } from "@/content/services";
 import OpenConsultationButton from "@/components/forms/OpenConsultationButton";
+import { Container } from "@/components/ui/Container/Container";
 import styles from "./ServicesSection.module.css";
 
 export default function ServicesSection() {
   return (
     <section className={styles.servicesSection} id="services" aria-labelledby="services-title">
-      <div className={styles.container}>
+      <Container className={styles.container}>
         <div className={styles.servicesIntro}>
           <div className={styles.introLeft}>
             <div className={styles.kicker}>Услуги</div>
@@ -46,35 +47,18 @@ export default function ServicesSection() {
         <div className={styles.servicesGrid} aria-label="Ключевые направления услуг">
           {serviceGroups.map((service) => (
             <article className={styles.serviceCard} key={service.title}>
-              {/* Зона 1: Лейбл */}
               <div className={styles.cardEyebrow}>{service.eyebrow}</div>
-
-              {/* Зона 2: Заголовок */}
               <h3>
                 {service.title}
                 {service.mutedTitle && <span>{service.mutedTitle}</span>}
               </h3>
-
-              {/* Зона 3: Аббревиатура */}
               <div className={styles.bigMark}>{service.bigMark}</div>
-
-              {/* Зона 4: Описание */}
               <p>{service.description}</p>
-
-              {/* Зона 5: Теги */}
               <div className={styles.chips} aria-label={`Услуги направления ${service.title}`}>
                 {service.services.map((item) => (
-                  <a
-                    key={item}
-                    href={`/services/${encodeURIComponent(item.toLowerCase())}`}
-                    className={styles.chipLink}
-                  >
-                    {item}
-                  </a>
+                  <a key={item} href={`/services/${encodeURIComponent(item.toLowerCase())}`} className={styles.chipLink}>{item}</a>
                 ))}
               </div>
-
-              {/* Зона 6: Футер */}
               <div className={styles.cardBottom}>
                 <span>{service.price}</span>
                 <a href={service.href}>{service.cta} →</a>
@@ -83,7 +67,7 @@ export default function ServicesSection() {
           ))}
         </div>
         <div className={styles.scrollHint}>→ Листайте</div>
-      </div>
+      </Container>
     </section>
   );
 }
