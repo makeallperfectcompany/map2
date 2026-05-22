@@ -393,7 +393,7 @@
 }
 
 @media (max-width: 375px) {
-  .heroSection { min-height: 100dvh; }
+  .heroSection { min-height: auto; }
   .heroTitle { font-size: 28px; letter-spacing: -0.04em; margin-bottom: 12px; }
   .heroInner { padding: 16px 14px 0; }
   .heroLead { font-size: 13px; margin-bottom: 16px; }
