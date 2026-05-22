@@ -111,14 +111,9 @@
 }
 
 /* =================================================================
-   HERO STATS — mobile-only block (hidden on desktop)
-   HERO PRINCIPLES — replaces stats on mobile
+   HERO STATS — showing on all screen sizes now
    ================================================================= */
 .heroStats {
-  display: none;
-}
-
-.heroPrinciples {
   display: none;
 }
 
@@ -314,42 +309,20 @@
   .heroActions { margin-bottom: 0; gap: 12px; }
   .btn { min-width: 0; padding: 16px 22px; font-size: 14.5px; }
 
-  /* Principles — show on mobile instead of stats */
   .heroStats {
-    display: none;
-  }
-
-  .heroPrinciples {
     display: flex;
-    flex-direction: column;
-    gap: 6px;
+    align-items: center;
+    justify-content: center;
     width: 100%;
-    margin: 0 0 18px;
-    padding: 14px 16px;
-    border-radius: 14px;
+    margin: 0 0 20px;
+    padding: 16px 8px;
+    border-radius: 16px;
     background: rgba(255, 255, 255, 0.72);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
     border: 1px solid rgba(15, 16, 20, 0.07);
     box-shadow: 0 2px 16px rgba(15, 16, 20, 0.06);
-    list-style: none;
-  }
-
-  .heroPrinciples li {
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 1.5;
-    color: #0f1014;
-    padding-left: 16px;
-    position: relative;
-  }
-
-  .heroPrinciples li::before {
-    content: "—";
-    position: absolute;
-    left: 0;
-    color: rgba(15, 16, 20, 0.35);
-    font-weight: 400;
+    overflow: hidden;
   }
 }
 @media (max-width: 640px) {

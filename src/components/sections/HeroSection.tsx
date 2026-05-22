@@ -34,26 +34,20 @@ export default function HeroSection() {
 
           <div className={styles.heroStats}>
             <div className={styles.heroStat}>
-              <span className={styles.heroStatValue}>С 2017</span>
+              <span className={styles.heroStatValue}>С 2017 года</span>
               <span className={styles.heroStatLabel}>с вами</span>
             </div>
             <div className={styles.heroStatDivider} />
             <div className={styles.heroStat}>
-              <span className={styles.heroStatValue}>8</span>
-              <span className={styles.heroStatLabel}>направлений</span>
+              <span className={styles.heroStatValue}>Более 500 кейсов</span>
+              <span className={styles.heroStatLabel}>в разных нишах</span>
             </div>
             <div className={styles.heroStatDivider} />
             <div className={styles.heroStat}>
               <span className={styles.heroStatValue}>400+</span>
-              <span className={styles.heroStatLabel}>проектов</span>
+              <span className={styles.heroStatLabel}>реализованных проектов</span>
             </div>
           </div>
-
-          <ul className={styles.heroPrinciples}>
-            <li>Не продаём лишнее</li>
-            <li>Видите всё, что мы делаем</li>
-            <li>Решения на основе данных</li>
-          </ul>
 
           <div className={styles.heroActions}>
             <OpenConsultationButton as="a" className={`${styles.btn} ${styles.btnAccent}`}>
