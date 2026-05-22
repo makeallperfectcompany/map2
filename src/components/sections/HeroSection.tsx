@@ -32,6 +32,23 @@ export default function HeroSection() {
             и&nbsp;выстраивать продвижение под реальные цели бизнеса.
           </p>
 
+          <div className={styles.heroStats}>
+            <div className={styles.heroStat}>
+              <span className={styles.heroStatValue}>С 2017</span>
+              <span className={styles.heroStatLabel}>на рынке</span>
+            </div>
+            <div className={styles.heroStatDivider} />
+            <div className={styles.heroStat}>
+              <span className={styles.heroStatValue}>8</span>
+              <span className={styles.heroStatLabel}>направлений</span>
+            </div>
+            <div className={styles.heroStatDivider} />
+            <div className={styles.heroStat}>
+              <span className={styles.heroStatValue}>400+</span>
+              <span className={styles.heroStatLabel}>проектов</span>
+            </div>
+          </div>
+
           <div className={styles.heroActions}>
             <OpenConsultationButton as="a" className={`${styles.btn} ${styles.btnAccent}`}>
               <span className={styles.label}>Получить консультацию</span>

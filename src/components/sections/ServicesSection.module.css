@@ -378,21 +378,6 @@
   }
 
   .factsRow {
-    flex-wrap: wrap;
-    gap: 12px 0;
-    margin-top: 16px;
-    padding-top: 16px;
-  }
-
-  .fact {
-    flex: 0 0 calc(50% - 8px);
-  }
-
-  .fact:nth-child(3) {
-    flex: 0 0 100%;
-  }
-
-  .factSeparator {
     display: none;
   }
 
@@ -518,14 +503,6 @@
 
   .servicesIntro h2 {
     font-size: 28px;
-  }
-
-  .factsRow {
-    gap: 10px 0;
-  }
-
-  .factValue {
-    font-size: 17px;
   }
 }
 
