@@ -2,6 +2,7 @@
 
 import OpenConsultationButton from "@/components/forms/OpenConsultationButton";
 import Breadcrumbs from "@/components/navigation/Breadcrumbs";
+import { Container } from "@/components/ui/Container/Container";
 import {
   approachSteps,
   audience,
@@ -17,7 +18,7 @@ export default function AboutPageSection() {
   return (
     <main className={styles.aboutPage}>
       <section className={styles.hero} aria-labelledby="about-title">
-        <div className={styles.container}>
+        <Container>
           <Breadcrumbs
             items={[
               { label: "Главная", href: "/" },
@@ -47,11 +48,11 @@ export default function AboutPageSection() {
               </article>
             ))}
           </div>
-        </div>
+        </Container>
       </section>
 
       <section className={styles.identitySection}>
-        <div className={styles.container}>
+        <Container>
           <div className={styles.identityGrid}>
             <div className={styles.sectionIntro}>
               <span>Кто мы</span>
@@ -97,11 +98,11 @@ export default function AboutPageSection() {
               </div>
             </div>
           </div>
-        </div>
+        </Container>
       </section>
 
       <section className={styles.directionsSection}>
-        <div className={styles.container}>
+        <Container>
           <div className={styles.sectionHead}>
             <span>Что мы делаем</span>
             <h2>Закрываем ключевые направления digital-маркетинга</h2>
@@ -115,11 +116,11 @@ export default function AboutPageSection() {
               </article>
             ))}
           </div>
-        </div>
+        </Container>
       </section>
 
       <section className={styles.approachSection}>
-        <div className={styles.container}>
+        <Container>
           <div className={styles.approachLayout}>
             <div className={styles.stickyTitle}>
               <span>Наш подход</span>
@@ -142,11 +143,11 @@ export default function AboutPageSection() {
               ))}
             </div>
           </div>
-        </div>
+        </Container>
       </section>
 
       <section className={styles.reasonsSection}>
-        <div className={styles.container}>
+        <Container>
           <div className={styles.sectionHead}>
             <span>Почему с нами работают</span>
             <h2>Почему клиенты выбирают Make All Perfect</h2>
@@ -160,11 +161,11 @@ export default function AboutPageSection() {
               </article>
             ))}
           </div>
-        </div>
+        </Container>
       </section>
 
       <section className={styles.principlesSection}>
-        <div className={styles.container}>
+        <Container>
           <div className={styles.principlesPanel}>
             <div>
               <span>Принципы</span>
@@ -180,11 +181,11 @@ export default function AboutPageSection() {
               ))}
             </div>
           </div>
-        </div>
+        </Container>
       </section>
 
       <section className={styles.audienceSection}>
-        <div className={styles.container}>
+        <Container>
           <div className={styles.sectionHead}>
             <span>Для кого мы</span>
             <h2>С кем мы работаем</h2>
@@ -198,11 +199,11 @@ export default function AboutPageSection() {
               </article>
             ))}
           </div>
-        </div>
+        </Container>
       </section>
 
       <section className={styles.trustSection}>
-        <div className={styles.container}>
+        <Container>
           <div className={styles.trustPanel}>
             <h2>Мы строим долгосрочные системы, а не разовые запуски</h2>
             <p>
@@ -217,11 +218,11 @@ export default function AboutPageSection() {
               <span>Growth</span>
             </div>
           </div>
-        </div>
+        </Container>
       </section>
 
       <section className={styles.finalCta}>
-        <div className={styles.container}>
+        <Container>
           <div className={styles.finalCtaInner}>
             <span>Готовы к разбору?</span>
             <h2>Хотите понять, где ваш маркетинг теряет рост?</h2>
@@ -234,7 +235,7 @@ export default function AboutPageSection() {
               <a href="/cases">Смотреть кейсы</a>
             </div>
           </div>
-        </div>
+        </Container>
       </section>
     </main>
   );
