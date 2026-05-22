@@ -35,7 +35,7 @@ export default function HeroSection() {
           <div className={styles.heroStats}>
             <div className={styles.heroStat}>
               <span className={styles.heroStatValue}>С 2017</span>
-              <span className={styles.heroStatLabel}>на рынке</span>
+              <span className={styles.heroStatLabel}>с вами</span>
             </div>
             <div className={styles.heroStatDivider} />
             <div className={styles.heroStat}>

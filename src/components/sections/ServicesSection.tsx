@@ -27,7 +27,7 @@ export default function ServicesSection() {
             <div className={styles.factsRow}>
               <div className={styles.fact}>
                 <span className={styles.factValue}>С 2017 года</span>
-                <span className={styles.factLabel}>на рынке</span>
+                <span className={styles.factLabel}>с вами</span>
               </div>
               <div className={styles.factSeparator} />
               <div className={styles.fact}>
