@@ -1,11 +1,12 @@
 import Link from "next/link";
 import { homeFaq } from "@/content/home/faq";
+import { Container } from "@/components/ui/Container/Container";
 import styles from "./HomeFaqSection.module.css";
 
 export default function HomeFaqSection() {
   return (
     <section className={styles.faqSection}>
-      <div className={styles.container}>
+      <Container className={styles.inner}>
         <div className={styles.headerGrid}>
           <div className={styles.header}>
             <span className={styles.sectionLabel}>{homeFaq.label}</span>
@@ -37,7 +38,7 @@ export default function HomeFaqSection() {
             </details>
           ))}
         </div>
-      </div>
+      </Container>
     </section>
   );
 }
