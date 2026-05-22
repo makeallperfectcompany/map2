@@ -28,35 +28,20 @@ export default function HomeBlogSection() {
         </div>
 
         <div className={styles.postsGrid}>
-          {homeBlog.posts.map((post, index) => (
-            <article className={styles.postCard} key={post.title}>
-              <Link className={styles.postLink} href={post.href} aria-label={post.title}>
-                <div className={styles.postVisual} aria-hidden="true">
-                  <span className={styles.postNumber}>{String(index + 1).padStart(2, "0")}</span>
-                  <span className={styles.visualLineOne} />
-                  <span className={styles.visualLineTwo} />
-                  <span className={styles.visualDot} />
+          {homeBlog.posts.map((post) => (
+            <a className={styles.articleCard} href={post.href} key={post.title}>
+              <div className={styles.articleImage}>
+                <img src={post.cover} alt={post.title} loading="lazy" decoding="async" />
+              </div>
+              <div className={styles.articleBody}>
+                <div className={styles.articleMeta}>
+                  <span>{post.category}</span>
+                  <span>{post.readTime}</span>
                 </div>
-
-                <div className={styles.postContent}>
-                  <div className={styles.postMeta}>
-                    <span>{post.category}</span>
-                    <span>{post.date}</span>
-                    <span>{post.readTime}</span>
-                  </div>
-
-                  <h3>{post.title}</h3>
-                  <p>{post.excerpt}</p>
-
-                  <span className={styles.readMore}>
-                    Читать
-                    <svg viewBox="0 0 24 24" aria-hidden="true">
-                      <path d="M5 12h14M13 6l6 6-6 6" />
-                    </svg>
-                  </span>
-                </div>
-              </Link>
-            </article>
+                <h3>{post.title}</h3>
+                <p>{post.excerpt}</p>
+              </div>
+            </a>
           ))}
         </div>
 

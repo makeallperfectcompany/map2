@@ -27,5 +27,6 @@ export const homeBlog = {
       href: article.url || `/blog/${article.slug}`,
       date: article.date,
       readTime: article.readingTime,
+      cover: article.cover,
     })),
 } as const;
