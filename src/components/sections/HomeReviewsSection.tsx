@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from "react";
 import { featuredReviews, type ReviewItem } from "@/content/reviews";
+import { Container } from "@/components/ui/Container/Container";
 import styles from "./HomeReviewsSection.module.css";
 
 const REVIEWS_PER_PAGE = 3;
@@ -107,7 +108,7 @@ export default function HomeReviewsSection() {
 
   return (
     <section className={styles.reviewsSection}>
-      <div className={styles.container}>
+      <Container className={styles.inner}>
         <div className={styles.headerGrid}>
           <div className={styles.sectionHeader}>
             <span className={styles.sectionLabel}>Отзывы</span>
@@ -224,7 +225,7 @@ export default function HomeReviewsSection() {
             />
           ))}
         </div>
-      </div>
+      </Container>
 
       {popupReview && (
         <ReviewPopup review={popupReview} onClose={() => setPopupReview(null)} />

@@ -1,7 +1,8 @@
 .reviewsSection {
   position: relative;
   overflow: hidden;
-  padding: 112px 0;
+  padding-top: var(--section-py);
+  padding-bottom: var(--section-py);
   color: #1d1d1f;
   background:
     radial-gradient(circle at 82% 10%, rgba(0, 113, 227, 0.09), transparent 30%),
@@ -18,12 +19,9 @@
     linear-gradient(90deg, rgba(255, 255, 255, 0.68), transparent 42%);
 }
 
-.container {
+.inner {
   position: relative;
   z-index: 1;
-  width: min(100%, 1232px);
-  margin: 0 auto;
-  padding: 0 32px;
 }
 
 .headerGrid {
@@ -414,8 +412,7 @@
 }
 
 @media (max-width: 760px) {
-  .reviewsSection { padding: 72px 0 48px; }
-  .container { padding: 0 18px; }
+  .reviewsSection { padding-top: var(--section-py); padding-bottom: var(--section-py); }
   .sectionHeader { text-align: center; }
   .sectionHeader h2 { font-size: 38px; line-height: 1.04; }
   .description { font-size: 16px; }
@@ -428,8 +425,8 @@
     gap: 12px;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
-    padding: 2px 18px 24px;
-    margin: 0 -18px;
+    padding: 2px var(--page-px) 24px;
+    margin: 0 calc(-1 * var(--page-px));
   }
   .mobileScroller .reviewCard { scroll-snap-align: start; }
   .reviewCard {
