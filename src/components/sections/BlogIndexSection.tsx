@@ -2,6 +2,7 @@
 
 import { useState, useMemo } from "react";
 import Breadcrumbs from "@/components/navigation/Breadcrumbs";
+import { Container } from "@/components/ui/Container/Container";
 import styles from "./BlogIndexSection.module.css";
 import { articles } from "@/content/articles";
 
@@ -86,7 +87,7 @@ export default function BlogIndexSection() {
   return (
     <main className={styles.blogPage}>
       <section className={styles.hero} aria-labelledby="blog-title">
-        <div className={styles.container}>
+        <Container>
           <Breadcrumbs
             items={[
               { label: "Главная", href: "/" },
@@ -111,11 +112,11 @@ export default function BlogIndexSection() {
               </button>
             ))}
           </div>
-        </div>
+        </Container>
       </section>
 
       <section className={styles.articleGridSection} aria-label="Все статьи">
-        <div className={styles.container}>
+        <Container>
           <h2 className={styles.gridTitle}>Новые материалы</h2>
 
           <div className={styles.articleGrid}>
@@ -146,7 +147,7 @@ export default function BlogIndexSection() {
             </div>
             <a href="/#contacts">Обсудить проект</a>
           </div>
-        </div>
+        </Container>
       </section>
     </main>
   );
