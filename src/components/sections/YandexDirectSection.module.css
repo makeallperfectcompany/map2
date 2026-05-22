@@ -113,7 +113,7 @@
 }
 .heroContent {
   display: grid;
-  grid-template-columns: minmax(460px, 0.92fr) minmax(450px, 1.08fr);
+  grid-template-columns: minmax(460px, 0.88fr) minmax(450px, 1.12fr);
   align-items: center;
   gap: 28px;
   min-height: 520px;
@@ -184,14 +184,7 @@
   border-radius: 50%;
   background: #0071e3;
 }
-.heroVisual {
-  position: relative;
-  height: 500px;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-}
-.heroVisual img {
+.heroImage {
   width: 100%;
   height: 100%;
   object-fit: contain;
@@ -810,7 +803,7 @@
 /* ── Responsive ──────────────────────────────── */
 @media (max-width: 1024px) {
   .heroContent { grid-template-columns: 1fr; min-height: auto; }
-  .heroVisual { height: 340px; }
+  .heroImage { height: 340px; }
   .hero { margin: 0 24px; padding: 56px 32px 40px; min-height: auto; }
   .niches { grid-template-columns: 1fr; gap: 24px; padding: 56px 32px; }
   .howGrid { grid-template-columns: 1fr; }
@@ -836,7 +829,7 @@
   .heroActions { flex-direction: column; }
   .heroActions a { width: 100%; justify-content: center; }
   .heroBenefits { flex-direction: column; gap: 12px; margin-top: 24px; }
-  .heroVisual { height: 200px; }
+  .heroImage { height: 200px; }
   .niches { padding: 42px 22px; border-radius: 25px; }
   .section { padding: 54px 22px; }
   .servicesGrid { grid-template-columns: 1fr; }

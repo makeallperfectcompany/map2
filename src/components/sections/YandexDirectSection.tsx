@@ -44,9 +44,7 @@ function Hero() {
             ))}
           </ul>
         </div>
-        <div className={styles.heroVisual}>
-          <img src="/images/services/yandex-direct/hero.webp" alt="" />
-        </div>
+        <img className={styles.heroImage} src="/images/services/yandex-direct/hero.webp" alt="" />
       </div>
     </section>
   );
