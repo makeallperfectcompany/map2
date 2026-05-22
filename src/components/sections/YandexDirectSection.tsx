@@ -46,11 +46,7 @@ function Hero() {
           />
         </div>
       </div>
-      <ul className={styles.heroBenefits}>
-        {heroInfo.benefits.map((item) => (
-          <li key={item}>{item}</li>
-        ))}
-      </ul>
+
     </section>
   );
 }
