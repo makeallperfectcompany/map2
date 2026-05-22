@@ -12,6 +12,7 @@
     margin-bottom: 0px;
     border-radius: 28px;
     overflow: hidden;
+    background-color: #000;
     background-image: url("/images/hero/hero-logo-mob.webp");
     background-repeat: no-repeat;
     background-position: center center;
