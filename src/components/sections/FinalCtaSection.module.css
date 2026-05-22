@@ -8,12 +8,7 @@
 
 .ctaCard {
   position: relative;
-  overflow: hidden;
   width: 100%;
-  min-height: 720px;
-  border-radius: 42px;
-  background: rgba(245, 245, 247, 0.92);
-  box-shadow: 0 28px 90px rgba(15, 16, 20, 0.08);
 }
 
 .background {
@@ -271,7 +266,6 @@
 @media (max-width: 1180px) {
   .ctaCard {
     min-height: auto;
-    border-radius: 34px;
   }
 
   .content {
@@ -324,10 +318,6 @@
 
 /* ─── ≤760px (планшеты) ────────────────────────────────────────────── */
 @media (max-width: 760px) {
-  .ctaCard {
-    border-radius: 24px;
-  }
-
   .content {
     padding: 40px 16px 24px 0;
   }
