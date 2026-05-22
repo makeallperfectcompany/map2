@@ -1,5 +1,5 @@
 import Image from "next/image";
-import AnimatedWord from "./AnimatedWord";
+
 import OpenConsultationButton from "@/components/forms/OpenConsultationButton";
 import styles from "./HeroSection.module.css";
 
@@ -20,7 +20,7 @@ export default function HeroSection() {
       <div className={styles.heroInner}>
         <div className={styles.left}>
           <h1 className={styles.heroTitle}>
-            Продвижение сайтов и брендов, которые хотят <AnimatedWord />
+            Продвижение сайтов и брендов, которые хотят роста
           </h1>
 
           <p className={styles.heroLead}>
