@@ -8,6 +8,7 @@ import HomeAboutSection from "@/components/sections/HomeAboutSection";
 import HomeBlogSection from "@/components/sections/HomeBlogSection";
 import HomeFaqSection from "@/components/sections/HomeFaqSection";
 import FinalCtaSection from "@/components/sections/FinalCtaSection";
+import PrinciplesSection from "@/components/sections/PrinciplesSection";
 import CasesSection from "@/components/sections/CasesSection";
 import HomeReviewsSection from "@/components/sections/HomeReviewsSection";
 
@@ -46,6 +47,7 @@ export default function HomePage() {
   return (
     <main>
       <HeroSection />
+      <PrinciplesSection />
       <ServicesSection />
       <HomeAdvantagesSection />
       <CasesSection />
