@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Breadcrumbs from "@/components/navigation/Breadcrumbs";
 import { cases } from "@/content/cases";
+import { Container } from "@/components/ui/Container/Container";
 import styles from "./CasesIndexSection.module.css";
 
 const filters = ["Все", ...Array.from(new Set(cases.map((c) => c.category)))];
@@ -19,7 +20,7 @@ export default function CasesIndexSection() {
   return (
     <main className={styles.casesPage}>
       <section className={styles.hero} aria-labelledby="cases-title">
-        <div className={styles.container}>
+        <Container>
           <Breadcrumbs
             items={[
               { label: "Главная", href: "/" },
@@ -44,11 +45,11 @@ export default function CasesIndexSection() {
               </button>
             ))}
           </div>
-        </div>
+        </Container>
       </section>
 
       <section className={styles.featured} aria-label="Главный кейс">
-        <div className={styles.container}>
+        <Container>
           <a className={styles.featuredCard} href={featured.url}>
             <div className={styles.featuredImage}>
               <img src={featured.cover} alt={featured.title} loading="eager" decoding="async" />
@@ -68,11 +69,11 @@ export default function CasesIndexSection() {
               <span className={styles.caseLink}>Смотреть кейс ↗</span>
             </div>
           </a>
-        </div>
+        </Container>
       </section>
 
       <section className={styles.gridSection} aria-label="Все кейсы">
-        <div className={styles.container}>
+        <Container>
           <div className={styles.sectionHead}>
             <h2>Все кейсы</h2>
             <p>Выберите проект по направлению или используйте кейсы как ориентир для своей задачи.</p>
@@ -106,7 +107,7 @@ export default function CasesIndexSection() {
             </div>
             <a href="/#contacts">Обсудить проект</a>
           </div>
-        </div>
+        </Container>
       </section>
     </main>
   );

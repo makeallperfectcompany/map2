@@ -3,11 +3,7 @@
   color: #0e0f12;
 }
 
-.container {
-  width: min(100%, 1232px);
-  margin: 0 auto;
-  padding: 0 32px;
-}
+/* .container removed — Container component handles max-width + padding */
 
 .hero {
   padding: 144px 0 56px;
@@ -354,9 +350,7 @@
 }
 
 @media (max-width: 640px) {
-  .container {
-    padding: 0 18px;
-  }
+  /* .container removed — Container component handles padding */
 
   .hero {
     padding: 112px 0 42px;
