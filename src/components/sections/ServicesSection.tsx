@@ -31,8 +31,8 @@ export default function ServicesSection() {
               </div>
               <div className={styles.factSeparator} />
               <div className={styles.fact}>
-                <span className={styles.factValue}>Полный комплекс</span>
-                <span className={styles.factLabel}>8 направлений</span>
+                <span className={styles.factValue}>Более 500 кейсов</span>
+                <span className={styles.factLabel}>в разных нишах</span>
               </div>
               <div className={styles.factSeparator} />
               <div className={styles.fact}>

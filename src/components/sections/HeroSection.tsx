@@ -34,18 +34,18 @@ export default function HeroSection() {
 
           <div className={styles.heroStats}>
             <div className={styles.heroStat}>
-              <span className={styles.heroStatValue}>С 2017 года</span>
+              <span className={styles.heroStatValue}>С 2017</span>
               <span className={styles.heroStatLabel}>с вами</span>
             </div>
             <div className={styles.heroStatDivider} />
             <div className={styles.heroStat}>
-              <span className={styles.heroStatValue}>Более 500 кейсов</span>
-              <span className={styles.heroStatLabel}>в разных нишах</span>
+              <span className={styles.heroStatValue}>8</span>
+              <span className={styles.heroStatLabel}>направлений</span>
             </div>
             <div className={styles.heroStatDivider} />
             <div className={styles.heroStat}>
               <span className={styles.heroStatValue}>400+</span>
-              <span className={styles.heroStatLabel}>реализованных проектов</span>
+              <span className={styles.heroStatLabel}>проектов</span>
             </div>
           </div>
 
