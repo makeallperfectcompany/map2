@@ -1,11 +1,12 @@
 import Image from "next/image";
 import { homeAdvantages } from "@/content/home/advantages";
+import { Container } from "@/components/ui/Container/Container";
 import styles from "./HomeAdvantagesSection.module.css";
 
 export default function HomeAdvantagesSection() {
   return (
     <section className={styles.advantagesSection}>
-      <div className={styles.container}>
+      <Container className={styles.inner}>
         <div className={styles.sectionHeader}>
           <span className={styles.sectionLabel}>{homeAdvantages.label}</span>
           <p className={styles.kicker}>{homeAdvantages.kicker}</p>
@@ -42,7 +43,7 @@ export default function HomeAdvantagesSection() {
             </div>
           </div>
         </div>
-      </div>
+      </Container>
     </section>
   );
 }
