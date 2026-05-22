@@ -1,7 +1,8 @@
 .industriesSection {
   position: relative;
   overflow: hidden;
-  padding: 112px 0;
+  padding-top: var(--section-py);
+  padding-bottom: var(--section-py);
   color: #1d1d1f;
   background:
     radial-gradient(circle at 84% 10%, rgba(0, 113, 227, 0.08), transparent 30%),
@@ -18,12 +19,9 @@
     radial-gradient(circle at 8% 92%, rgba(134, 134, 139, 0.10), transparent 30%);
 }
 
-.container {
+.inner {
   position: relative;
   z-index: 1;
-  width: min(100%, 1232px);
-  margin: 0 auto;
-  padding: 0 32px;
 }
 
 .headerGrid {
@@ -367,7 +365,8 @@
 
 @media (max-width: 760px) {
   .industriesSection {
-    padding: 56px 0 48px;
+    padding-top: var(--section-py);
+    padding-bottom: var(--section-py);
   }
 
   .extraNichesCard {
@@ -379,10 +378,6 @@
     min-height: 28px;
     padding: 0 10px;
     font-size: 11px;
-  }
-
-  .container {
-    padding: 0 18px;
   }
 
   .sectionHeader h2 {

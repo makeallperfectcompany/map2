@@ -1,10 +1,11 @@
 import { homeIndustries } from "@/content/home/industries";
+import { Container } from "@/components/ui/Container/Container";
 import styles from "./HomeIndustriesSection.module.css";
 
 export default function HomeIndustriesSection() {
   return (
     <section className={styles.industriesSection}>
-      <div className={styles.container}>
+      <Container className={styles.inner}>
         <div className={styles.headerGrid}>
           <div className={styles.sectionHeader}>
             <span className={styles.sectionLabel}>{homeIndustries.label}</span>
@@ -72,7 +73,7 @@ export default function HomeIndustriesSection() {
             ))}
           </div>
         </aside>
-      </div>
+      </Container>
     </section>
   );
 }
