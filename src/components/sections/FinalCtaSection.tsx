@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePhoneMask } from "@/hooks/usePhoneMask";
 import { finalCta } from "@/content/home/final-cta";
+import { Container } from "@/components/ui/Container/Container";
 import styles from "./FinalCtaSection.module.css";
 
 export default function FinalCtaSection() {
@@ -30,7 +31,8 @@ export default function FinalCtaSection() {
 
   return (
     <section className={styles.finalCtaSection} id="lead-form">
-      <div className={styles.container}>
+      <Container>
+        <div className={styles.ctaCard}>
         <div className={styles.background} aria-hidden="true" />
 
         <div className={styles.content}>
@@ -118,7 +120,8 @@ export default function FinalCtaSection() {
             )}
           </div>
         </div>
-      </div>
+        </div>
+      </Container>
     </section>
   );
 }
