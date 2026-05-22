@@ -53,7 +53,7 @@
   max-width: 940px;
   margin: 14px 0 0;
   color: #1d1d1f;
-  font: 850 clamp(42px, 5.2vw, 78px)/1.02 Onest, Inter, system-ui, sans-serif;
+  font: 850 clamp(36px, 4vw, 58px)/1.02 Onest, Inter, system-ui, sans-serif;
   letter-spacing: -0.076em;
   text-wrap: balance;
 }
