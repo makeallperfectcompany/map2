@@ -3,17 +3,13 @@
   color: #0e0f12;
 }
 
-.container {
-  width: min(100%, 1232px);
-  margin: 0 auto;
-  padding: 0 32px;
-}
+
 
 .hero {
   min-height: 760px;
   display: flex;
   align-items: center;
-  padding: 132px 0 96px;
+  padding: var(--section-py) 0;
   background-color: #f5f6f8;
   background-image:
     linear-gradient(90deg, rgba(255,255,255,0.98) 0%, rgba(255,255,255,0.90) 34%, rgba(255,255,255,0.46) 58%, rgba(255,255,255,0.04) 100%),
@@ -106,7 +102,7 @@
 .detailsSection,
 .socialSection,
 .faqSection {
-  padding: 88px 0 0;
+  padding: var(--section-py) 0 0;
 }
 
 .sectionHead {
@@ -377,7 +373,7 @@
 }
 
 .finalCta {
-  padding: 88px 0 112px;
+  padding: var(--section-py) 0;
 }
 
 .finalCtaInner {
@@ -419,14 +415,10 @@
 }
 
 @media (max-width: 760px) {
-  .container {
-    padding: 0 18px;
-  }
-
   .hero {
     min-height: 660px;
     align-items: flex-start;
-    padding: 112px 0 52px;
+    padding: var(--section-py) 0;
     background-image:
       linear-gradient(180deg, rgba(255,255,255,0.98) 0%, rgba(255,255,255,0.86) 50%, rgba(255,255,255,0.28) 100%),
       url("/assets/contacts/contacts-hero-bg.webp");
@@ -454,7 +446,7 @@
   .detailsSection,
   .socialSection,
   .faqSection {
-    padding-top: 64px;
+    padding-top: var(--section-py);
   }
 
   .quickGrid,
@@ -478,6 +470,6 @@
   }
 
   .finalCta {
-    padding: 64px 0 78px;
+    padding: var(--section-py) 0;
   }
 }

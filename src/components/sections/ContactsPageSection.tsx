@@ -10,6 +10,7 @@ import {
   socialLinks,
 } from "@/content/contacts";
 import ConsentCheckbox, { CONSENT_REQUIRED_ERROR } from "@/components/forms/ConsentCheckbox";
+import { Container } from "@/components/ui/Container/Container";
 import styles from "./ContactsPageSection.module.css";
 
 export default function ContactsPageSection() {
@@ -31,7 +32,7 @@ export default function ContactsPageSection() {
   return (
     <main className={styles.contactsPage}>
       <section className={styles.hero} aria-labelledby="contacts-title">
-        <div className={styles.container}>
+        <Container>
           <div className={styles.heroContent}>
             <div className={styles.eyebrow}>Контакты Make All Perfect</div>
             <h1 id="contacts-title">Обсудим ваш проект и найдём точки роста</h1>
@@ -47,11 +48,11 @@ export default function ContactsPageSection() {
               <a href="#request">Оставить заявку</a>
             </div>
           </div>
-        </div>
+        </Container>
       </section>
 
       <section className={styles.quickSection} aria-label="Быстрые способы связи">
-        <div className={styles.container}>
+        <Container>
           <div className={styles.sectionHead}>
             <span>Связаться быстро</span>
             <h2>Выберите удобный канал</h2>
@@ -68,11 +69,11 @@ export default function ContactsPageSection() {
               </article>
             ))}
           </div>
-        </div>
+        </Container>
       </section>
 
       <section className={styles.requestSection} id="request">
-        <div className={styles.container}>
+        <Container>
           <div className={styles.requestLayout}>
             <div className={styles.formCard}>
               <span>Оставить заявку</span>
@@ -128,11 +129,11 @@ export default function ContactsPageSection() {
               </ul>
             </aside>
           </div>
-        </div>
+        </Container>
       </section>
 
       <section className={styles.servicesSection}>
-        <div className={styles.container}>
+        <Container>
           <div className={styles.sectionHead}>
             <span>С чем можно обращаться</span>
             <h2>Закрываем задачи от рекламы до комплексной системы маркетинга</h2>
@@ -145,11 +146,11 @@ export default function ContactsPageSection() {
               </article>
             ))}
           </div>
-        </div>
+        </Container>
       </section>
 
       <section className={styles.detailsSection}>
-        <div className={styles.container}>
+        <Container>
           <div className={styles.detailsGrid}>
             <article className={styles.requisitesCard}>
               <span>Реквизиты</span>
@@ -189,11 +190,11 @@ export default function ContactsPageSection() {
               </dl>
             </article>
           </div>
-        </div>
+        </Container>
       </section>
 
       <section className={styles.socialSection} id="socials">
-        <div className={styles.container}>
+        <Container>
           <div className={styles.sectionHead}>
             <span>Социальные сети и каналы</span>
             <h2>Можно написать или следить за обновлениями агентства</h2>
@@ -207,11 +208,11 @@ export default function ContactsPageSection() {
               </a>
             ))}
           </div>
-        </div>
+        </Container>
       </section>
 
       <section className={styles.faqSection}>
-        <div className={styles.container}>
+        <Container>
           <div className={styles.sectionHead}>
             <span>FAQ</span>
             <h2>Частые вопросы перед обращением</h2>
@@ -225,11 +226,11 @@ export default function ContactsPageSection() {
               </article>
             ))}
           </div>
-        </div>
+        </Container>
       </section>
 
       <section className={styles.finalCta}>
-        <div className={styles.container}>
+        <Container>
           <div className={styles.finalCtaInner}>
             <span>Готовы обсудить проект?</span>
             <h2>Напишите нам в удобный канал или оставьте заявку</h2>
@@ -243,7 +244,7 @@ export default function ContactsPageSection() {
               <a href="#request">Оставить заявку</a>
             </div>
           </div>
-        </div>
+        </Container>
       </section>
     </main>
   );
