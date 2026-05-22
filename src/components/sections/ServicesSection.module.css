@@ -328,6 +328,13 @@
 
 /* ── Адаптив ── */
 
+/* Hide facts on mobile — they live in hero stats instead */
+@media (max-width: 768px) {
+  .factsRow {
+    display: none;
+  }
+}
+
 @media (max-width: 1180px) {
   .servicesIntro {
     grid-template-columns: 1fr;
