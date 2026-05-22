@@ -49,6 +49,12 @@ export default function HeroSection() {
             </div>
           </div>
 
+          <ul className={styles.heroPrinciples}>
+            <li>Не продаём лишнее</li>
+            <li>Видите всё, что мы делаем</li>
+            <li>Решения на основе данных</li>
+          </ul>
+
           <div className={styles.heroActions}>
             <OpenConsultationButton as="a" className={`${styles.btn} ${styles.btnAccent}`}>
               <span className={styles.label}>Получить консультацию</span>
