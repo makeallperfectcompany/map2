@@ -31,9 +31,9 @@ export default function FinalCtaSection() {
 
   return (
     <section className={styles.finalCtaSection} id="lead-form">
+      <div className={styles.background} aria-hidden="true" />
       <Container>
         <div className={styles.ctaCard}>
-        <div className={styles.background} aria-hidden="true" />
 
         <div className={styles.content}>
           <div className={styles.copy}>
