@@ -22,9 +22,8 @@ export default function HeroSection() {
         <div className={styles.heroInner}>
           <div className={styles.left}>
             <h1 className={styles.heroTitle}>
-            Продвижение сайтов и&nbsp;брендов,
-            <br />усиленное технологиями
-            <br /><span className={styles.highlight}>Make All Perfect</span>
+            Продвижение сайтов и брендов, усиленное технологиями
+            <span className={styles.highlight}>Make All Perfect</span>
           </h1>
 
           <p className={styles.heroLead}>
