@@ -251,7 +251,7 @@
   align-content: flex-start;
   gap: 7px;
   padding-top: 2px;
-  /* height не фиксируем — у карточек разное количество чипсов */
+  flex: 1;
 }
 
 .chips span,
