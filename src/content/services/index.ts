@@ -132,7 +132,7 @@ const RAW_GROUPS = [
     bigMark: "SMM",
     description:
       "Строим присутствие бренда в соцсетях и YouTube. Контент, инфлюенсеры и охваты — в одной системе.",
-    price: "ОТ 10 000 ₽",
+    price: "ОТ 30 000 ₽",
     cta: "Подробнее",
     href: "/services/smm",
     services: [
