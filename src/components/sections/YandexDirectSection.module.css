@@ -54,6 +54,13 @@
 }
 .btnSecondary:hover { transform: translateY(-2px); }
 
+.heroBtnSecondary {
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  color: #fff;
+  backdrop-filter: blur(6px);
+}
+
 .whiteButton {
   display: inline-flex;
   align-items: center;
@@ -96,7 +103,12 @@
 .hero {
   position: relative;
   overflow: hidden;
-  padding: 72px 68px 56px;
+  margin: 0;
+  border-radius: 0;
+  padding-top: 120px;
+  padding-right: 68px;
+  padding-bottom: 56px;
+  padding-left: 68px;
 }
 .heroBody {
   position: relative;
@@ -115,9 +127,9 @@
   inset: 0;
   background: linear-gradient(
     80deg,
-    rgba(23, 25, 29, 0.75) 0%,
-    rgba(0, 0, 0, 0.35) 45%,
-    rgba(0, 0, 0, 0.10) 100%
+    rgba(23, 25, 29, 0.85) 0%,
+    rgba(0, 0, 0, 0.5) 50%,
+    transparent 100%
   );
   z-index: 0;
 }

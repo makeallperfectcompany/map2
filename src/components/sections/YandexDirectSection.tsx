@@ -35,7 +35,7 @@ function Hero() {
             <a className={styles.btnPrimary} href={heroInfo.primaryCta.href}>
               {heroInfo.primaryCta.text} <Arrow />
             </a>
-            <a className={styles.btnSecondary} href={heroInfo.secondaryCta.href}>
+            <a className={`${styles.btnSecondary} ${styles.heroBtnSecondary}`} href={heroInfo.secondaryCta.href}>
               {heroInfo.secondaryCta.text} <Arrow />
             </a>
           </div>
