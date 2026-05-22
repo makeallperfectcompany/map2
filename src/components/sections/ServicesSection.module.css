@@ -204,7 +204,7 @@
 
 .serviceCard h3 {
   margin: 0;
-  min-height: 82px;
+  min-height: 96px;
   color: #ffffff;
   font: 840 28px/1.06 Onest, Inter, system-ui, sans-serif;
   letter-spacing: -0.05em;
@@ -237,7 +237,7 @@
 
 .serviceCard p {
   margin: 0;
-  min-height: 66px;
+  min-height: 76px;
   color: rgba(255, 255, 255, 0.60);
   font: 430 14px/1.55 Onest, Inter, system-ui, sans-serif;
   letter-spacing: -0.012em;
@@ -252,6 +252,7 @@
   gap: 7px;
   padding-top: 2px;
   flex: 1;
+  min-height: 108px;
 }
 
 .chips span,
