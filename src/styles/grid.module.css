@@ -1,0 +1,44 @@
+/* ── Базовая сетка ──────────────────────────────────── */
+.grid {
+  display: grid;
+  gap: var(--grid-gap);
+  grid-template-columns: 1fr;
+}
+
+/* 2 колонки */
+.grid2 {
+  composes: grid;
+}
+@media (min-width: 768px) {
+  .grid2 { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* 3 колонки */
+.grid3 {
+  composes: grid;
+}
+@media (min-width: 768px) {
+  .grid3 { grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 1280px) {
+  .grid3 { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* 4 колонки */
+.grid4 {
+  composes: grid;
+}
+@media (min-width: 768px) {
+  .grid4 { grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 1280px) {
+  .grid4 { grid-template-columns: repeat(4, 1fr); }
+}
+
+/* 2 колонки — большая + малая (2/3 + 1/3) */
+.gridAsymmetric {
+  composes: grid;
+}
+@media (min-width: 1280px) {
+  .gridAsymmetric { grid-template-columns: 2fr 1fr; }
+}

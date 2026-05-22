@@ -10,6 +10,34 @@ html, body { margin: 0; padding: 0; }
   --glass-2:    rgba(255,255,255,0.78);
   --ease:       cubic-bezier(.2,.7,.2,1);
   --ease-snap:  cubic-bezier(.34,1.56,.64,1);
+
+  /* Grid system */
+  --page-px: 16px;
+  --section-py: 64px;
+  --grid-gap: 24px;
+  --grid-gap-sm: 16px;
+  --card-px: 24px;
+  --card-py: 24px;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --page-px: 32px;
+    --section-py: 80px;
+    --grid-gap: 28px;
+    --card-px: 28px;
+    --card-py: 28px;
+  }
+}
+
+@media (min-width: 1280px) {
+  :root {
+    --page-px: 40px;
+    --section-py: 96px;
+    --grid-gap: 32px;
+    --card-px: 32px;
+    --card-py: 32px;
+  }
 }
 
 body {

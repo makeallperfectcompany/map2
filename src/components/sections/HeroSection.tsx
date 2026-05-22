@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-
+import { Container } from "@/components/ui/Container/Container";
 import OpenConsultationButton from "@/components/forms/OpenConsultationButton";
 import styles from "./HeroSection.module.css";
 
@@ -18,9 +18,10 @@ export default function HeroSection() {
         style={{ objectFit: "cover", objectPosition: "center right" }}
       />
 
-      <div className={styles.heroInner}>
-        <div className={styles.left}>
-          <h1 className={styles.heroTitle}>
+      <Container>
+        <div className={styles.heroInner}>
+          <div className={styles.left}>
+            <h1 className={styles.heroTitle}>
             Продвижение сайтов и&nbsp;брендов,
             <br />усиленное технологиями
             <br /><span className={styles.highlight}>Make All Perfect</span>
@@ -77,6 +78,7 @@ export default function HeroSection() {
           </div>
         </div>
       </div>
+    </Container>
     </section>
   );
 }
