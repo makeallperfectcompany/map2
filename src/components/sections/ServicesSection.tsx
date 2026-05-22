@@ -52,7 +52,7 @@ export default function ServicesSection() {
               {/* Зона 2: Заголовок */}
               <h3>
                 {service.title}
-                <span>{service.mutedTitle}</span>
+                {service.mutedTitle && <span>{service.mutedTitle}</span>}
               </h3>
 
               {/* Зона 3: Аббревиатура */}

@@ -15,7 +15,7 @@ const RAW_GROUPS = [
   {
     eyebrow: "ТРАФИК И ЗАЯВКИ",
     title: "Контекстная и таргетированная реклама",
-    mutedTitle: "с контролем ROMI",
+    mutedTitle: "",
     bigMark: "ADS",
     description:
       "Запускаем рекламу там, где ваша аудитория. Управляем ставками и бюджетом — вы видите каждый рубль ROMI.",
@@ -36,7 +36,7 @@ const RAW_GROUPS = [
   {
     eyebrow: "ОРГАНИЧЕСКИЙ РОСТ",
     title: "SEO и поисковая видимость",
-    mutedTitle: "в Яндексе, Google и AI",
+    mutedTitle: "в Яндексе и Google",
     bigMark: "SEO",
     description:
       "Выводим в топ Яндекса, Google и AI-поиска. Органика работает на вас 24/7 — без оплаты за каждый клик.",
