@@ -1,10 +1,11 @@
 import { homeTechnologies } from "@/content/home/technologies";
+import { Container } from "@/components/ui/Container/Container";
 import styles from "./HomeTechnologiesSection.module.css";
 
 export default function HomeTechnologiesSection() {
   return (
     <section className={styles.technologiesSection}>
-      <div className={styles.container}>
+      <Container className={styles.inner}>
         <div className={styles.headerGrid}>
           <div className={styles.sectionHeader}>
             <span className={styles.sectionLabel}>{homeTechnologies.label}</span>
@@ -52,7 +53,7 @@ export default function HomeTechnologiesSection() {
           ))}
         </div>
         <div className={styles.scrollHint}>→ Листайте</div>
-      </div>
+      </Container>
     </section>
   );
 }

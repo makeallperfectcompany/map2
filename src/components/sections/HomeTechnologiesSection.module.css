@@ -25,12 +25,11 @@
     radial-gradient(circle at 50% 0%, rgba(255, 255, 255, 0.06), transparent 36%);
 }
 
-.container {
+.inner {
   position: relative;
   z-index: 1;
-  width: min(100%, 1232px);
-  margin: 0 auto;
-  padding: 0;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .headerGrid {
@@ -262,10 +261,6 @@
     margin: 0 12px;
     border-radius: 24px;
     padding: 48px 16px 40px;
-  }
-
-  .container {
-    padding: 0;
   }
 
   .sectionHeader h2 {
