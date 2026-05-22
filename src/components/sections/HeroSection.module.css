@@ -350,7 +350,12 @@
     gap: 12px;
     width: 100%;
     margin-top: 20px;
-    text-align: left;
+    text-align: center;
+    align-items: center;
+  }
+
+  .heroPrinciplesMobile > div {
+    justify-content: center;
   }
 
   .heroPrinciplesMobile > div {
