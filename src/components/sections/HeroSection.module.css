@@ -63,7 +63,7 @@
   position: relative; z-index: 2;
   width: 100%;
   display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
+  grid-template-columns: 1.35fr 0.65fr;
   gap: 64px;
   align-items: center;
   padding-top: 24px;
@@ -85,7 +85,7 @@
   line-height: 1.0;
   letter-spacing: -0.06em;
   color: var(--ink);
-  margin: 0 0 28px;
+  margin: 0 0 20px;
   text-wrap: balance;
 }
 
@@ -291,7 +291,7 @@
   }
   .heroTitle {
     font-size: clamp(44px, 4.6vw, 70px);
-    margin-bottom: 24px;
+    margin-bottom: 18px;
   }
   .heroLead {
     margin-bottom: 32px;
