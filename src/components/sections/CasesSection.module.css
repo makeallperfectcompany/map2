@@ -127,48 +127,42 @@
   display: flex;
   flex-direction: column;
   flex: 1;
-  padding: 20px;
+  padding: 24px;
 }
 
 .caseCategory {
-  margin-bottom: 12px;
+  margin-bottom: 18px;
   color: #1a3a6e;
-  font: 700 11px/1.2 "JetBrains Mono", ui-monospace, monospace;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
+  font: 700 12px/1 Onest, Inter, system-ui, sans-serif;
+  letter-spacing: -0.01em;
 }
 
 .caseBody h3 {
   margin: 0;
   color: #0e0f12;
-  font: 790 20px/1.1 Onest, Inter, system-ui, sans-serif;
-  letter-spacing: -0.035em;
-  /* фиксируем высоту — 2 строки макс */
+  font: 780 24px/1.1 Onest, Inter, system-ui, sans-serif;
+  letter-spacing: -0.04em;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
-  min-height: 2.2em;
 }
 
 .caseBody p {
-  margin: 12px 0 14px;
+  margin: 14px 0 0;
   color: #6b6f76;
   font: 450 14px/1.5 Onest, Inter, system-ui, sans-serif;
-  letter-spacing: -0.015em;
-  /* clamp text to 3 lines */
   display: -webkit-box;
-  -webkit-line-clamp: 3;
+  -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
-  min-height: 4.5em;
 }
 
 .metricGrid {
   display: flex;
   flex-wrap: wrap;
-  gap: 6px;
-  margin-bottom: 14px;
+  gap: 8px;
+  margin-top: 14px;
   min-height: 30px;
 }
 
@@ -181,22 +175,26 @@
   background: rgba(0, 113, 227, 0.075);
   color: #1a3a6e;
   border: 1px solid rgba(0, 113, 227, 0.10);
-  font: 760 12px/1 Onest, Inter, system-ui, sans-serif;
-  letter-spacing: -0.01em;
+  font: 700 12px/1 Onest, Inter, system-ui, sans-serif;
 }
 
-.caseLink {
+.readMore {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  margin-top: auto;
-  color: #0e0f12;
-  font: 750 14px/1 Onest, Inter, system-ui, sans-serif;
-  text-decoration: none;
+  margin-top: 24px;
+  padding: 10px 20px;
+  border-radius: 14px;
+  background: linear-gradient(90deg, #1A3A6E 0%, #0071E3 52%, #5FA8FF 100%);
+  color: #fff;
+  font: 750 13px/1 Onest, Inter, system-ui, sans-serif;
+  box-shadow: 0 8px 20px rgba(0, 113, 227, 0.18);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  align-self: flex-start;
 }
 
-.caseLink span {
-  color: #0071e3;
+.caseCard:hover .readMore {
+  transform: translateY(-1px);
+  box-shadow: 0 12px 28px rgba(0, 113, 227, 0.25);
 }
 
 /* ── Планшет ────────────────────────────────────────────────────────── */
@@ -255,11 +253,7 @@
   }
 
   .caseBody {
-    padding: 16px;
-  }
-
-  .caseBody h3 {
-    font-size: 18px;
+    padding: 20px;
   }
 }
 

@@ -93,6 +93,7 @@ export default function CasesIndexSection() {
                       <span key={metric.label}>{metric.value}</span>
                     ))}
                   </div>
+                  <span className={styles.readMore}>Открыть →</span>
                 </div>
               </a>
             ))}
