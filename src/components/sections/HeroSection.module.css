@@ -9,17 +9,14 @@
   align-items: center;
   justify-content: center;
 }
-.heroBg {
-  position: absolute; inset: 0;
-  width: 100%; height: 100%;
-  object-fit: cover;
-  object-position: center right;
-  z-index: 0;
-  user-select: none; pointer-events: none;
-  animation: heroFloat 6s ease-in-out infinite;
+.heroContainerBg {
+  background-image: url("/assets/home/hero/hero-bg.webp");
+  background-size: cover;
+  background-position: center right;
+  background-repeat: no-repeat;
 }
 
-/* Shimmer на heroBg */
+/* Shimmer на background */
 .heroSection::after {
   content: "";
   position: absolute;
@@ -36,11 +33,6 @@
   background-size: 200% 100%;
   animation: heroShimmer 8s ease-in-out infinite;
   pointer-events: none;
-}
-
-@keyframes heroFloat {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-24px); }
 }
 
 @keyframes heroShimmer {
@@ -312,8 +304,6 @@
 }
 @media (max-width: 1024px) {
   .heroSection { min-height: 100dvh; }
-  /* Скрыть desktop background на mobile/tablet */
-  .heroBg { display: none; }
   .heroSection::before {
     background: linear-gradient(180deg,
       rgba(255,255,255,0) 0%,

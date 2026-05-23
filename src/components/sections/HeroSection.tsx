@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import { Container } from "@/components/ui/Container/Container";
 import OpenConsultationButton from "@/components/forms/OpenConsultationButton";
@@ -7,18 +6,7 @@ import styles from "./HeroSection.module.css";
 export default function HeroSection() {
   return (
     <section className={styles.heroSection}>
-      {/* Desktop background — скрывается на mobile через CSS */}
-      <Image
-        className={styles.heroBg}
-        src="/assets/home/hero/hero-bg.webp"
-        alt=""
-        fill
-        priority
-        sizes="100vw"
-        style={{ objectFit: "cover", objectPosition: "center right" }}
-      />
-
-      <Container>
+      <Container className={styles.heroContainerBg}>
         <div className={styles.heroInner}>
           <div className={styles.left}>
             <h1 className={styles.heroTitle}>
