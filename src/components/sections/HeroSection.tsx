@@ -6,7 +6,7 @@ import styles from "./HeroSection.module.css";
 export default function HeroSection() {
   return (
     <section className={styles.heroSection}>
-      <Container className={styles.heroContainerBg}>
+      <Container>
         <div className={styles.heroInner}>
           <div className={styles.left}>
             <h1 className={styles.heroTitle}>

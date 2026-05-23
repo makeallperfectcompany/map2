@@ -8,8 +8,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-}
-.heroContainerBg {
   background-image: url("/assets/home/hero/hero-bg.webp");
   background-size: cover;
   background-position: center right;
