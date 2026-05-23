@@ -126,8 +126,9 @@
 }
 
 .heroLogo {
-  width: clamp(120px, 16vw, 280px);
+  max-width: 100%;
   height: auto;
+  object-fit: contain;
   animation: heroFloat 6s ease-in-out infinite;
   filter: drop-shadow(0 4px 20px rgba(0,0,0,0.08));
 }

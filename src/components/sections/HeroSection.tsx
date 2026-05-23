@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 import { Container } from "@/components/ui/Container/Container";
 import OpenConsultationButton from "@/components/forms/OpenConsultationButton";
 import styles from "./HeroSection.module.css";
@@ -57,13 +56,10 @@ export default function HeroSection() {
 
         {/* Desktop: блок принципов — справа, под логотипом */}
         <div className={styles.right}>
-          <Image
+          <img
             className={styles.heroLogo}
             src="/assets/home/hero/logo-hero.png"
             alt="Make All Perfect"
-            width={400}
-            height={400}
-            priority
           />
           <div className={styles.heroPrinciplesDesktop} aria-label="Принципы работы">
             <span>Не продаём лишние услуги</span>
