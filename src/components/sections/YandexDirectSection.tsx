@@ -64,7 +64,11 @@ function Hero() {
             </ul>
           </div>
           <div className={styles.right}>
-            {/* Structural spacer — background image shows through on this side */}
+            <img
+              className={styles.heroVisual}
+              src="/images/services/yandex-direct/hero-visual.png"
+              alt=""
+            />
           </div>
         </div>
       </Container>
