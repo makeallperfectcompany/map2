@@ -28,26 +28,45 @@ function Hero() {
   return (
     <section className={styles.hero}>
       <Container>
-      <div className={styles.heroContent}>
-        <div className={styles.heroText}>
-          <h1>{heroInfo.title}</h1>
-          <p>{heroInfo.text}</p>
-          <div className={styles.heroActions}>
-            <a className={styles.btnPrimary} href={heroInfo.primaryCta.href}>
-              {heroInfo.primaryCta.text} ↗
-            </a>
-            <a className={styles.heroBtnSecondary} href={heroInfo.secondaryCta.href}>
-              {heroInfo.secondaryCta.text} ↗
-            </a>
+        <div className={styles.heroInner}>
+          <div className={styles.left}>
+            <h1 className={styles.heroTitle}>{heroInfo.title}</h1>
+            <p className={styles.heroLead}>{heroInfo.text}</p>
+            <div className={styles.heroActions}>
+              <a href={heroInfo.primaryCta.href} className={`${styles.btn} ${styles.btnAccent}`}>
+                <span className={styles.label}>{heroInfo.primaryCta.text}</span>
+                <span className={styles.arrWrap}>
+                  <svg className={`${styles.arr} ${styles.arrMain}`} viewBox="0 0 14 14" fill="none">
+                    <path d="M3 11L11 3M11 3H4M11 3V10" stroke="white" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                  <svg className={`${styles.arr} ${styles.arrGhost}`} viewBox="0 0 14 14" fill="none">
+                    <path d="M3 11L11 3M11 3H4M11 3V10" stroke="white" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                </span>
+              </a>
+              <a href={heroInfo.secondaryCta.href} className={`${styles.btn} ${styles.btnGhost}`}>
+                <span className={styles.label}>{heroInfo.secondaryCta.text}</span>
+                <span className={styles.arrWrap}>
+                  <svg className={`${styles.arr} ${styles.arrMain}`} viewBox="0 0 14 14" fill="none">
+                    <path d="M3 11L11 3M11 3H4M11 3V10" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                  <svg className={`${styles.arr} ${styles.arrGhost}`} viewBox="0 0 14 14" fill="none">
+                    <path d="M3 11L11 3M11 3H4M11 3V10" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                </span>
+              </a>
+            </div>
+            {/* Desktop: benefits below buttons */}
+            <ul className={styles.heroBenefits}>
+              {heroInfo.benefits.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
           </div>
-          <ul className={styles.heroBenefits}>
-            {heroInfo.benefits.map((item) => (
-              <li key={item}>{item}</li>
-            ))}
-          </ul>
+          <div className={styles.right}>
+            {/* Structural spacer — background image shows through on this side */}
+          </div>
         </div>
-        <img className={styles.heroImage} src="/images/services/yandex-direct/hero.webp" alt="" />
-      </div>
       </Container>
     </section>
   );
