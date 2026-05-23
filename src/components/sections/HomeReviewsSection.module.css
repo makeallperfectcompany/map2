@@ -26,13 +26,13 @@
 
 .headerGrid {
   display: grid;
-  grid-template-columns: minmax(0, 0.98fr) minmax(360px, 0.62fr);
-  gap: 28px;
+  grid-template-columns: 1fr minmax(340px, 500px);
+  gap: 40px;
   align-items: stretch;
   margin-bottom: 34px;
 }
 
-.sectionHeader { max-width: 880px; }
+.sectionHeader { }
 
 .sectionLabel {
   display: inline-flex;
@@ -55,7 +55,6 @@
 }
 
 .sectionHeader h2 {
-  max-width: 900px;
   margin: 14px 0 0;
   color: #1d1d1f;
   font: 850 clamp(36px, 4vw, 58px)/1.02 Onest, Inter, system-ui, sans-serif;
@@ -64,7 +63,7 @@
 }
 
 .description {
-  max-width: 760px;
+  max-width: 620px;
   margin: 24px 0 0;
   color: #62666d;
   font: 450 18px/1.62 Onest, Inter, system-ui, sans-serif;
@@ -91,7 +90,6 @@
 .summaryVisualImg {
   width: 100%;
   height: auto;
-  min-height: 200px;
   display: block;
   object-fit: cover;
 }
@@ -101,7 +99,7 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  padding: 28px 30px 30px;
+  padding: 28px 24px 28px;
 }
 
 .summaryContent > span {
@@ -178,7 +176,7 @@
 }
 
 .reviewsViewport { overflow: hidden; }
-.reviewsGrid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; align-items: start; }
+.reviewsGrid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; align-items: start; }
 .mobileScroller { display: none; }
 
 .reviewCard {
@@ -195,7 +193,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 14px;
+  gap: 16px;
 }
 
 .rating { display: flex; gap: 8px; color: #a7ccfb; }
