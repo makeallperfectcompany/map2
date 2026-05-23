@@ -431,6 +431,7 @@
   .heroTitle { font-size: 28px; letter-spacing: -0.04em; margin-bottom: 12px; }
   .heroLead { font-size: 13px; margin-bottom: 16px; }
   .btn { padding: 12px 16px; font-size: 13px; }
+}
 /* Section labels (blue pills) */
 .label {
   display: inline-flex;
@@ -1035,10 +1036,43 @@
   color: #727783;
   font: 450 14px/1.65 Onest, Inter, system-ui, sans-serif;
 }
-
-/* ── Responsive ──────────────────────────────── */
 @media (max-width: 1024px) {
+  .niches { grid-template-columns: 1fr; gap: 24px; }
+  .howGrid { grid-template-columns: 1fr; }
+  .flowVisual { min-height: 320px; }
+  .servicesGrid { grid-template-columns: repeat(2, 1fr); }
+  .advantagesGrid { grid-template-columns: 1fr; }
+  .analyticsVisual { min-height: 320px; }
+  .stepsGrid { grid-template-columns: repeat(2, 1fr); }
+  .packagesGrid { grid-template-columns: repeat(2, 1fr); }
+  .casesGrid { grid-template-columns: repeat(2, 1fr); }
+  .fitGrid { grid-template-columns: 1fr; }
+  .expertiseGrid { grid-template-columns: repeat(2, 1fr); }
+  .faqHeading { grid-template-columns: 1fr; gap: 32px; }
+}
 
 @media (max-width: 640px) {
+  .servicesGrid { grid-template-columns: 1fr; }
+  .analyticsVisual { min-height: 220px; }
+  .benefitGrid { grid-template-columns: 1fr; }
+  .stepsGrid { grid-template-columns: 1fr; gap: 12px; }
+  .stepsGrid article { min-height: auto; }
+  .packagesGrid { grid-template-columns: 1fr; }
+  .casesGrid { grid-template-columns: 1fr; }
   
-  .hero { min-height: auto; }
+  .fitCard { padding: 27px 23px; }
+  .contrastCard { padding: 27px 23px; }
+  .fitCard h3 { font-size: 24px; }
+  .contrastCard h3 { font-size: 22px; }
+  .expertiseGrid { grid-template-columns: 1fr; }
+  .rowHeading { flex-direction: column; align-items: flex-start; gap: 20px; }
+  .faqHeading .contrastCard { padding: 24px; }
+  .faqList summary { padding: 0 16px; grid-template-columns: 31px 1fr 31px; font-size: 14px; }
+  .faqList details p { padding: 0 18px 24px 47px; }
+  .blueCard { padding: 27px 23px; }
+  .blueCard h3 { font-size: 26px; }
+  
+  .niches h2 { font-size: clamp(30px, 9vw, 36px); }
+  .heading h2 { font-size: clamp(30px, 9vw, 36px); }
+  .darkHeading h2 { font-size: clamp(30px, 9vw, 36px); }
+}
