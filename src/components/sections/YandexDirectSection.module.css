@@ -78,9 +78,8 @@
 
 .section {
   position: relative;
-  margin: 0 24px;
-  padding: 105px 68px;
-  border-radius: 32px;
+  padding-top: var(--section-py);
+  padding-bottom: var(--section-py);
 }
 
 .heading {
@@ -103,11 +102,9 @@
 .hero {
   position: relative;
   overflow: hidden;
-  margin: 0 24px;
-  margin-top: 36px;
-  border-radius: 34px;
   min-height: 640px;
-  padding: 72px 68px 44px;
+  padding-top: var(--section-py);
+  padding-bottom: var(--section-py);
   background:
     radial-gradient(circle at 82% 36%, rgba(0, 113, 227, 0.08), transparent 30%),
     linear-gradient(118deg, #ffffff 0%, #ffffff 47%, #f6f9fc 100%);
@@ -287,10 +284,9 @@
 
 /* ── Состав услуги (тёмный блок) ─────────────── */
 .darkSection {
-  margin: 12px 24px;
-  padding: 72px 68px;
-  border-radius: 32px;
   color: #fff;
+  padding-top: var(--section-py);
+  padding-bottom: var(--section-py);
   background:
     radial-gradient(circle at 84% 10%, rgba(0, 113, 227, 0.2), transparent 30%),
     linear-gradient(135deg, #17191d, #1d1f24);
@@ -805,8 +801,8 @@
 @media (max-width: 1024px) {
   .heroContent { grid-template-columns: 1fr; min-height: auto; }
   .heroImage { height: 340px; }
-  .hero { margin: 0 24px; padding: 56px 32px 40px; min-height: auto; }
-  .niches { grid-template-columns: 1fr; gap: 24px; padding: 56px 32px; }
+  .hero { min-height: auto; }
+  .niches { grid-template-columns: 1fr; gap: 24px; }
   .howGrid { grid-template-columns: 1fr; }
   .flowVisual { min-height: 320px; }
   .servicesGrid { grid-template-columns: repeat(2, 1fr); }
@@ -821,9 +817,8 @@
 }
 
 @media (max-width: 640px) {
-  .hero, .darkSection, .softSection, .casesSection, .niches,
-  .section { margin-left: 16px; margin-right: 16px; }
-  .hero { padding: 36px 22px 28px; border-radius: 25px; min-height: auto; }
+  
+  .hero { min-height: auto; }
   .heroContent { grid-template-columns: 1fr; min-height: auto; gap: 16px; }
   .heroText h1 { font-size: clamp(36px, 11vw, 44px); }
   .heroText p { margin-top: 18px; font-size: 15px; }
@@ -831,8 +826,8 @@
   .heroActions a { width: 100%; justify-content: center; }
   .heroBenefits { flex-direction: column; gap: 12px; margin-top: 24px; }
   .heroImage { height: 200px; }
-  .niches { padding: 42px 22px; border-radius: 25px; }
-  .section { padding: 54px 22px; }
+  
+  
   .servicesGrid { grid-template-columns: 1fr; }
   .analyticsVisual { min-height: 220px; }
   .benefitGrid { grid-template-columns: 1fr; }
@@ -840,7 +835,7 @@
   .stepsGrid article { min-height: auto; }
   .packagesGrid { grid-template-columns: 1fr; }
   .casesGrid { grid-template-columns: 1fr; }
-  .casesSection { padding: 54px 22px; }
+  
   .fitCard { padding: 27px 23px; }
   .contrastCard { padding: 27px 23px; }
   .fitCard h3 { font-size: 24px; }
@@ -852,8 +847,8 @@
   .faqList details p { padding: 0 18px 24px 47px; }
   .blueCard { padding: 27px 23px; }
   .blueCard h3 { font-size: 26px; }
-  .softSection { padding: 54px 22px; border-radius: 25px; }
-  .darkSection { padding: 52px 22px; }
+  
+  
   .niches h2 { font-size: clamp(30px, 9vw, 36px); }
   .heading h2 { font-size: clamp(30px, 9vw, 36px); }
   .darkHeading h2 { font-size: clamp(30px, 9vw, 36px); }

@@ -1,3 +1,4 @@
+import { Container } from "@/components/ui/Container/Container";
 import Link from "next/link";
 import { cases } from "@/content/cases";
 import {
@@ -26,6 +27,7 @@ function Arrow() {
 function Hero() {
   return (
     <section className={styles.hero}>
+      <Container>
       <div className={styles.heroContent}>
         <div className={styles.heroText}>
           <h1>{heroInfo.title}</h1>
@@ -46,6 +48,7 @@ function Hero() {
         </div>
         <img className={styles.heroImage} src="/images/services/yandex-direct/hero.webp" alt="" />
       </div>
+      </Container>
     </section>
   );
 }
@@ -57,6 +60,7 @@ function Niches() {
 function HowItWorks() {
   return (
     <section className={styles.section}>
+      <Container>
       <div className={styles.heading}>
         <Label>{howItWorks.label}</Label>
         <h2>{howItWorks.title}</h2>
@@ -80,6 +84,7 @@ function HowItWorks() {
           ))}
         </div>
       </div>
+      </Container>
     </section>
   );
 }
@@ -87,6 +92,7 @@ function HowItWorks() {
 function Services() {
   return (
     <section className={styles.darkSection}>
+      <Container>
       <div className={styles.darkHeading}>
         <div>
           <Label>{servicesData.label}</Label>
@@ -109,6 +115,7 @@ function Services() {
           </article>
         ))}
       </div>
+      </Container>
     </section>
   );
 }
@@ -116,6 +123,7 @@ function Services() {
 function Advantages() {
   return (
     <section className={styles.section}>
+      <Container>
       <div className={styles.heading}>
         <Label>{advantagesData.label}</Label>
         <h2>{advantagesData.title}</h2>
@@ -147,6 +155,7 @@ function Advantages() {
           </div>
         </div>
       </div>
+      </Container>
     </section>
   );
 }
@@ -154,6 +163,7 @@ function Advantages() {
 function Process() {
   return (
     <section className={`${styles.section} ${styles.softSection}`}>
+      <Container>
       <div className={styles.heading}>
         <Label>{processData.label}</Label>
         <h2>{processData.title}</h2>
@@ -171,6 +181,7 @@ function Process() {
       <a className={styles.btnPrimary} href="#pricing">
         Обсудить запуск рекламы <Arrow />
       </a>
+      </Container>
     </section>
   );
 }
@@ -178,6 +189,7 @@ function Process() {
 function Pricing() {
   return (
     <section className={styles.section} id="pricing">
+      <Container>
       <div className={styles.heading}>
         <Label>{pricingData.label}</Label>
         <h2>{pricingData.title}</h2>
@@ -205,6 +217,7 @@ function Pricing() {
         ))}
       </div>
       <p className={styles.pricingNote}>Финальная стоимость рассчитывается после знакомства с задачей, сайтом, нишей и планируемым рекламным бюджетом.</p>
+      </Container>
     </section>
   );
 }
@@ -213,6 +226,7 @@ function Cases() {
   const topCases = cases.slice(0, 3);
   return (
     <section className={`${styles.section} ${styles.casesSection}`}>
+      <Container>
       <div className={styles.rowHeading}>
         <div className={styles.heading}>
           <Label>Кейсы</Label>
@@ -236,6 +250,7 @@ function Cases() {
           </a>
         ))}
       </div>
+      </Container>
     </section>
   );
 }
@@ -243,6 +258,7 @@ function Cases() {
 function Fit() {
   return (
     <section className={styles.section}>
+      <Container>
       <div className={styles.heading}>
         <Label>{fitData.label}</Label>
         <h2>{fitData.title}</h2>
@@ -263,6 +279,7 @@ function Fit() {
           <a className={styles.whiteButton} href="#lead-form">Получить консультацию <Arrow /></a>
         </article>
       </div>
+      </Container>
     </section>
   );
 }
@@ -270,6 +287,7 @@ function Fit() {
 function Expertise() {
   return (
     <section className={styles.darkSection}>
+      <Container>
       <div className={styles.darkHeading}>
         <div>
           <Label>{expertiseData.label}</Label>
@@ -286,6 +304,7 @@ function Expertise() {
           </article>
         ))}
       </div>
+      </Container>
     </section>
   );
 }
@@ -293,6 +312,7 @@ function Expertise() {
 function Faq() {
   return (
     <section className={styles.section}>
+      <Container>
       <div className={styles.faqHeading}>
         <div className={styles.heading}>
           <Label>{faqData.label}</Label>
@@ -317,6 +337,7 @@ function Faq() {
           </details>
         ))}
       </div>
+      </Container>
     </section>
   );
 }
