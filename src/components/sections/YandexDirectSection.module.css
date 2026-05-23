@@ -68,7 +68,7 @@
 .heading {
   max-width: 820px;
 }
-.heading .label { margin-bottom: 19px; }
+.heading .pillLabel { margin-bottom: 19px; }
 .heading h2 {
   font: 800 clamp(40px, 4vw, 56px)/0.99 Onest, Inter, system-ui, sans-serif;
   letter-spacing: -0.07em;
@@ -190,9 +190,11 @@
 }
 
 .heroVisual {
-  max-width: 100%;
-  height: auto;
-  object-fit: contain;
+  width: 100%;
+  flex: 1;
+  object-fit: cover;
+  display: block;
+  border-radius: 20px;
 }
 
 /* BUTTONS */
@@ -334,6 +336,8 @@
   gap: 18px;
   width: fit-content;
   max-width: 100%;
+  margin-top: auto;
+  margin-bottom: 18px;
 }
 
 .heroBenefitsInline span {
@@ -441,7 +445,7 @@
   .btn { padding: 12px 16px; font-size: 13px; }
 }
 /* Section labels (blue pills) */
-.label {
+.pillLabel {
   display: inline-flex;
   min-height: 30px;
   align-items: center;
@@ -544,7 +548,7 @@
   margin: 0 auto;
   width: min(100% - 64px, 1100px);
 }
-.darkSection .label {
+.darkSection .pillLabel {
   background: rgba(0, 113, 227, 0.14);
   border-color: rgba(255, 255, 255, 0.08);
   color: #7fb7ff;
@@ -939,7 +943,7 @@
   font: 450 14px/1.63 Onest, Inter, system-ui, sans-serif;
   margin-bottom: 28px;
 }
-.contrastCard .label {
+.contrastCard .pillLabel {
   background: rgba(0, 113, 227, 0.14);
   border-color: rgba(255, 255, 255, 0.08);
   color: #7fb7ff;

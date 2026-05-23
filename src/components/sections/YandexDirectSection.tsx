@@ -17,7 +17,7 @@ import FinalCtaSection from "@/components/sections/FinalCtaSection";
 import styles from "./YandexDirectSection.module.css";
 
 function Label({ children }: { children: React.ReactNode }) {
-  return <span className={styles.label}>{children}</span>;
+  return <span className={styles.pillLabel}>{children}</span>;
 }
 
 function Arrow() {
