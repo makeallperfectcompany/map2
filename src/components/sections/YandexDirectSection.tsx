@@ -57,6 +57,7 @@ function Hero() {
               </a>
             </div>
             {/* Desktop: benefits below buttons */}
+            {/* Mobile: benefits shown at ≤1024px */}
             <ul className={styles.heroBenefits}>
               {heroInfo.benefits.map((item) => (
                 <li key={item}>{item}</li>
@@ -69,6 +70,14 @@ function Hero() {
               src="/images/services/yandex-direct/hero-visual.png"
               alt=""
             />
+            {/* Desktop: benefits inline in right column */}
+            <div className={styles.heroBenefitsInline} aria-label="Преимущества">
+              {heroInfo.benefits.reduce<React.ReactNode[]>((acc, item, i) => {
+                if (i > 0) acc.push(<i key={`dot-${i}`} aria-hidden="true" />);
+                acc.push(<span key={item}>{item}</span>);
+                return acc;
+              }, [])}
+            </div>
           </div>
         </div>
       </Container>

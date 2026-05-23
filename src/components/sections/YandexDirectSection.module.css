@@ -301,7 +301,7 @@
   list-style: none;
   padding: 0;
   margin: 0;
-  display: flex;
+  display: none;
   flex-direction: column;
   gap: 10px;
 }
@@ -396,6 +396,8 @@
   }
   .heroActions { justify-content: center; margin-bottom: 0; }
   .right { display: none; }
+  .heroBenefits { display: flex; }
+  .heroBenefitsInline { display: none; }
 }
 
 @media (max-width: 768px) {
