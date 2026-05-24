@@ -267,9 +267,6 @@
   color: #1a3a6e;
   border: 1px solid rgba(0, 113, 227, 0.10);
   font: 700 12px/1 Onest, Inter, system-ui, sans-serif;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  width: fit-content;
 }
 
 /* =================================================================
@@ -736,7 +733,7 @@
   display: grid;
   grid-template-columns: 0.9fr 1.1fr;
   gap: 40px;
-  align-items: start;
+  align-items: end;
 }
 
 .availVisual img {
@@ -792,7 +789,7 @@
   display: grid;
   grid-template-columns: 0.85fr 1.15fr;
   gap: 40px;
-  align-items: start;
+  align-items: end;
 }
 
 .approachVisual img {
@@ -998,7 +995,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 24px;
-  align-items: start;
+  align-items: end;
 }
 
 .fitCard {
