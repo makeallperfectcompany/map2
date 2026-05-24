@@ -44,7 +44,6 @@ function Hero() {
       <Container>
         <div className={styles.heroInner}>
           <div className={styles.left}>
-            <Label>{heroInfo.label}</Label>
             <h1 className={styles.heroTitle}>{heroInfo.title}</h1>
             <p className={styles.heroLead}>{heroInfo.text}</p>
             <div className={styles.heroActions}>
