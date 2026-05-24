@@ -57,12 +57,15 @@ function Hero() {
               </a>
             </div>
             {/* Desktop: benefits below buttons */}
-            {/* Mobile: benefits shown at ≤1024px */}
-            <ul className={styles.heroBenefits}>
+            {/* Mobile: benefits shown at ≤1024px (same structure as main page principles) */}
+            <div className={styles.heroBenefits}>
               {heroInfo.benefits.map((item) => (
-                <li key={item}>{item}</li>
+                <div key={item}>
+                  <i aria-hidden="true" />
+                  <span>{item}</span>
+                </div>
               ))}
-            </ul>
+            </div>
           </div>
           <div className={styles.right}>
             <img
