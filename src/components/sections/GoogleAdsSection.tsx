@@ -44,6 +44,13 @@ function Hero() {
       <Container>
         <div className={styles.heroInner}>
           <div className={styles.left}>
+            <nav className={styles.breadcrumb} aria-label="Breadcrumb">
+              <a href="/">Главная</a>
+              <span aria-hidden="true">—</span>
+              <a href="#">Контекстная реклама</a>
+              <span aria-hidden="true">—</span>
+              <span>Google Ads</span>
+            </nav>
             <h1 className={styles.heroTitle}>{heroInfo.title}</h1>
             <p className={styles.heroLead}>{heroInfo.text}</p>
             <div className={styles.heroActions}>

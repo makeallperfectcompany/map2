@@ -96,6 +96,31 @@
   overflow: hidden;
 }
 
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+.breadcrumb a {
+  color: #86868b;
+  font-size: 13px;
+  font-weight: 400;
+  text-decoration: none;
+  transition: color .25s ease;
+}
+.breadcrumb a:hover { color: #0071E3; }
+.breadcrumb span[aria-hidden] {
+  color: #c7c7cc;
+  font-size: 12px;
+}
+.breadcrumb > span:last-child {
+  color: #6e6e73;
+  font-size: 13px;
+  font-weight: 400;
+}
+
 /* Shimmer на background */
 .hero::after {
   content: "";
