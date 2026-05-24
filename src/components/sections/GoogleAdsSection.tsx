@@ -35,12 +35,6 @@ function Arrow() {
 function Hero() {
   return (
     <section className={styles.hero}>
-      <img
-        className={styles.heroBg}
-        src="/images/services/google-ads/hero-bg.webp"
-        alt=""
-        aria-hidden="true"
-      />
       <Container>
         <div className={styles.heroInner}>
           <div className={styles.left}>
