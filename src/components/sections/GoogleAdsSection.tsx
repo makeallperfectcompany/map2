@@ -8,6 +8,7 @@ import {
   availabilityData,
   servicesData,
   approachData,
+  casesData,
   processData,
   pricingData,
   transparencyData,
