@@ -37,7 +37,7 @@ function Hero() {
     <section className={styles.hero}>
       <img
         className={styles.heroBg}
-        src="/images/services/google-ads/google-ads-hero-background.webp"
+        src="/images/services/google-ads/hero-bg.webp"
         alt=""
         aria-hidden="true"
       />
@@ -80,11 +80,6 @@ function Hero() {
             </div>
           </div>
           <div className={styles.right}>
-            <img
-              className={styles.heroVisual}
-              src="/images/services/google-ads/google-ads-hero-element.webp"
-              alt=""
-            />
             <div className={styles.heroBenefitsInline} aria-label="Преимущества">
               {heroInfo.benefits.reduce<React.ReactNode[]>((acc, item, i) => {
                 if (i > 0) acc.push(<i key={`dot-${i}`} aria-hidden="true" />);
