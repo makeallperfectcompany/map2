@@ -762,9 +762,14 @@
   align-items: stretch;
 }
 
+.availVisual {
+  height: 100%;
+}
+
 .availVisual img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: fill;
   border-radius: 18px;
   display: block;
 }
@@ -818,9 +823,14 @@
   align-items: stretch;
 }
 
+.approachVisual {
+  height: 100%;
+}
+
 .approachVisual img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: fill;
   border-radius: 18px;
   display: block;
 }
