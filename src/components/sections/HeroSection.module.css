@@ -61,7 +61,7 @@
   grid-template-columns: 1.35fr 0.65fr;
   gap: 64px;
   align-items: center;
-  padding-top: 24px;
+  padding-top: 0;
 }
 
 .left {
@@ -313,7 +313,7 @@
    ================================================================= */
 @media (min-width: 1024px) and (max-height: 920px) {
   .heroInner {
-    padding-top: 110px;
+    padding-top: 0;
     padding-bottom: 48px;
   }
   .heroTitle {
