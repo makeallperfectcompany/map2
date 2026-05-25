@@ -196,7 +196,7 @@
   gap: 16px;
 }
 
-.rating { display: flex; gap: 8px; color: #a7ccfb; }
+.rating { display: flex; gap: 8px; color: #0071E3; }
 .rating svg {
   width: 20px;
   height: 20px;
