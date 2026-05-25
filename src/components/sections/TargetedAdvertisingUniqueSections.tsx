@@ -41,6 +41,13 @@ export function TargetedAdvertisingHero() {
       <Container>
         <div className={styles.heroContent}>
           <div className={styles.heroText}>
+            <nav className={styles.breadcrumb} aria-label="Breadcrumb">
+              <a href="/">Главная</a>
+              <span aria-hidden="true">—</span>
+              <a href="#">Таргетированная реклама</a>
+              <span aria-hidden="true">—</span>
+              <span>Реклама ВКонтакте и Telegram</span>
+            </nav>
             <h1>{content.hero.title}</h1>
             <p className={styles.lead}>{content.hero.description}</p>
             <div className={styles.actions}>
