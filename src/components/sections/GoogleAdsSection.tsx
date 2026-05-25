@@ -462,33 +462,37 @@ function Expertise() {
 
 function Faq() {
   return (
-    <section className={styles.section} id="faq">
+    <section className={styles.faqSection} id="faq">
       <Container>
-        <div className={styles.faqHeading}>
-          <div className={styles.heading}>
-            <Label>{faqData.label}</Label>
-            <h2>{faqData.title}</h2>
+        <div className={styles.faqInner}>
+          <div className={styles.faqHeaderGrid}>
+            <div className={styles.faqHeader}>
+              <span className={styles.faqLabel}>{faqData.label}</span>
+              <h2>{faqData.title}</h2>
+            </div>
+            <article className={styles.faqCtaCard}>
+              <small className={styles.faqCtaEyebrow}>AUDIT</small>
+              <h3>Не нашли свой вопрос?</h3>
+              <p>Разберём задачу и подходящий формат рекламы лично.</p>
+              <a className={styles.faqCtaButton} href="#contact">
+                Получить консультацию
+              </a>
+            </article>
           </div>
-          <article className={styles.contrastCard}>
-            <small>AUDIT</small>
-            <h3>Не нашли свой вопрос?</h3>
-            <p>Разберём задачу и подходящий формат рекламы лично.</p>
-            <a className={styles.whiteButton} href="#contact">
-              Получить консультацию
-            </a>
-          </article>
-        </div>
-        <div className={styles.faqList}>
-          {faqData.items.map((item, i) => (
-            <details key={item.q} open={i === 0}>
-              <summary>
-                <span>0{i + 1}</span>
-                {item.q}
-                <i>+</i>
-              </summary>
-              <p>{item.a}</p>
-            </details>
-          ))}
+          <div className={styles.faqList}>
+            {faqData.items.map((item, i) => (
+              <details key={item.q} className={styles.faqItem} open={i === 0}>
+                <summary>
+                  <span>0{i + 1}</span>
+                  <h3>{item.q}</h3>
+                  <i></i>
+                </summary>
+                <div className={styles.faqAnswer}>
+                  <p>{item.a}</p>
+                </div>
+              </details>
+            ))}
+          </div>
         </div>
       </Container>
     </section>

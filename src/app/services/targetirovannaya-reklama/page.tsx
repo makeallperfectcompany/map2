@@ -11,7 +11,7 @@ import {
 import CasesSection from "@/components/sections/CasesSection";
 import HomeIndustriesSection from "@/components/sections/HomeIndustriesSection";
 import HomeReviewsSection from "@/components/sections/HomeReviewsSection";
-import HomeFaqSection from "@/components/sections/HomeFaqSection";
+import TargetedFaqSection from "@/components/sections/TargetedFaqSection";
 import FinalCtaSection from "@/components/sections/FinalCtaSection";
 
 export const metadata: Metadata = {
@@ -76,10 +76,11 @@ export default function TargetirovannayaReklamaPage() {
         <HomeIndustriesSection />
         <HomeReviewsSection />
 
-        <HomeFaqSection />
+        <TargetedFaqSection />
       </main>
 
       <FinalCtaSection />
     </>
   );
 }
+
