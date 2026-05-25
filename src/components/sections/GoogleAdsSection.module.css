@@ -69,7 +69,7 @@
   grid-template-columns: 1.35fr 0.65fr;
   gap: 64px;
   align-items: center;
-  padding-top: 24px;
+  padding-top: 0;
 }
 
 .left {
