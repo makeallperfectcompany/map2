@@ -32,14 +32,18 @@ import { ecommerceSeoUxCase } from "./ecommerce-seo-ux";
 import { clinicSeoAdsUxCase } from "./clinic-seo-ads-ux";
 import { wildberriesExternalAdsClothingCase } from "./wildberries-external-ads-clothing";
 import { wildberriesFashionGrowthCase } from "./wildberries-fashion-growth";
+import { clothingBrandSeoVkCase } from "./clothing-brand-seo-vk";
 
 export const cases: CaseItem[] = [
   wildberriesFashionGrowthCase,
   wildberriesExternalAdsClothingCase,
   wildberriesExternalTrafficCase,
+  clothingBrandSeoVkCase,
   ecommerceSeoUxCase,
   clinicSeoAdsUxCase,
 ];
+
+
 
 export function getCaseBySlug(slug: string): CaseItem | undefined {
   return cases.find((item) => item.slug === slug);
