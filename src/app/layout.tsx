@@ -78,7 +78,7 @@ export const metadata: Metadata = {
 
 const localBusinessSchema = {
   "@context": "https://schema.org",
-  "@type": "MarketingAgency",
+  "@type": "Organization",
   name: "Make All Perfect",
   url: BASE_URL,
   logo: `${BASE_URL}/favicon.webp`,
