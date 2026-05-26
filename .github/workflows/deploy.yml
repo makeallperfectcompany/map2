@@ -1,0 +1,30 @@
+name: Deploy to Vercel (master)
+
+on:
+  push:
+    branches: [master]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+
+      - name: Deploy to Vercel (production)
+        uses: amondnet/vercel-action@v25
+        with:
+          vercel-token: ${{ secrets.VERCEL_TOKEN }}
+          vercel-org-id: team_8ZNf10w2GuIkPqIJOo56sdxv
+          vercel-project-id: prj_TrwIhihVaANP1khFCApQLqwWXgfg
+          vercel-args: "--prod"
