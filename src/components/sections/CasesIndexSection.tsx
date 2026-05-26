@@ -28,7 +28,6 @@ export default function CasesIndexSection() {
         <Container>
           <div className={styles.sectionHead}>
             <h2>Все кейсы</h2>
-            <p>Выберите проект по направлению или используйте кейсы как ориентир для своей задачи.</p>
           </div>
 
           <div className={styles.caseGrid}>
