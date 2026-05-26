@@ -22,7 +22,7 @@ export default function Footer() {
               <Image
                 src="/assets/home/hero/logo-header.webp"
                 alt="Make All Perfect"
-                title="Make All Perfect — маркетинговое агентство"
+                title="Make All Perfect"
                 width={0}
                 height={0}
                 sizes="42px"
@@ -82,7 +82,7 @@ export default function Footer() {
             <Image
               src="/images/yandex-rating.webp"
               alt="Рейтинг Make All Perfect на Яндекс Картах — 4.9"
-              title="Рейтинг Make All Perfect на Яндекс Картах — 4.9"
+              title="Яндекс рейтинг 4.9"
               width={0}
               height={0}
               sizes="234px"

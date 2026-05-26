@@ -112,7 +112,7 @@ export default function Header({ menuOpen, onBurgerClick }: HeaderProps) {
             className={styles.brandLogo}
             src="/assets/home/hero/logo-header.webp"
             alt="Make All Perfect logo"
-            title="Make All Perfect — маркетинговое агентство"
+            title="Make All Perfect"
             width={34}
             height={34}
             priority

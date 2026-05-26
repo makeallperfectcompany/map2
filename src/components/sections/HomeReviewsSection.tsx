@@ -127,7 +127,7 @@ export default function HomeReviewsSection() {
               <img
                 src="/images/yandex-rating.webp"
                 alt="Рейтинг Make All Perfect на Яндекс Картах — 4.9"
-                title="Рейтинг Make All Perfect на Яндекс Картах — 4.9"
+                title="Яндекс рейтинг 4.9"
                 loading="lazy"
                 decoding="async"
                 className={styles.yandexRatingImgHeader}
@@ -140,7 +140,7 @@ export default function HomeReviewsSection() {
               <img
                 src="/images/home/reviews/summary-visual.webp"
                 alt=""
-                title="Отзывы клиентов Make All Perfect"
+                title="Отзывы клиентов"
                 className={styles.summaryVisualImg}
                 loading="lazy"
                 decoding="async"

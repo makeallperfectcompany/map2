@@ -152,7 +152,7 @@ function Availability() {
             <img
               src="/images/services/google-ads/google-ads-markets.webp"
               alt=""
-              title="Рынки и аудитории Google Ads"
+              title="Google Ads аудитории"
               loading="lazy"
             />
           </div>
@@ -226,7 +226,7 @@ function Approach() {
             <img
               src="/images/services/google-ads/google-ads-performance.webp"
               alt=""
-              title="Результаты рекламы Google Ads"
+              title="Результаты Google Ads"
               loading="lazy"
             />
           </div>

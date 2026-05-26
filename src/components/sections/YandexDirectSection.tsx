@@ -79,7 +79,7 @@ function Hero() {
               className={styles.heroVisual}
               src="/images/services/yandex-direct/hero-visual.png"
               alt=""
-              title="Яндекс Директ — настройка и ведение рекламы"
+              title="Яндекс Директ реклама"
             />
             {/* Desktop: benefits inline in right column */}
             <div className={styles.heroBenefitsInline} aria-label="Преимущества">
@@ -115,7 +115,7 @@ function HowItWorks() {
             className={styles.flowImage}
             src="/images/services/yandex-direct/flow.webp"
             alt=""
-            title="Процесс работы с Яндекс Директ"
+            title="Процесс работы"
             loading="lazy"
           />
         </div>
@@ -179,7 +179,7 @@ function Advantages() {
             className={styles.analyticsImage}
             src="/images/services/yandex-direct/analytics.webp"
             alt=""
-            title="Аналитика Яндекс Директ"
+            title="Аналитика Яндекса"
             loading="lazy"
           />
         </div>

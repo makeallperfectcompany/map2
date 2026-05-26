@@ -24,7 +24,7 @@ function ReviewCard({ item }: { item: Extract<ReviewItem, { type: "review" }> })
       <div className={styles.quoteMark} aria-hidden="true">“</div>
       <div className={styles.cardTop}>
         <div className={styles.author}>
-          <img src={item.avatar} alt="" title="Аватар клиента" loading="lazy" decoding="async" />
+          <img src={item.avatar} alt="" title="Аватар" loading="lazy" decoding="async" />
           <div>
             <strong>{item.name}</strong>
             <span>{item.role}</span>
@@ -152,7 +152,7 @@ export default function ReviewsIndexSection() {
               <img
                 src="/images/yandex-rating.webp"
                 alt="Рейтинг Make All Perfect на Яндекс Картах — 4.9"
-                title="Рейтинг Make All Perfect на Яндекс Картах — 4.9"
+                title="Яндекс рейтинг 4.9"
                 loading="lazy"
                 decoding="async"
                 className={styles.yandexRatingImg}
