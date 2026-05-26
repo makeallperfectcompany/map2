@@ -50,7 +50,7 @@
   box-shadow: 0 0 16px rgba(111, 183, 255, 0.72);
 }
 
-.servicesIntro h2 {
+.servicesIntro h2, .servicesIntro .sectionTitle {
   max-width: 720px;
   margin: 18px 0 0;
   font: 800 clamp(36px, 4vw, 58px)/0.98 Onest, Inter, system-ui, sans-serif;
@@ -60,7 +60,7 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.servicesIntro h2 span {
+.servicesIntro h2 span, .servicesIntro .sectionTitle span {
   display: block;
   color: rgba(245, 245, 247, 0.55);
 }
@@ -377,7 +377,7 @@
     margin-bottom: 24px;
   }
 
-  .servicesIntro h2 {
+  .servicesIntro h2, .servicesIntro .sectionTitle {
     font-size: 34px;
     line-height: 1.02;
   }
@@ -510,7 +510,7 @@
     padding: 40px 12px 32px;
   }
 
-  .servicesIntro h2 {
+  .servicesIntro h2, .servicesIntro .sectionTitle {
     font-size: 28px;
   }
 }

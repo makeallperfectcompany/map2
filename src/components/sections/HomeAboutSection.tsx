@@ -8,9 +8,9 @@ export default function HomeAboutSection() {
       <Container className={styles.inner}>
         <div className={styles.grid}>
           <div className={styles.content}>
-            <span className={styles.sectionLabel}>{homeAbout.label}</span>
+            <h2 className={styles.sectionLabel}>{homeAbout.label}</h2>
 
-            <h2>{homeAbout.title}</h2>
+            <p className={styles.sectionTitle}>{homeAbout.title}</p>
 
             <div className={styles.text}>
               {homeAbout.paragraphs.map((paragraph) => (

@@ -9,8 +9,8 @@ export default function HomeFaqSection() {
       <Container className={styles.inner}>
         <div className={styles.headerGrid}>
           <div className={styles.header}>
-            <span className={styles.sectionLabel}>{homeFaq.label}</span>
-            <h2>{homeFaq.title}</h2>
+            <h2 className={styles.sectionLabel}>{homeFaq.label}</h2>
+            <p className={styles.sectionTitle}>{homeFaq.title}</p>
             <p>{homeFaq.description}</p>
           </div>
 

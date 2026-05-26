@@ -9,8 +9,8 @@ export default function HomeBlogSection() {
       <Container className={styles.inner}>
         <div className={styles.header}>
           <div>
-            <span className={styles.sectionLabel}>{homeBlog.label}</span>
-            <h2>{homeBlog.title}</h2>
+            <h2 className={styles.sectionLabel}>{homeBlog.label}</h2>
+            <p className={styles.sectionTitle}>{homeBlog.title}</p>
             <p>{homeBlog.description}</p>
           </div>
 

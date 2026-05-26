@@ -9,11 +9,11 @@ export default function ServicesSection() {
       <Container className={styles.container}>
         <div className={styles.servicesIntro}>
           <div className={styles.introLeft}>
-            <div className={styles.kicker}>Услуги</div>
-            <h2 id="services-title">
+            <h2 className={styles.kicker}>Услуги</h2>
+            <p id="services-title" className={styles.sectionTitle}>
               8 направлений. Одна система.
               <span>Ваш рост.</span>
-            </h2>
+            </p>
 
             <div className={styles.introActions}>
               <OpenConsultationButton as="a" href="/contacts">Подобрать связку услуг</OpenConsultationButton>
