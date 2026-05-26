@@ -79,8 +79,8 @@ export const vkAdsContent: VkAdsContent = {
     primaryCta: "Обсудить запуск рекламы",
     secondaryCta: "Рассчитать медиаплан",
     microtext: "Сначала разберём продукт, аудиторию и точку входа. После этого предложим сценарий запуска и объём работ.",
-    desktopImage: "/images/services/reklama-vkontakte/hero-background-desktop.webp",
-    mobileImage: "/images/services/reklama-vkontakte/hero-background-mobile.webp",
+    desktopImage: "/images/services/reklama-vkontakte/hero-bg-d.webp",
+    mobileImage: "/images/services/reklama-vkontakte/hero-bg-m.webp",
   },
   scenarios: {
     title: "Запускаем рекламу ВКонтакте под конкретную задачу бизнеса",
