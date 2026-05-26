@@ -8,10 +8,10 @@ export default function CasesSection() {
       <Container>
         <div className={styles.top}>
           <div className={styles.copy}>
-            <h2 className={styles.eyebrow}>Кейсы</h2>
-            <p className={styles.title} id="cases-title">
+            <div className={styles.eyebrow}>Кейсы</div>
+            <h2 className={styles.title} id="cases-title">
               Результаты, которые видно в цифрах
-            </p>
+            </h2>
             <p className={styles.lead}>
               Показываем не просто красивые запуски, а системную работу: стратегия, трафик,
               упаковка, аналитика и рост ключевых показателей бизнеса.

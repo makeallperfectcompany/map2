@@ -8,8 +8,8 @@ export default function HomeTechnologiesSection() {
       <Container className={styles.inner}>
         <div className={styles.headerGrid}>
           <div className={styles.sectionHeader}>
-            <h2 className={styles.sectionLabel}>{homeTechnologies.label}</h2>
-            <p className={styles.sectionTitle}>{homeTechnologies.title}</p>
+            <span className={styles.sectionLabel}>{homeTechnologies.label}</span>
+            <h2>{homeTechnologies.title}</h2>
           </div>
 
           <div className={styles.headerSide}>

@@ -8,9 +8,9 @@ export default function HomeAdvantagesSection() {
     <section className={styles.advantagesSection}>
       <Container className={styles.inner}>
         <div className={styles.sectionHeader}>
-          <h2 className={styles.sectionLabel}>{homeAdvantages.label}</h2>
+          <span className={styles.sectionLabel}>{homeAdvantages.label}</span>
           <p className={styles.kicker}>{homeAdvantages.kicker}</p>
-          <p className={styles.sectionTitle}>{homeAdvantages.title}</p>
+          <h2>{homeAdvantages.title}</h2>
           <p className={styles.description}>{homeAdvantages.description}</p>
         </div>
 

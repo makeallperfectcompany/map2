@@ -37,8 +37,8 @@ export default function FinalCtaSection() {
 
         <div className={styles.content}>
           <div className={styles.copy}>
-            <h2 className={styles.sectionLabel}>{finalCta.label}</h2>
-            <p className={styles.sectionTitle}>{finalCta.title}</p>
+            <span className={styles.sectionLabel}>{finalCta.label}</span>
+            <h2>{finalCta.title}</h2>
             <p>{finalCta.description}</p>
           </div>
 

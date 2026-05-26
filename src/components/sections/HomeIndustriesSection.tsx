@@ -8,9 +8,9 @@ export default function HomeIndustriesSection() {
       <Container className={styles.inner}>
         <div className={styles.headerGrid}>
           <div className={styles.sectionHeader}>
-            <h2 className={styles.sectionLabel}>{homeIndustries.label}</h2>
+            <span className={styles.sectionLabel}>{homeIndustries.label}</span>
             <p className={styles.kicker}>{homeIndustries.kicker}</p>
-            <p className={styles.sectionTitle}>{homeIndustries.title}</p>
+            <h2>{homeIndustries.title}</h2>
             <p className={styles.description}>{homeIndustries.description}</p>
             <ul className={styles.bulletList}>
               {homeIndustries.bullets.map((bullet) => (

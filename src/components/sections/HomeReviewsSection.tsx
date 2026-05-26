@@ -111,9 +111,9 @@ export default function HomeReviewsSection() {
       <Container className={styles.inner}>
         <div className={styles.headerGrid}>
           <div className={styles.sectionHeader}>
-            <h2 className={styles.sectionLabel}>Отзывы</h2>
+            <span className={styles.sectionLabel}>Отзывы</span>
             <p className={styles.kicker}>Доверие и благодарственные письма</p>
-            <p className={styles.sectionTitle}>Клиенты ценят нас за системный подход, прозрачность и результат</p>
+            <h2>Клиенты ценят нас за системный подход, прозрачность и результат</h2>
             <p className={styles.description}>
               Мы не обещаем магию и не прячем работу за красивыми отчётами. Показываем,
               что делаем, почему это важно и как каждый шаг влияет на заявки, продажи и рост бизнеса.

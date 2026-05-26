@@ -56,7 +56,7 @@
   letter-spacing: -0.018em;
 }
 
-.sectionHeader h2, .sectionHeader .sectionTitle {
+.sectionHeader h2 {
   max-width: 940px;
   margin: 14px 0 0;
   color: #1d1d1f;
@@ -380,7 +380,7 @@
     font-size: 11px;
   }
 
-  .sectionHeader h2, .sectionHeader .sectionTitle {
+  .sectionHeader h2 {
     font-size: 38px;
     line-height: 1.04;
   }
@@ -441,7 +441,7 @@
 }
 
 @media (max-width: 430px) {
-  .sectionHeader h2, .sectionHeader .sectionTitle {
+  .sectionHeader h2 {
     font-size: 34px;
   }
 
