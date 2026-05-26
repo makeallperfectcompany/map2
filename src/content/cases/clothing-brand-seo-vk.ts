@@ -6,7 +6,7 @@ export const clothingBrandSeoVkCase = {
     "Как увеличить продажи одежды в 2,4 раза за 4 месяца: кейс по SEO и таргету ВКонтакте — Make All Perfect",
   description:
     "Комплексное продвижение бренда женской одежды: SEO-оптимизация + таргетированная реклама ВКонтакте. Рост заказов в 2,4 раза, снижение CPL в 2,3 раза.",
-  category: "VK Ads",
+  category: "SEO",
   tags: ["SEO", "VK Ads", "Одежда", "Таргетированная реклама", "E-commerce"],
   industry: "Женская одежда и аксессуары",
   service: "SEO + VK Ads",
