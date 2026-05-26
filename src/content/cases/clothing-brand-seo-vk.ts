@@ -110,6 +110,11 @@ export const clothingBrandSeoVkCase = {
         "SEO дало первый рост уже на 6-й неделе после публикации контента.",
         "VK Ads обеспечили 41% всех заказов в третьем месяце.",
       ],
+      imageAfter: {
+        src: "/assets/cases/uvelichili-onlayn-prodazhi-v-24-raza-dlya-brenda-odezhdy-za-4-mesyatsa/results.webp",
+        alt: "Графики роста продаж бренда одежды после SEO и VK Ads",
+        caption: "Результаты за 4 месяца: рост онлайн-продаж в 2,4 раза, снижение CPL в 2,3 раза.",
+      },
     },
     {
       title: "8. Выводы и рекомендации",
