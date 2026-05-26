@@ -15,8 +15,6 @@ export default function CasesIndexSection() {
     ? cases
     : cases.filter((c) => c.category === activeFilter);
 
-  const featured = filteredCases[0];
-
   return (
     <main className={styles.casesPage}>
       <section className={styles.hero} aria-labelledby="cases-title">
@@ -48,30 +46,6 @@ export default function CasesIndexSection() {
         </Container>
       </section>
 
-      <section className={styles.featured} aria-label="Главный кейс">
-        <Container>
-          <a className={styles.featuredCard} href={featured.url}>
-            <div className={styles.featuredImage}>
-              <img src={featured.cover} alt={featured.title} loading="eager" decoding="async" />
-            </div>
-            <div className={styles.featuredContent}>
-              <span className={styles.category}>{featured.category}</span>
-              <h2>{featured.title}</h2>
-              <p>{featured.lead}</p>
-              <div className={styles.metrics}>
-                {featured.metrics.map((metric) => (
-                  <div className={styles.metric} key={metric.label}>
-                    <strong>{metric.value}</strong>
-                    <span>{metric.label}</span>
-                  </div>
-                ))}
-              </div>
-              <span className={styles.caseLink}>Смотреть кейс ↗</span>
-            </div>
-          </a>
-        </Container>
-      </section>
-
       <section className={styles.gridSection} aria-label="Все кейсы">
         <Container>
           <div className={styles.sectionHead}>
@@ -80,7 +54,7 @@ export default function CasesIndexSection() {
           </div>
 
           <div className={styles.caseGrid}>
-            {filteredCases.slice(1).map((item) => (
+            {filteredCases.map((item) => (
               <a className={styles.caseCard} href={item.url} key={item.slug}>
                 <div className={styles.cardImage}>
                   <img src={item.cover} alt={item.title} loading="lazy" decoding="async" />
