@@ -1682,6 +1682,7 @@
    RESPONSIVE — 640px
    ================================================================= */
 @media (max-width: 640px) {
+  .hero { background-image: none; }
   .heroTitle { font-size: 36px; }
   .left { padding: 0 10px; min-width: unset; }
   .heroActions {

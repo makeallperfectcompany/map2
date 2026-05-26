@@ -437,7 +437,9 @@
 }
 
 @media (max-width: 768px) {
-  .hero { min-height: unset; align-items: flex-start; margin-bottom: 30px; }
+  .hero { min-height: unset; align-items: flex-start; margin-bottom: 30px; background-image: none; }
+  .hero::before { background: none; }
+  .hero::after { background: none; }
   .heroTitle { font-size: 38px; line-height: 1.075; letter-spacing: -0.045em; margin-bottom: 14px; }
   .heroLead { font-size: 15px; max-width: 480px; margin-bottom: 22px; }
   .heroActions { margin-bottom: 0; gap: 12px; }

@@ -411,7 +411,7 @@
   }
 }
 @media (max-width: 768px) {
-  .heroSection { min-height: unset; align-items: flex-start; margin-bottom: 30px; }
+  .heroSection { min-height: unset; align-items: flex-start; margin-bottom: 30px; background-image: none; }
   .heroInner {  }
   .heroTitle { font-size: 38px; line-height: 1.075; letter-spacing: -0.045em; margin-bottom: 14px; }
   .heroLead { font-size: 15px; max-width: 480px; margin-bottom: 22px; }
