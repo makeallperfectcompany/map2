@@ -16,6 +16,7 @@ export const wildberriesFashionGrowthCase = {
     "Кейс продвижения одежды на Wildberries: как увеличить продажи в fashion-нише",
   lead:
     "Разбираем кейс продвижения магазина одежды на Wildberries в конкурентной fashion-нише. Как работа с воронкой, карточками и ассортиментом дала рост заказов на 90% при высоком выкупе.",
+  cover: "/assets/cases/keys-prodvizheniya-odezhdy-na-wildberries-kak-uvelichit-prodazhi-v-fashion-nishe/cover.webp",
   
   metrics: [
     { value: "+104%", label: "переходы в карточку" },
