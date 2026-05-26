@@ -1,20 +1,11 @@
 "use client";
 
-import { useState } from "react";
 import Breadcrumbs from "@/components/navigation/Breadcrumbs";
 import { cases } from "@/content/cases";
 import { Container } from "@/components/ui/Container/Container";
 import styles from "./CasesIndexSection.module.css";
 
-const filters = ["Все", ...Array.from(new Set(cases.map((c) => c.category)))];
-
 export default function CasesIndexSection() {
-  const [activeFilter, setActiveFilter] = useState("Все");
-
-  const filteredCases = activeFilter === "Все"
-    ? cases
-    : cases.filter((c) => c.category === activeFilter);
-
   return (
     <main className={styles.casesPage}>
       <section className={styles.hero} aria-labelledby="cases-title">
@@ -30,19 +21,6 @@ export default function CasesIndexSection() {
             Показываем, как стратегия, реклама, SEO, сайты, контент и аналитика превращаются
             в рост заявок, продаж и управляемую экономику продвижения.
           </p>
-
-          <div className={styles.filterBar} aria-label="Фильтры кейсов">
-            {filters.map((filter) => (
-              <button
-                className={`${styles.filterButton} ${activeFilter === filter ? styles.activeFilter : ""}`}
-                type="button"
-                key={filter}
-                onClick={() => setActiveFilter(filter)}
-              >
-                {filter}
-              </button>
-            ))}
-          </div>
         </Container>
       </section>
 
@@ -54,7 +32,7 @@ export default function CasesIndexSection() {
           </div>
 
           <div className={styles.caseGrid}>
-            {filteredCases.map((item) => (
+            {cases.map((item) => (
               <a className={styles.caseCard} href={item.url} key={item.slug}>
                 <div className={styles.cardImage}>
                   <img src={item.cover} alt={item.title} loading="lazy" decoding="async" />

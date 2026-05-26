@@ -13,8 +13,6 @@
     linear-gradient(180deg, #ffffff 0%, #f5f6f8 100%);
 }
 
-
-
 .hero h1 {
   max-width: 940px;
   margin: 0 auto;
@@ -29,14 +27,6 @@
   color: #6b6f76;
   font: 450 19px/1.58 Onest, Inter, system-ui, sans-serif;
   letter-spacing: -0.02em;
-}
-
-.filterBar {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-top: 42px;
 }
 
 .filterButton {
@@ -365,23 +355,11 @@
     font-size: 16px;
   }
 
-  .filterBar {
-    width: calc(100% + 36px);
-    margin-left: -18px;
-    padding: 0 18px 4px;
-    justify-content: flex-start;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    scrollbar-width: none;
-  }
+  
 
-  .filterBar::-webkit-scrollbar {
-    display: none;
-  }
+  
 
-  .filterButton {
-    flex: 0 0 auto;
-  }
+  
 
   .featuredCard {
     padding: 10px;
