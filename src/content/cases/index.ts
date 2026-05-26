@@ -6,7 +6,7 @@ export type CaseItem = {
   seoTitle: string;
   description: string;
   lead: string;
-  cover: string;
+  cover?: string;
   contentType: string;
   tags: string[];
   service: string | null;
