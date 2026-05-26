@@ -80,7 +80,7 @@ export default function CasesIndexSection() {
           </div>
 
           <div className={styles.caseGrid}>
-            {filteredCases.map((item) => (
+            {filteredCases.slice(1).map((item) => (
               <a className={styles.caseCard} href={item.url} key={item.slug}>
                 <div className={styles.cardImage}>
                   <img src={item.cover} alt={item.title} loading="lazy" decoding="async" />
