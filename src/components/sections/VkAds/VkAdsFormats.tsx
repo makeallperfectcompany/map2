@@ -3,19 +3,17 @@ import grid from "@/styles/grid.module.css";
 import type { VkAdsContent } from "@/content/services/vkAds";
 import styles from "./VkAds.module.css";
 
-type Props = { content: VkAdsContent["formats"] };
-
-export default function VkAdsFormats({ content }: Props) {
+export default function VkAdsFormats({ content }: { content: VkAdsContent["formats"] }) {
   return (
-    <section className={styles.darkSection} aria-labelledby="vk-formats-title">
+    <section className={styles.darkSection} aria-labelledby="vkAdsFormatsTitle">
       <Container>
         <div className={styles.darkHeader}>
-          <h2 id="vk-formats-title">{content.title}</h2>
+          <h2 id="vkAdsFormatsTitle">{content.title}</h2>
           <p>{content.text}</p>
         </div>
         <div className={grid.grid3}>
           {content.cards.map((card) => (
-            <article key={card.code} className={card.featured ? styles.darkCardFeatured : styles.darkCard}>
+            <article className={card.featured ? styles.darkCardFeatured : styles.darkCard} key={card.code}>
               <span className={styles.darkCode}>{card.code}</span>
               <h3>{card.title}</h3>
               <p>{card.text}</p>
