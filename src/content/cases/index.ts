@@ -31,8 +31,10 @@ import { wildberriesExternalTrafficCase } from "./wildberries-external-traffic";
 import { ecommerceSeoUxCase } from "./ecommerce-seo-ux";
 import { clinicSeoAdsUxCase } from "./clinic-seo-ads-ux";
 import { wildberriesExternalAdsClothingCase } from "./wildberries-external-ads-clothing";
+import { wildberriesFashionGrowthCase } from "./wildberries-fashion-growth";
 
 export const cases: CaseItem[] = [
+  wildberriesFashionGrowthCase,
   wildberriesExternalAdsClothingCase,
   wildberriesExternalTrafficCase,
   ecommerceSeoUxCase,
