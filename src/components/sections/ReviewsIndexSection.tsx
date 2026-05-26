@@ -24,7 +24,7 @@ function ReviewCard({ item }: { item: Extract<ReviewItem, { type: "review" }> })
       <div className={styles.quoteMark} aria-hidden="true">“</div>
       <div className={styles.cardTop}>
         <div className={styles.author}>
-          <img src={item.avatar} alt="" loading="lazy" decoding="async" />
+          <img src={item.avatar} alt="" title="Аватар клиента" loading="lazy" decoding="async" />
           <div>
             <strong>{item.name}</strong>
             <span>{item.role}</span>
@@ -55,7 +55,7 @@ function LetterCard({ item }: { item: Extract<ReviewItem, { type: "letter" }> })
   return (
     <article className={`${styles.reviewCard} ${styles.letterCard}`}>
       <div className={styles.letterPreview}>
-        <img src={item.preview} alt="" loading="lazy" decoding="async" />
+        <img src={item.preview} alt="" title="Превью отзыва" loading="lazy" decoding="async" />
       </div>
 
       <div className={styles.letterBody}>
@@ -152,6 +152,7 @@ export default function ReviewsIndexSection() {
               <img
                 src="/images/yandex-rating.webp"
                 alt="Рейтинг Make All Perfect на Яндекс Картах — 4.9"
+                title="Рейтинг Make All Perfect на Яндекс Картах — 4.9"
                 loading="lazy"
                 decoding="async"
                 className={styles.yandexRatingImg}

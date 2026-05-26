@@ -19,6 +19,7 @@ export default function HomeAdvantagesSection() {
             <Image
               src={homeAdvantages.visual}
               alt=""
+              title="Преимущества работы с Make All Perfect"
               fill
               sizes="(max-width: 900px) 100vw, 50vw"
               priority={false}

@@ -32,6 +32,7 @@ export default function CasesSection() {
                 <img
                   src={item.cover}
                   alt=""
+                  title={item.title}
                   className={styles.caseCoverImg}
                   loading="lazy"
                   decoding="async"

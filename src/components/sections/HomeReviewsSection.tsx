@@ -22,7 +22,7 @@ function Avatar({ src, name }: { src?: string; name: string }) {
   if (src) {
     return (
       <div className={styles.avatarImageWrapper}>
-        <img src={src} alt={name} className={styles.avatarImage} loading="lazy" />
+        <img src={src} alt={name} title={name} className={styles.avatarImage} loading="lazy" />
       </div>
     );
   }
@@ -127,6 +127,7 @@ export default function HomeReviewsSection() {
               <img
                 src="/images/yandex-rating.webp"
                 alt="Рейтинг Make All Perfect на Яндекс Картах — 4.9"
+                title="Рейтинг Make All Perfect на Яндекс Картах — 4.9"
                 loading="lazy"
                 decoding="async"
                 className={styles.yandexRatingImgHeader}
@@ -139,6 +140,7 @@ export default function HomeReviewsSection() {
               <img
                 src="/images/home/reviews/summary-visual.webp"
                 alt=""
+                title="Отзывы клиентов Make All Perfect"
                 className={styles.summaryVisualImg}
                 loading="lazy"
                 decoding="async"

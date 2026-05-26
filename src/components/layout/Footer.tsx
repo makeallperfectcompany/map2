@@ -22,6 +22,7 @@ export default function Footer() {
               <Image
                 src="/assets/home/hero/logo-header.webp"
                 alt="Make All Perfect"
+                title="Make All Perfect — маркетинговое агентство"
                 width={0}
                 height={0}
                 sizes="42px"
@@ -48,7 +49,7 @@ export default function Footer() {
           <nav className={styles.groups} aria-label="Навигация в подвале сайта">
             {groups.map((group) => (
               <div className={styles.group} key={group.title}>
-                <h2>{group.title}</h2>
+                <span className={styles.groupTitle}>{group.title}</span>
                 <ul>
                   {group.items.map((item) => (
                     <li key={item.href}>
@@ -81,6 +82,7 @@ export default function Footer() {
             <Image
               src="/images/yandex-rating.webp"
               alt="Рейтинг Make All Perfect на Яндекс Картах — 4.9"
+              title="Рейтинг Make All Perfect на Яндекс Картах — 4.9"
               width={0}
               height={0}
               sizes="234px"

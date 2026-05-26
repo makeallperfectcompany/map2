@@ -136,6 +136,7 @@ export default function ArticleTemplate({ article }: { article: Article }) {
                       <img
                         src={section.imageAfter.src}
                         alt={section.imageAfter.alt}
+                        title={section.imageAfter.alt}
                         loading="lazy"
                         decoding="async"
                       />

@@ -152,6 +152,7 @@ function Availability() {
             <img
               src="/images/services/google-ads/google-ads-markets.webp"
               alt=""
+              title="Рынки и аудитории Google Ads"
               loading="lazy"
             />
           </div>
@@ -225,6 +226,7 @@ function Approach() {
             <img
               src="/images/services/google-ads/google-ads-performance.webp"
               alt=""
+              title="Результаты рекламы Google Ads"
               loading="lazy"
             />
           </div>
@@ -363,7 +365,7 @@ function Cases() {
           {topCases.map((c) => (
             <a className={styles.caseCard} key={c.slug} href={c.url}>
               <div className={styles.caseImage}>
-                <img src={c.cover} alt={c.title} loading="lazy" decoding="async" />
+                <img src={c.cover} alt={c.title} title={c.title} loading="lazy" decoding="async" />
               </div>
               <div className={styles.caseBody}>
                 <span className={styles.caseCategory}>{c.category}</span>

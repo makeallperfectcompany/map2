@@ -60,6 +60,7 @@ export default function HeroSection() {
             className={styles.heroLogo}
             src="/assets/home/hero/logo-hero.png"
             alt="Make All Perfect"
+            title="Make All Perfect — маркетинговое агентство"
           />
           <div className={styles.heroPrinciplesDesktop} aria-label="Принципы работы">
             <span>Не продаём лишние услуги</span>

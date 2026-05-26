@@ -123,7 +123,7 @@ export default function BlogIndexSection() {
             {paginatedArticles.map((article) => (
               <a className={styles.articleCard} href={article.href} key={`${article.category}-${article.title}`}>
                 <div className={styles.articleImage}>
-                  <img src={article.cover} alt={article.title} loading="lazy" decoding="async" />
+                  <img src={article.cover} alt={article.title} title={article.title} loading="lazy" decoding="async" />
                 </div>
                 <div className={styles.articleBody}>
                   <div className={styles.articleMeta}>

@@ -49,6 +49,10 @@ export default function CaseTemplate({ item }: { item: CaseItem }) {
       "@type": "Organization",
       name: "Make All Perfect",
       url: BASE_URL,
+      logo: {
+        "@type": "ImageObject",
+        url: `${BASE_URL}/og-image.jpg`,
+      },
     },
     mainEntityOfPage: {
       "@type": "WebPage",
@@ -156,6 +160,7 @@ export default function CaseTemplate({ item }: { item: CaseItem }) {
                         <img
                           src={section.imageAfter.src}
                           alt={section.imageAfter.alt}
+                          title={section.imageAfter.alt}
                           loading="lazy"
                           decoding="async"
                         />
@@ -192,6 +197,7 @@ export default function CaseTemplate({ item }: { item: CaseItem }) {
           <img
             src={lightboxSrc}
             alt=""
+            title=""
             className={styles.lightboxImage}
             onClick={(e) => e.stopPropagation()}
           />

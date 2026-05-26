@@ -82,7 +82,8 @@
   gap: 42px;
 }
 
-.group h2 {
+.groupTitle {
+  display: block;
   margin: 0 0 18px;
   color: #1d1d1f;
   font: 780 15px/1 Onest, Inter, system-ui, sans-serif;

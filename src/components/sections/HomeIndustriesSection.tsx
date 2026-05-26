@@ -50,7 +50,7 @@ export default function HomeIndustriesSection() {
                 <span className={styles.cardNumber}>{String(index + 1).padStart(2, "0")}</span>
                 <h3 lang="ru">{industry.title}</h3>
                 <div className={styles.cardIcon} aria-hidden="true">
-                  <img src={industry.icon} alt="" />
+                  <img src={industry.icon} alt="" title="Отрасли, с которыми работаем" />
                 </div>
               </div>
 

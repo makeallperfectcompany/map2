@@ -32,7 +32,7 @@ export default function HomeBlogSection() {
           {homeBlog.posts.map((post) => (
             <a className={styles.articleCard} href={post.href} key={post.title}>
               <div className={styles.articleImage}>
-                <img src={post.cover} alt={post.title} loading="lazy" decoding="async" />
+                <img src={post.cover} alt={post.title} title={post.title} loading="lazy" decoding="async" />
               </div>
               <div className={styles.articleBody}>
                 <div className={styles.articleMeta}>

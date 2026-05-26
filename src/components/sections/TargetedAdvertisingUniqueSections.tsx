@@ -23,6 +23,7 @@ export function TargetedAdvertisingHero() {
       <Image
         src={content.hero.background}
         alt=""
+        title="Таргетированная реклама"
         fill
         priority
         sizes="(min-width: 768px) 100vw, 1px"
@@ -32,6 +33,7 @@ export function TargetedAdvertisingHero() {
       <Image
         src={content.hero.backgroundMobile}
         alt=""
+        title="Таргетированная реклама"
         fill
         priority
         sizes="(max-width: 767px) 100vw, 1px"
