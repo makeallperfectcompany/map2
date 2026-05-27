@@ -176,15 +176,6 @@ export default function ArticleTemplate({ article }: { article: Article }) {
                 </section>
               ))}
 
-              <section className={styles.authorBox}>
-                <div className={styles.avatarLarge}><img src="/images/dmitry-grafov.webp" alt="Дмитрий Графов" className={styles.avatarLargeImg} /></div>
-                <div>
-                  <span>Автор статьи</span>
-                  <h3>{article.author}</h3>
-                  <p>{article.authorRole}. Помогает бизнесу собирать SEO, рекламу, контент, аналитику и продажи в единую систему роста.</p>
-                </div>
-              </section>
-
               <section className={styles.relatedSection}>
                 <div className={styles.relatedHead}>
                   <span>Читайте также</span>
