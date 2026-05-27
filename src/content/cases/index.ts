@@ -37,8 +37,18 @@ import { dentalClinicCase } from "./dental-clinic-spb";
 import { udestroyRageRoomCase } from "./udestroy-rage-room";
 import { confectioneryKrasnodarCase } from "./confectionery-krasnodar";
 import { eliteLandPlotsCase } from "./elite-land-plots-spb";
+import { realEstateLeadsCase } from "./real-estate-leads";
+import { insuranceCplCase } from "./insurance-cpl";
+import { languageSchoolCase } from "./language-school";
+import { aiManufacturingCase } from "./ai-manufacturing";
+import { fpvExcursionsCase } from "./fpv-excursions";
+import { designStudioSiteCase } from "./design-studio-site";
 
 export const cases: CaseItem[] = [
+  realEstateLeadsCase,
+  insuranceCplCase,
+  languageSchoolCase,
+  aiManufacturingCase,
   eliteLandPlotsCase,
   karelskiyDomCase,
   dentalClinicCase,
