@@ -58,6 +58,12 @@ import { medicalClinicCase } from "./medical-clinic";
 import { foodDeliveryCase } from "./food-delivery";
 import { collegeAdmissionsCase } from "./college-admissions";
 import { customShoesCase } from "./custom-shoes";
+import { cosmeticsPromoPageCase } from "./cosmetics-promo-page";
+import { wb31mlnCase } from "./wb-31mln";
+import { wbRoi435Case } from "./wb-roi-435";
+import { aestheticClinicCase } from "./aesthetic-clinic";
+import { logisticsCase } from "./logistics";
+import { homeGoodsCase } from "./home-goods";
 
 export const cases: CaseItem[] = [
   realEstateLeadsCase,
@@ -91,6 +97,12 @@ export const cases: CaseItem[] = [
   foodDeliveryCase,
   collegeAdmissionsCase,
   customShoesCase,
+  cosmeticsPromoPageCase,
+  wb31mlnCase,
+  wbRoi435Case,
+  aestheticClinicCase,
+  logisticsCase,
+  homeGoodsCase,
 ];
 
 export function getCaseBySlug(slug: string): CaseItem | undefined {
