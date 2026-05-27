@@ -51,6 +51,9 @@ import { yandexSearchResultsArticle } from "./vydacha-v-yandekse";
 import { longCycleContextAdArticle } from "./kontekstnaya-reklama-dlya-biznesa-s-dlinnym-tsiklom-sdelki";
 import { wordpressGuideArticle } from "./sozdat-sayt-na-wordpress-v-2026";
 import { marketingToolsArticle } from "./instrumenty-internet-marketinga";
+import { influencerMarketingArticle } from "./inflyuens-marketing";
+import { getClientsArticle } from "./kak-poluchit-klientov";
+import { businessPromotionArticle } from "./prodvizhenie-biznesa";
 
 const buildArticle = (a: Record<string, unknown>): Article => ({
   ...a,
@@ -81,5 +84,20 @@ export const articles: Article[] = [
     ...marketingToolsArticle,
     slug: "instrumenty-internet-marketinga",
     url: "/blog/instrumenty-internet-marketinga",
+  }),
+  buildArticle({
+    ...influencerMarketingArticle,
+    slug: "inflyuens-marketing",
+    url: "/blog/inflyuens-marketing",
+  }),
+  buildArticle({
+    ...getClientsArticle,
+    slug: "kak-poluchit-klientov",
+    url: "/blog/kak-poluchit-klientov",
+  }),
+  buildArticle({
+    ...businessPromotionArticle,
+    slug: "prodvizhenie-biznesa",
+    url: "/blog/prodvizhenie-biznesa",
   }),
 ];
