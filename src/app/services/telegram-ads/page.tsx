@@ -1,24 +1,28 @@
 import type { Metadata } from "next";
 import { telegramAdsContent as content } from "@/content/services/telegramAds";
-import {
-  TelegramAdsHero,
-  TelegramAdsServicesSection,
-  TelegramAdsAdvantagesSection,
-  TelegramAdsProcessSection,
-  TelegramAdsOpportunitiesSection,
-  TelegramAdsPricingSection,
-  TelegramAdsFaqSection,
-} from "@/components/sections/TelegramAdsUniqueSections";
-import CasesSection from "@/components/sections/CasesSection";
+import TelegramAdsHero from "@/components/sections/TelegramAdsHero";
+import HomeAdvantagesSection from "@/components/sections/HomeAdvantagesSection";
 import HomeIndustriesSection from "@/components/sections/HomeIndustriesSection";
-import HomeReviewsSection from "@/components/sections/HomeReviewsSection";
+import HomeTechnologiesSection from "@/components/sections/HomeTechnologiesSection";
+import HomeAboutSection from "@/components/sections/HomeAboutSection";
+import HomeBlogSection from "@/components/sections/HomeBlogSection";
+import HomeFaqSection from "@/components/sections/HomeFaqSection";
 import FinalCtaSection from "@/components/sections/FinalCtaSection";
+import CasesSection from "@/components/sections/CasesSection";
+import HomeReviewsSection from "@/components/sections/HomeReviewsSection";
+import TelegramAdsServicesSection from "@/components/sections/TelegramAdsServicesSection";
 
 export const metadata: Metadata = {
   title: content.meta.title,
   description: content.meta.description,
   alternates: {
     canonical: "/services/telegram-ads",
+  },
+  openGraph: {
+    type: "website",
+    url: "https://makeallperfect.ru/services/telegram-ads",
+    title: content.meta.title,
+    description: content.meta.description,
   },
 };
 
@@ -86,16 +90,14 @@ export default function TelegramAdsPage() {
       <main>
         <TelegramAdsHero />
         <TelegramAdsServicesSection />
-        <TelegramAdsAdvantagesSection />
-        <TelegramAdsProcessSection />
-        <TelegramAdsOpportunitiesSection />
-        <TelegramAdsPricingSection />
-
+        <HomeAdvantagesSection />
         <CasesSection />
         <HomeReviewsSection />
         <HomeIndustriesSection />
-
-        <TelegramAdsFaqSection />
+        <HomeTechnologiesSection />
+        <HomeAboutSection />
+        <HomeBlogSection />
+        <HomeFaqSection />
       </main>
 
       <FinalCtaSection />
