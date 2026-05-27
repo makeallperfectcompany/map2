@@ -54,15 +54,17 @@
 }
 
 .authorMini {
-  display: inline-flex;
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 12px;
+  gap: 0px;
   margin-top: 30px;
-  padding: 10px 16px 10px 10px;
-  border-radius: 999px;
+  padding: 24px 28px;
+  border-radius: 20px;
   background: rgba(255,255,255,0.74);
   border: 1px solid rgba(15,16,20,0.065);
   box-shadow: 0 10px 28px rgba(15,16,20,0.045), inset 0 1px 0 rgba(255,255,255,0.9);
+  text-align: center;
 }
 
 .avatar,
@@ -82,11 +84,12 @@
 }
 
 .avatarImg {
-  width: 38px;
-  height: 38px;
+  width: 64px;
+  height: 64px;
   border-radius: 50%;
   object-fit: cover;
   display: block;
+  margin-bottom: 12px;
 }
 
 .avatarLarge {
@@ -106,18 +109,19 @@
 .authorMini div {
   display: flex;
   flex-direction: column;
-  text-align: left;
+  align-items: center;
+  text-align: center;
 }
 
 .authorMini strong {
   color: #0e0f12;
-  font: 760 14px/1.2 Onest, Inter, system-ui, sans-serif;
+  font: 760 16px/1.3 Onest, Inter, system-ui, sans-serif;
 }
 
 .authorMini span {
-  margin-top: 3px;
+  margin-top: 4px;
   color: #6b6f76;
-  font: 550 12px/1.2 Onest, Inter, system-ui, sans-serif;
+  font: 550 13px/1.3 Onest, Inter, system-ui, sans-serif;
 }
 
 .coverWrap {
