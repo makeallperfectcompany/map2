@@ -49,8 +49,10 @@ export default function BlogIndexSection() {
                     <span>{article.category}</span>
                     <span>{article.readingTime}</span>
                   </div>
-                  <h3>{article.title}</h3>
-                  <p>{article.description}</p>
+                  <div className={styles.contentBody}>
+                    <h3>{article.title}</h3>
+                    <p>{article.description}</p>
+                  </div>
                   <span className={styles.readMore}>Открыть →</span>
                 </div>
               </a>
