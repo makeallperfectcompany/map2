@@ -151,7 +151,8 @@ export default function ArticleTemplate({ article }: { article: Article }) {
 
               <section className={styles.relatedSection}>
                 <div className={styles.relatedHead}>
-                  <h2>Рекомендуем</h2>
+                  <span>Читайте также</span>
+                  <h2>Полезные статьи по теме</h2>
                 </div>
                 <div className={styles.relatedGrid}>
                   {article.relatedArticles.map((item) => (
@@ -161,6 +162,15 @@ export default function ArticleTemplate({ article }: { article: Article }) {
                       <p>{item.description}</p>
                     </a>
                   ))}
+                </div>
+              </section>
+
+              <section className={styles.relatedSection}>
+                <div className={styles.relatedHead}>
+                  <span>Кейсы</span>
+                  <h2>Как это выглядит в проектах</h2>
+                </div>
+                <div className={styles.relatedGrid}>
                   {article.relatedCases.map((item) => (
                     <a href={item.href} className={styles.relatedCard} key={item.title}>
                       <span>{item.label}</span>
