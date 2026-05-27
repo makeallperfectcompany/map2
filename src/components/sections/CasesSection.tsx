@@ -39,10 +39,10 @@ export default function CasesSection() {
                 />
               </div>
               <div className={styles.caseBody}>
-                <div className={styles.caseCategory}>{item.category}</div>
-                <h3>{item.title}</h3>
-                <p>{item.lead}</p>
-
+                <div className={styles.contentBody}>
+                  <h3>{item.title}</h3>
+                  <p>{item.lead}</p>
+                </div>
                 <span className={styles.readMore}>Открыть →</span>
               </div>
             </article>

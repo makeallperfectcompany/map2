@@ -128,25 +128,19 @@
   padding: 24px;
 }
 
-.caseCategory {
-  display: inline-flex;
-  width: fit-content;
-  min-height: 30px;
-  align-items: center;
-  padding: 0 10px;
-  margin-bottom: 18px;
-  border-radius: 999px;
-  background: rgba(0, 113, 227, 0.075);
-  color: #1a3a6e;
-  border: 1px solid rgba(0, 113, 227, 0.10);
-  font: 700 12px/1 Onest, Inter, system-ui, sans-serif;
+.contentBody {
+  flex: 1;
 }
 
 .caseBody h3 {
   margin: 0;
   color: #0e0f12;
-  font: 780 28px/1.15 Onest, Inter, system-ui, sans-serif;
+  font: 780 26px/1.15 Onest, Inter, system-ui, sans-serif;
   letter-spacing: -0.04em;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .caseBody p {
@@ -154,7 +148,7 @@
   color: #6b6f76;
   font: 450 15px/1.55 Onest, Inter, system-ui, sans-serif;
   display: -webkit-box;
-  -webkit-line-clamp: 3;
+  -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
