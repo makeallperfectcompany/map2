@@ -182,10 +182,13 @@ export default function ArticleTemplate({ article }: { article: Article }) {
               </section>
 
               <div className={styles.authorBottom}>
-                <div className={styles.avatarBot}><img src="/images/dmitry-grafov.webp" alt="Дмитрий Графов" className={styles.avatarBotImg} /></div>
-                <div>
-                  <strong>{article.author}</strong>
-                  <span>{article.authorRole}</span>
+                <span className={styles.authorLabel}>Автор статьи</span>
+                <div className={styles.authorRow}>
+                  <div className={styles.avatarBot}><img src="/images/dmitry-grafov.webp" alt="Дмитрий Графов" className={styles.avatarBotImg} /></div>
+                  <div>
+                    <strong>{article.author}</strong>
+                    <span>{article.authorRole}</span>
+                  </div>
                 </div>
               </div>
 
