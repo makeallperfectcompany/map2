@@ -55,13 +55,6 @@ export default function ArticleTemplate({ article }: { article: Article }) {
               ]}
             />
 
-            <div className={styles.meta}>
-              <span>{article.category}</span>
-              <span>{article.date}</span>
-              <span>Обновлено: {article.updatedAt}</span>
-              <span>{article.readingTime}</span>
-            </div>
-
             <h1>{article.title}</h1>
             <p>{article.description}</p>
 
