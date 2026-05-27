@@ -33,9 +33,15 @@ import { wildberriesWomenClothingCase } from "./wildberries-women-clothing";
 import { frontendSchoolLeadsCase } from "./frontend-school-leads";
 import { taxOptimizationCase } from "./tax-optimization-usn";
 import { karelskiyDomCase } from "./karelskiy-dom-construction";
+import { dentalClinicCase } from "./dental-clinic-spb";
+import { udestroyRageRoomCase } from "./udestroy-rage-room";
+import { confectioneryKrasnodarCase } from "./confectionery-krasnodar";
+import { eliteLandPlotsCase } from "./elite-land-plots-spb";
 
 export const cases: CaseItem[] = [
+  eliteLandPlotsCase,
   karelskiyDomCase,
+  dentalClinicCase,
   frontendSchoolLeadsCase,
   taxOptimizationCase,
   wildberriesWomenClothingCase,
