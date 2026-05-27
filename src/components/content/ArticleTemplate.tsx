@@ -147,13 +147,6 @@ export default function ArticleTemplate({ article }: { article: Article }) {
                         Маркетинг становится управляемым только тогда, когда команда видит не клики,
                         а связь между каналами, заявками, продажами и повторными касаниями.
                       </p>
-                      <footer>
-                        <div className={styles.avatar}><img src="/images/dmitry-grafov.webp" alt="Дмитрий Графов" className={styles.avatarImg} /></div>
-                        <div>
-                          <strong>{article.author}</strong>
-                          <span>{article.authorRole}</span>
-                        </div>
-                      </footer>
                     </blockquote>
                   ) : null}
 
