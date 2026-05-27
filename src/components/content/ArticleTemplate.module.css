@@ -565,31 +565,49 @@
   gap: 12px;
 }
 
+.relatedGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  grid-auto-rows: 1fr;
+}
+
 .relatedCard {
   display: flex;
   flex-direction: column;
-  gap: 12px;
   padding: 20px;
   text-decoration: none;
   background: rgba(255,255,255,0.78);
   box-shadow: 0 14px 38px rgba(15,16,20,0.045), inset 0 1px 0 rgba(255,255,255,.9);
+  border-radius: 20px;
 }
 
 .relatedCard span {
+  display: block;
   color: #1a3a6e;
   font: 750 12px/1.2 Onest, Inter, system-ui, sans-serif;
+  margin-bottom: 10px;
 }
 
 .relatedCard strong {
   color: #0e0f12;
   font: 760 18px/1.15 Onest, Inter, system-ui, sans-serif;
   letter-spacing: -0.035em;
+  flex: 1;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .relatedCard p {
-  margin: 0;
+  margin: 12px 0 0;
   color: #6b6f76;
   font: 450 13px/1.45 Onest, Inter, system-ui, sans-serif;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .finalCta {

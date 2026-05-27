@@ -159,7 +159,7 @@ export default function ArticleTemplate({ article }: { article: Article }) {
                       ...article.relatedArticles,
                       ...article.relatedCases.filter((_, i) => i < 4 - article.relatedArticles.length)
                     ];
-                    return combined.slice(0, 4).map((item) => (
+                    return combined.slice(0, 3).map((item) => (
                       <a href={item.href} className={styles.relatedCard} key={item.title}>
                         <span>{item.label}</span>
                         <strong>{item.title}</strong>
@@ -176,7 +176,7 @@ export default function ArticleTemplate({ article }: { article: Article }) {
                   <h2>Как это выглядит в проектах</h2>
                 </div>
                 <div className={styles.relatedGrid}>
-                  {article.relatedCases.slice(0, 4).map((item) => (
+                  {article.relatedCases.map((item) => (
                     <a href={item.href} className={styles.relatedCard} key={item.title}>
                       <span>{item.label}</span>
                       <strong>{item.title}</strong>
