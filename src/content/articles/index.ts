@@ -48,6 +48,7 @@ export type Article = {
 
 import { testArticle as rawTestArticle } from "./test-article";
 import { yandexSearchResultsArticle } from "./vydacha-v-yandekse";
+import { longCycleContextAdArticle } from "./kontekstnaya-reklama-dlya-biznesa-s-dlinnym-tsiklom-sdelki";
 
 const buildArticle = (a: Record<string, unknown>): Article => ({
   ...a,
@@ -64,4 +65,9 @@ export const articles: Article[] = [
     priority: rawTestArticle.priority ?? 50,
   }),
   buildArticle(yandexSearchResultsArticle),
+  buildArticle({
+    ...longCycleContextAdArticle,
+    slug: "kontekstnaya-reklama-dlya-biznesa-s-dlinnym-tsiklom-sdelki",
+    url: "/blog/kontekstnaya-reklama-dlya-biznesa-s-dlinnym-tsiklom-sdelki",
+  }),
 ];
