@@ -60,6 +60,12 @@ import { wildberriesExternalArticle } from "./vneshnyaya-reklama-wildberries";
 import { seo2026Article } from "./seo-v-2026";
 import { marketplaceTrafficArticle } from "./vneshniy-trafik-marketpleysov";
 import { avitoAdArticle } from "./reklama-na-avito";
+import { b2bContextAds2026Article } from "./kontekstnaya-reklama-v-b2b-2026";
+import { emailMarketingArticle } from "./email-marketing";
+import { marketplaceBehavioralFactorsArticle } from "./povedencheskie-faktory-marketpleysov";
+import { skolkoStoitVneshniyTrafikArticle } from "./skolko-stoit-vneshniy-trafik";
+import { gdeZakazatVneshniyTrafikArticle } from "./gde-zakazat-vneshniy-trafik";
+import { kakRabotaetReklamaMpArticle } from "./kak-rabotaet-reklama-mp";
 
 const buildArticle = (a: Record<string, unknown>): Article => ({
   ...a,
@@ -135,5 +141,35 @@ export const articles: Article[] = [
     ...avitoAdArticle,
     slug: "reklama-na-avito",
     url: "/blog/reklama-na-avito",
+  }),
+  buildArticle({
+    ...b2bContextAds2026Article,
+    slug: "kontekstnaya-reklama-v-b2b-2026",
+    url: "/blog/kontekstnaya-reklama-v-b2b-2026",
+  }),
+  buildArticle({
+    ...emailMarketingArticle,
+    slug: "email-marketing",
+    url: "/blog/email-marketing",
+  }),
+  buildArticle({
+    ...marketplaceBehavioralFactorsArticle,
+    slug: "povedencheskie-faktory-marketpleysov",
+    url: "/blog/povedencheskie-faktory-marketpleysov",
+  }),
+  buildArticle({
+    ...skolkoStoitVneshniyTrafikArticle,
+    slug: "skolko-stoit-vneshniy-trafik",
+    url: "/blog/skolko-stoit-vneshniy-trafik",
+  }),
+  buildArticle({
+    ...gdeZakazatVneshniyTrafikArticle,
+    slug: "gde-zakazat-vneshniy-trafik",
+    url: "/blog/gde-zakazat-vneshniy-trafik",
+  }),
+  buildArticle({
+    ...kakRabotaetReklamaMpArticle,
+    slug: "kak-rabotaet-reklama-mp",
+    url: "/blog/kak-rabotaet-reklama-mp",
   }),
 ];
