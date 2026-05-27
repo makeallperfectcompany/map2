@@ -78,6 +78,12 @@ import { mediaPrSeoArticle } from "./stati-v-smi-seo";
 import { contextDirectStableLeadsArticle } from "./kontekstnaya-reklama-direkt-stabilnye-zayavki";
 import { sitePromotionDirectArticle } from "./prodvizhenie-sayta-v-direkt";
 import { vkVsDirectArticle } from "./reklama-vk-ili-direkt";
+import { avitoPromotionNewArticle } from "./reklama-na-avito-kak-prodvigat";
+import { analyticsArticle } from "./skvoznaya-analitika";
+import { decliningDemandArticle } from "./padayushchiy-spros";
+import { trustCrisisArticle } from "./krizis-doveriya-k-reklame";
+import { model4bArticle } from "./model-4b";
+import { sellerNeuralNetworksArticle } from "./neyroseti-dlya-sellerov";
 
 const buildArticle = (a: Record<string, unknown>): Article => ({
   ...a,
@@ -243,5 +249,35 @@ export const articles: Article[] = [
     ...vkVsDirectArticle,
     slug: "reklama-vk-ili-direkt",
     url: "/blog/reklama-vk-ili-direkt",
+  }),
+  buildArticle({
+    ...avitoPromotionNewArticle,
+    slug: "reklama-na-avito-kak-prodvigat",
+    url: "/blog/reklama-na-avito-kak-prodvigat",
+  }),
+  buildArticle({
+    ...analyticsArticle,
+    slug: "skvoznaya-analitika",
+    url: "/blog/skvoznaya-analitika",
+  }),
+  buildArticle({
+    ...decliningDemandArticle,
+    slug: "padayushchiy-spros",
+    url: "/blog/padayushchiy-spros",
+  }),
+  buildArticle({
+    ...trustCrisisArticle,
+    slug: "krizis-doveriya-k-reklame",
+    url: "/blog/krizis-doveriya-k-reklame",
+  }),
+  buildArticle({
+    ...model4bArticle,
+    slug: "klassicheskiy-marketing-ustarel-model-4b",
+    url: "/blog/klassicheskiy-marketing-ustarel-model-4b",
+  }),
+  buildArticle({
+    ...sellerNeuralNetworksArticle,
+    slug: "neyroseti-dlya-sellerov",
+    url: "/blog/neyroseti-dlya-sellerov",
   }),
 ];
