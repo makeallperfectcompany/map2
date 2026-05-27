@@ -50,6 +50,8 @@ import { jewelrySalesCase } from "./jewelry-sales";
 import { mobileGameCase } from "./mobile-game";
 import { travelAgencyCase } from "./travel-agency";
 import { autoServiceCase } from "./auto-service";
+import { hrServiceCase } from "./hr-service";
+import { coffeeTeaCase } from "./coffee-tea";
 
 export const cases: CaseItem[] = [
   realEstateLeadsCase,
@@ -75,6 +77,8 @@ export const cases: CaseItem[] = [
   mobileGameCase,
   travelAgencyCase,
   autoServiceCase,
+  hrServiceCase,
+  coffeeTeaCase,
 ];
 
 export function getCaseBySlug(slug: string): CaseItem | undefined {
