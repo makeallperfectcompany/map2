@@ -96,6 +96,12 @@ import { aiSeoArticle } from "./ai-seo";
 import { ugcArticle } from "./ugc";
 import { emailVsMessengersArticle } from "./email-vs-messengers";
 import { freeSeoAuditArticle } from "./besplatnyy-seo-audit";
+import { budgetFormulaSmallBizArticle } from "./byudzhet-malogo-biznesa";
+import { targetingMistakesArticle } from "./oshibki-targeta";
+import { seoVsContextArticle } from "./seo-ili-kontekst";
+import { geminiChromeArticle } from "./gemini-chrome";
+import { yandexKitArticle } from "./yandeks-kit";
+import { neuroWebmasterArticle } from "./neyrovebmaster";
 
 const buildArticle = (a: Record<string, unknown>): Article => ({
   ...a,
@@ -351,5 +357,35 @@ export const articles: Article[] = [
     ...freeSeoAuditArticle,
     slug: "besplatnyy-seo-audit",
     url: "/blog/besplatnyy-seo-audit",
+  }),
+  buildArticle({
+    ...budgetFormulaSmallBizArticle,
+    slug: "byudzhet-malogo-biznesa",
+    url: "/blog/byudzhet-malogo-biznesa",
+  }),
+  buildArticle({
+    ...targetingMistakesArticle,
+    slug: "oshibki-targeta",
+    url: "/blog/oshibki-targeta",
+  }),
+  buildArticle({
+    ...seoVsContextArticle,
+    slug: "seo-ili-kontekst",
+    url: "/blog/seo-ili-kontekst",
+  }),
+  buildArticle({
+    ...geminiChromeArticle,
+    slug: "google-vstroil-gemini-v-chrome",
+    url: "/blog/google-vstroil-gemini-v-chrome",
+  }),
+  buildArticle({
+    ...yandexKitArticle,
+    slug: "yandeks-kit",
+    url: "/blog/yandeks-kit",
+  }),
+  buildArticle({
+    ...neuroWebmasterArticle,
+    slug: "neyrovebmaster",
+    url: "/blog/neyrovebmaster",
   }),
 ];
