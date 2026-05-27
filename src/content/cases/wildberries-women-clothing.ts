@@ -1,6 +1,6 @@
-import { CaseStudy } from "./index";
+import { CaseItem } from "./index";
 
-export const wildberriesWomenClothingCase: CaseStudy = {
+export const wildberriesWomenClothingCase: CaseItem = {
   slug: "uvelichenie-prodazh-magazina-zhenskoy-odezhdy-na-wildberries",
   url: "/cases/uvelichenie-prodazh-magazina-zhenskoy-odezhdy-na-wildberries",
   contentType: "case",
