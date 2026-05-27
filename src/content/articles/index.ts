@@ -90,6 +90,12 @@ import { budgetDistributionArticle } from "./raspredelenie-byudzheta";
 import { hantLadderArticle } from "./lestnitsa-khanta";
 import { buyerPsychologyArticle } from "./psikhologiya-pokupatelya";
 import { rsyaArticle } from "./rsya-kliki-bez-lidov";
+import { reklamnySbor3Article } from "./reklamnyy-sbor-3";
+import { nds22Article } from "./nds-22";
+import { aiSeoArticle } from "./ai-seo";
+import { ugcArticle } from "./ugc";
+import { emailVsMessengersArticle } from "./email-vs-messengers";
+import { freeSeoAuditArticle } from "./besplatnyy-seo-audit";
 
 const buildArticle = (a: Record<string, unknown>): Article => ({
   ...a,
@@ -315,5 +321,35 @@ export const articles: Article[] = [
     ...rsyaArticle,
     slug: "rsya-kliki-bez-lidov",
     url: "/blog/rsya-kliki-bez-lidov",
+  }),
+  buildArticle({
+    ...reklamnySbor3Article,
+    slug: "reklamnyy-sbor-3",
+    url: "/blog/reklamnyy-sbor-3",
+  }),
+  buildArticle({
+    ...nds22Article,
+    slug: "nds-22",
+    url: "/blog/nds-22",
+  }),
+  buildArticle({
+    ...aiSeoArticle,
+    slug: "ai-seo",
+    url: "/blog/ai-seo",
+  }),
+  buildArticle({
+    ...ugcArticle,
+    slug: "ugc",
+    url: "/blog/ugc",
+  }),
+  buildArticle({
+    ...emailVsMessengersArticle,
+    slug: "email-vs-messengers",
+    url: "/blog/email-vs-messengers",
+  }),
+  buildArticle({
+    ...freeSeoAuditArticle,
+    slug: "besplatnyy-seo-audit",
+    url: "/blog/besplatnyy-seo-audit",
   }),
 ];
