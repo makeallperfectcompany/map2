@@ -84,6 +84,12 @@ import { decliningDemandArticle } from "./padayushchiy-spros";
 import { trustCrisisArticle } from "./krizis-doveriya-k-reklame";
 import { model4bArticle } from "./model-4b";
 import { sellerNeuralNetworksArticle } from "./neyroseti-dlya-sellerov";
+import { factsVsMarketingAntiAgingArticle } from "./fakty-protiv-marketinga";
+import { externalAdsMarketplaceGrowthArticle } from "./vneshnyaya-reklama-marketpleysy";
+import { budgetDistributionArticle } from "./raspredelenie-byudzheta";
+import { hantLadderArticle } from "./lestnitsa-khanta";
+import { buyerPsychologyArticle } from "./psikhologiya-pokupatelya";
+import { rsyaArticle } from "./rsya-kliki-bez-lidov";
 
 const buildArticle = (a: Record<string, unknown>): Article => ({
   ...a,
@@ -279,5 +285,35 @@ export const articles: Article[] = [
     ...sellerNeuralNetworksArticle,
     slug: "neyroseti-dlya-sellerov",
     url: "/blog/neyroseti-dlya-sellerov",
+  }),
+  buildArticle({
+    ...factsVsMarketingAntiAgingArticle,
+    slug: "fakty-protiv-marketinga",
+    url: "/blog/fakty-protiv-marketinga",
+  }),
+  buildArticle({
+    ...externalAdsMarketplaceGrowthArticle,
+    slug: "vneshnyaya-reklama-marketpleysy",
+    url: "/blog/vneshnyaya-reklama-marketpleysy",
+  }),
+  buildArticle({
+    ...budgetDistributionArticle,
+    slug: "raspredelenie-byudzheta",
+    url: "/blog/raspredelenie-byudzheta",
+  }),
+  buildArticle({
+    ...hantLadderArticle,
+    slug: "lestnitsa-khanta",
+    url: "/blog/lestnitsa-khanta",
+  }),
+  buildArticle({
+    ...buyerPsychologyArticle,
+    slug: "psikhologiya-pokupatelya",
+    url: "/blog/psikhologiya-pokupatelya",
+  }),
+  buildArticle({
+    ...rsyaArticle,
+    slug: "rsya-kliki-bez-lidov",
+    url: "/blog/rsya-kliki-bez-lidov",
   }),
 ];
