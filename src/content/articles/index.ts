@@ -54,6 +54,7 @@ import { marketingToolsArticle } from "./instrumenty-internet-marketinga";
 import { influencerMarketingArticle } from "./inflyuens-marketing";
 import { getClientsArticle } from "./kak-poluchit-klientov";
 import { businessPromotionArticle } from "./prodvizhenie-biznesa";
+import { vkTargetingArticle } from "./targetirovannaya-reklama-vk";
 
 const buildArticle = (a: Record<string, unknown>): Article => ({
   ...a,
@@ -99,5 +100,10 @@ export const articles: Article[] = [
     ...businessPromotionArticle,
     slug: "prodvizhenie-biznesa",
     url: "/blog/prodvizhenie-biznesa",
+  }),
+  buildArticle({
+    ...vkTargetingArticle,
+    slug: "targetirovannaya-reklama-vk",
+    url: "/blog/targetirovannaya-reklama-vk",
   }),
 ];
