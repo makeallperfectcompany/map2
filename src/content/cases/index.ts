@@ -54,9 +54,13 @@ export const cases: CaseItem[] = [
   dentalClinicCase,
   frontendSchoolLeadsCase,
   taxOptimizationCase,
+  confectioneryKrasnodarCase,
+  udestroyRageRoomCase,
   wildberriesWomenClothingCase,
   wildberriesFashionGrowthCase,
   clothingBrandSeoVkCase,
+  fpvExcursionsCase,
+  designStudioSiteCase,
 ];
 
 export function getCaseBySlug(slug: string): CaseItem | undefined {
