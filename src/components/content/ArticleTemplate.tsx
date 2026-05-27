@@ -57,14 +57,6 @@ export default function ArticleTemplate({ article }: { article: Article }) {
 
             <h1>{article.title}</h1>
             <p>{article.description}</p>
-
-            <div className={styles.authorMini}>
-              <div className={styles.avatar}><img src="/images/dmitry-grafov.webp" alt="Дмитрий Графов" className={styles.avatarImg} /></div>
-              <div>
-                <strong>{article.author}</strong>
-                <span>{article.authorRole}</span>
-              </div>
-            </div>
           </div>
         </header>
 
@@ -188,6 +180,14 @@ export default function ArticleTemplate({ article }: { article: Article }) {
                   ))}
                 </div>
               </section>
+
+              <div className={styles.authorBottom}>
+                <div className={styles.avatarBot}><img src="/images/dmitry-grafov.webp" alt="Дмитрий Графов" className={styles.avatarBotImg} /></div>
+                <div>
+                  <strong>{article.author}</strong>
+                  <span>{article.authorRole}</span>
+                </div>
+              </div>
 
               <div className={styles.finalCta}>
                 <span>Нужна такая система для вашего бизнеса?</span>

@@ -124,6 +124,51 @@
   font: 550 13px/1.3 Onest, Inter, system-ui, sans-serif;
 }
 
+.authorBottom {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 48px 0 40px;
+  padding: 0;
+  border: none;
+  background: none;
+  box-shadow: none;
+}
+
+.avatarBot {
+  flex: 0 0 auto;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  width: 52px;
+  height: 52px;
+  overflow: hidden;
+}
+
+.avatarBotImg {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+}
+
+.authorBottom div:last-child {
+  display: flex;
+  flex-direction: column;
+}
+
+.authorBottom strong {
+  color: #0e0f12;
+  font: 760 16px/1.3 Onest, Inter, system-ui, sans-serif;
+}
+
+.authorBottom span {
+  margin-top: 4px;
+  color: #6b6f76;
+  font: 550 13px/1.3 Onest, Inter, system-ui, sans-serif;
+}
+
 .coverWrap {
   padding: 34px 0 0;
   background: #f5f6f8;
