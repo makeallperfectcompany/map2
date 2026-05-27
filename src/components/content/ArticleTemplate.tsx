@@ -153,7 +153,6 @@ export default function ArticleTemplate({ article }: { article: Article }) {
                     ];
                     return combined.slice(0, 3).map((item) => (
                       <a href={item.href} className={styles.relatedCard} key={item.title}>
-                        <span>{item.label}</span>
                         <strong>{item.title}</strong>
                         <p>{item.description}</p>
                       </a>
@@ -170,7 +169,6 @@ export default function ArticleTemplate({ article }: { article: Article }) {
                 <div className={styles.relatedGrid}>
                   {article.relatedCases.map((item) => (
                     <a href={item.href} className={styles.relatedCard} key={item.title}>
-                      <span>{item.label}</span>
                       <strong>{item.title}</strong>
                       <p>{item.description}</p>
                     </a>
