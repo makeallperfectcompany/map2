@@ -86,11 +86,6 @@ export default function ArticleTemplate({ article }: { article: Article }) {
         <div className={styles.contentWrap}>
           <div className={styles.container}>
             <aside className={styles.sidebar}>
-              <label className={styles.searchBox}>
-                <span>Поиск</span>
-                <input type="search" placeholder="Поиск по статьям" />
-              </label>
-
               <nav className={styles.toc} aria-label="Оглавление">
                 <span>В статье</span>
                 {article.content.sections.map((section) => (
