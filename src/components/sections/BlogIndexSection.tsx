@@ -45,10 +45,6 @@ export default function BlogIndexSection() {
                   <img src={article.cover} alt={article.title} title={article.title} loading="lazy" decoding="async" />
                 </div>
                 <div className={styles.articleBody}>
-                  <div className={styles.articleMeta}>
-                    <span>{article.category}</span>
-                    <span>{article.readingTime}</span>
-                  </div>
                   <div className={styles.contentBody}>
                     <h3>{article.title}</h3>
                     <p>{article.description}</p>
