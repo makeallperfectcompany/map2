@@ -39,6 +39,7 @@ export default function CasesSection() {
                 />
               </div>
               <div className={styles.caseBody}>
+                <div className={styles.caseCategory}>{item.category}</div>
                 <div className={styles.contentBody}>
                   <h3>{item.title}</h3>
                   <p>{item.lead}</p>
