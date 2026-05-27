@@ -60,14 +60,6 @@ export default function ArticleTemplate({ article }: { article: Article }) {
           </div>
         </header>
 
-        <div className={styles.coverWrap}>
-          <div className={styles.container}>
-            <div className={styles.cover}>
-              <img src={article.cover} alt={article.title} loading="eager" decoding="async" />
-            </div>
-          </div>
-        </div>
-
         <div className={styles.contentWrap}>
           <div className={styles.container}>
             <aside className={styles.sidebar}>
