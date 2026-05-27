@@ -42,13 +42,7 @@ export default function CasesSection() {
                 <div className={styles.caseCategory}>{item.category}</div>
                 <h3>{item.title}</h3>
                 <p>{item.lead}</p>
-                <div className={styles.metricGrid}>
-                  {item.metrics.slice(0, 3).map((metric) => (
-                    <span className={styles.metricPill} key={metric.label}>
-                      {metric.value} {metric.label}
-                    </span>
-                  ))}
-                </div>
+
                 <span className={styles.readMore}>Открыть →</span>
               </div>
             </article>

@@ -40,11 +40,7 @@ export default function CasesIndexSection() {
                   <span className={styles.category}>{item.category}</span>
                   <h3>{item.title}</h3>
                   <p>{item.lead}</p>
-                  <div className={styles.cardMetrics}>
-                    {item.metrics.slice(0, 3).map((metric) => (
-                      <span key={metric.label}>{metric.value}</span>
-                    ))}
-                  </div>
+
                   <span className={styles.readMore}>Открыть →</span>
                 </div>
               </a>
