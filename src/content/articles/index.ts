@@ -55,6 +55,11 @@ import { influencerMarketingArticle } from "./inflyuens-marketing";
 import { getClientsArticle } from "./kak-poluchit-klientov";
 import { businessPromotionArticle } from "./prodvizhenie-biznesa";
 import { vkTargetingArticle } from "./targetirovannaya-reklama-vk";
+import { yandexDirectArticle } from "./yandeks-direkt";
+import { wildberriesExternalArticle } from "./vneshnyaya-reklama-wildberries";
+import { seo2026Article } from "./seo-v-2026";
+import { marketplaceTrafficArticle } from "./vneshniy-trafik-marketpleysov";
+import { avitoAdArticle } from "./reklama-na-avito";
 
 const buildArticle = (a: Record<string, unknown>): Article => ({
   ...a,
@@ -105,5 +110,30 @@ export const articles: Article[] = [
     ...vkTargetingArticle,
     slug: "targetirovannaya-reklama-vk",
     url: "/blog/targetirovannaya-reklama-vk",
+  }),
+  buildArticle({
+    ...yandexDirectArticle,
+    slug: "yandeks-direkt",
+    url: "/blog/yandeks-direkt",
+  }),
+  buildArticle({
+    ...wildberriesExternalArticle,
+    slug: "vneshnyaya-reklama-wildberries",
+    url: "/blog/vneshnyaya-reklama-wildberries",
+  }),
+  buildArticle({
+    ...seo2026Article,
+    slug: "seo-v-2026",
+    url: "/blog/seo-v-2026",
+  }),
+  buildArticle({
+    ...marketplaceTrafficArticle,
+    slug: "vneshniy-trafik-marketpleysov",
+    url: "/blog/vneshniy-trafik-marketpleysov",
+  }),
+  buildArticle({
+    ...avitoAdArticle,
+    slug: "reklama-na-avito",
+    url: "/blog/reklama-na-avito",
   }),
 ];
