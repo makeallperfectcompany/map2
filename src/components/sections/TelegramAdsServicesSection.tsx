@@ -4,29 +4,30 @@ import { Container } from "@/components/ui/Container/Container";
 import styles from "./TelegramAdsServicesSection.module.css";
 
 export default function TelegramAdsServicesSection() {
+  const { services } = content;
+
   return (
-    <section className={styles.section} aria-labelledby="services-title">
-      <Container>
+    <section className={styles.section} aria-labelledby="tgads-services-title">
+      <Container className={styles.container}>
         <div className={styles.header}>
           <span className={styles.kicker}>Услуги</span>
-          <h2 id="services-title">{content.services.h2}</h2>
-          <p className={styles.description}>{content.services.description}</p>
+          <h2 id="tgads-services-title">{services.h2}</h2>
+          <p>{services.description}</p>
         </div>
 
         <div className={styles.grid}>
-          {content.services.cards.map((card, i) => (
+          {services.cards.map((card, i) => (
             <article className={styles.card} key={i}>
-              <div className={styles.cardIcon}>
-                <span>{String(i + 1).padStart(2, '0')}</span>
-              </div>
+              <span className={styles.cardNumber}>{String(i + 1).padStart(2, '0')}</span>
               <h3>{card.title}</h3>
               <p>{card.description}</p>
             </article>
           ))}
         </div>
+        <div className={styles.scrollHint}>→ Листайте</div>
 
         <div className={styles.ctaWrap}>
-          <OpenConsultationButton as="a" href="/contacts">
+          <OpenConsultationButton as="a" href="/contacts" className={styles.ctaBtn}>
             Обсудить продвижение в Telegram
           </OpenConsultationButton>
         </div>

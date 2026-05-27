@@ -1,16 +1,13 @@
 import type { Metadata } from "next";
 import { telegramAdsContent as content } from "@/content/services/telegramAds";
 import TelegramAdsHero from "@/components/sections/TelegramAdsHero";
-import HomeAdvantagesSection from "@/components/sections/HomeAdvantagesSection";
-import HomeIndustriesSection from "@/components/sections/HomeIndustriesSection";
-import HomeTechnologiesSection from "@/components/sections/HomeTechnologiesSection";
-import HomeAboutSection from "@/components/sections/HomeAboutSection";
-import HomeBlogSection from "@/components/sections/HomeBlogSection";
-import HomeFaqSection from "@/components/sections/HomeFaqSection";
-import FinalCtaSection from "@/components/sections/FinalCtaSection";
-import CasesSection from "@/components/sections/CasesSection";
-import HomeReviewsSection from "@/components/sections/HomeReviewsSection";
 import TelegramAdsServicesSection from "@/components/sections/TelegramAdsServicesSection";
+import TelegramAdsAdvantagesSection from "@/components/sections/TelegramAdsAdvantagesSection";
+import TelegramAdsProcessSection from "@/components/sections/TelegramAdsProcessSection";
+import TelegramAdsOpportunitiesSection from "@/components/sections/TelegramAdsOpportunitiesSection";
+import TelegramAdsPricingSection from "@/components/sections/TelegramAdsPricingSection";
+import TelegramAdsFaqSection from "@/components/sections/TelegramAdsFaqSection";
+import FinalCtaSection from "@/components/sections/FinalCtaSection";
 
 export const metadata: Metadata = {
   title: content.meta.title,
@@ -90,14 +87,11 @@ export default function TelegramAdsPage() {
       <main>
         <TelegramAdsHero />
         <TelegramAdsServicesSection />
-        <HomeAdvantagesSection />
-        <CasesSection />
-        <HomeReviewsSection />
-        <HomeIndustriesSection />
-        <HomeTechnologiesSection />
-        <HomeAboutSection />
-        <HomeBlogSection />
-        <HomeFaqSection />
+        <TelegramAdsAdvantagesSection />
+        <TelegramAdsProcessSection />
+        <TelegramAdsOpportunitiesSection />
+        <TelegramAdsPricingSection />
+        <TelegramAdsFaqSection />
       </main>
 
       <FinalCtaSection />

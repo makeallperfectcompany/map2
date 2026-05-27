@@ -1,0 +1,152 @@
+/* ═══════════════════════════════════════════════════════════
+   TelegramAdsProcessSection — light bg, step timeline
+   ═══════════════════════════════════════════════════════════ */
+
+.section {
+  position: relative;
+  overflow: hidden;
+  padding-top: var(--section-py);
+  padding-bottom: var(--section-py);
+  color: #1d1d1f;
+  background:
+    radial-gradient(circle at 16% 84%, rgba(0, 113, 227, 0.08), transparent 30%),
+    linear-gradient(180deg, #f5f5f7 0%, #ffffff 100%);
+}
+
+.section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.74), transparent 44%),
+    radial-gradient(circle at 80% 10%, rgba(134, 134, 139, 0.10), transparent 30%);
+}
+
+.inner {
+  position: relative;
+  z-index: 1;
+}
+
+.header {
+  margin-bottom: 52px;
+}
+
+.header h2 {
+  max-width: 820px;
+  margin: 0;
+  color: #1d1d1f;
+  font: 850 clamp(36px, 4vw, 58px)/1.02 Onest, Inter, system-ui, sans-serif;
+  letter-spacing: -0.076em;
+  text-wrap: balance;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 14px;
+}
+
+.stepCard {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.88);
+  border: 1px solid rgba(29, 29, 31, 0.065);
+  box-shadow: 0 16px 48px rgba(15, 16, 20, 0.045);
+}
+
+.stepNumber {
+  color: #0071e3;
+  font: 780 13px/1 JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, monospace;
+  letter-spacing: -0.01em;
+}
+
+.stepCard h3 {
+  margin: 28px 0 0;
+  color: #1d1d1f;
+  font: 820 20px/1.12 Onest, Inter, system-ui, sans-serif;
+  letter-spacing: -0.052em;
+}
+
+.stepCard p {
+  margin: 16px 0 0;
+  color: #62666d;
+  font: 450 14px/1.56 Onest, Inter, system-ui, sans-serif;
+  letter-spacing: -0.014em;
+  flex: 1;
+}
+
+/* Arrow connector between steps (desktop) */
+.stepCard::after {
+  content: "→";
+  position: absolute;
+  right: -16px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  font-weight: 300;
+  color: #0071e3;
+  opacity: 0.35;
+  pointer-events: none;
+}
+
+.stepCard:last-child::after {
+  display: none;
+}
+
+@media (max-width: 1120px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .stepCard:nth-child(3)::after {
+    display: none;
+  }
+  .stepCard:nth-child(4)::after {
+    display: none;
+  }
+}
+
+@media (max-width: 760px) {
+  .section {
+    padding-top: var(--section-py);
+    padding-bottom: var(--section-py);
+  }
+
+  .header h2 {
+    font-size: 38px;
+    line-height: 1.04;
+    margin-bottom: 20px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .stepCard {
+    padding: 24px;
+    border-radius: 26px;
+  }
+
+  .stepCard h3 {
+    font-size: 20px;
+    margin-top: 20px;
+  }
+
+  .stepCard p {
+    font-size: 13px;
+  }
+
+  .stepCard::after {
+    display: none;
+  }
+}
+
+@media (max-width: 430px) {
+  .header h2 {
+    font-size: 34px;
+  }
+}
