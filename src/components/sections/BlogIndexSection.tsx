@@ -45,11 +45,11 @@ export default function BlogIndexSection() {
                   <img src={article.cover} alt={article.title} title={article.title} loading="lazy" decoding="async" />
                 </div>
                 <div className={styles.articleBody}>
-                  <div className={styles.contentBody}>
-                    <h3>{article.title}</h3>
-                    <p>{article.description}</p>
+                  <h3 className={styles.articleTitle}>{article.title}</h3>
+                  <div className={styles.bottomBlock}>
+                    <p className={styles.articleDesc}>{article.description}</p>
+                    <span className={styles.readMore}>Открыть →</span>
                   </div>
-                  <span className={styles.readMore}>Открыть →</span>
                 </div>
               </a>
             ))}
