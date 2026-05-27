@@ -49,6 +49,7 @@ export type Article = {
 import { testArticle as rawTestArticle } from "./test-article";
 import { yandexSearchResultsArticle } from "./vydacha-v-yandekse";
 import { longCycleContextAdArticle } from "./kontekstnaya-reklama-dlya-biznesa-s-dlinnym-tsiklom-sdelki";
+import { wordpressGuideArticle } from "./sozdat-sayt-na-wordpress-v-2026";
 
 const buildArticle = (a: Record<string, unknown>): Article => ({
   ...a,
@@ -69,5 +70,10 @@ export const articles: Article[] = [
     ...longCycleContextAdArticle,
     slug: "kontekstnaya-reklama-dlya-biznesa-s-dlinnym-tsiklom-sdelki",
     url: "/blog/kontekstnaya-reklama-dlya-biznesa-s-dlinnym-tsiklom-sdelki",
+  }),
+  buildArticle({
+    ...wordpressGuideArticle,
+    slug: "sozdat-sayt-na-wordpress-v-2026",
+    url: "/blog/sozdat-sayt-na-wordpress-v-2026",
   }),
 ];
