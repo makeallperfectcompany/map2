@@ -31,7 +31,7 @@ export default function CasesIndexSection() {
           </div>
 
           <div className={styles.caseGrid}>
-            {[...cases].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()).map((item) => (
+            {cases.map((item) => (
               <a className={styles.caseCard} href={item.url} key={item.slug}>
                 <div className={styles.cardImage}>
                   <img src={item.cover} alt={item.title} loading="lazy" decoding="async" />

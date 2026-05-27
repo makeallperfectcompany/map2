@@ -72,49 +72,61 @@ import { wbBagsCase } from "./wb-bags";
 import { zhkMoscowCase } from "./zhk-moscow";
 
 export const cases: CaseItem[] = [
-  realEstateLeadsCase,
-  insuranceCplCase,
-  languageSchoolCase,
-  aiManufacturingCase,
-  eliteLandPlotsCase,
-  karelskiyDomCase,
-  dentalClinicCase,
-  frontendSchoolLeadsCase,
-  taxOptimizationCase,
-  confectioneryKrasnodarCase,
-  udestroyRageRoomCase,
-  wildberriesWomenClothingCase,
+  // ▸ Страница 1 (page=1) — самые верхние на makeallperfect.ru
   wildberriesFashionGrowthCase,
-  clothingBrandSeoVkCase,
-  fpvExcursionsCase,
-  designStudioSiteCase,
-  furnitureMoscowCase,
-  cleaningLeadsCase,
-  babyShopCase,
-  jewelrySalesCase,
-  mobileGameCase,
-  travelAgencyCase,
-  autoServiceCase,
-  hrServiceCase,
-  coffeeTeaCase,
-  autoDealerCase,
-  moscowCleaningCase,
-  medicalClinicCase,
-  foodDeliveryCase,
-  collegeAdmissionsCase,
-  customShoesCase,
+  wb122Case,
+  growth87Case,
+  emailFashionCase,
+  wbBagsCase,
+  zhkMoscowCase,
+
+  // ▸ Страница 2 (page=2)
   cosmeticsPromoPageCase,
   wb31mlnCase,
   wbRoi435Case,
   aestheticClinicCase,
   logisticsCase,
   homeGoodsCase,
-  // fashionWbCase,
-  wb122Case,
-  growth87Case,
-  emailFashionCase,
-  wbBagsCase,
-  zhkMoscowCase,
+
+  // ▸ Страница 3 (page=3)
+  autoDealerCase,
+  moscowCleaningCase,
+  medicalClinicCase,
+  foodDeliveryCase,
+  collegeAdmissionsCase,
+  customShoesCase,
+
+  // ▸ Страница 4 (page=4)
+  cleaningLeadsCase,
+  babyShopCase,
+  jewelrySalesCase,
+  mobileGameCase,
+  travelAgencyCase,
+  autoServiceCase,
+
+  // ▸ Страница 5 (page=5)
+  realEstateLeadsCase,
+  insuranceCplCase,
+  languageSchoolCase,
+  aiManufacturingCase,
+  fpvExcursionsCase,
+  designStudioSiteCase,
+
+  // ▸ Страница 6 (page=6)
+  eliteLandPlotsCase,
+  confectioneryKrasnodarCase,
+  udestroyRageRoomCase,
+  dentalClinicCase,
+  karelskiyDomCase,
+  furnitureMoscowCase,
+
+  // ▸ Страница 7 (page=7)
+  taxOptimizationCase,
+  wildberriesWomenClothingCase,
+  frontendSchoolLeadsCase,
+  hrServiceCase,
+  coffeeTeaCase,
+  clothingBrandSeoVkCase,
 ];
 
 export function getCaseBySlug(slug: string): CaseItem | undefined {

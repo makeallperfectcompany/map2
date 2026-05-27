@@ -26,7 +26,7 @@ export default function CasesSection() {
         </div>
 
         <div className={styles.caseGrid}>
-          {[...cases].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()).slice(0, 3).map((item) => (
+          {cases.slice(0, 3).map((item) => (
             <article className={styles.caseCard} key={item.slug}>
               <div className={styles.caseCover}>
                 <img
