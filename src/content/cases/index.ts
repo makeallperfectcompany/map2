@@ -43,6 +43,7 @@ import { languageSchoolCase } from "./language-school";
 import { aiManufacturingCase } from "./ai-manufacturing";
 import { fpvExcursionsCase } from "./fpv-excursions";
 import { designStudioSiteCase } from "./design-studio-site";
+import { furnitureMoscowCase } from "./furniture-moscow";
 
 export const cases: CaseItem[] = [
   realEstateLeadsCase,
@@ -61,6 +62,7 @@ export const cases: CaseItem[] = [
   clothingBrandSeoVkCase,
   fpvExcursionsCase,
   designStudioSiteCase,
+  furnitureMoscowCase,
 ];
 
 export function getCaseBySlug(slug: string): CaseItem | undefined {
