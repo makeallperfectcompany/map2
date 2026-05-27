@@ -7,6 +7,10 @@ import TelegramAdsProcessSection from "@/components/sections/TelegramAdsProcessS
 import TelegramAdsOpportunitiesSection from "@/components/sections/TelegramAdsOpportunitiesSection";
 import TelegramAdsPricingSection from "@/components/sections/TelegramAdsPricingSection";
 import TelegramAdsFaqSection from "@/components/sections/TelegramAdsFaqSection";
+import CasesSection from "@/components/sections/CasesSection";
+import HomeReviewsSection from "@/components/sections/HomeReviewsSection";
+import HomeIndustriesSection from "@/components/sections/HomeIndustriesSection";
+import HomeBlogSection from "@/components/sections/HomeBlogSection";
 import FinalCtaSection from "@/components/sections/FinalCtaSection";
 
 export const metadata: Metadata = {
@@ -91,6 +95,12 @@ export default function TelegramAdsPage() {
         <TelegramAdsProcessSection />
         <TelegramAdsOpportunitiesSection />
         <TelegramAdsPricingSection />
+
+        <CasesSection />
+        <HomeReviewsSection />
+        <HomeIndustriesSection />
+        <HomeBlogSection />
+
         <TelegramAdsFaqSection />
       </main>
 
