@@ -64,7 +64,7 @@ import { wbRoi435Case } from "./wb-roi-435";
 import { aestheticClinicCase } from "./aesthetic-clinic";
 import { logisticsCase } from "./logistics";
 import { homeGoodsCase } from "./home-goods";
-import { fashionWbCase } from "./fashion-wb";
+// import { fashionWbCase } from "./fashion-wb";
 import { wb122Case } from "./wb-122";
 import { growth87Case } from "./growth-87";
 import { emailFashionCase } from "./email-fashion";
@@ -109,7 +109,7 @@ export const cases: CaseItem[] = [
   aestheticClinicCase,
   logisticsCase,
   homeGoodsCase,
-  fashionWbCase,
+  // fashionWbCase,
   wb122Case,
   growth87Case,
   emailFashionCase,
