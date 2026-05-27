@@ -66,6 +66,12 @@ import { marketplaceBehavioralFactorsArticle } from "./povedencheskie-faktory-ma
 import { skolkoStoitVneshniyTrafikArticle } from "./skolko-stoit-vneshniy-trafik";
 import { gdeZakazatVneshniyTrafikArticle } from "./gde-zakazat-vneshniy-trafik";
 import { kakRabotaetReklamaMpArticle } from "./kak-rabotaet-reklama-mp";
+import { analyticsExternalTrafficArticle } from "./analitika-vneshnego-trafika";
+import { localBusinessGeoArticle } from "./lokalnyy-biznes-geo-servisy";
+import { wbSalesWithoutDiscountsArticle } from "./prodazhi-wb-bez-aktsiy";
+import { salesDropMarketplaceArticle } from "./pochemu-padayut-prodazhi";
+import { externalTrafficWbPositionsArticle } from "./pozitsii-kartochki-wb";
+import { growthLimitedExternalTrafficArticle } from "./rost-ogranichen-bez-vneshnego-trafika";
 
 const buildArticle = (a: Record<string, unknown>): Article => ({
   ...a,
@@ -171,5 +177,35 @@ export const articles: Article[] = [
     ...kakRabotaetReklamaMpArticle,
     slug: "kak-rabotaet-reklama-mp",
     url: "/blog/kak-rabotaet-reklama-mp",
+  }),
+  buildArticle({
+    ...analyticsExternalTrafficArticle,
+    slug: "analitika-vneshnego-trafika",
+    url: "/blog/analitika-vneshnego-trafika",
+  }),
+  buildArticle({
+    ...localBusinessGeoArticle,
+    slug: "lokalnyy-biznes-geo-servisy",
+    url: "/blog/lokalnyy-biznes-geo-servisy",
+  }),
+  buildArticle({
+    ...wbSalesWithoutDiscountsArticle,
+    slug: "prodazhi-wb-bez-aktsiy",
+    url: "/blog/prodazhi-wb-bez-aktsiy",
+  }),
+  buildArticle({
+    ...salesDropMarketplaceArticle,
+    slug: "pochemu-padayut-prodazhi",
+    url: "/blog/pochemu-padayut-prodazhi",
+  }),
+  buildArticle({
+    ...externalTrafficWbPositionsArticle,
+    slug: "pozitsii-kartochki-wb",
+    url: "/blog/pozitsii-kartochki-wb",
+  }),
+  buildArticle({
+    ...growthLimitedExternalTrafficArticle,
+    slug: "rost-ogranichen-bez-vneshnego-trafika",
+    url: "/blog/rost-ogranichen-bez-vneshnego-trafika",
   }),
 ];
