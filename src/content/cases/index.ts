@@ -30,8 +30,12 @@ export type CaseItem = {
 import { wildberriesFashionGrowthCase } from "./wildberries-fashion-growth";
 import { clothingBrandSeoVkCase } from "./clothing-brand-seo-vk";
 import { wildberriesWomenClothingCase } from "./wildberries-women-clothing";
+import { frontendSchoolLeadsCase } from "./frontend-school-leads";
+import { taxOptimizationCase } from "./tax-optimization-usn";
 
 export const cases: CaseItem[] = [
+  frontendSchoolLeadsCase,
+  taxOptimizationCase,
   wildberriesWomenClothingCase,
   wildberriesFashionGrowthCase,
   clothingBrandSeoVkCase,
