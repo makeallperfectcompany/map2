@@ -32,8 +32,10 @@ import { clothingBrandSeoVkCase } from "./clothing-brand-seo-vk";
 import { wildberriesWomenClothingCase } from "./wildberries-women-clothing";
 import { frontendSchoolLeadsCase } from "./frontend-school-leads";
 import { taxOptimizationCase } from "./tax-optimization-usn";
+import { karelskiyDomCase } from "./karelskiy-dom-construction";
 
 export const cases: CaseItem[] = [
+  karelskiyDomCase,
   frontendSchoolLeadsCase,
   taxOptimizationCase,
   wildberriesWomenClothingCase,
