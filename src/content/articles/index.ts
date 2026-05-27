@@ -46,8 +46,6 @@ export type Article = {
   }>;
 };
 
-import { testArticle as rawTestArticle } from "./test-article";
-import { yandexSearchResultsArticle } from "./vydacha-v-yandekse";
 import { longCycleContextAdArticle } from "./kontekstnaya-reklama-dlya-biznesa-s-dlinnym-tsiklom-sdelki";
 import { wordpressGuideArticle } from "./sozdat-sayt-na-wordpress-v-2026";
 import { marketingToolsArticle } from "./instrumenty-internet-marketinga";
@@ -108,16 +106,6 @@ const buildArticle = (a: Record<string, unknown>): Article => ({
 } as Article);
 
 export const articles: Article[] = [
-  buildArticle({
-    ...rawTestArticle,
-    slug: "test-article",
-    url: "/blog/test-article",
-    tags: rawTestArticle.tags ?? ["Аналитика", "Конверсия", "Продажи"],
-    service: rawTestArticle.service ?? null,
-    industry: rawTestArticle.industry ?? null,
-    priority: rawTestArticle.priority ?? 50,
-  }),
-  buildArticle(yandexSearchResultsArticle),
   buildArticle({
     ...longCycleContextAdArticle,
     slug: "kontekstnaya-reklama-dlya-biznesa-s-dlinnym-tsiklom-sdelki",
