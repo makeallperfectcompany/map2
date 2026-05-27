@@ -66,7 +66,7 @@ export default function ArticleTemplate({ article }: { article: Article }) {
             <p>{article.description}</p>
 
             <div className={styles.authorMini}>
-              <div className={styles.avatar}>Д</div>
+              <div className={styles.avatar}><img src="/images/dmitry-grafov.webp" alt="Дмитрий Графов" className={styles.avatarImg} /></div>
               <div>
                 <strong>{article.author}</strong>
                 <span>{article.authorRole}</span>
@@ -153,7 +153,7 @@ export default function ArticleTemplate({ article }: { article: Article }) {
                         а связь между каналами, заявками, продажами и повторными касаниями.
                       </p>
                       <footer>
-                        <div className={styles.avatar}>Д</div>
+                        <div className={styles.avatar}><img src="/images/dmitry-grafov.webp" alt="Дмитрий Графов" className={styles.avatarImg} /></div>
                         <div>
                           <strong>{article.author}</strong>
                           <span>{article.authorRole}</span>
@@ -177,7 +177,7 @@ export default function ArticleTemplate({ article }: { article: Article }) {
               ))}
 
               <section className={styles.authorBox}>
-                <div className={styles.avatarLarge}>Д</div>
+                <div className={styles.avatarLarge}><img src="/images/dmitry-grafov.webp" alt="Дмитрий Графов" className={styles.avatarLargeImg} /></div>
                 <div>
                   <span>Автор статьи</span>
                   <h3>{article.author}</h3>
