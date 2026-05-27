@@ -50,6 +50,7 @@ import { testArticle as rawTestArticle } from "./test-article";
 import { yandexSearchResultsArticle } from "./vydacha-v-yandekse";
 import { longCycleContextAdArticle } from "./kontekstnaya-reklama-dlya-biznesa-s-dlinnym-tsiklom-sdelki";
 import { wordpressGuideArticle } from "./sozdat-sayt-na-wordpress-v-2026";
+import { marketingToolsArticle } from "./instrumenty-internet-marketinga";
 
 const buildArticle = (a: Record<string, unknown>): Article => ({
   ...a,
@@ -75,5 +76,10 @@ export const articles: Article[] = [
     ...wordpressGuideArticle,
     slug: "sozdat-sayt-na-wordpress-v-2026",
     url: "/blog/sozdat-sayt-na-wordpress-v-2026",
+  }),
+  buildArticle({
+    ...marketingToolsArticle,
+    slug: "instrumenty-internet-marketinga",
+    url: "/blog/instrumenty-internet-marketinga",
   }),
 ];
