@@ -72,6 +72,12 @@ import { wbSalesWithoutDiscountsArticle } from "./prodazhi-wb-bez-aktsiy";
 import { salesDropMarketplaceArticle } from "./pochemu-padayut-prodazhi";
 import { externalTrafficWbPositionsArticle } from "./pozitsii-kartochki-wb";
 import { growthLimitedExternalTrafficArticle } from "./rost-ogranichen-bez-vneshnego-trafika";
+import { rfmAnalysisB2bArticle } from "./rfm-analiz-b2b";
+import { hypercompetitionArticle } from "./giperkonkurentsiya";
+import { mediaPrSeoArticle } from "./stati-v-smi-seo";
+import { contextDirectStableLeadsArticle } from "./kontekstnaya-reklama-direkt-stabilnye-zayavki";
+import { sitePromotionDirectArticle } from "./prodvizhenie-sayta-v-direkt";
+import { vkVsDirectArticle } from "./reklama-vk-ili-direkt";
 
 const buildArticle = (a: Record<string, unknown>): Article => ({
   ...a,
@@ -207,5 +213,35 @@ export const articles: Article[] = [
     ...growthLimitedExternalTrafficArticle,
     slug: "rost-ogranichen-bez-vneshnego-trafika",
     url: "/blog/rost-ogranichen-bez-vneshnego-trafika",
+  }),
+  buildArticle({
+    ...rfmAnalysisB2bArticle,
+    slug: "rfm-analiz-b2b",
+    url: "/blog/rfm-analiz-b2b",
+  }),
+  buildArticle({
+    ...hypercompetitionArticle,
+    slug: "giperkonkurentsiya",
+    url: "/blog/giperkonkurentsiya",
+  }),
+  buildArticle({
+    ...mediaPrSeoArticle,
+    slug: "stati-v-smi-seo",
+    url: "/blog/stati-v-smi-seo",
+  }),
+  buildArticle({
+    ...contextDirectStableLeadsArticle,
+    slug: "kontekstnaya-reklama-direkt-stabilnye-zayavki",
+    url: "/blog/kontekstnaya-reklama-direkt-stabilnye-zayavki",
+  }),
+  buildArticle({
+    ...sitePromotionDirectArticle,
+    slug: "prodvizhenie-sayta-v-direkt",
+    url: "/blog/prodvizhenie-sayta-v-direkt",
+  }),
+  buildArticle({
+    ...vkVsDirectArticle,
+    slug: "reklama-vk-ili-direkt",
+    url: "/blog/reklama-vk-ili-direkt",
   }),
 ];
