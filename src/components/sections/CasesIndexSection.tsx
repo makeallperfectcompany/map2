@@ -37,7 +37,6 @@ export default function CasesIndexSection() {
                   <img src={item.cover} alt={item.title} loading="lazy" decoding="async" />
                 </div>
                 <div className={styles.cardBody}>
-                  <span className={styles.category}>{item.category}</span>
                   <h3>{item.title}</h3>
                   <p>{item.lead}</p>
 
