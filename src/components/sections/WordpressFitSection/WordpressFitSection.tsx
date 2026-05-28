@@ -1,0 +1,6 @@
+import Image from 'next/image';
+import { Container } from '@/components/ui/Container/Container';
+import { wordpressDevelopmentContent as content } from '@/content/services/wordpressDevelopment';
+import grid from '@/styles/grid.module.css';
+import styles from './WordpressFitSection.module.css';
+export function WordpressFitSection(){const {fit}=content;return <section className={styles.section}><Container><div className={grid.grid2}><div className={styles.headerCopy}><p className={styles.label}>{fit.label}</p><h2>{fit.title}</h2><p className={styles.intro}>{fit.description}</p></div></div><div className={`${grid.grid2} ${styles.layout}`}><figure className={styles.visual}><Image src={fit.image} alt="" fill sizes="(min-width: 768px) 42vw, 100vw" className={styles.image}/></figure><div className={styles.right}><article className={styles.featured}><p className={styles.meta}>ВЫБОР ПЛАТФОРМЫ</p><h3>{fit.featured.title}</h3><p>{fit.featured.text}</p></article><div className={grid.grid2}>{fit.items.map((item,index)=><article key={item.title} className={styles.card}><p className={styles.number}>{String(index+1).padStart(2,'0')}</p><h3>{item.title}</h3><p>{item.text}</p></article>)}</div></div></div></Container></section>}
