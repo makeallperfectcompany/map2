@@ -1,4 +1,4 @@
-import type { VkAdsContent } from "@/content/services/vkAds";
+import type { VkAdsContent } from "@/content/services/vkAdsNew";
 
 export default function VkAdsSchema({ faq }: { faq: VkAdsContent["faq"] }) {
   const breadcrumb = {

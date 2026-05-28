@@ -1,6 +1,6 @@
 import { Container } from "@/components/ui/Container/Container";
 import grid from "@/styles/grid.module.css";
-import type { VkAdsContent } from "@/content/services/vkAds";
+import type { VkAdsContent } from "@/content/services/vkAdsNew";
 import styles from "./VkAds.module.css";
 
 export default function VkAdsTransparency({ content }: { content: VkAdsContent["transparency"] }) {

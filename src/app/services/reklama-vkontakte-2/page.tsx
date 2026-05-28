@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { vkAdsContent } from "@/content/services/vkAds";
+import { vkAdsContent } from "@/content/services/vkAdsNew";
 import VkAdsHero from "@/components/sections/VkAds/VkAdsHero";
 import VkAdsScenarios from "@/components/sections/VkAds/VkAdsScenarios";
 import VkAdsHowItWorks from "@/components/sections/VkAds/VkAdsHowItWorks";
