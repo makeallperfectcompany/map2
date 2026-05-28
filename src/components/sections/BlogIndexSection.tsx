@@ -12,7 +12,6 @@ const listedArticles = articles.map((a) => ({
   title: a.title,
   description: a.description,
   cover: a.cover,
-  readingTime: a.readingTime,
 }));
 
 export default function BlogIndexSection() {

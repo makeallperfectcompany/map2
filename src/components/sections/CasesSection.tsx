@@ -40,7 +40,7 @@ export default function CasesSection() {
               <article className={styles.caseCard} key={item.slug}>
                 <div className={styles.caseCover}>
                   <img
-                    src={item.cover}
+                    src={item.hero}
                     alt=""
                     title={item.title}
                     className={styles.caseCoverImg}
@@ -51,7 +51,7 @@ export default function CasesSection() {
                 <div className={styles.caseBody}>
                     <div className={styles.contentBody}>
                     <h3>{item.title}</h3>
-                    <p>{item.lead}</p>
+                    <p>{item.description}</p>
                   </div>
                   <span className={styles.readMore}>Открыть →</span>
                 </div>

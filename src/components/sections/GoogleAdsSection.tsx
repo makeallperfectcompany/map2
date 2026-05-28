@@ -365,10 +365,10 @@ function Cases() {
           {topCases.map((c) => (
             <a className={styles.caseCard} key={c.slug} href={c.url}>
               <div className={styles.caseImage}>
-                <img src={c.cover} alt={c.title} title={c.title} loading="lazy" decoding="async" />
+                <img src={c.hero} alt={c.title} title={c.title} loading="lazy" decoding="async" />
               </div>
               <div className={styles.caseBody}>
-                <span className={styles.caseCategory}>{c.category}</span>
+                <span className={styles.caseCategory}>{"Кейс"}</span>
                 <h3>{c.title}</h3>
                 <p>{c.description}</p>
                 <span className={styles.readMore}>Открыть →</span>

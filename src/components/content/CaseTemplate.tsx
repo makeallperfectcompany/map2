@@ -36,8 +36,8 @@ export default function CaseTemplate({ item }: { item: CaseItem }) {
     "@type": "Article",
     headline: item.title,
     description: item.description,
-    image: item.cover
-      ? `${BASE_URL}${item.cover}`
+    image: item.hero
+      ? `${BASE_URL}${item.hero}`
       : `${BASE_URL}/og-image.jpg`,
     datePublished: item.date,
     author: {
@@ -97,23 +97,26 @@ export default function CaseTemplate({ item }: { item: CaseItem }) {
               items={[
                 { label: "Главная", href: "/" },
                 { label: "Кейсы", href: "/cases" },
-                { label: item.category },
                 { label: item.title },
               ]}
             />
 
-            <span className={styles.category}>{item.category}</span>
             <h1>{item.title}</h1>
-            <p>{item.lead}</p>
+            <p>{item.description}</p>
 
-            <div className={styles.metrics}>
-              {item.metrics.map((metric) => (
-                <div className={styles.metric} key={metric.label}>
-                  <strong>{metric.value}</strong>
-                  <span>{metric.label}</span>
-                </div>
-              ))}
-            </div>
+            {item.results && item.results.length > 0 ? (
+              <div className={styles.metrics}>
+                {item.results.map((result, i) => (
+                  <div className={styles.metric} key={`result-${i}`}>
+                    <strong>{result.value}</strong>
+                    <span>{result.label}</span>
+                    {result.description ? (
+                      <small>{result.description}</small>
+                    ) : null}
+                  </div>
+                ))}
+              </div>
+            ) : null}
           </div>
         </header>
 
@@ -121,13 +124,15 @@ export default function CaseTemplate({ item }: { item: CaseItem }) {
           <div className={styles.container}>
             <aside className={styles.sidebar}>
               <div className={styles.factCard}>
-                <span>Проект</span>
-                {item.facts.map((fact) => (
-                  <div className={styles.fact} key={fact.label}>
-                    <small>{fact.label}</small>
-                    <strong>{fact.value}</strong>
-                  </div>
-                ))}
+                <span>О проекте</span>
+                <div className={styles.fact}>
+                  <small>Услуга</small>
+                  <strong>{item.service || "—"}</strong>
+                </div>
+                <div className={styles.fact}>
+                  <small>Ниша</small>
+                  <strong>{item.industry || "—"}</strong>
+                </div>
               </div>
 
               <div className={styles.sidebarCta}>
@@ -139,36 +144,48 @@ export default function CaseTemplate({ item }: { item: CaseItem }) {
 
             <div className={styles.content}>
               {item.sections.map((section) => (
-                <section className={styles.caseSection} key={section.title}>
+                <section className={styles.caseSection} key={section.id || section.title}>
                   <h2>{section.title}</h2>
                   <p>{section.text}</p>
-                  {section.bullets ? (
+
+                  {section.highlights && section.highlights.length > 0 ? (
                     <ul>
-                      {section.bullets.map((bullet) => (
-                        <li key={bullet}>{bullet}</li>
+                      {section.highlights.map((h, i) => (
+                        <li key={`h-${i}`}>{h}</li>
                       ))}
                     </ul>
                   ) : null}
 
-                  {section.imageAfter ? (
+                  {section.image ? (
                     <figure className={styles.caseFigure}>
                       <button
                         className={styles.imageButton}
-                        onClick={() => setLightboxSrc(section.imageAfter!.src)}
+                        onClick={() => setLightboxSrc(section.image!)}
                         aria-label="Увеличить изображение"
                       >
                         <img
-                          src={section.imageAfter.src}
-                          alt={section.imageAfter.alt}
-                          title={section.imageAfter.alt}
+                          src={section.image}
+                          alt={section.title}
+                          title={section.title}
                           loading="lazy"
                           decoding="async"
                         />
                       </button>
-                      {section.imageAfter.caption ? (
-                        <figcaption>{section.imageAfter.caption}</figcaption>
-                      ) : null}
                     </figure>
+                  ) : null}
+
+                  {section.marqueeImages && section.marqueeImages.length > 0 ? (
+                    <div className={styles.marqueeImages}>
+                      {section.marqueeImages.map((src, i) => (
+                        <img
+                          key={`marquee-${i}`}
+                          src={src}
+                          alt=""
+                          loading="lazy"
+                          decoding="async"
+                        />
+                      ))}
+                    </div>
                   ) : null}
                 </section>
               ))}

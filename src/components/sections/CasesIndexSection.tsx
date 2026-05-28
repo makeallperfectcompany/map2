@@ -34,11 +34,11 @@ export default function CasesIndexSection() {
             {cases.map((item) => (
               <a className={styles.caseCard} href={item.url} key={item.slug}>
                 <div className={styles.cardImage}>
-                  <img src={item.cover} alt={item.title} loading="lazy" decoding="async" />
+                  <img src={item.hero} alt={item.title} loading="lazy" decoding="async" />
                 </div>
                 <div className={styles.cardBody}>
                   <h3>{item.title}</h3>
-                  <p>{item.lead}</p>
+                  <p>{item.description}</p>
 
                   <span className={styles.readMore}>Открыть →</span>
                 </div>

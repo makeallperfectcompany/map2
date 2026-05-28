@@ -24,8 +24,8 @@ export async function generateMetadata({
   }
 
   const url = `${BASE_URL}${item.url}`;
-  const ogImage = item.cover
-    ? { url: item.cover, width: 1200, height: 630, alt: item.title }
+  const ogImage = item.hero
+    ? { url: item.hero, width: 1200, height: 630, alt: item.title }
     : { url: "/og-image.jpg", width: 1200, height: 630, alt: item.title };
 
   return {

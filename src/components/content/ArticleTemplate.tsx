@@ -4,6 +4,16 @@ import styles from "./ArticleTemplate.module.css";
 
 const BASE_URL = "https://map2.vercel.app";
 
+function slugify(text: string) {
+  return text
+    .toLowerCase()
+    .replace(/<[^>]*>/g, "")
+    .replace(/[^a-zа-яё0-9\s-]/g, "")
+    .replace(/\s+/g, "-")
+    .replace(/-+/g, "-")
+    .replace(/^-|-$/g, "");
+}
+
 export default function ArticleTemplate({ article }: { article: Article }) {
   const articleSchema = {
     "@context": "https://schema.org",
@@ -39,6 +49,10 @@ export default function ArticleTemplate({ article }: { article: Article }) {
     ],
   };
 
+  const tocItems = article.body.filter(
+    (b) => b.type === "h2" && b.showInContent !== false && b.content
+  );
+
   return (
     <main className={styles.articlePage}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
@@ -62,84 +76,76 @@ export default function ArticleTemplate({ article }: { article: Article }) {
 
         <div className={styles.contentWrap}>
           <div className={styles.container}>
-            <aside className={styles.sidebar}>
-              <nav className={styles.toc} aria-label="Оглавление">
-                <span>В статье</span>
-                {article.content.sections.map((section) => (
-                  <a href={`#${section.title.toLowerCase().replaceAll(" ", "-")}`} key={section.title}>
-                    {section.title}
-                  </a>
-                ))}
-              </nav>
+            {tocItems.length > 0 ? (
+              <aside className={styles.sidebar}>
+                <nav className={styles.toc} aria-label="Оглавление">
+                  <span>В статье</span>
+                  {tocItems.map((item) => (
+                    <a href={`#${slugify(item.content || "")}`} key={item.content}>
+                      {item.content}
+                    </a>
+                  ))}
+                </nav>
 
-              <div className={styles.sidebarCta}>
-                <span>Экспресс-разбор</span>
-                <strong>Покажем, где маркетинг теряет рост</strong>
-                <a href="/#contacts">Получить разбор</a>
-              </div>
-            </aside>
+                <div className={styles.sidebarCta}>
+                  <span>Экспресс-разбор</span>
+                  <strong>Покажем, где маркетинг теряет рост</strong>
+                  <a href="/#contacts">Получить разбор</a>
+                </div>
+              </aside>
+            ) : (
+              <aside className={styles.sidebar}>
+                <div className={styles.sidebarCta}>
+                  <span>Экспресс-разбор</span>
+                  <strong>Покажем, где маркетинг теряет рост</strong>
+                  <a href="/#contacts">Получить разбор</a>
+                </div>
+              </aside>
+            )}
 
             <div className={styles.content}>
-              <section className={styles.takeaways}>
-                <span>В статье разберём</span>
-                <ul>
-                  {article.takeaways.map((item) => (
-                    <li key={item}>{item}</li>
-                  ))}
-                </ul>
-              </section>
-
-              <p className={styles.intro}>{article.content.intro}</p>
-
-              {article.content.sections.map((section) => (
-                <section id={section.title.toLowerCase().replaceAll(" ", "-")} key={section.title} className={styles.articleSection}>
-                  <h2>{section.title}</h2>
-                  <p>{section.text}</p>
-                  {section.bullets ? (
-                    <ul className={styles.contentList}>
-                      {section.bullets.map((bullet) => (
-                        <li key={bullet}>{bullet}</li>
-                      ))}
-                    </ul>
-                  ) : null}
-
-                  {section.imageAfter ? (
-                    <figure className={styles.articleFigure}>
-                      <img
-                        src={section.imageAfter.src}
-                        alt={section.imageAfter.alt}
-                        title={section.imageAfter.alt}
-                        loading="lazy"
-                        decoding="async"
+              {article.body.map((block, i) => {
+                switch (block.type) {
+                  case "h2":
+                    return (
+                      <section
+                        id={slugify(block.content || "")}
+                        key={`h2-${i}`}
+                        className={styles.articleSection}
+                      >
+                        <h2>{block.content}</h2>
+                      </section>
+                    );
+                  case "h3":
+                    return <h3 key={`h3-${i}`}>{block.content}</h3>;
+                  case "text":
+                    return (
+                      <p key={`text-${i}`} dangerouslySetInnerHTML={{ __html: block.content || "" }} />
+                    );
+                  case "image":
+                    return (
+                      <figure className={styles.articleFigure} key={`img-${i}`}>
+                        <img
+                          src={block.src}
+                          alt={block.alt || ""}
+                          title={block.alt || ""}
+                          loading="lazy"
+                          decoding="async"
+                        />
+                      </figure>
+                    );
+                  case "blockquote":
+                    return (
+                      <blockquote
+                        className={styles.expertQuote}
+                        key={`quote-${i}`}
+                        dangerouslySetInnerHTML={{ __html: block.content || "" }}
                       />
-                      {section.imageAfter.caption ? (
-                        <figcaption>{section.imageAfter.caption}</figcaption>
-                      ) : null}
-                    </figure>
-                  ) : null}
-
-                  {section.quoteAfter ? (
-                    <blockquote className={styles.expertQuote}>
-                      <p>
-                        Маркетинг становится управляемым только тогда, когда команда видит не клики,
-                        а связь между каналами, заявками, продажами и повторными касаниями.
-                      </p>
-                    </blockquote>
-                  ) : null}
-
-                  {section.ctaAfter ? (
-                    <div className={styles.inlineCta}>
-                      <div>
-                        <span>Хотите понять, где теряется рост?</span>
-                        <strong>
-                          Проведём экспресс-разбор сайта, рекламы и аналитики и покажем, какие точки роста можно усилить в первую очередь.
-                        </strong>
-                      </div>
-                      <a href="/#contacts">Получить разбор</a>
-                    </div>
-                  ) : null}
-                </section>
-              ))}
+                    );
+                  default:
+                    return null;
+                }
+              })}
 
               <section className={styles.relatedSection}>
                 <div className={styles.relatedHead}>
