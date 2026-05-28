@@ -167,3 +167,4 @@ curl -s -X POST "https://api.vercel.com/v13/deployments" \
 5. При изменении Header — проверить поведение бургера на mobile (<375px)
 6. Assets — все изображения в `public/assets/`, WebP, с Next.js Image компонентом
 7. Vercel-токены, API-ключи и пароли — не коммитить. GitHub Push Protection заблокирует пуш.
+
