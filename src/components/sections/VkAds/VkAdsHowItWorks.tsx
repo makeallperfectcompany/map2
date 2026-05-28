@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { Container } from "@/components/ui/Container/Container";
 import grid from "@/styles/grid.module.css";
-import type { VkAdsContent } from "@/content/services/vkAdsNew";
+import type { VkAdsContent } from "@/content/services/vkAds";
 import styles from "./VkAds.module.css";
 
 export default function VkAdsHowItWorks({ content }: { content: VkAdsContent["howItWorks"] }) {

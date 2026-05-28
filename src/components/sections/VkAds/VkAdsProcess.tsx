@@ -1,5 +1,5 @@
 import { Container } from "@/components/ui/Container/Container";
-import type { VkAdsContent } from "@/content/services/vkAdsNew";
+import type { VkAdsContent } from "@/content/services/vkAds";
 import styles from "./VkAds.module.css";
 
 export default function VkAdsProcess({ content }: { content: VkAdsContent["process"] }) {

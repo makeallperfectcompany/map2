@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Container } from "@/components/ui/Container/Container";
 import grid from "@/styles/grid.module.css";
-import type { VkAdsContent } from "@/content/services/vkAdsNew";
+import type { VkAdsContent } from "@/content/services/vkAds";
 import styles from "./VkAds.module.css";
 
 export default function VkAdsScenarios({ content }: { content: VkAdsContent["scenarios"] }) {

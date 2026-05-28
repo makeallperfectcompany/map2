@@ -15,9 +15,8 @@ import HomeReviewsSection from "@/components/sections/HomeReviewsSection";
 import FinalCtaSection from "@/components/sections/FinalCtaSection";
 
 export const metadata: Metadata = {
-  title: "Реклама ВКонтакте под ключ — настройка и ведение VK Ads | Make All Perfect",
-  description:
-    "Настраиваем и ведём рекламу ВКонтакте в VK Ads: аудитории, креативы, лид-формы, ретаргетинг и аналитика обращений. Стоимость от 50 000 ₽/мес.",
+  title: content.metadata.title,
+  description: content.metadata.description,
   alternates: {
     canonical: "/services/reklama-vkontakte",
   },
@@ -52,13 +51,12 @@ const serviceSchema = {
     "@type": "Country",
     name: "Россия",
   },
-  description:
-    "Настраиваем и ведём рекламу ВКонтакте в VK Ads: аудитории, креативы, лид-формы, ретаргетинг и аналитика обращений. Стоимость от 50 000 ₽/мес.",
-  offers: content.pricing.tiers?.map((tier, index) => ({
+  description: content.metadata.description,
+  offers: content.pricing.tiers.map((tier, index) => ({
     "@type": "Offer",
     name: tier.name,
-    description: `${tier.subtitle || ""}. ${tier.price}`,
-    price: String(tier.price).replace(/[^0-9]/g, "") || "50000",
+    description: `${tier.subtitle}. ${tier.price}`,
+    price: tier.price.replace(/[^0-9]/g, ""),
     priceCurrency: "RUB",
     position: index + 1,
   })),
