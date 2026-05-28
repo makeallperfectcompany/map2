@@ -146,7 +146,7 @@ export default function CaseTemplate({ item }: { item: CaseItem }) {
               {item.sections.map((section) => (
                 <section className={styles.caseSection} key={section.id || section.title}>
                   <h2>{section.title}</h2>
-                  <p>{section.text}</p>
+                  <p dangerouslySetInnerHTML={{ __html: section.text }} />
 
                   {section.highlights && section.highlights.length > 0 ? (
                     <ul>
