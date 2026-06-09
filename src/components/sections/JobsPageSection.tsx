@@ -8,9 +8,9 @@ export default function JobsPageSection() {
         <div className={styles.container}>
           <div className={styles.heroContent}>
             <div className={styles.eyebrow}>Карьера в Make All Perfect</div>
-            <h1 id="jobs-title">Присоединяйтесь к команде, которая строит маркетинг на результате</h1>
+            <h1 id="jobs-title">Команда, которая строит маркетинг на результате</h1>
             <p>
-              Мы собираем команду уровня senior, lead и head-level. Это роли для специалистов, которые умеют думать стратегически, держать высокий стандарт, брать ответственность за результат и работать с проектами, где маркетинг влияет на деньги.
+              Ищем специалистов senior, lead и head: тех, кто мыслит стратегически и отвечает за результат в деньгах.
             </p>
             <div className={styles.heroActions}>
               <a href="#jobs">Смотреть вакансии</a>
