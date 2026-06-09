@@ -49,6 +49,7 @@
   font: 760 13px/1 Onest, Inter, system-ui, sans-serif;
   letter-spacing: -0.012em;
   flex-shrink: 0;
+  align-self: flex-start;
 }
 
 .content h2 {
