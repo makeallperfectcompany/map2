@@ -334,7 +334,7 @@
   visibility: hidden;
   transform: translateY(-8px);
   transition: opacity .25s var(--ease), transform .25s var(--ease), visibility .25s;
-  padding: 28px 48px 32px;
+  padding: 28px 0 32px;
 }
 .megaMenuOpen {
   opacity: 1;
@@ -343,8 +343,9 @@
 }
 
 .megaGrid {
-  max-width: 1280px;
+  max-width: 1200px;
   margin: 0 auto;
+  padding: 0 48px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 16px;
