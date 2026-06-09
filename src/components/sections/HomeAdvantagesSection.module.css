@@ -50,7 +50,7 @@
 }
 
 .sectionHeader h2 {
-  max-width: 940px;
+  max-width: 640px;
   margin: 14px 0 0;
   color: #1d1d1f;
   font: 850 clamp(36px, 4vw, 58px)/1.02 Onest, Inter, system-ui, sans-serif;
@@ -59,7 +59,7 @@
 }
 
 .description {
-  max-width: 760px;
+  max-width: 640px;
   margin: 24px 0 0;
   color: #62666d;
   font: 450 18px/1.62 Onest, Inter, system-ui, sans-serif;
@@ -71,12 +71,13 @@
   grid-template-columns: minmax(360px, 0.88fr) minmax(0, 1.12fr);
   gap: 22px;
   align-items: stretch;
+  margin-top: -20px;
 }
 
 .visualCard {
   position: sticky;
   top: 96px;
-  min-height: 620px;
+  min-height: 580px;
   overflow: hidden;
   border-radius: 36px;
   background: #ffffff;
