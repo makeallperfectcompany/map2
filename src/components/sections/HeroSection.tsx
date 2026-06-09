@@ -46,15 +46,24 @@ export default function HeroSection() {
             </Link>
           </div>
 
-          {/* Mobile: блок принципов — после кнопок */}
-          <div className={styles.heroPrinciplesMobile} aria-label="Принципы работы">
-            <div><i aria-hidden="true" /><span>Не продаём лишние услуги</span></div>
-            <div><i aria-hidden="true" /><span>Полная прозрачность в работе</span></div>
-            <div><i aria-hidden="true" /><span>Решения на основе аналитики</span></div>
+          {/* Trust bar: принципы с описаниями */}
+          <div className={styles.trustBar}>
+            <div className={styles.trustItem}>
+              <span className={styles.trustLabel}>С 2017 года в маркетинге</span>
+              <span className={styles.trustValue}>строим продвижение на опыте, аналитике и понимании бизнеса</span>
+            </div>
+            <div className={styles.trustItem}>
+              <span className={styles.trustLabel}>Не продаём лишние услуги</span>
+              <span className={styles.trustValue}>предлагаем только то, что действительно нужно для роста</span>
+            </div>
+            <div className={styles.trustItem}>
+              <span className={styles.trustLabel}>Полная прозрачность в работе</span>
+              <span className={styles.trustValue}>вы видите стратегию, цифры и ход работ на каждом этапе</span>
+            </div>
           </div>
         </div>
 
-        {/* Desktop: блок принципов — справа, под логотипом */}
+        {/* Desktop: логотип */}
         <div className={styles.right}>
           <img
             className={styles.heroLogo}
@@ -62,13 +71,6 @@ export default function HeroSection() {
             alt="Make All Perfect"
             title="Make All Perfect"
           />
-          <div className={styles.heroPrinciplesDesktop} aria-label="Принципы работы">
-            <span>Не продаём лишние услуги</span>
-            <i aria-hidden="true" />
-            <span>Полная прозрачность в работе</span>
-            <i aria-hidden="true" />
-            <span>Решения на основе аналитики</span>
-          </div>
         </div>
       </div>
     </Container>
