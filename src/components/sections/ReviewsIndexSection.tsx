@@ -38,7 +38,6 @@ function ReviewCard({ item }: { item: Extract<ReviewItem, { type: "review" }> })
       <div className={styles.cardBottom}>
         <div className={styles.cardFooter}>
           <span>{item.category}</span>
-          {item.date ? <small>{item.date}</small> : null}
         </div>
 
         {item.relatedCaseUrl ? (
@@ -66,7 +65,7 @@ function LetterCard({ item }: { item: Extract<ReviewItem, { type: "letter" }> })
         <div className={styles.letterBottom}>
           <div className={styles.letterMeta}>
             <strong>{item.name}</strong>
-            <span>{item.category}{item.date ? ` · ${item.date}` : ""}</span>
+            <span>{item.category}</span>
           </div>
 
           <div className={styles.letterActions}>

@@ -161,10 +161,10 @@
 .reviewCard {
   position: relative;
   grid-column: span 4;
-  min-height: 430px;
+  min-height: 520px;
   display: flex;
   flex-direction: column;
-  padding: 24px;
+  padding: 28px 26px 24px;
   border-radius: 26px;
   background: rgba(255, 255, 255, 0.84);
   border: 1px solid rgba(15, 16, 20, 0.065);
@@ -282,7 +282,7 @@
 }
 
 .letterCard {
-  min-height: 560px;
+  min-height: 680px;
   padding: 14px;
   background:
     radial-gradient(circle at 86% 10%, rgba(127, 183, 255, 0.13), transparent 34%),
@@ -291,7 +291,7 @@
 
 .letterPreview {
   flex: 0 0 auto;
-  aspect-ratio: 16 / 10;
+  aspect-ratio: 9 / 16;
   border-radius: 20px;
   overflow: hidden;
   background: #f5f6f8;
