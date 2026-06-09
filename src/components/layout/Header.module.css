@@ -329,15 +329,12 @@
   right: 0;
   z-index: 200;
   background: #fff;
-  border-bottom: 1px solid rgba(15,16,20,0.07);
   box-shadow: 0 24px 70px rgba(0,0,0,0.12);
   opacity: 0;
   visibility: hidden;
   transform: translateY(-8px);
   transition: opacity .25s var(--ease), transform .25s var(--ease), visibility .25s;
   padding: 28px 48px 32px;
-  max-height: calc(100vh - 64px);
-  overflow-y: auto;
 }
 .megaMenuOpen {
   opacity: 1;
