@@ -18,7 +18,23 @@ export default function HomeAdvantagesSection() {
             <p className={styles.description}>{homeAdvantages.description}</p>
           </div>
 
-          <div className={styles.advantagesLayout}>
+          <div className={styles.contentColumn}>
+            <article className={styles.mainCard}>
+              <span>Full-cycle growth</span>
+              <h3>{homeAdvantages.mainCard.title}</h3>
+              <p>{homeAdvantages.mainCard.text}</p>
+            </article>
+
+            <div className={styles.cardsGrid}>
+              {homeAdvantages.items.map((item, index) => (
+                <article className={styles.advantageCard} key={item.title}>
+                  <span className={styles.cardNumber}>{String(index + 1).padStart(2, "0")}</span>
+                  <h3>{item.title}</h3>
+                  <p>{item.text}</p>
+                </article>
+              ))}
+            </div>
+
             <div className={styles.visualCard}>
               <Image
                 src={homeAdvantages.visual}
@@ -28,24 +44,6 @@ export default function HomeAdvantagesSection() {
                 sizes="(max-width: 900px) 100vw, 50vw"
                 priority={false}
               />
-            </div>
-
-            <div className={styles.contentColumn}>
-              <article className={styles.mainCard}>
-                <span>Full-cycle growth</span>
-                <h3>{homeAdvantages.mainCard.title}</h3>
-                <p>{homeAdvantages.mainCard.text}</p>
-              </article>
-
-              <div className={styles.cardsGrid}>
-                {homeAdvantages.items.map((item, index) => (
-                  <article className={styles.advantageCard} key={item.title}>
-                    <span className={styles.cardNumber}>{String(index + 1).padStart(2, "0")}</span>
-                    <h3>{item.title}</h3>
-                    <p>{item.text}</p>
-                  </article>
-                ))}
-              </div>
             </div>
           </div>
         </div>

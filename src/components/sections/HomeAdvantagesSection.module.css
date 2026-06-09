@@ -74,29 +74,7 @@
   letter-spacing: -0.02em;
 }
 
-/* ---- existing advantages grid (nested in right column) ---- */
-
-.advantagesLayout {
-  display: grid;
-  grid-template-columns: minmax(300px, 0.88fr) minmax(0, 1.12fr);
-  gap: 18px;
-  align-items: stretch;
-}
-
-.visualCard {
-  position: sticky;
-  top: 96px;
-  min-height: 580px;
-  overflow: hidden;
-  border-radius: 36px;
-  background: #ffffff;
-  border: 1px solid rgba(29, 29, 31, 0.065);
-  box-shadow: 0 28px 80px rgba(15, 16, 20, 0.08);
-}
-
-.visualCard img {
-  object-fit: cover;
-}
+/* ---- right column: mainCard + cardsGrid + image ---- */
 
 .contentColumn {
   display: grid;
@@ -179,6 +157,22 @@
   letter-spacing: -0.012em;
 }
 
+/* ---- image at bottom ---- */
+
+.visualCard {
+  overflow: hidden;
+  border-radius: 36px;
+  aspect-ratio: 16 / 7;
+  background: #ffffff;
+  border: 1px solid rgba(29, 29, 31, 0.065);
+  box-shadow: 0 28px 80px rgba(15, 16, 20, 0.08);
+  position: relative;
+}
+
+.visualCard img {
+  object-fit: cover;
+}
+
 @media (max-width: 1120px) {
   .layoutRow {
     grid-template-columns: 1fr;
@@ -193,14 +187,7 @@
     max-width: 660px;
   }
 
-  .advantagesLayout {
-    grid-template-columns: 1fr;
-  }
-
   .visualCard {
-    position: relative;
-    top: auto;
-    min-height: auto;
     aspect-ratio: 16 / 9;
   }
 }
