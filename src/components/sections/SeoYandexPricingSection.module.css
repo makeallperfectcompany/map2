@@ -1,0 +1,27 @@
+.section { padding: var(--section-py) 0; background: #ffffff; }
+.headerGrid { display: grid; grid-template-columns: minmax(0,1fr) minmax(340px,.56fr); gap: var(--grid-gap); align-items: stretch; }
+.sectionLabel {
+  display: inline-flex;
+  min-height: 34px;
+  align-items: center;
+  padding: 0 14px;
+  border-radius: 999px;
+  color: #0071e3;
+  background: rgba(0, 113, 227, 0.075);
+  border: 1px solid rgba(0, 113, 227, 0.13);
+  font: 760 13px/1 Onest, Inter, system-ui, sans-serif;
+  letter-spacing: -0.012em;
+}
+
+.copy h2 { margin: 26px 0 0; color:#1d1d1f; font: 850 clamp(34px,3.8vw,58px)/.98 Onest, Inter, system-ui, sans-serif; letter-spacing: -.075em; text-wrap: balance; }
+.copy p { margin: 24px 0 0; max-width: 760px; color: var(--muted); font: 450 18px/1.6 Onest, Inter, system-ui, sans-serif; letter-spacing: -.02em; }
+.priceCard { padding: var(--card-px) var(--card-py); border-radius: 32px; color:#f5f5f7; background: radial-gradient(circle at 86% 12%, rgba(0,113,227,0.34), transparent 44%), radial-gradient(circle at 14% 88%, rgba(0,113,227,0.14), transparent 38%), linear-gradient(180deg, #0a2240 0%, #071530 100%); box-shadow: 0 28px 80px rgba(7,21,48,.24); }
+.priceCard span { color: rgba(245,245,247,.62); font: 760 13px/1 Onest, Inter, system-ui, sans-serif; }
+.priceCard strong { display:block; margin-top:20px; font: 850 clamp(42px,5vw,72px)/.9 Onest, Inter, system-ui, sans-serif; letter-spacing: -.08em; }
+.priceCard p { margin: 24px 0 0; color: rgba(245,245,247,.7); font: 450 15.5px/1.55 Onest, Inter, system-ui, sans-serif; }
+.priceCard a { display:inline-flex; margin-top:28px; min-height:48px; align-items:center; justify-content:center; padding: 0 20px; border-radius:999px; background:#fff; color:#071530; text-decoration:none; font: 750 14px/1 Onest, Inter, system-ui, sans-serif; }
+.formats { margin-top: var(--grid-gap); display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: var(--grid-gap); }
+.format { padding: var(--card-px) var(--card-py); border-radius: 24px; background:#f8f8fa; border:1px solid var(--line); }
+.format h3 { margin:0; color:#1d1d1f; font:840 23px/1.05 Onest, Inter, system-ui, sans-serif; letter-spacing:-.055em; }
+.format p { margin:14px 0 0; color:var(--muted); font:450 16px/1.55 Onest, Inter, system-ui, sans-serif; letter-spacing:-.018em; }
+@media (max-width: 767px) { .headerGrid, .formats { grid-template-columns: 1fr; } }

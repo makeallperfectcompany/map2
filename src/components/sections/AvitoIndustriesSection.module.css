@@ -1,0 +1,8 @@
+.section { padding: var(--section-py) 0; background: #fff; }
+.header { margin-bottom: var(--grid-gap); }
+.label { display: inline-flex; margin-bottom: 18px; border-radius: 999px; padding: 8px 13px; background: rgba(0,113,227,0.08); color: #0071E3; font: 800 12px/1 Onest, Inter, system-ui, sans-serif; letter-spacing: 0.08em; }
+.header h2 { max-width: 980px; margin: 0; color: #1d1d1f; font: 800 clamp(34px, 4vw, 58px)/1 Onest, Inter, system-ui, sans-serif; letter-spacing: -0.07em; text-wrap: balance; }
+.card { border: 1px solid var(--line); border-radius: 26px; padding: var(--card-px) var(--card-py); background: rgba(255,255,255,0.78); box-shadow: 0 22px 70px rgba(15,16,20,0.06); }
+.card span { display: inline-flex; width: 42px; height: 42px; align-items: center; justify-content: center; margin-bottom: 42px; border-radius: 999px; background: rgba(0,113,227,0.08); color: #0071E3; font: 850 13px/1 Onest, Inter, system-ui, sans-serif; }
+.card h3 { margin: 0; color: #1a1c20; font: 840 22px/1.08 Onest, Inter, system-ui, sans-serif; letter-spacing: -0.045em; }
+.card p { margin: 14px 0 0; color: var(--muted); font: 450 15.5px/1.55 Onest, Inter, system-ui, sans-serif; }

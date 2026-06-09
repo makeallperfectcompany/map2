@@ -1,0 +1,4 @@
+import styles from './SermTasksSection.module.css';
+import { Container } from '@/components/ui/Container/Container';
+const tasks = ['Аудит Google и Яндекса','Карта репутационных рисков','Вытеснение негатива','Усиление управляемых активов','Работа с отзывами и площадками','Мониторинг изменений'];
+export function SermTasksSection() { return <section id="serm-tasks" className={styles.section}><Container><div className={styles.panel}><h2>Что входит в управление репутацией в поиске</h2><p>Мы работаем с поисковой выдачей как с системой влияния на доверие: определяем, что нужно удалить, вытеснить, усилить и какие новые материалы создать.</p></div><div className={styles.grid}>{tasks.map((title) => <article key={title}><h3>{title}</h3><p>Текст карточки берётся из утверждённой структуры SERM.</p></article>)}</div></Container></section>; }

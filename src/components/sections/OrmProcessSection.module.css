@@ -1,0 +1,13 @@
+.section { padding-top: var(--section-py); padding-bottom: var(--section-py); background: #fff; }
+.layout { align-items: start; }
+.header { position: sticky; top: 32px; }
+.sectionLabel { display: inline-flex; min-height: 32px; align-items: center; padding: 0 12px; border-radius: 999px; color: #0071E3; background: rgba(0,113,227,.07); border: 1px solid rgba(0,113,227,.10); font: 760 12px/1 Onest,Inter,system-ui,sans-serif; }
+.header h2 { margin: 26px 0 34px; color: var(--ink); font: 800 clamp(34px,3.5vw,52px)/1 Onest,Inter,system-ui,sans-serif; letter-spacing: -.07em; text-wrap: balance; }
+.cta { display: inline-flex; min-height: 48px; align-items: center; padding: 0 22px; border-radius: 999px; color: #fff; background: #0071E3; font: 750 14px/1 Onest,Inter,system-ui,sans-serif; text-decoration: none; }
+.timeline { list-style: none; margin: 0; padding: 0; }
+.timeline li { position: relative; display: flex; gap: 26px; padding: 0 0 39px 0; }
+.timeline li:not(:last-child)::after { content: ""; position: absolute; left: 26px; top: 63px; bottom: 13px; width: 1px; background: var(--line); }
+.timeline li > span { flex: 0 0 54px; color: #0071E3; font: 800 19px/1 Onest,Inter,system-ui,sans-serif; letter-spacing: -.04em; padding-top: 8px; }
+.timeline h3 { margin: 0 0 10px; color: var(--ink); font: 840 clamp(24px,2vw,29px)/1.05 Onest,Inter,system-ui,sans-serif; letter-spacing: -.055em; }
+.timeline p { margin: 0; color: var(--muted); font: 450 16px/1.56 Onest,Inter,system-ui,sans-serif; }
+@media (max-width: 768px) { .header { position: static; margin-bottom: 34px; } .timeline li { gap: 16px; padding-bottom: 30px; } .timeline li > span { flex-basis: 42px; } .timeline li:not(:last-child)::after { left: 20px; } }

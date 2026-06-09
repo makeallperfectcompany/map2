@@ -1,0 +1,4 @@
+import { Container } from "@/components/ui/Container/Container";
+import { aiAgentsService } from "@/content/services/sozdanie-ii-agentov";
+import styles from "./AiAgentsProcessSection.module.css";
+export default function AiAgentsProcessSection(){const data=aiAgentsService.process;return <section className={styles.sectionLight}><Container><div className={styles.layout}><div><h2 className={styles.title}>{data.title}</h2><p className={styles.lead}>Этапы показаны живой HTML/CSS-графикой. Не используйте сгенерированный process visual из папки rejected: на нём есть текст.</p></div><div className={styles.workflow}>{data.items.map((item,index)=><article key={item}><span>{String(index+1).padStart(2,"0")}</span><h3>{item}</h3></article>)}</div></div></Container></section>}

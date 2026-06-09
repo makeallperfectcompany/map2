@@ -1,0 +1,25 @@
+.trustBar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 14px 24px;
+  background: rgba(0, 113, 227, 0.04);
+  font: 450 13px/1.4 Onest, Inter, system-ui, sans-serif;
+  color: var(--muted);
+  text-align: center;
+}
+
+.trustDot {
+  color: var(--muted);
+  opacity: 0.4;
+}
+
+@media (min-width: 768px) {
+  .trustBar {
+    gap: 10px;
+    font-size: 14px;
+    padding: 16px 32px;
+  }
+}

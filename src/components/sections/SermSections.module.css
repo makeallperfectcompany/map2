@@ -1,0 +1,46 @@
+/* SERM unique sections. Layout uses Container + existing shared grid module. */
+.riskSection, .definitionSection, .scopeSection, .processSection, .pricingSection { padding-top: var(--section-py); padding-bottom: var(--section-py); }
+.riskSection, .scopeSection { background: radial-gradient(circle at 84% 10%, rgba(0,113,227,.08), transparent 30%), linear-gradient(180deg,#fff 0%,#f5f5f7 100%); }
+.definitionSection, .processSection, .pricingSection { background: #fff; }
+.sectionLabel { display: inline-flex; min-height: 32px; align-items: center; padding: 0 12px; border-radius: 999px; color: #0071e3; background: rgba(0,113,227,.07); border: 1px solid rgba(0,113,227,.10); font: 760 12px/1 Onest, Inter, system-ui, sans-serif; letter-spacing: -.01em; margin-bottom: 20px; }
+.copy h2, .headerRow h2, .processIntro h2, .pricingPanel h2 { margin: 0 0 22px; color: #1d1d1f; font: 850 clamp(35px,4vw,56px)/1.02 Onest,Inter,system-ui,sans-serif; letter-spacing: -.075em; text-wrap: balance; }
+.copy p, .headerRow p, .processIntro p, .auditCard p, .miniCard p, .compareCard p { margin: 0 0 18px; color: #62666d; font: 450 17px/1.62 Onest,Inter,system-ui,sans-serif; }
+.textLink { display: inline-flex; margin-top: 20px; color: #0071e3; font: 750 15px/1 Onest,Inter,system-ui,sans-serif; text-decoration: none; }
+.bluePanel, .pricingPanel { padding: var(--card-py) var(--card-px); border-radius: 32px; color: #f5f5f7; background: radial-gradient(circle at 86% 12%, rgba(0,113,227,.34), transparent 44%), radial-gradient(circle at 14% 88%, rgba(0,113,227,.14), transparent 38%), linear-gradient(180deg,#0a2240 0%,#071530 100%); border: 1px solid rgba(111,183,255,.18); box-shadow: inset 0 1px 0 rgba(255,255,255,.07), 0 22px 70px rgba(0,0,0,.12); }
+.panelKicker { color:#6fb7ff; font:760 12px/1 JetBrains Mono,monospace; letter-spacing:.12em; }
+.bluePanel h3 { margin: 26px 0 24px; font: 840 clamp(25px,2.4vw,34px)/1.07 Onest,Inter,system-ui,sans-serif; letter-spacing:-.055em; }
+.bluePanel ul { list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:15px; }
+.bluePanel li { display:flex; gap:12px; color:rgba(245,245,247,.78); font:450 15px/1.5 Onest,Inter,system-ui,sans-serif; }
+.bluePanel li::before { content:""; flex:none; width:7px; height:7px; border-radius:50%; margin-top:7px; background:#6fb7ff; }
+.headerRow { display:flex; flex-direction:column; gap:10px; margin-bottom: var(--grid-gap); }
+.compareCard, .auditCard, .miniCard { padding: var(--card-py) var(--card-px); border-radius: 24px; border:1px solid var(--line); background: rgba(255,255,255,.72); box-shadow: 0 16px 38px rgba(20,24,30,.03); }
+.compareCard strong { color:#0071e3; font:800 14px/1 Onest,Inter,system-ui,sans-serif; letter-spacing:.08em; }
+.compareCard h3, .auditCard h3 { margin:22px 0 14px; color:var(--ink); font:840 clamp(25px,2.4vw,33px)/1.1 Onest,Inter,system-ui,sans-serif; letter-spacing:-.055em; }
+.chips { display:flex; flex-wrap:wrap; gap:8px; margin-top:23px; }
+.chips span { padding: 9px 13px; border-radius:999px; color:#466070; background:rgba(0,113,227,.05); border:1px solid rgba(0,113,227,.1); font:700 13px/1 Onest,Inter,system-ui,sans-serif; }
+.definitionNote { margin:32px 0 0; padding-top:22px; border-top:1px solid var(--line); color:#62666d; font:450 17px/1.62 Onest,Inter,system-ui,sans-serif; }
+.scopeVisual { position: relative; overflow: hidden; aspect-ratio: 4 / 5; border-radius: 30px; background: #eef3fa; }
+.scopeVisual img { object-fit:cover; }
+.scopeCards { display:flex; flex-direction:column; gap:var(--grid-gap); }
+.auditCard { border-color:rgba(0,113,227,.12); }
+.miniCard strong { color:#0071e3; font:780 13px/1 Onest,Inter,system-ui,sans-serif; }
+.miniCard h3 { margin:16px 0 10px; color:var(--ink); font:800 21px/1.16 Onest,Inter,system-ui,sans-serif; letter-spacing:-.045em; }
+.miniCard p { margin:0; font-size:15px; }
+.processLayout { display:flex; flex-direction:column; gap:48px; }
+.timeline { display:flex; flex-direction:column; }
+.timeline article { position:relative; display:flex; gap:22px; padding-bottom:34px; }
+.timeline article::before { content:""; position:absolute; left:23px; top:46px; bottom:0; width:1px; background:rgba(15,16,20,.12); }
+.timeline article:last-child::before { display:none; }
+.timeline article > strong { flex:none; width:47px; height:47px; border-radius:50%; display:flex; align-items:center; justify-content:center; color:#0071e3; background:rgba(0,113,227,.07); border:1px solid rgba(0,113,227,.12); font:780 12px/1 Onest,Inter,system-ui,sans-serif; }
+.timeline h3 { margin:4px 0 8px; color:var(--ink); font:800 23px/1.12 Onest,Inter,system-ui,sans-serif; letter-spacing:-.05em; }
+.timeline p { margin:0; color:#62666d; font:450 15px/1.55 Onest,Inter,system-ui,sans-serif; }
+.pricingPanel { display:flex; flex-direction:column; gap:28px; }
+.pricingPanel h2 { color:#f5f5f7; }
+.pricingPanel p { margin:0; color:rgba(245,245,247,.68); font:450 17px/1.62 Onest,Inter,system-ui,sans-serif; }
+.darkLabel { color:#6fb7ff; background:rgba(111,183,255,.1); border-color:rgba(111,183,255,.24); }
+.pricingAction { display:flex; flex-direction:column; gap:18px; }
+.pricingAction strong { color:#fff; font:850 clamp(44px,4vw,58px)/1 Onest,Inter,system-ui,sans-serif; letter-spacing:-.07em; }
+.primaryButton { display:inline-flex; justify-content:center; min-height:56px; align-items:center; padding:0 24px; border-radius:14px; text-decoration:none; color:#fff; background:linear-gradient(90deg,#1A3A6E 0%,#0071E3 52%,#5FA8FF 100%); font:500 15.5px/1 Onest,Inter,system-ui,sans-serif; box-shadow:0 18px 42px rgba(0,113,227,.18),0 8px 18px rgba(26,58,110,.10); }
+.pricingNote { padding-top:24px; border-top:1px solid rgba(255,255,255,.11); }
+@media (min-width: 768px) { .headerRow { flex-direction:row; align-items:flex-end; justify-content:space-between; } .headerRow h2 { width:64%; margin-bottom:0; } .headerRow p { width:31%; margin:0; } }
+@media (min-width: 1280px) { .bluePanel { display:flex; flex-direction:column; justify-content:center; } .scopeLayout { align-items:stretch; } .processLayout { flex-direction:row; align-items:flex-start; } .processIntro { width:44%; position:sticky; top:120px; } .timeline { width:56%; padding-left:38px; } .pricingPanel { flex-flow:row wrap; align-items:center; } .pricingPanel > div:first-child { width:58%; } .pricingAction { width:36%; margin-left:auto; } .pricingNote { width:100%; } }

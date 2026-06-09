@@ -1,0 +1,3 @@
+import { Container } from '@/components/ui/Container/Container';
+import styles from './SermNegativeSection.module.css';
+export default function SermNegativeSection(){return <section className={styles.section}><Container><span className={styles.pill}>Репутационный риск-менеджмент</span><h2>Не каждый негатив решается одинаково</h2><p>В SERM нет универсального сценария “удалить всё”. Для разных ситуаций используются юридическая работа, техническое удаление, вытеснение негативных страниц, усиление позитивных документов, работа с отзывными площадками и публичная коммуникация.</p><div className={styles.note}>Главная задача SERM — снизить влияние негатива на доверие пользователя и коммерческий результат.</div></Container></section>}

@@ -1,0 +1,119 @@
+.heroSection {
+  position: relative;
+  min-height: 100vh;
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding: 112px 0 64px;
+  background: #f5f6f8;
+}
+
+.heroSection::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(90deg, rgba(245,246,248,0.97) 0%, rgba(245,246,248,0.9) 34%, rgba(245,246,248,0.12) 62%);
+  pointer-events: none;
+}
+
+.heroBg {
+  z-index: 0;
+  object-fit: cover;
+  object-position: center;
+}
+
+.container {
+  position: relative;
+  z-index: 2;
+}
+
+.content {
+  max-width: 650px;
+}
+
+.content h1 {
+  margin: 0;
+  color: #0e0f12;
+  font: 800 clamp(48px, 6.2vw, 88px)/0.96 Onest, Inter, system-ui, sans-serif;
+  letter-spacing: -0.075em;
+  text-wrap: balance;
+}
+
+.content p {
+  max-width: 590px;
+  margin: 28px 0 0;
+  color: #525760;
+  font: 450 clamp(16px, 1.55vw, 20px)/1.55 Onest, Inter, system-ui, sans-serif;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 34px;
+}
+
+.primary,
+.secondary {
+  display: inline-flex;
+  min-height: 48px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  padding: 0 24px;
+  font: 750 14px/1 Onest, Inter, system-ui, sans-serif;
+  text-decoration: none;
+}
+
+.primary {
+  background: linear-gradient(90deg, #1A3A6E 0%, #0071E3 52%, #5FA8FF 100%);
+  color: #fff;
+  box-shadow: 0 18px 45px rgba(0, 113, 227, 0.22);
+}
+
+.secondary {
+  background: rgba(255,255,255,0.68);
+  color: #1a1c20;
+  border: 1px solid rgba(15,16,20,0.10);
+}
+
+.price {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 24px;
+  color: #525760;
+  font: 650 15px/1.2 Onest, Inter, system-ui, sans-serif;
+}
+
+.price::before {
+  content: "";
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #0071E3;
+}
+
+@media (max-width: 767px) {
+  .heroSection {
+    padding: 96px 0 56px;
+  }
+
+  .heroSection::after {
+    background: linear-gradient(180deg, rgba(245,246,248,0.98) 0%, rgba(245,246,248,0.93) 58%, rgba(245,246,248,0.25) 100%);
+  }
+
+  .heroBg {
+    object-position: 66% top;
+  }
+
+  .content h1 {
+    font-size: 46px;
+  }
+
+  .actions a {
+    width: 100%;
+  }
+}

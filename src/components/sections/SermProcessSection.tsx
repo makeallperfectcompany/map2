@@ -1,0 +1,4 @@
+import { Container } from "@/components/ui/Container/Container";
+import { sermContent } from "@/content/services/serm";
+import styles from "./SermSections.module.css";
+export default function SermProcessSection(){ const { process } = sermContent; return <section className={styles.processSection} id="process"><Container><div className={styles.processLayout}><div className={styles.processIntro}><span className={styles.sectionLabel}>{process.label}</span><h2>{process.title}</h2><p>{process.lead}</p><a className={styles.textLink} href="#lead-form">{process.cta} →</a></div><div className={styles.timeline}>{process.steps.map((step, index) => <article key={step.title}><strong>{String(index + 1).padStart(2, "0")}</strong><div><h3>{step.title}</h3><p>{step.text}</p></div></article>)}</div></div></Container></section>; }

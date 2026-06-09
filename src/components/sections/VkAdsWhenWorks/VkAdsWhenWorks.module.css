@@ -1,0 +1,9 @@
+.section { padding: var(--section-py) 0; background: linear-gradient(180deg, #ffffff 0%, #f5f5f7 100%); }
+.head { margin-bottom: 36px; }
+.head h2 { margin: 0; max-width: 980px; color: #1d1d1f; font: 800 clamp(34px, 4vw, 58px)/0.98 Onest, Inter, system-ui, sans-serif; letter-spacing: -0.07em; text-wrap: balance; }
+.head p { margin: 20px 0 0; max-width: 780px; color: var(--muted); font: 450 17px/1.65 Onest, Inter, system-ui, sans-serif; }
+.card { min-height: 280px; padding: var(--card-py) var(--card-px); border-radius: 24px; background: rgba(255,255,255,0.72); border: 1px solid var(--line); box-shadow: 0 22px 70px rgba(29,29,31,0.07); transition: transform 240ms var(--ease), border-color 240ms var(--ease); }
+.card:hover { transform: translateY(-2px); border-color: rgba(0,113,227,0.18); }
+.card span { display: inline-flex; color: #0071E3; font: 850 13px/1 Onest, Inter, system-ui, sans-serif; letter-spacing: -0.03em; }
+.card h3 { margin: 32px 0 0; color: var(--ink); font: 840 22px/1.08 Onest, Inter, system-ui, sans-serif; letter-spacing: -0.05em; }
+.card p { margin: 14px 0 0; color: var(--muted); font: 450 15px/1.55 Onest, Inter, system-ui, sans-serif; }

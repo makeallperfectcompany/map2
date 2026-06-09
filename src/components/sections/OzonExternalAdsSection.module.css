@@ -1,0 +1,94 @@
+:root {}
+.heroSection {
+  position: relative;
+  min-height: 100vh;
+  min-height: 100svh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  background: #f5f6f8;
+}
+.heroBg { object-fit: cover; object-position: center; z-index: 0; }
+.heroOverlay { position: absolute; inset: 0; z-index: 1; background: linear-gradient(90deg, rgba(245,246,248,0.96) 0%, rgba(245,246,248,0.78) 36%, rgba(245,246,248,0.16) 72%, rgba(245,246,248,0) 100%); }
+.heroContainer { position: relative; z-index: 2; width: 100%; }
+.heroContent { max-width: 680px; padding: 132px 0 88px; }
+.heroContent h1, .sectionHeaderWide h2, .auditGrid h2, .stickyHeader h2, .pricingPanel h2, .darkHeader h2, .techHeader h2, .faqGrid h2, .finalPanel h2 { margin: 0; color: #0e0f12; letter-spacing: -0.07em; text-wrap: balance; }
+.heroContent h1 { font: 800 clamp(44px, 6.2vw, 92px)/0.92 Onest, Inter, system-ui, sans-serif; letter-spacing: -0.075em; }
+.heroContent p { margin: 28px 0 0; max-width: 620px; color: #4e535b; font: 450 clamp(17px, 1.4vw, 21px)/1.55 Onest, Inter, system-ui, sans-serif; }
+.heroActions { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 34px; }
+.primaryButton, .secondaryButton, .finalButton { min-height: 48px; display: inline-flex; align-items: center; justify-content: center; border-radius: 999px; padding: 0 22px; text-decoration: none; font: 750 14px/1 Onest, Inter, system-ui, sans-serif; transition: transform 240ms ease, filter 240ms ease, box-shadow 240ms ease; }
+.primaryButton, .finalButton { color: #fff; background: linear-gradient(90deg, #1A3A6E 0%, #0071E3 52%, #5FA8FF 100%); box-shadow: 0 18px 40px rgba(0,113,227,0.18); }
+.secondaryButton { color: #0071E3; background: rgba(255,255,255,0.62); border: 1px solid rgba(15,16,20,0.10); }
+.primaryButton:hover, .secondaryButton:hover, .finalButton:hover { transform: translateY(-2px); }
+.sectionSoft, .sectionWhite { padding: var(--section-py) 0; }
+.sectionSoft { background: radial-gradient(circle at 84% 10%, rgba(0,113,227,0.08), transparent 30%), linear-gradient(180deg, #ffffff 0%, #f5f5f7 100%); }
+.sectionWhite { background: #fff; }
+.sectionHeaderWide { max-width: 960px; margin-bottom: 38px; }
+.sectionHeaderWide h2, .auditGrid h2, .stickyHeader h2, .pricingPanel h2, .darkHeader h2, .techHeader h2, .faqGrid h2, .finalPanel h2 { font: 800 clamp(34px, 4vw, 60px)/0.98 Onest, Inter, system-ui, sans-serif; }
+.sectionHeaderWide p, .leadText, .pricingPanel p, .finalPanel p { margin: 18px 0 0; color: #626873; font: 450 17px/1.6 Onest, Inter, system-ui, sans-serif; max-width: 780px; }
+.visualFeatureGrid, .auditGrid, .processGrid, .faqGrid { display: grid; gap: var(--grid-gap); }
+.visualFeatureGrid, .auditGrid, .processGrid, .faqGrid { grid-template-columns: 1fr; }
+.verticalVisual, .wideVisual { position: relative; overflow: hidden; border-radius: 32px; background: rgba(255,255,255,0.55); box-shadow: 0 22px 70px rgba(15,16,20,0.10); }
+.verticalVisual { aspect-ratio: 4 / 5; }
+.wideVisual { aspect-ratio: 16 / 10; margin: 0 0 28px; }
+.verticalVisual img, .wideVisual img { object-fit: cover; }
+.featureStack { display: flex; flex-direction: column; gap: var(--grid-gap); }
+.blueCard { padding: var(--card-py) var(--card-px); min-height: 220px; border-radius: 32px; color: #f5f5f7; background: radial-gradient(circle at 86% 12%, rgba(0,113,227,0.34), transparent 44%), radial-gradient(circle at 14% 88%, rgba(0,113,227,0.14), transparent 38%), linear-gradient(180deg, #0a2240 0%, #071530 100%); box-shadow: 0 24px 70px rgba(0,0,0,0.20); }
+.blueCard h3 { margin: 0; font: 840 30px/1.04 Onest, Inter, system-ui, sans-serif; letter-spacing: -0.055em; }
+.blueCard p { margin: 18px 0 0; color: rgba(245,245,247,0.68); font: 450 16px/1.55 Onest, Inter, system-ui, sans-serif; }
+.grid2, .cardGrid, .pricingCards, .techStats { display: grid; gap: var(--grid-gap); }
+.grid2, .cardGrid, .pricingCards, .techStats { grid-template-columns: 1fr; }
+.card, .cardCompact, .priceCard { position: relative; min-height: 210px; padding: var(--card-py) var(--card-px); border-radius: 24px; background: rgba(255,255,255,0.78); border: 1px solid rgba(15,16,20,0.08); box-shadow: inset 0 1px 0 rgba(255,255,255,0.72), 0 18px 54px rgba(15,16,20,0.06); transition: transform 240ms ease, border-color 240ms ease; }
+.card:hover, .cardCompact:hover, .priceCard:hover { transform: translateY(-2px); border-color: rgba(0,113,227,0.22); }
+.cardNumber { display: block; margin-bottom: 20px; color: #0071E3; font: 850 13px/1 Onest, Inter, system-ui, sans-serif; letter-spacing: -0.02em; }
+.card h3, .cardCompact h3, .priceCard h3, .darkCard h3, .timelineItem h3 { margin: 0; color: #1a1c20; font: 840 22px/1.08 Onest, Inter, system-ui, sans-serif; letter-spacing: -0.055em; }
+.card p, .cardCompact p, .priceCard p, .darkCard p, .timelineItem p { margin: 14px 0 0; color: #6b6f76; font: 450 15px/1.55 Onest, Inter, system-ui, sans-serif; }
+.checkList { display: grid; gap: 10px; margin: 28px 0 0; padding: 0; list-style: none; }
+.checkList li { position: relative; padding: 15px 18px 15px 44px; border: 1px solid rgba(15,16,20,0.08); border-radius: 18px; background: rgba(255,255,255,0.72); color: #1a1c20; font: 520 15px/1.35 Onest, Inter, system-ui, sans-serif; }
+.checkList li::before { content: ""; position: absolute; left: 18px; top: 18px; width: 10px; height: 10px; border-radius: 50%; background: #0071E3; box-shadow: 0 0 0 5px rgba(0,113,227,0.10); }
+.processGrid { align-items: start; }
+.timeline { display: grid; gap: 14px; }
+.timelineItem { display: grid; grid-template-columns: auto 1fr; gap: 18px; padding: var(--card-py) var(--card-px); border-radius: 24px; background: rgba(255,255,255,0.78); border: 1px solid rgba(15,16,20,0.08); }
+.timelineItem span { display: inline-grid; place-items: center; width: 44px; height: 44px; border-radius: 50%; color: #0071E3; background: rgba(0,113,227,0.10); font: 850 13px/1 Onest, Inter, system-ui, sans-serif; }
+.pricingPanel { display: grid; gap: var(--grid-gap); padding: clamp(28px, 5vw, 56px); border-radius: 32px; background: radial-gradient(circle at 88% 18%, rgba(0,113,227,0.10), transparent 34%), rgba(245,246,248,0.9); border: 1px solid rgba(15,16,20,0.08); }
+.pricePill { display: inline-flex; align-items: center; min-height: 42px; padding: 0 16px; margin-bottom: 18px; border-radius: 999px; color: #fff; background: #0071E3; font: 850 15px/1 Onest, Inter, system-ui, sans-serif; }
+.darkSection, .techSection { margin: 0 24px; border-radius: 32px; padding: var(--section-py) 0; color: #f5f5f7; overflow: hidden; }
+.darkSection { background: radial-gradient(circle at 86% 12%, rgba(0,113,227,0.34), transparent 44%), radial-gradient(circle at 14% 88%, rgba(0,113,227,0.14), transparent 38%), linear-gradient(180deg, #0a2240 0%, #071530 100%); }
+.techSection { background: radial-gradient(circle at 14% 8%, rgba(0,113,227,0.15), transparent 32%), radial-gradient(circle at 84% 72%, rgba(0,113,227,0.12), transparent 30%), linear-gradient(180deg, #1d1d1f 0%, #151619 100%); }
+.darkHeader, .techHeader { margin-bottom: 34px; max-width: 900px; }
+.darkHeader h2, .techHeader h2, .finalPanel h2 { color: #f5f5f7; }
+.darkCard { padding: var(--card-py) var(--card-px); border-radius: 24px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.075); box-shadow: inset 0 1px 0 rgba(255,255,255,0.045); }
+.darkCard h3 { color: #f5f5f7; }
+.darkCard p { color: rgba(245,245,247,0.58); }
+.techStats { margin-bottom: 28px; }
+.techStats article { min-height: 130px; padding: 24px; border-radius: 24px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.075); }
+.techStats strong { display: block; color: #6fb7ff; font: 850 34px/1 Onest, Inter, system-ui, sans-serif; letter-spacing: -0.05em; }
+.techStats span { display: block; margin-top: 10px; color: rgba(245,245,247,0.55); font: 450 14px/1.45 Onest, Inter, system-ui, sans-serif; }
+.faqList { display: grid; gap: 12px; }
+.faqItem { border-radius: 22px; background: rgba(255,255,255,0.82); border: 1px solid rgba(15,16,20,0.08); padding: 0 22px; }
+.faqItem summary { cursor: pointer; padding: 22px 0; color: #1a1c20; font: 760 17px/1.25 Onest, Inter, system-ui, sans-serif; }
+.faqItem p { margin: 0 0 22px; color: #6b6f76; font: 450 15px/1.6 Onest, Inter, system-ui, sans-serif; }
+.finalCta { padding: var(--section-py) 0; background: #fff; }
+.finalPanel { display: grid; gap: var(--grid-gap); align-items: center; padding: clamp(30px, 6vw, 64px); border-radius: 32px; background: radial-gradient(circle at 86% 12%, rgba(0,113,227,0.34), transparent 44%), radial-gradient(circle at 14% 88%, rgba(0,113,227,0.14), transparent 38%), linear-gradient(180deg, #0a2240 0%, #071530 100%); }
+.finalPanel p { color: rgba(245,245,247,0.64); }
+@media (min-width: 768px) {
+  .grid2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .cardGrid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .pricingCards { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .techStats { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+@media (min-width: 1280px) {
+  .visualFeatureGrid, .auditGrid { grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr); }
+  .auditGrid { grid-template-columns: minmax(0, 1fr) minmax(0, 0.82fr); align-items: center; }
+  .processGrid, .faqGrid { grid-template-columns: minmax(0, 0.72fr) minmax(0, 1.28fr); }
+  .pricingPanel, .finalPanel { grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); }
+  .finalPanel { grid-template-columns: 1fr auto; }
+  .cardGrid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .stickyHeader { position: sticky; top: 120px; }
+}
+@media (max-width: 767px) {
+  .heroContent { padding: 112px 0 64px; }
+  .heroOverlay { background: linear-gradient(180deg, rgba(245,246,248,0.98) 0%, rgba(245,246,248,0.92) 50%, rgba(245,246,248,0.72) 100%); }
+  .heroBg { object-position: 68% center; opacity: 0.58; }
+  .darkSection, .techSection { margin: 0 12px; }
+}

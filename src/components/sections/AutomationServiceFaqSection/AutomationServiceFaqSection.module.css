@@ -1,0 +1,8 @@
+.section { padding: var(--section-py) 0; background: linear-gradient(180deg, #ffffff 0%, #f5f5f7 100%); }
+.container { max-width: 1280px; margin: 0 auto; padding: 0 var(--page-px); }
+.container h2 { margin: 0 0 var(--grid-gap); color: #1d1d1f; font: 800 clamp(34px, 4vw, 56px)/1 Onest, Inter, system-ui, sans-serif; letter-spacing: -0.07em; text-wrap: balance; }
+.list { display: grid; gap: 12px; }
+.item { border-radius: 24px; background: rgba(255,255,255,.78); border: 1px solid rgba(15,16,20,.08); overflow: hidden; }
+.item summary { cursor: pointer; padding: 24px; color: #0e0f12; font: 760 18px/1.25 Onest, Inter, system-ui, sans-serif; list-style: none; }
+.item summary::-webkit-details-marker { display: none; }
+.item p { margin: 0; padding: 0 24px 24px; color: #6b6f76; font: 450 16px/1.55 Onest, Inter, system-ui, sans-serif; max-width: 880px; }

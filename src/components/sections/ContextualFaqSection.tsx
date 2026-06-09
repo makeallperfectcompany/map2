@@ -1,0 +1,2 @@
+import { Container } from "@/components/ui/Container/Container"; import styles from "./ContextualServiceSections.module.css";
+export default function ContextualFaqSection({ items }: { items: readonly (readonly [string,string])[] }) { return <section className={`${styles.section} ${styles.lightSection}`}><Container><h2>Вопросы о контекстной рекламе</h2><div className={styles.faqList}>{items.map(([q,a])=><details key={q}><summary>{q}</summary><p>{a}</p></details>)}</div></Container></section>; }

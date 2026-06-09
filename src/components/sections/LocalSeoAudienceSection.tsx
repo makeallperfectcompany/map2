@@ -1,0 +1,2 @@
+import { Container } from '@/components/ui/Container/Container';import grid from '@/styles/grid.module.css';import styles from './LocalSeoAudienceSection.module.css';import { localSeoContent } from '@/content/services/localSeo';
+export function LocalSeoAudienceSection(){const s=localSeoContent.audience;return <section className={styles.section}><Container><h2>{s.title}</h2><div className={`${grid.grid3} ${styles.cards}`}>{s.cards.map(([title,text])=><article key={title}><span>+</span><h3>{title}</h3><p>{text}</p></article>)}</div></Container></section>}

@@ -1,0 +1,3 @@
+import styles from './SermRealitySection.module.css';
+import { Container } from '@/components/ui/Container/Container';
+export function SermRealitySection() { return <section className={styles.section}><Container><h2>Без ложных обещаний: что реально возможно</h2><div className={styles.compare}><div><h3>Можно сделать</h3><ul><li>Провести аудит выдачи.</li><li>Снизить видимость негатива.</li><li>Усилить позитивные и нейтральные материалы.</li><li>Подготовить обращения на удаление при наличии оснований.</li></ul></div><div><h3>Нельзя честно обещать</h3><ul><li>Удалить любой негатив по желанию.</li><li>Гарантировать полную очистку топ-10.</li><li>Мгновенно изменить репутацию.</li><li>Использовать фейковые отзывы.</li></ul></div></div></Container></section>; }

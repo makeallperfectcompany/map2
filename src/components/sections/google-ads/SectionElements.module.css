@@ -1,0 +1,45 @@
+.label {
+  display: inline-flex;
+  align-items: center;
+  min-height: 24px;
+  padding: 0 12px;
+  border-radius: 999px;
+  background: rgba(0, 113, 227, 0.08);
+  color: #0071e3;
+  font-size: 12px;
+  font-weight: 560;
+  line-height: 1;
+  letter-spacing: -0.01em;
+}
+.labelDark {
+  background: rgba(0, 113, 227, 0.2);
+  color: #75b7ff;
+}
+.arrow {
+  width: 15px;
+  height: 15px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.iconWrap {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 13px;
+  background: rgba(0, 113, 227, 0.06);
+  color: #0071e3;
+}
+.iconWrap svg {
+  width: 22px;
+  height: 22px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.45;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}

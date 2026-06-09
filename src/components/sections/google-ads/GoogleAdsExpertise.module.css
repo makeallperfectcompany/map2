@@ -1,0 +1,17 @@
+.section { padding:78px 24px 72px; color:#fff; background:radial-gradient(circle at 82% 10%,#11304f,transparent 34%),#171b21; }
+.container, .techContainer { max-width:960px; margin:0 auto; }
+.container h2 { margin:18px 0 14px; max-width:590px; font-size:clamp(34px,3.2vw,43px); line-height:1.05; letter-spacing:-.06em; font-weight:630; }
+.lead { margin:0 0 34px; max-width:560px; color:rgba(255,255,255,.58); font-size:12px; line-height:1.68; }
+.cards { display:grid; grid-template-columns:repeat(3,1fr); gap:10px; }
+.cards article { min-height:150px; padding:23px; border-radius:21px; border:1px solid rgba(255,255,255,.055); background:rgba(255,255,255,.045); }
+.cards small { color:#71b8ff; font-size:9px; letter-spacing:.14em; }
+.cards h3 { margin:17px 0 9px; font-size:19px; font-weight:580; letter-spacing:-.04em; }
+.cards p { color:rgba(255,255,255,.6); margin:0; font-size:11px; line-height:1.62; }
+.technology { padding:67px 24px 75px; background:#fff; }
+.techContainer h2 { margin:18px 0 32px; max-width:565px; font-size:clamp(32px,3vw,42px); line-height:1.06; letter-spacing:-.06em; font-weight:630; }
+.techGrid { display:grid; grid-template-columns:repeat(3,1fr); gap:10px; }
+.techGrid article { min-height:104px; padding:21px; border:1px solid rgba(29,29,31,.05); border-radius:18px; }
+.techGrid h3 { margin:0 0 9px; font-size:15px; letter-spacing:-.03em; font-weight:600; }
+.techGrid p { margin:0; font-size:11px; line-height:1.5; color:#6e6e73; }
+@media (max-width:700px) { .cards, .techGrid { grid-template-columns:1fr; } }
+@media (max-width:560px) { .section, .technology { padding:56px 18px; } }

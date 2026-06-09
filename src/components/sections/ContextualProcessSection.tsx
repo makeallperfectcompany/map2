@@ -1,0 +1,2 @@
+import { Container } from "@/components/ui/Container/Container"; import styles from "./ContextualServiceSections.module.css";
+export default function ContextualProcessSection({ data }: { data: { title: string; steps: readonly (readonly [string,string,string])[] } }) { return <section className={styles.section}><Container><h2>{data.title}</h2><div className={styles.timeline}>{data.steps.map(([num,title,text])=><article className={styles.card} key={num}><b>{num}</b><h3>{title}</h3><p>{text}</p></article>)}</div></Container></section>; }

@@ -1,0 +1,139 @@
+.decisionSection,
+.formatsSection {
+  padding-top: var(--section-py);
+  padding-bottom: var(--section-py);
+  background: #ffffff;
+}
+
+.decisionLayout {
+  align-items: start;
+}
+
+.stickyCopy {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.stickyCopy h2,
+.panelCopy h2 {
+  margin: 0;
+  color: #1d1d1f;
+  font: 800 clamp(36px, 4vw, 58px)/0.98 Onest, Inter, system-ui, sans-serif;
+  letter-spacing: -0.07em;
+  text-wrap: balance;
+}
+
+.stickyCopy p,
+.panelCopy p {
+  margin: 0;
+  color: var(--muted);
+  font: 450 18px/1.52 Onest, Inter, system-ui, sans-serif;
+  letter-spacing: -0.025em;
+}
+
+.stickyCopy a,
+.formatCard a {
+  color: #0071E3;
+  text-decoration: none;
+  font: 760 15px/1.2 Onest, Inter, system-ui, sans-serif;
+  letter-spacing: -0.01em;
+}
+
+.stepsList {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.stepCard {
+  padding: var(--card-py) var(--card-px);
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.78);
+  border: 1px solid rgba(15, 16, 20, 0.08);
+  box-shadow: 0 22px 70px rgba(18, 35, 60, 0.08);
+}
+
+.stepCard span {
+  color: #0071E3;
+  font: 850 15px/1 Onest, Inter, system-ui, sans-serif;
+}
+
+.stepCard h3,
+.formatCard h3 {
+  margin: 18px 0 0;
+  color: var(--ink);
+  font: 840 22px/1.08 Onest, Inter, system-ui, sans-serif;
+  letter-spacing: -0.045em;
+}
+
+.stepCard p,
+.formatCard p {
+  margin: 12px 0 0;
+  color: var(--muted);
+  font: 450 15px/1.5 Onest, Inter, system-ui, sans-serif;
+  letter-spacing: -0.018em;
+}
+
+.bluePanel {
+  overflow: hidden;
+  border-radius: 32px;
+  padding: var(--card-py) var(--card-px);
+  color: #ffffff;
+  background:
+    radial-gradient(circle at 86% 12%, rgba(0, 113, 227, 0.34), transparent 44%),
+    radial-gradient(circle at 14% 88%, rgba(0, 113, 227, 0.14), transparent 38%),
+    linear-gradient(180deg, #0a2240 0%, #071530 100%);
+  border: 1px solid rgba(111, 183, 255, 0.20);
+  box-shadow: 0 34px 90px rgba(4, 22, 50, 0.18);
+}
+
+.panelGrid {
+  align-items: center;
+}
+
+.panelCopy h2 {
+  color: #ffffff;
+}
+
+.panelCopy p {
+  color: rgba(245, 245, 247, 0.66);
+  margin-top: 22px;
+}
+
+.formatCards {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.formatCard {
+  padding: var(--card-py) var(--card-px);
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.11);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.formatCard h3 {
+  color: #ffffff;
+  margin-top: 0;
+}
+
+.formatCard p {
+  color: rgba(245, 245, 247, 0.62);
+}
+
+.formatCard a {
+  display: inline-flex;
+  margin-top: 18px;
+  color: #6FB7FF;
+}
+
+@media (min-width: 768px) {
+  .bluePanel { padding: 42px; }
+}
+
+@media (min-width: 1280px) {
+  .bluePanel { padding: 56px; }
+}

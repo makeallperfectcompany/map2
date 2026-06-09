@@ -1,0 +1,27 @@
+.section { padding: var(--section-py) 0; background: linear-gradient(180deg,#f5f5f7 0%, #ffffff 100%); }
+.grid { display: grid; grid-template-columns: minmax(320px,.68fr) minmax(0,1fr); gap: var(--grid-gap); align-items: start; }
+.stickyCopy { position: sticky; top: 96px; }
+.sectionLabel {
+  display: inline-flex;
+  min-height: 34px;
+  align-items: center;
+  padding: 0 14px;
+  border-radius: 999px;
+  color: #0071e3;
+  background: rgba(0, 113, 227, 0.075);
+  border: 1px solid rgba(0, 113, 227, 0.13);
+  font: 760 13px/1 Onest, Inter, system-ui, sans-serif;
+  letter-spacing: -0.012em;
+}
+
+.stickyCopy h2 { margin: 26px 0 0; color: #1d1d1f; font: 850 clamp(34px,3.8vw,56px)/.98 Onest, Inter, system-ui, sans-serif; letter-spacing: -.075em; text-wrap: balance; }
+.stickyCopy p { margin: 24px 0 0; color: var(--muted); font: 450 18px/1.6 Onest, Inter, system-ui, sans-serif; letter-spacing: -.02em; }
+.stickyCopy img { margin-top: 34px; display: block; width: 100%; border-radius: 32px; border: 1px solid var(--line); box-shadow: 0 24px 70px rgba(15,16,20,.09); }
+.timeline { position: relative; display: grid; gap: 18px; }
+.timeline::before { content:""; position:absolute; left: 22px; top: 22px; bottom: 22px; width:1px; background: linear-gradient(180deg, rgba(0,113,227,.28), rgba(15,16,20,.08)); }
+.step { position: relative; display: grid; grid-template-columns: 62px minmax(0,1fr); gap: 18px; padding: 28px; border-radius: 28px; background: rgba(255,255,255,.76); border: 1px solid var(--line); box-shadow: 0 16px 48px rgba(15,16,20,.055); }
+.step span { z-index: 1; display:inline-flex; align-items:center; justify-content:center; width:44px; height:44px; border-radius:999px; color:#fff; background:#0071e3; font: 780 13px/1 Onest, Inter, system-ui, sans-serif; box-shadow: 0 12px 28px rgba(0,113,227,.22); flex-shrink: 0; }
+.stepText { min-width: 0; }
+.stepText h3 { margin: 0; color:#1d1d1f; font: 840 23px/1.05 Onest, Inter, system-ui, sans-serif; letter-spacing: -.055em; }
+.stepText p { margin: 12px 0 0; color: var(--muted); font: 450 16px/1.55 Onest, Inter, system-ui, sans-serif; letter-spacing: -.018em; }
+@media (max-width: 767px) { .grid { grid-template-columns: 1fr; } .stickyCopy { position: static; } .step { grid-template-columns: 44px minmax(0,1fr); gap: 14px; } .timeline::before { display:none; } }

@@ -1,0 +1,291 @@
+.section {
+  padding-top: var(--section-py);
+  padding-bottom: var(--section-py);
+  position: relative;
+}
+
+.softSection,
+.searchShift {
+  background:
+    radial-gradient(circle at 84% 10%, rgba(0,113,227,0.08), transparent 30%),
+    linear-gradient(180deg, #ffffff 0%, #f5f5f7 100%);
+}
+
+.sectionHeader {
+  max-width: 920px;
+  margin-bottom: var(--grid-gap);
+}
+
+.sectionHeader h2,
+.copyBlock h2,
+.processIntro h2,
+.pricingIntro h2 {
+  margin: 0;
+  color: #1d1d1f;
+  font: 800 clamp(34px, 4vw, 56px)/0.98 Onest, Inter, system-ui, sans-serif;
+  letter-spacing: -0.07em;
+  text-wrap: balance;
+}
+
+.sectionHeader p,
+.copyBlock p,
+.processIntro p,
+.pricingIntro p {
+  margin: 18px 0 0;
+  max-width: 760px;
+  color: var(--muted);
+  font: 450 17px/1.6 Onest, Inter, system-ui, sans-serif;
+}
+
+.copyBlock p + p {
+  margin-top: 14px;
+}
+
+.argumentStack {
+  display: grid;
+  gap: var(--grid-gap-sm);
+}
+
+.argumentCard,
+.card,
+.compactCard,
+.metricCard,
+.priceCard {
+  position: relative;
+  min-height: 100%;
+  padding: var(--card-px) var(--card-py);
+  border-radius: 24px;
+  background: rgba(255,255,255,0.74);
+  border: 1px solid var(--line);
+  box-shadow: 0 18px 48px rgba(15,16,20,0.055);
+  transition: transform 240ms var(--ease), border-color 240ms var(--ease), box-shadow 240ms var(--ease);
+}
+
+.argumentCard:hover,
+.card:hover,
+.compactCard:hover,
+.metricCard:hover,
+.priceCard:hover {
+  transform: translateY(-2px);
+  border-color: rgba(0,113,227,0.18);
+  box-shadow: 0 22px 60px rgba(15,16,20,0.075);
+}
+
+.argumentCard span,
+.cardIcon {
+  display: block;
+  width: 42px;
+  height: 42px;
+  margin-bottom: 22px;
+  border-radius: 18px;
+  background:
+    radial-gradient(circle at 70% 20%, rgba(95,168,255,0.36), transparent 45%),
+    rgba(0,113,227,0.08);
+  border: 1px solid rgba(0,113,227,0.12);
+}
+
+.argumentCard h3,
+.card h3,
+.compactCard h3,
+.metricCard h3,
+.metricFeatured h3,
+.priceCard h3,
+.timelineItem h3 {
+  margin: 0;
+  color: var(--ink);
+  font: 840 20px/1.1 Onest, Inter, system-ui, sans-serif;
+  letter-spacing: -0.04em;
+  text-wrap: balance;
+}
+
+.argumentCard p,
+.card p,
+.compactCard p,
+.metricCard p,
+.metricFeatured p,
+.priceCard p,
+.timelineItem p,
+.blueCard p {
+  margin: 12px 0 0;
+  color: var(--muted);
+  font: 450 15px/1.55 Onest, Inter, system-ui, sans-serif;
+}
+
+.includesLayout {
+  display: grid;
+  gap: var(--grid-gap);
+}
+
+.blueCard {
+  padding: var(--card-px) var(--card-py);
+  border-radius: 32px;
+  color: #f5f5f7;
+  background:
+    radial-gradient(circle at 86% 12%, rgba(0, 113, 227, 0.34), transparent 44%),
+    radial-gradient(circle at 14% 88%, rgba(0, 113, 227, 0.14), transparent 38%),
+    linear-gradient(180deg, #0a2240 0%, #071530 100%);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.08), 0 28px 80px rgba(7,21,48,0.2);
+}
+
+.blueCardLabel {
+  display: inline-flex;
+  margin-bottom: 24px;
+  color: #6fb7ff;
+  font: 760 13px/1 Onest, Inter, system-ui, sans-serif;
+  letter-spacing: 0.08em;
+}
+
+.blueCard h3 {
+  margin: 0;
+  max-width: 560px;
+  color: #f5f5f7;
+  font: 840 clamp(28px, 3vw, 42px)/1 Onest, Inter, system-ui, sans-serif;
+  letter-spacing: -0.06em;
+  text-wrap: balance;
+}
+
+.blueCard p {
+  max-width: 620px;
+  color: rgba(245,245,247,0.68);
+}
+
+.includesGrid {
+  display: grid;
+  gap: var(--grid-gap-sm);
+}
+
+.summaryPanel {
+  margin-top: var(--grid-gap);
+  padding: 28px 32px;
+  border-radius: 28px;
+  color: var(--ink);
+  background:
+    radial-gradient(circle at 94% 14%, rgba(0,113,227,0.12), transparent 28%),
+    rgba(255,255,255,0.78);
+  border: 1px solid rgba(0,113,227,0.12);
+  font: 760 22px/1.3 Onest, Inter, system-ui, sans-serif;
+  letter-spacing: -0.045em;
+}
+
+.processLayout {
+  display: grid;
+  gap: var(--grid-gap);
+}
+
+.processIntro {
+  align-self: start;
+}
+
+.timeline {
+  display: grid;
+  gap: 14px;
+}
+
+.timelineItem {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 18px;
+  padding: 22px;
+  border-radius: 24px;
+  background: rgba(255,255,255,0.74);
+  border: 1px solid var(--line);
+}
+
+.timelineItem > span {
+  color: #0071E3;
+  font: 850 18px/1 Onest, Inter, system-ui, sans-serif;
+  letter-spacing: -0.04em;
+}
+
+.metricsGrid {
+  display: grid;
+  gap: var(--grid-gap);
+}
+
+.metricFeatured {
+  padding: var(--card-px) var(--card-py);
+  border-radius: 32px;
+  background:
+    radial-gradient(circle at 86% 12%, rgba(0,113,227,0.34), transparent 44%),
+    radial-gradient(circle at 14% 88%, rgba(0,113,227,0.14), transparent 38%),
+    linear-gradient(180deg, #0a2240 0%, #071530 100%);
+}
+
+.metricFeatured h3,
+.metricFeatured p {
+  color: #f5f5f7;
+}
+
+.metricFeatured p {
+  color: rgba(245,245,247,0.68);
+}
+
+.pricingSection {
+  background:
+    radial-gradient(circle at 84% 10%, rgba(0,113,227,0.08), transparent 30%),
+    linear-gradient(180deg, #ffffff 0%, #f5f5f7 100%);
+}
+
+.pricingIntro {
+  margin-bottom: var(--grid-gap);
+}
+
+.priceCard span {
+  display: inline-flex;
+  margin-bottom: 18px;
+  color: #0071E3;
+  font: 850 22px/1 Onest, Inter, system-ui, sans-serif;
+  letter-spacing: -0.05em;
+}
+
+.inlineCta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  margin-top: var(--grid-gap);
+  padding: 0 24px;
+  border-radius: 999px;
+  color: #fff;
+  text-decoration: none;
+  font: 750 14px/1 Onest, Inter, system-ui, sans-serif;
+  background: linear-gradient(90deg, #1A3A6E 0%, #0071E3 52%, #5FA8FF 100%);
+  box-shadow: 0 18px 42px rgba(0,113,227,0.18), 0 8px 18px rgba(26,58,110,0.10);
+}
+
+@media (min-width: 768px) {
+  .includesGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .metricsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .metricFeatured {
+    grid-column: span 2;
+  }
+}
+
+@media (min-width: 1280px) {
+  .includesLayout {
+    grid-template-columns: 0.86fr 1.14fr;
+    align-items: stretch;
+  }
+  .blueCard {
+    min-height: 100%;
+  }
+  .processLayout {
+    grid-template-columns: 0.78fr 1.22fr;
+    align-items: start;
+  }
+  .processIntro {
+    position: sticky;
+    top: 120px;
+  }
+  .metricsGrid {
+    grid-template-columns: 1.2fr 1fr 1fr;
+  }
+  .metricFeatured {
+    grid-column: auto;
+    grid-row: span 2;
+  }
+}

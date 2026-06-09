@@ -1,0 +1,75 @@
+.faqSection {
+  padding-top: var(--section-py);
+  padding-bottom: var(--section-py);
+  background: #f5f5f7;
+}
+
+.faqLayout {
+  align-items: start;
+}
+
+.faqIntro {
+  padding: var(--card-py) var(--card-px);
+  border-radius: 32px;
+  color: #ffffff;
+  background:
+    radial-gradient(circle at 86% 12%, rgba(0, 113, 227, 0.34), transparent 44%),
+    radial-gradient(circle at 14% 88%, rgba(0, 113, 227, 0.14), transparent 38%),
+    linear-gradient(180deg, #0a2240 0%, #071530 100%);
+  border: 1px solid rgba(111, 183, 255, 0.20);
+}
+
+.faqIntro span {
+  color: #6FB7FF;
+  font: 850 15px/1 Onest, Inter, system-ui, sans-serif;
+  letter-spacing: -0.03em;
+}
+
+.faqIntro h2 {
+  margin: 24px 0 0;
+  color: #ffffff;
+  font: 800 clamp(34px, 3.6vw, 52px)/0.98 Onest, Inter, system-ui, sans-serif;
+  letter-spacing: -0.07em;
+  text-wrap: balance;
+}
+
+.faqIntro p {
+  margin: 20px 0 0;
+  color: rgba(245, 245, 247, 0.66);
+  font: 450 17px/1.52 Onest, Inter, system-ui, sans-serif;
+  letter-spacing: -0.022em;
+}
+
+.faqList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.faqItem {
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.78);
+  border: 1px solid rgba(15, 16, 20, 0.08);
+  box-shadow: 0 22px 70px rgba(18, 35, 60, 0.06);
+}
+
+.faqItem summary {
+  cursor: pointer;
+  list-style: none;
+  padding: 24px;
+  color: var(--ink);
+  font: 760 18px/1.25 Onest, Inter, system-ui, sans-serif;
+  letter-spacing: -0.028em;
+}
+
+.faqItem summary::-webkit-details-marker {
+  display: none;
+}
+
+.faqItem p {
+  margin: 0;
+  padding: 0 24px 24px;
+  color: var(--muted);
+  font: 450 15px/1.55 Onest, Inter, system-ui, sans-serif;
+  letter-spacing: -0.018em;
+}

@@ -1,0 +1,7 @@
+.section { padding-top:var(--section-py); padding-bottom:var(--section-py); background: radial-gradient(circle at 84% 10%, rgba(0,113,227,.08), transparent 30%), linear-gradient(180deg,#ffffff 0%,#f5f5f7 100%); }
+.sectionHead { max-width:880px; margin:0 0 38px; }
+.sectionHead h2 { margin:0; color:#1d1d1f; font:800 clamp(34px,4vw,58px)/1 Onest, Inter, system-ui, sans-serif; letter-spacing:-.07em; text-wrap:balance; }
+.faqList { display:flex; flex-direction:column; gap:14px; }
+.item { border-radius:24px; background:#fff; border:1px solid var(--line); padding:22px 24px; }
+.item summary { cursor:pointer; font:840 20px/1.15 Onest, Inter, system-ui, sans-serif; letter-spacing:-.04em; }
+.item p { color:var(--muted); font:450 16px/1.55 Onest, Inter, system-ui, sans-serif; margin:14px 0 0; }

@@ -1,0 +1,12 @@
+.section { padding: var(--section-py) 0; background: #fff; }
+.container { max-width: 1280px; margin: 0 auto; padding: 0 var(--page-px); }
+.layout { display: grid; gap: var(--grid-gap); }
+.stickyText h2 { margin: 0; color: #1d1d1f; font: 800 clamp(34px, 4vw, 56px)/1 Onest, Inter, system-ui, sans-serif; letter-spacing: -0.07em; text-wrap: balance; }
+.stickyText p { margin: 22px 0 0; color: #6b6f76; font: 450 18px/1.55 Onest, Inter, system-ui, sans-serif; }
+.stickyText a { margin-top: 30px; min-height: 48px; display: inline-flex; align-items: center; justify-content: center; border-radius: 999px; padding: 0 22px; color: #fff; text-decoration: none; background: linear-gradient(90deg, #1A3A6E 0%, #0071E3 52%, #5FA8FF 100%); font: 750 14px/1 Onest, Inter, system-ui, sans-serif; }
+.steps { display: grid; gap: 16px; }
+.step { display: grid; grid-template-columns: 54px 1fr; gap: 18px; padding: var(--card-px) var(--card-py); border-radius: 24px; background: rgba(255,255,255,.78); border: 1px solid rgba(15,16,20,.08); box-shadow: 0 18px 48px rgba(15,16,20,.06); }
+.step span { color: #0071E3; font: 850 14px/1 Onest, Inter, system-ui, sans-serif; letter-spacing: -0.02em; }
+.step h3 { margin: 0; color: #0e0f12; font: 840 22px/1.08 Onest, Inter, system-ui, sans-serif; letter-spacing: -0.04em; }
+.step p { margin: 12px 0 0; color: #6b6f76; font: 450 15px/1.55 Onest, Inter, system-ui, sans-serif; }
+@media (min-width: 1280px) { .layout { grid-template-columns: 1fr 1.25fr; align-items: start; } .stickyText { position: sticky; top: 96px; } }

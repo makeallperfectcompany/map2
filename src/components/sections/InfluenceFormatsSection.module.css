@@ -1,0 +1,12 @@
+.section { padding-top: var(--section-py); padding-bottom: var(--section-py); background:#fff; }
+.sectionHead { max-width: 880px; margin: 0 0 38px; }
+.sectionHead h2 { margin:0; color:#1d1d1f; font:800 clamp(34px,4vw,58px)/1 Onest, Inter, system-ui, sans-serif; letter-spacing:-.07em; text-wrap:balance; }
+.sectionHead p { margin:20px 0 0; color:var(--muted); font:450 18px/1.6 Onest, Inter, system-ui, sans-serif; }
+.formatOrbit { min-height:220px; margin: -8px 0 30px; border-radius:32px; background: radial-gradient(circle at 50% 50%, rgba(0,113,227,.14), transparent 22%), linear-gradient(180deg,#fff,#f5f7fb); border:1px solid var(--line); position:relative; overflow:hidden; }
+.formatOrbit::before { content:""; position:absolute; inset:34px; border:1px solid rgba(0,113,227,.15); border-radius:50%; }
+.formatOrbit span { position:absolute; width:80px; height:80px; border-radius:28px; background:rgba(255,255,255,.72); border:1px solid rgba(0,113,227,.12); box-shadow:0 20px 60px rgba(0,113,227,.11); }
+.formatOrbit span:nth-child(1){left:12%;top:35%}.formatOrbit span:nth-child(2){left:30%;top:14%}.formatOrbit span:nth-child(3){left:47%;top:42%}.formatOrbit span:nth-child(4){right:30%;top:15%}.formatOrbit span:nth-child(5){right:13%;top:34%}.formatOrbit span:nth-child(6){left:50%;bottom:18px}
+.card { min-height:210px; padding:var(--card-py) var(--card-px); border-radius:24px; background:rgba(255,255,255,.78); border:1px solid var(--line); box-shadow:0 22px 70px rgba(15,16,20,.06); }
+.card h3 { margin:0; color:var(--ink-2); font:840 22px/1.06 Onest, Inter, system-ui, sans-serif; letter-spacing:-.045em; }
+.card p { margin:16px 0 0; color:var(--muted); font:450 16px/1.55 Onest, Inter, system-ui, sans-serif; }
+@media (max-width: 767px){ .formatOrbit{min-height:170px}.formatOrbit span{width:54px;height:54px;border-radius:20px} }

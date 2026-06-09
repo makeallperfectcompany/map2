@@ -1,0 +1,347 @@
+.lightSection,
+.whiteSection,
+.pricingSection,
+.industriesSection {
+  padding: var(--section-py) 0;
+}
+
+.lightSection,
+.industriesSection {
+  background:
+    radial-gradient(circle at 84% 10%, rgba(0, 113, 227, 0.08), transparent 30%),
+    linear-gradient(180deg, #ffffff 0%, #f5f5f7 100%);
+}
+
+.whiteSection,
+.pricingSection {
+  background: #ffffff;
+}
+
+.centerGrid {
+  align-items: center;
+}
+
+.cardGrid {
+  margin-top: var(--grid-gap);
+}
+
+.h2 {
+  margin: 0 0 24px;
+  color: #1d1d1f;
+  font: 800 clamp(32px, 3.6vw, 56px)/1 Onest, Inter, system-ui, sans-serif;
+  letter-spacing: -0.07em;
+  text-wrap: balance;
+}
+
+.lead {
+  inline-size: min(100%, 720px);
+  margin: 0 0 16px;
+  color: var(--muted);
+  font: 450 17px/1.64 Onest, Inter, system-ui, sans-serif;
+}
+
+.sectionHead {
+  inline-size: min(100%, 860px);
+  margin-bottom: var(--grid-gap);
+}
+
+.sectionHeadWide {
+  inline-size: min(100%, 960px);
+  margin-bottom: var(--grid-gap);
+}
+
+.textCta,
+.bottomCta,
+.lightButton,
+.priceButton {
+  min-height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  text-decoration: none;
+  font: 500 15.5px/1 Onest, Inter, system-ui, sans-serif;
+  transition: transform 240ms var(--ease), border-color 240ms var(--ease), filter 240ms var(--ease), box-shadow 240ms var(--ease);
+}
+
+.textCta,
+.bottomCta {
+  margin-top: 18px;
+  padding: 0 22px;
+  color: #0071E3;
+  border: 1px solid var(--line);
+  background: rgba(255,255,255,0.62);
+}
+
+.textCta:hover,
+.bottomCta:hover,
+.lightButton:hover,
+.priceButton:hover {
+  transform: translateY(-2px);
+}
+
+.visualCard,
+.blueVisual {
+  overflow: hidden;
+  border-radius: 32px;
+  background: rgba(255,255,255,0.72);
+  border: 1px solid rgba(15,16,20,0.08);
+  box-shadow: 0 24px 70px rgba(15,16,20,0.08);
+}
+
+.visualCard img,
+.blueVisual img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.infoCard {
+  position: relative;
+  min-height: auto;
+  padding: var(--card-py) var(--card-px);
+  border-radius: 24px;
+  background: rgba(255,255,255,0.76);
+  border: 1px solid rgba(15,16,20,0.08);
+  box-shadow: 0 22px 70px rgba(15,16,20,0.06);
+  transition: transform 240ms var(--ease), border-color 240ms var(--ease);
+}
+
+.infoCard:hover {
+  transform: translateY(-2px);
+  border-color: rgba(0,113,227,0.18);
+}
+
+.infoCard h3 {
+  inline-size: 85%;
+  margin: 0 0 14px;
+  color: var(--ink);
+  font: 840 22px/1.08 Onest, Inter, system-ui, sans-serif;
+  letter-spacing: -0.04em;
+}
+
+.infoCard p {
+  margin: 0;
+  color: var(--muted);
+  font: 450 15px/1.55 Onest, Inter, system-ui, sans-serif;
+}
+
+.cardCode {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  color: #0071E3;
+  font: 760 13px/1 Onest, Inter, system-ui, sans-serif;
+  letter-spacing: -0.02em;
+}
+
+.blueWrap {
+  margin: 0 24px;
+  padding: var(--section-py) 0;
+  border-radius: 28px;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 86% 12%, rgba(0,113,227,0.34), transparent 44%),
+    radial-gradient(circle at 14% 88%, rgba(0,113,227,0.14), transparent 38%),
+    linear-gradient(180deg, #0a2240 0%, #071530 100%);
+}
+
+.blueContent h2 {
+  margin: 0 0 24px;
+  color: #F5F5F7;
+  font: 800 clamp(32px, 3.6vw, 54px)/1 Onest, Inter, system-ui, sans-serif;
+  letter-spacing: -0.07em;
+  text-wrap: balance;
+}
+
+.blueContent p {
+  inline-size: min(100%, 640px);
+  margin: 0 0 16px;
+  color: rgba(245,245,247,0.72);
+  font: 450 16px/1.62 Onest, Inter, system-ui, sans-serif;
+}
+
+.lightButton {
+  margin-top: 18px;
+  padding: 0 22px;
+  color: #071530;
+  background: rgba(255,255,255,0.92);
+}
+
+.blueVisual {
+  background: rgba(255,255,255,0.08);
+  border-color: rgba(255,255,255,0.12);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.045), 0 22px 70px rgba(0,0,0,0.18);
+}
+
+.blueCards {
+  margin-top: var(--grid-gap);
+}
+
+.darkCard,
+.techCard {
+  padding: var(--card-py) var(--card-px);
+  border-radius: 24px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.10);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.045), 0 22px 70px rgba(0,0,0,0.14);
+}
+
+.darkCard h3 {
+  margin: 0 0 12px;
+  color: #F5F5F7;
+  font: 840 21px/1.08 Onest, Inter, system-ui, sans-serif;
+  letter-spacing: -0.04em;
+}
+
+.darkCard p,
+.techCard p {
+  margin: 0;
+  color: rgba(245,245,247,0.64);
+  font: 450 15px/1.55 Onest, Inter, system-ui, sans-serif;
+}
+
+.stepsList {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin: 0 0 18px;
+}
+
+.stepCard {
+  display: flex;
+  gap: 18px;
+  padding: 22px;
+  border-radius: 24px;
+  background: rgba(255,255,255,0.76);
+  border: 1px solid rgba(15,16,20,0.08);
+}
+
+.stepCard span {
+  color: #0071E3;
+  font: 840 15px/1 Onest, Inter, system-ui, sans-serif;
+}
+
+.stepCard h3 {
+  margin: 0 0 8px;
+  color: var(--ink);
+  font: 840 20px/1.1 Onest, Inter, system-ui, sans-serif;
+  letter-spacing: -0.04em;
+}
+
+.stepCard p {
+  margin: 0;
+  color: var(--muted);
+  font: 450 15px/1.55 Onest, Inter, system-ui, sans-serif;
+}
+
+.note {
+  margin: 18px 0 0;
+  color: var(--ink-2);
+  font: 760 15px/1.55 Onest, Inter, system-ui, sans-serif;
+}
+
+.priceCard {
+  padding: clamp(28px, 4vw, 48px);
+  border-radius: 32px;
+  color: #F5F5F7;
+  background:
+    radial-gradient(circle at 86% 12%, rgba(0,113,227,0.34), transparent 44%),
+    radial-gradient(circle at 14% 88%, rgba(0,113,227,0.14), transparent 38%),
+    linear-gradient(180deg, #0a2240 0%, #071530 100%);
+  box-shadow: 0 32px 90px rgba(7,21,48,0.22);
+}
+
+.priceCard span {
+  color: rgba(245,245,247,0.7);
+  font: 700 14px/1.2 Onest, Inter, system-ui, sans-serif;
+}
+
+.priceCard strong {
+  display: block;
+  margin: 18px 0 20px;
+  color: #fff;
+  font: 850 clamp(44px, 5vw, 70px)/0.95 Onest, Inter, system-ui, sans-serif;
+  letter-spacing: -0.07em;
+}
+
+.priceCard ul {
+  display: grid;
+  gap: 12px;
+  margin: 0 0 26px;
+  padding: 0;
+  list-style: none;
+}
+
+.priceCard li {
+  color: rgba(245,245,247,0.72);
+  font: 450 15px/1.35 Onest, Inter, system-ui, sans-serif;
+}
+
+.priceButton {
+  width: 100%;
+  padding: 0 22px;
+  color: #fff;
+  background: linear-gradient(90deg, #1A3A6E 0%, #0071E3 52%, #5FA8FF 100%);
+  box-shadow: 0 22px 50px rgba(0,113,227,0.25);
+}
+
+.techSection {
+  margin: 0 16px;
+  padding: var(--section-py) 0;
+  border-radius: 28px;
+  background:
+    radial-gradient(circle at 14% 8%, rgba(0, 113, 227, 0.15), transparent 32%),
+    radial-gradient(circle at 84% 72%, rgba(0, 113, 227, 0.12), transparent 30%),
+    linear-gradient(180deg, #1d1d1f 0%, #151619 100%);
+}
+
+.techHead {
+  inline-size: min(100%, 900px);
+  margin-bottom: var(--grid-gap);
+}
+
+.techHead h2 {
+  margin: 0 0 20px;
+  color: #F5F5F7;
+  font: 800 clamp(34px, 3.8vw, 58px)/1 Onest, Inter, system-ui, sans-serif;
+  letter-spacing: -0.07em;
+  text-wrap: balance;
+}
+
+.techHead p {
+  margin: 0;
+  color: rgba(245,245,247,0.58);
+  font: 450 17px/1.6 Onest, Inter, system-ui, sans-serif;
+}
+
+.techCard {
+  background: #2A2A2C;
+  border-color: rgba(255,255,255,0.075);
+}
+
+.techCard span {
+  display: block;
+  margin-bottom: 18px;
+  color: #6FB7FF;
+  font: 760 14px/1 Onest, Inter, system-ui, sans-serif;
+  letter-spacing: 0.02em;
+}
+
+@media (min-width: 768px) {
+  .infoCard {
+    min-height: 230px;
+  }
+
+  .stepCard {
+    padding: 22px;
+  }
+}
+
+@media (min-width: 768px) {
+  .blueWrap,
+  .techSection {
+    margin: 0 24px;
+    border-radius: 32px;
+  }
+}

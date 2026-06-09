@@ -1,0 +1,84 @@
+.section {
+  padding: var(--section-py) 0;
+  background:
+    radial-gradient(circle at 84% 10%, rgba(0, 113, 227, 0.08), transparent 30%),
+    linear-gradient(180deg, #ffffff 0%, #f5f5f7 100%);
+}
+
+.header {
+  display: grid;
+  gap: 20px;
+  align-items: end;
+}
+
+.header h2 {
+  margin: 0;
+  color: #1d1d1f;
+  font: 800 clamp(34px, 4vw, 58px)/0.98 Onest, Inter, system-ui, sans-serif;
+  letter-spacing: -0.07em;
+  text-wrap: balance;
+}
+
+.header p {
+  margin: 0;
+  color: #6b6f76;
+  font: 450 18px/1.55 Onest, Inter, system-ui, sans-serif;
+}
+
+.visualCard {
+  margin-top: 38px;
+  overflow: hidden;
+  border-radius: 32px;
+  background: rgba(255, 255, 255, 0.55);
+  border: 1px solid rgba(15, 16, 20, 0.08);
+  box-shadow: 0 22px 70px rgba(0, 0, 0, 0.1);
+}
+
+.visualCard img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.cards {
+  display: grid;
+  gap: var(--grid-gap);
+  margin-top: 24px;
+}
+
+.card {
+  padding: var(--card-py) var(--card-px);
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.78);
+  border: 1px solid rgba(15, 16, 20, 0.08);
+  box-shadow: 0 16px 50px rgba(15, 16, 20, 0.06);
+}
+
+.card h3 {
+  margin: 0;
+  color: #0e0f12;
+  font: 840 20px/1.08 Onest, Inter, system-ui, sans-serif;
+  letter-spacing: -0.04em;
+}
+
+.card p {
+  margin: 14px 0 0;
+  color: #6b6f76;
+  font: 450 15px/1.5 Onest, Inter, system-ui, sans-serif;
+}
+
+@media (min-width: 768px) {
+  .cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1280px) {
+  .header {
+    grid-template-columns: minmax(0, 1fr) minmax(360px, 0.52fr);
+  }
+
+  .cards {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}

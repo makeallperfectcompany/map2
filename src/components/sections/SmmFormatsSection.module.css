@@ -1,0 +1,77 @@
+.section {
+  padding: var(--section-py) 0;
+  background: #ffffff;
+}
+
+.header {
+  max-width: 940px;
+}
+
+.header h2 {
+  margin: 0;
+  color: #1d1d1f;
+  font: 800 clamp(34px, 4vw, 58px)/0.98 Onest, Inter, system-ui, sans-serif;
+  letter-spacing: -0.07em;
+  text-wrap: balance;
+}
+
+.header p {
+  max-width: 760px;
+  margin: 22px 0 0;
+  color: #6b6f76;
+  font: 450 18px/1.55 Onest, Inter, system-ui, sans-serif;
+}
+
+.cards {
+  display: grid;
+  gap: var(--grid-gap);
+  margin-top: 38px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  min-height: 320px;
+  padding: var(--card-py) var(--card-px);
+  border-radius: 24px;
+  background: #f5f5f7;
+  border: 1px solid rgba(15, 16, 20, 0.08);
+  transition: transform 240ms ease, border-color 240ms ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(0, 113, 227, 0.24);
+}
+
+.card h3 {
+  margin: 0;
+  color: #0e0f12;
+  font: 840 24px/1.04 Onest, Inter, system-ui, sans-serif;
+  letter-spacing: -0.055em;
+}
+
+.card p {
+  margin: 18px 0 0;
+  color: #6b6f76;
+  font: 450 16px/1.52 Onest, Inter, system-ui, sans-serif;
+}
+
+.card strong {
+  margin-top: auto;
+  color: #0071E3;
+  font: 840 28px/1 Onest, Inter, system-ui, sans-serif;
+  letter-spacing: -0.06em;
+}
+
+@media (min-width: 768px) {
+  .cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1280px) {
+  .cards {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}

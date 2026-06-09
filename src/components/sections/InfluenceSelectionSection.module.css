@@ -1,0 +1,8 @@
+.section { padding-top: var(--section-py); padding-bottom: var(--section-py); background: radial-gradient(circle at 84% 10%, rgba(0,113,227,.08), transparent 30%), linear-gradient(180deg,#ffffff 0%,#f5f5f7 100%); }
+.textCol { align-self: center; }
+.textCol h2 { margin:0; color:#1d1d1f; font:800 clamp(34px,4vw,58px)/1 Onest, Inter, system-ui, sans-serif; letter-spacing:-.07em; text-wrap:balance; }
+.textCol p { margin:20px 0 0; color:var(--muted); font:450 18px/1.6 Onest, Inter, system-ui, sans-serif; }
+.criteria { display:flex; flex-wrap:wrap; gap:12px; margin-top:28px; }
+.criteria span { padding:14px 18px; border-radius:999px; background:#fff; border:1px solid var(--line); box-shadow:0 16px 40px rgba(15,16,20,.05); font:760 14px/1 Onest, Inter, system-ui, sans-serif; }
+.visualCard { border-radius:32px; overflow:hidden; background:rgba(255,255,255,.65); border:1px solid var(--line); box-shadow:0 30px 90px rgba(15,16,20,.09); }
+.visualCard img { display:block; width:100%; height:auto; }

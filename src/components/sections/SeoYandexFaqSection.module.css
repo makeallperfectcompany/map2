@@ -1,0 +1,20 @@
+.section { padding: var(--section-py) 0; background: linear-gradient(180deg,#ffffff 0%,#f5f5f7 100%); }
+.header { max-width: 820px; }
+.sectionLabel {
+  display: inline-flex;
+  min-height: 34px;
+  align-items: center;
+  padding: 0 14px;
+  border-radius: 999px;
+  color: #0071e3;
+  background: rgba(0, 113, 227, 0.075);
+  border: 1px solid rgba(0, 113, 227, 0.13);
+  font: 760 13px/1 Onest, Inter, system-ui, sans-serif;
+  letter-spacing: -0.012em;
+}
+
+.header h2 { margin: 26px 0 0; color:#1d1d1f; font: 850 clamp(34px,3.8vw,58px)/.98 Onest, Inter, system-ui, sans-serif; letter-spacing: -.075em; text-wrap: balance; }
+.faqList { margin-top: var(--grid-gap); display: grid; gap: 12px; }
+.faqItem { border-radius: 22px; background: rgba(255,255,255,.78); border: 1px solid var(--line); box-shadow: 0 14px 42px rgba(15,16,20,.045); overflow: hidden; }
+.faqItem summary { cursor:pointer; padding: 24px 28px; color:#1d1d1f; font: 780 19px/1.2 Onest, Inter, system-ui, sans-serif; letter-spacing:-.035em; }
+.faqItem p { margin: 0; padding: 0 28px 26px; color: var(--muted); font: 450 16px/1.6 Onest, Inter, system-ui, sans-serif; letter-spacing:-.018em; }

@@ -1,0 +1,25 @@
+/* Buttons copy the verified HeroSection → heroActions UI pattern. */
+.heroSection { position: relative; min-height: 100vh; min-height: 100svh; display: flex; align-items: center; overflow: hidden; }
+.background { object-fit: cover; object-position: center bottom; z-index: 0; }
+.desktopBackground { display: none; }
+.mobileBackground { display: block; }
+.heroSection::before { content: ""; position: absolute; inset: 0; z-index: 1; pointer-events: none; background: linear-gradient(180deg, rgba(255,255,255,.98) 0%, rgba(255,255,255,.82) 46%, rgba(255,255,255,.04) 78%, transparent 100%); }
+.inner { position: relative; z-index: 2; width: 100%; padding-top: 104px; padding-bottom: 43vh; }
+.copy h1 { margin: 0 0 20px; color: var(--ink); font: 850 clamp(40px, 11vw, 54px)/.99 Onest, Inter, system-ui, sans-serif; letter-spacing: -.075em; text-wrap: balance; }
+.lead { margin: 0 0 18px; color: var(--muted); font: 440 16px/1.58 Onest, Inter, system-ui, sans-serif; }
+.priceLine { margin: 0 0 30px; color: var(--ink-2); font: 520 15px/1.45 Onest, Inter, system-ui, sans-serif; }
+.priceLine strong { color: #0071e3; font-weight: 760; }
+.heroActions { display: flex; flex-direction: column; gap: 12px; margin-bottom: 0; }
+.btn { position: relative; display: inline-flex; align-items: center; justify-content: space-between; gap: 18px; padding: 18px 26px; border-radius: 14px; font: 500 15.5px/1 Onest, Inter, system-ui, sans-serif; cursor: pointer; text-decoration: none; min-width: 230px; border: 1px solid transparent; overflow: hidden; isolation: isolate; transition: transform .35s var(--ease), box-shadow .4s var(--ease), background .35s var(--ease), border-color .35s var(--ease), color .35s var(--ease); }
+.label { position: relative; z-index: 2; transition: transform .4s var(--ease); }
+.arrWrap { position: relative; z-index: 2; width: 14px; height: 14px; overflow: hidden; display: inline-block; }
+.arr { width: 14px; height: 14px; display: block; transition: transform .45s var(--ease-snap); }
+.arrGhost { position: absolute; inset: 0; transform: translate(-100%, 100%); }
+.btnAccent { background: linear-gradient(90deg, #1A3A6E 0%, #0071E3 52%, #5FA8FF 100%); color: #fff; border: none; box-shadow: 0 18px 42px rgba(0,113,227,.18), 0 8px 18px rgba(26,58,110,.10); }
+.btnAccent:hover { transform: translateY(-2px); box-shadow: 0 22px 50px rgba(0,113,227,.25), 0 10px 22px rgba(26,58,110,.14); filter: brightness(1.08); }
+.btnGhost { background: rgba(255,255,255,.62); backdrop-filter: blur(8px); color: var(--ink); border: 1px solid rgba(15,16,20,.10); box-shadow: 0 2px 6px rgba(15,16,20,.04); }
+.btnGhost:hover { transform: translateY(-2px); box-shadow: 0 14px 28px rgba(15,16,20,.10); }
+.btn:hover .arrMain { transform: translate(100%, -100%); }
+.btn:hover .arrGhost { transform: translate(0, 0); }
+@media (min-width: 768px) { .mobileBackground { display: none; } .desktopBackground { display: block; object-position: center right; } .heroSection::before { background: linear-gradient(90deg, rgba(255,255,255,.96) 0%, rgba(255,255,255,.83) 38%, rgba(255,255,255,.06) 62%, transparent 100%); } .inner { padding-top: 90px; padding-bottom: 0; } .copy { width: 56%; } .copy h1 { font-size: clamp(48px, 4.8vw, 72px); } .lead { font-size: 17px; } .heroActions { flex-direction: row; gap: 16px; } }
+@media (min-width: 1280px) { .copy { width: 52%; } }

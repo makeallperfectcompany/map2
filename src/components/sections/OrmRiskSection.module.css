@@ -1,0 +1,11 @@
+.section { padding-top: var(--section-py); padding-bottom: var(--section-py); background: #fff; }
+.layout { align-items: stretch; }
+.copy h2 { margin: 0 0 30px; color: var(--ink); font: 800 clamp(34px,3.6vw,52px)/1 Onest,Inter,system-ui,sans-serif; letter-spacing: -.07em; text-wrap: balance; }
+.copy p { margin: 0 0 17px; color: var(--muted); font: 450 17px/1.6 Onest,Inter,system-ui,sans-serif; }
+.cta { display: inline-flex; margin-top: 24px; padding: 16px 23px; border-radius: 999px; color: #fff; background: #0071E3; text-decoration: none; font: 750 14px/1 Onest,Inter,system-ui,sans-serif; }
+.panel { min-height: 100%; padding: var(--card-py) var(--card-px); border-radius: 34px; color: #fff; background: radial-gradient(circle at 86% 12%, rgba(0,113,227,.34), transparent 44%), radial-gradient(circle at 14% 88%, rgba(0,113,227,.14), transparent 38%), linear-gradient(180deg,#0a2240 0%,#071530 100%); border: 1px solid rgba(255,255,255,.10); box-shadow: 0 24px 70px rgba(15,16,20,.12); }
+.panel h3 { margin: 0 0 34px; font: 800 clamp(28px,2.4vw,36px)/1.04 Onest,Inter,system-ui,sans-serif; letter-spacing: -.06em; }
+.panel ul { list-style: none; margin: 0; padding: 0; }
+.panel li { position: relative; padding: 18px 0 18px 25px; border-top: 1px solid rgba(255,255,255,.12); color: rgba(245,245,247,.76); font: 450 16px/1.45 Onest,Inter,system-ui,sans-serif; }
+.panel li::before { content: ""; position: absolute; left: 0; top: 25px; width: 8px; height: 8px; border-radius: 50%; background: #6fb7ff; }
+@media (max-width: 768px) { .copy p { font-size: 16px; } .panel { margin-top: 8px; border-radius: 28px; } }

@@ -1,0 +1,2 @@
+import { Container } from '@/components/ui/Container/Container';import styles from './LocalSeoPricingSection.module.css';import { localSeoContent } from '@/content/services/localSeo';
+export function LocalSeoPricingSection(){const s=localSeoContent.pricing;return <section className={styles.section}><Container><div className={styles.card}><div><h2>{s.title}</h2><p>{s.text}</p><a href="#final-cta">{s.cta}<span>↗</span></a></div><ul>{s.factors.map((item)=><li key={item}>{item}</li>)}</ul></div></Container></section>}

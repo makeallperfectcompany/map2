@@ -1,0 +1,14 @@
+.section { padding-top: var(--section-py); padding-bottom: var(--section-py); background: #f5f6f8; }
+.panel { gap: var(--grid-gap); align-items: stretch; padding: var(--card-py) var(--card-px); border-radius: 34px; color: #fff; background: radial-gradient(circle at 86% 12%, rgba(0,113,227,.34), transparent 44%), radial-gradient(circle at 14% 88%, rgba(0,113,227,.14), transparent 38%), linear-gradient(180deg,#0a2240 0%,#071530 100%); border: 1px solid rgba(255,255,255,.10); box-shadow: 0 24px 70px rgba(15,16,20,.12); }
+.label { display: inline-flex; min-height: 32px; align-items: center; padding: 0 12px; border-radius: 999px; color: #6fb7ff; background: rgba(111,183,255,.12); border: 1px solid rgba(111,183,255,.2); font: 760 12px/1 Onest,Inter,system-ui,sans-serif; }
+.copy h2 { margin: 25px 0 35px; color: #fff; font: 800 clamp(32px,3vw,45px)/1 Onest,Inter,system-ui,sans-serif; letter-spacing: -.07em; text-wrap: balance; }
+.copy strong { display: block; margin-bottom: 27px; color: #fff; font: 850 clamp(46px,4.2vw,66px)/.95 Onest,Inter,system-ui,sans-serif; letter-spacing: -.07em; }
+.copy p { margin: 0; color: rgba(245,245,247,.66); font: 450 16px/1.57 Onest,Inter,system-ui,sans-serif; }
+.details { padding: 8px 0 0; }
+.details h3 { margin: 0 0 20px; color: #fff; font: 800 25px/1.05 Onest,Inter,system-ui,sans-serif; letter-spacing: -.055em; }
+.details ul { list-style: none; margin: 0 0 20px; padding: 0; }
+.details li { position: relative; padding: 12px 0 12px 22px; border-top: 1px solid rgba(255,255,255,.12); color: rgba(245,245,247,.76); font: 450 15px/1.42 Onest,Inter,system-ui,sans-serif; }
+.details li::before { content: ""; position: absolute; left: 0; top: 18px; width: 7px; height: 7px; border-radius: 50%; background: #6fb7ff; }
+.note { margin: 0 0 26px; color: rgba(245,245,247,.52); font: 450 13px/1.5 Onest,Inter,system-ui,sans-serif; }
+.cta { display: inline-flex; min-height: 48px; align-items: center; padding: 0 23px; border-radius: 999px; color: #071530; background: #fff; font: 750 14px/1 Onest,Inter,system-ui,sans-serif; text-decoration: none; }
+@media (max-width: 768px) { .panel { border-radius: 28px; } .details { padding-top: 8px; } .cta { width: 100%; justify-content: center; } }
