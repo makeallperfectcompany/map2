@@ -171,7 +171,7 @@ export default function HomeReviewsSection() {
         </div>
 
         <div className={styles.reviewsViewport}>
-          <div className={styles.reviewsGrid}>
+          <div className={styles.reviewsGrid} key={activePage}>
             {currentReviews.map((review, index) => (
               <article className={styles.reviewCard} key={review.id}>
                 <div className={styles.cardTop}>

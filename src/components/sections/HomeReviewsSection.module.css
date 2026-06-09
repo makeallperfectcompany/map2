@@ -176,7 +176,12 @@
 }
 
 .reviewsViewport { overflow: hidden; }
-.reviewsGrid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; align-items: start; }
+.reviewsGrid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; align-items: start; animation: reviewFadeIn 0.35s ease; }
+
+@keyframes reviewFadeIn {
+  from { opacity: 0.3; transform: translateY(6px); }
+  to   { opacity: 1;   transform: translateY(0); }
+}
 .mobileScroller { display: none; }
 
 .reviewCard {

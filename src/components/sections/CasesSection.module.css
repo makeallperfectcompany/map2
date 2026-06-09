@@ -86,6 +86,12 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 16px;
+  animation: caseFadeIn 0.35s ease;
+}
+
+@keyframes caseFadeIn {
+  from { opacity: 0.3; transform: translateY(6px); }
+  to   { opacity: 1;   transform: translateY(0); }
 }
 
 .carouselNav {

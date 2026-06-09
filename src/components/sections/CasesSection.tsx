@@ -35,7 +35,7 @@ export default function CasesSection() {
         </div>
 
         <div className={styles.carouselOuter}>
-          <div className={styles.caseGrid}>
+          <div className={styles.caseGrid} key={slide}>
             {cases.slice(slide * 3, slide * 3 + 3).map((item) => (
               <article className={styles.caseCard} key={item.slug}>
                 <div className={styles.caseCover}>
