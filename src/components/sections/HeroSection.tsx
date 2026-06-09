@@ -1,15 +1,13 @@
 import Link from "next/link";
-import { Container } from "@/components/ui/Container/Container";
 import OpenConsultationButton from "@/components/forms/OpenConsultationButton";
 import styles from "./HeroSection.module.css";
 
 export default function HeroSection() {
   return (
     <section className={styles.heroSection}>
-      <Container>
-        <div className={styles.heroInner}>
-          <div className={styles.left}>
-            <h1 className={styles.heroTitle}>
+      <div className={styles.heroInner}>
+        <div className={styles.left}>
+          <h1 className={styles.heroTitle}>
             Продвижение сайтов и брендов, усиленное технологиями
             <span className={styles.highlight}>Make All Perfect</span>
           </h1>
@@ -46,19 +44,21 @@ export default function HeroSection() {
             </Link>
           </div>
 
-          {/* Trust bar: принципы с описаниями */}
+          {/* Trust bar: только лейблы */}
           <div className={styles.trustBar}>
-            <div className={styles.trustItem}>
-              <span className={styles.trustLabel}>С 2017 года в маркетинге</span>
-              <span className={styles.trustValue}>строим продвижение на опыте, аналитике и понимании бизнеса</span>
-            </div>
-            <div className={styles.trustItem}>
-              <span className={styles.trustLabel}>Не продаём лишние услуги</span>
-              <span className={styles.trustValue}>предлагаем только то, что действительно нужно для роста</span>
-            </div>
-            <div className={styles.trustItem}>
-              <span className={styles.trustLabel}>Полная прозрачность в работе</span>
-              <span className={styles.trustValue}>вы видите стратегию, цифры и ход работ на каждом этапе</span>
+            <div className={styles.trustBarInner}>
+              <div className={styles.trustItem}>
+                <span className={styles.trustLabel}>С 2017 года в маркетинге</span>
+                <span className={styles.trustValue}>строим продвижение на опыте, аналитике и понимании бизнеса</span>
+              </div>
+              <div className={styles.trustItem}>
+                <span className={styles.trustLabel}>Не продаём лишние услуги</span>
+                <span className={styles.trustValue}>предлагаем только то, что действительно нужно для роста</span>
+              </div>
+              <div className={styles.trustItem}>
+                <span className={styles.trustLabel}>Полная прозрачность в работе</span>
+                <span className={styles.trustValue}>вы видите стратегию, цифры и ход работ на каждом этапе</span>
+              </div>
             </div>
           </div>
         </div>
@@ -73,7 +73,6 @@ export default function HeroSection() {
           />
         </div>
       </div>
-    </Container>
     </section>
   );
 }
