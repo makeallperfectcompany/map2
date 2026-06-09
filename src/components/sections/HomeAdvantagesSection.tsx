@@ -16,16 +16,6 @@ export default function HomeAdvantagesSection() {
           <div className={styles.h2Column}>
             <h2>{homeAdvantages.title}</h2>
             <p className={styles.description}>{homeAdvantages.description}</p>
-            <div className={styles.visualCard}>
-              <Image
-                src={homeAdvantages.visual}
-                alt=""
-                title="Преимущества работы"
-                fill
-                sizes="(max-width: 900px) 100vw, 40vw"
-                priority={false}
-              />
-            </div>
           </div>
 
           <div className={styles.contentColumn}>
@@ -44,6 +34,17 @@ export default function HomeAdvantagesSection() {
                 </article>
               ))}
             </div>
+          </div>
+
+          <div className={styles.visualCard}>
+            <Image
+              src={homeAdvantages.visual}
+              alt=""
+              title="Преимущества работы"
+              fill
+              sizes="(max-width: 900px) 100vw, 40vw"
+              priority={false}
+            />
           </div>
         </div>
       </Container>
