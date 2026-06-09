@@ -352,6 +352,22 @@
   }
 
   .right { display: none; }
+
+  .trustBar::before { display: none; }
+  .trustBar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .trustBarInner {
+    justify-content: center;
+  }
+  .trustItem {
+    margin-left: 0 !important;
+  }
+  .trustLabel {
+    font-size: 14px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -360,9 +376,9 @@
   .heroLead { font-size: 15px; max-width: 480px; margin-bottom: 22px; }
   .heroActions { margin-bottom: 0; gap: 12px; }
   .btn { min-width: 0; padding: 16px 22px; font-size: 14.5px; }
-  .trustBar { margin-top: 20px; padding-top: 18px; }
-  .trustBarInner { gap: 16px; }
-  .trustLabel { font-size: 12px; }
+  .trustBar { margin-top: 20px; padding-top: 0; }
+  .trustBarInner { gap: 12px; }
+  .trustLabel { font-size: 14px; }
 }
 
 @media (max-width: 640px) {
