@@ -14,31 +14,7 @@
   background-repeat: no-repeat;
 }
 
-/* Shimmer на background */
-.heroSection::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  background: linear-gradient(
-    115deg,
-    transparent 20%,
-    rgba(255, 255, 255, 0.12) 40%,
-    rgba(255, 255, 255, 0.22) 50%,
-    rgba(255, 255, 255, 0.12) 60%,
-    transparent 80%
-  );
-  background-size: 200% 100%;
-  animation: heroShimmer 8s ease-in-out infinite;
-  pointer-events: none;
-}
 
-
-@keyframes heroShimmer {
-  0% { background-position: 200% 0; }
-  50% { background-position: -50% 0; }
-  100% { background-position: 200% 0; }
-}
 .heroSection::before {
   content: "";
   position: absolute; inset: 0;
@@ -120,40 +96,43 @@
   max-width: 100%;
   height: auto;
   object-fit: contain;
+  animation: none;
+  -webkit-mask: none;
+  mask: none;
+  transform: none;
 }
 
 .trustBar {
   display: flex;
-  flex-direction: column;
-  gap: 0;
+  flex-wrap: wrap;
+  gap: 12px;
   margin-top: 28px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(15,16,20,0.08);
+}
+
+@media (min-width: 1024px) {
+  .trustBar {
+    flex-wrap: nowrap;
+    gap: 28px;
+  }
 }
 
 .trustItem {
   display: flex;
-  align-items: baseline;
-  gap: 6px;
-  padding: 11px 0;
-  border-bottom: 1px solid rgba(0, 113, 227, 0.12);
-}
-.trustItem:first-child {
-  border-top: 1px solid rgba(0, 113, 227, 0.12);
+  flex-direction: column;
+  gap: 2px;
 }
 
 .trustLabel {
-  font-size: 15px;
-  font-weight: 600;
+  font: 750 13px/1 Onest, Inter, system-ui, sans-serif;
   color: #1d1d1f;
-  white-space: nowrap;
-  flex-shrink: 0;
-  line-height: 1.3;
+  letter-spacing: -0.01em;
 }
 
 .trustValue {
-  font-size: 14px;
-  font-weight: 400;
-  color: #6e6e73;
-  line-height: 1.4;
+  font: 450 12px/1.3 Onest, Inter, system-ui, sans-serif;
+  color: var(--muted);
 }
 
 /* =================================================================
@@ -341,21 +320,15 @@
   .right { display: none; }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
   .trustBar {
-    margin-top: 24px;
+    gap: 16px;
   }
-  .trustItem {
-    flex-direction: column;
-    align-items: center;
-    gap: 2px;
-    text-align: center;
-  }
-  .trustLabel {
-    white-space: normal;
-  }
-  .trustValue {
-    white-space: normal;
+}
+
+@media (max-width: 430px) {
+  .trustBar {
+    gap: 12px;
   }
 }
 @media (max-width: 768px) {
