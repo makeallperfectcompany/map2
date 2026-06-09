@@ -13,7 +13,7 @@ export const kakSnizitStoimostLidaNaZhkVMoskveDo2900V2025GoduCase: CaseItem = {
   industry: null,
   priority: 50,
   date: `23 декабря 2025`,
-  hero: undefined,
+  hero: '/images/cases/kak-snizit-stoimost-lida-na-zhk-v-moskve-do-2900-v-2025-godu-keys-427-zayavok.webp',
   results: [],
   sections: [
   {

@@ -13,7 +13,7 @@ export const keysRoi435NaWbCherezVneshnyuyuReklamuCase: CaseItem = {
   industry: null,
   priority: 50,
   date: `17 октября 2025`,
-  hero: undefined,
+  hero: '/images/cases/keys-roi-435-na-wb-cherez-vneshnyuyu-reklamu.webp',
   results: [],
   sections: [
   {

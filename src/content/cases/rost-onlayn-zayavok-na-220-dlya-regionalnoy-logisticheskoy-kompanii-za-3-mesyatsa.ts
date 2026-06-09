@@ -13,7 +13,7 @@ export const rostOnlaynZayavokNa220DlyaRegionalnoyCase: CaseItem = {
   industry: null,
   priority: 50,
   date: `9 октября 2025`,
-  hero: undefined,
+  hero: '/images/cases/rost-onlayn-zayavok-na-220-dlya-regionalnoy-logisticheskoy-kompanii-za-3-mesyatsa.webp',
   results: [{ value: "+220%", label: "Заявки", description: "за период проекта" }],
   sections: [
   {

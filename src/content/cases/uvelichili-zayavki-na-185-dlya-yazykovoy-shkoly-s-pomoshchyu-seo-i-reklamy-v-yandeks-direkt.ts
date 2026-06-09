@@ -13,7 +13,7 @@ export const uvelichiliZayavkiNa185DlyaYazykovoyShkolySCase: CaseItem = {
   industry: null,
   priority: 50,
   date: `12 сентября 2025`,
-  hero: undefined,
+  hero: '/images/cases/uvelichili-zayavki-na-185-dlya-yazykovoy-shkoly-s-pomoshchyu-seo-i-reklamy-v-yandeks-direkt.webp',
   results: [{ value: "+185%", label: "Заявки", description: "за период проекта" }],
   sections: [
   {

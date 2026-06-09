@@ -13,7 +13,7 @@ export const sniziliStoimostLidaNa42IUvelichiliKolVoZayavokCase: CaseItem = {
   industry: null,
   priority: 50,
   date: `16 августа 2025`,
-  hero: undefined,
+  hero: '/images/cases/snizili-stoimost-lida-na-42-i-uvelichili-kol-vo-zayavok-dlya-hr-servisa.webp',
   results: [{ value: "−42%", label: "Стоимость лида", description: "за период проекта" }],
   sections: [
   {

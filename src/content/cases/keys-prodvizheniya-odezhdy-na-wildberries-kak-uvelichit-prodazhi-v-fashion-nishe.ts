@@ -13,7 +13,7 @@ export const keysProdvizheniyaOdezhdyNaWildberriesKakUvelichitCase: CaseItem = {
   industry: null,
   priority: 50,
   date: `17 марта 2026`,
-  hero: undefined,
+  hero: '/images/cases/keys-prodvizheniya-odezhdy-na-wildberries-kak-uvelichit-prodazhi-v-fashion-nishe.webp',
   results: [],
   sections: [
   {

@@ -13,7 +13,7 @@ export const komnataYarostiUdestroyVMoskveProdvizhenieIRezultatyCase: CaseItem =
   industry: null,
   priority: 50,
   date: `10 сентября 2025`,
-  hero: undefined,
+  hero: '/images/cases/komnata-yarosti-udestroy-v-moskve-prodvizhenie-i-rezultaty.webp',
   results: [],
   sections: [
   {

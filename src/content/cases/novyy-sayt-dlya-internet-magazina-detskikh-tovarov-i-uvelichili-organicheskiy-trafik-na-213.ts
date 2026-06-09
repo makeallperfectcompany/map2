@@ -13,7 +13,7 @@ export const novyySaytDlyaInternetMagazinaDetskikhTovarovICase: CaseItem = {
   industry: null,
   priority: 50,
   date: `13 сентября 2025`,
-  hero: undefined,
+  hero: '/images/cases/novyy-sayt-dlya-internet-magazina-detskikh-tovarov-i-uvelichili-organicheskiy-trafik-na-213.webp',
   results: [{ value: "+213%", label: "Трафик", description: "за период проекта" }],
   sections: [
   {

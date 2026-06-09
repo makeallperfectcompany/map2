@@ -13,7 +13,7 @@ export const emailMarketingDlyaFashionECommerceKakVystroitSistemuSCase: CaseItem
   industry: null,
   priority: 50,
   date: `7 февраля 2026`,
-  hero: undefined,
+  hero: '/images/cases/email-marketing-dlya-fashion-e-commerce-kak-vystroit-sistemu-s-dokhodnostyu-250-i-pobedit-papku-spam.webp',
   results: [],
   sections: [
   {

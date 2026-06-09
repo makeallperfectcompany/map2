@@ -13,7 +13,7 @@ export const keysReklamaKlinikiEsteticheskoyMeditsinySCpl633ZaCase: CaseItem = {
   industry: null,
   priority: 50,
   date: `14 октября 2025`,
-  hero: undefined,
+  hero: '/images/cases/keys-reklama-kliniki-esteticheskoy-meditsiny-s-cpl-633-za-mesyats.webp',
   results: [],
   sections: [
   {

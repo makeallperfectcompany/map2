@@ -13,7 +13,7 @@ export const uvelichiliOrganicheskiyTrafikV43RazaISniziliCplCase: CaseItem = {
   industry: null,
   priority: 50,
   date: `12 сентября 2025`,
-  hero: undefined,
+  hero: '/images/cases/uvelichili-organicheskiy-trafik-v-43-raza-i-snizili-cpl-na-47-dlya-avtoservisa-s-prodazhey-zapchastey.webp',
   results: [{ value: "×4,3", label: "Трафик", description: "за период проекта" }],
   sections: [
   {

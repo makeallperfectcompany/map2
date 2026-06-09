@@ -13,7 +13,7 @@ export const kakMyUvelichiliPotokZayavokNaKliningovyeUslugiV34Case: CaseItem = {
   industry: null,
   priority: 50,
   date: `13 сентября 2025`,
-  hero: undefined,
+  hero: '/images/cases/kak-my-uvelichili-potok-zayavok-na-kliningovye-uslugi-v-34-raza-za-5-mesyatsev.webp',
   results: [{ value: "×3,4", label: "Заявки", description: "за период проекта" }],
   sections: [
   {

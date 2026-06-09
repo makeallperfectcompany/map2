@@ -13,7 +13,7 @@ export const keysRostaZakazovNaWildberriesKakVneshniyTrafikCase: CaseItem = {
   industry: null,
   priority: 50,
   date: `3 февраля 2026`,
-  hero: undefined,
+  hero: '/images/cases/keys-rosta-zakazov-na-wildberries-kak-vneshniy-trafik-povliyal-na-prodazhi-i-povedenie.webp',
   results: [],
   sections: [
   {

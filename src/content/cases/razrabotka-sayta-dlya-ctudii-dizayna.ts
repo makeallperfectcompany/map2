@@ -13,7 +13,7 @@ export const razrabotkaSaytaDlyaCtudiiDizaynaCase: CaseItem = {
   industry: null,
   priority: 50,
   date: `10 сентября 2025`,
-  hero: undefined,
+  hero: '/images/cases/razrabotka-sayta-dlya-ctudii-dizayna.webp',
   results: [],
   sections: [
   {

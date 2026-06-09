@@ -13,7 +13,7 @@ export const optimizatsiyaNalogovDlyaPredprinimateleyNaUsnCase: CaseItem = {
   industry: null,
   priority: 50,
   date: `10 сентября 2025`,
-  hero: undefined,
+  hero: '/images/cases/optimizatsiya-nalogov-dlya-predprinimateley-na-usn.webp',
   results: [],
   sections: [
   {

@@ -13,7 +13,7 @@ export const keysProdaliNa31MlnNaWbCherezVneshniyTrafikSDrr28Case: CaseItem = {
   industry: null,
   priority: 50,
   date: `18 октября 2025`,
-  hero: undefined,
+  hero: '/images/cases/keys-prodali-na-31-mln-na-wb-cherez-vneshniy-trafik-s-drr-28.webp',
   results: [],
   sections: [
   {

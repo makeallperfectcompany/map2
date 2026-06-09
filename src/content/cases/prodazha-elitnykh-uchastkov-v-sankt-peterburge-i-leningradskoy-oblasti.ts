@@ -13,7 +13,7 @@ export const prodazhaElitnykhUchastkovVSanktPeterburgeICase: CaseItem = {
   industry: null,
   priority: 50,
   date: `10 сентября 2025`,
-  hero: undefined,
+  hero: '/images/cases/prodazha-elitnykh-uchastkov-v-sankt-peterburge-i-leningradskoy-oblasti.webp',
   results: [],
   sections: [
   {

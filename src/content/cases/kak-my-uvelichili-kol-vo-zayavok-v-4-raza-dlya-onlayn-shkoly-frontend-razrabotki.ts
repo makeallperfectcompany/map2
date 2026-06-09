@@ -13,7 +13,7 @@ export const kakMyUvelichiliKolVoZayavokV4RazaDlyaOnlaynShkolyCase: CaseItem = {
   industry: null,
   priority: 50,
   date: `10 сентября 2025`,
-  hero: undefined,
+  hero: '/images/cases/kak-my-uvelichili-kol-vo-zayavok-v-4-raza-dlya-onlayn-shkoly-frontend-razrabotki.webp',
   results: [{ value: "×4", label: "Заявки", description: "за период проекта" }],
   sections: [
   {

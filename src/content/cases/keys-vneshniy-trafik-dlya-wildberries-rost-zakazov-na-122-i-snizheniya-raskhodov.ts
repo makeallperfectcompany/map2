@@ -13,7 +13,7 @@ export const keysVneshniyTrafikDlyaWildberriesRostZakazovNa122ICase: CaseItem = 
   industry: null,
   priority: 50,
   date: `12 марта 2026`,
-  hero: undefined,
+  hero: '/images/cases/keys-vneshniy-trafik-dlya-wildberries-rost-zakazov-na-122-i-snizheniya-raskhodov.webp',
   results: [],
   sections: [
   {

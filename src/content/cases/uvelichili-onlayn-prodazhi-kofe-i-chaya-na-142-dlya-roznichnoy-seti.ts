@@ -13,7 +13,7 @@ export const uvelichiliOnlaynProdazhiKofeIChayaNa142DlyaCase: CaseItem = {
   industry: null,
   priority: 50,
   date: `16 августа 2025`,
-  hero: undefined,
+  hero: '/images/cases/uvelichili-onlayn-prodazhi-kofe-i-chaya-na-142-dlya-roznichnoy-seti.webp',
   results: [{ value: "+142%", label: "Продажи", description: "за период проекта" }],
   sections: [
   {

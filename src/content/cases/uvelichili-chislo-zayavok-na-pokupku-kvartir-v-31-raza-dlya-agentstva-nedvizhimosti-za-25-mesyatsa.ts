@@ -13,7 +13,7 @@ export const uvelichiliChisloZayavokNaPokupkuKvartirV31RazaCase: CaseItem = {
   industry: null,
   priority: 50,
   date: `12 сентября 2025`,
-  hero: undefined,
+  hero: '/images/cases/uvelichili-chislo-zayavok-na-pokupku-kvartir-v-31-raza-dlya-agentstva-nedvizhimosti-za-25-mesyatsa.webp',
   results: [{ value: "×3,1", label: "Заявки", description: "за период проекта" }],
   sections: [
   {

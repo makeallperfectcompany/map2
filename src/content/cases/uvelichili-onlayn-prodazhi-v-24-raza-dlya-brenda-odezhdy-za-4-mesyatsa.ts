@@ -13,7 +13,7 @@ export const uvelichiliOnlaynProdazhiV24RazaDlyaBrendaOdezhdyCase: CaseItem = {
   industry: null,
   priority: 50,
   date: `16 августа 2025`,
-  hero: undefined,
+  hero: '/images/cases/uvelichili-onlayn-prodazhi-v-24-raza-dlya-brenda-odezhdy-za-4-mesyatsa.webp',
   results: [{ value: "×2,4", label: "Продажи", description: "за период проекта" }],
   sections: [
   {

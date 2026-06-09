@@ -13,7 +13,7 @@ export const rostKolichestvaOnlaynZapiseyNaPriemV32RazaDlyaCase: CaseItem = {
   industry: null,
   priority: 50,
   date: `13 сентября 2025`,
-  hero: undefined,
+  hero: '/images/cases/rost-kolichestva-onlayn-zapisey-na-priem-v-32-raza-dlya-meditsinskoy-kliniki.webp',
   results: [{ value: "×3,2", label: "Записи", description: "за период проекта" }],
   sections: [
   {

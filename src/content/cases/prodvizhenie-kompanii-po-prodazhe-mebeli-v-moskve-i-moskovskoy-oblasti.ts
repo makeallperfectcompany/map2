@@ -13,7 +13,7 @@ export const prodvizhenieKompaniiPoProdazheMebeliVMoskveIMoskovskoyCase: CaseIte
   industry: null,
   priority: 50,
   date: `10 сентября 2025`,
-  hero: undefined,
+  hero: '/images/cases/prodvizhenie-kompanii-po-prodazhe-mebeli-v-moskve-i-moskovskoy-oblasti.webp',
   results: [],
   sections: [
   {

@@ -13,7 +13,7 @@ export const ekskursiiVoVladimireSFpvTekhnologiyamiCase: CaseItem = {
   industry: null,
   priority: 50,
   date: `10 сентября 2025`,
-  hero: undefined,
+  hero: '/images/cases/ekskursii-vo-vladimire-s-fpv-tekhnologiyami.webp',
   results: [],
   sections: [
   {

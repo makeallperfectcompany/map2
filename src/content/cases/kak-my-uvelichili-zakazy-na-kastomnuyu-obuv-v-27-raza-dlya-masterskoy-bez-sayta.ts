@@ -13,7 +13,7 @@ export const kakMyUvelichiliZakazyNaKastomnuyuObuvV27RazaDlyaCase: CaseItem = {
   industry: null,
   priority: 50,
   date: `13 сентября 2025`,
-  hero: undefined,
+  hero: '/images/cases/kak-my-uvelichili-zakazy-na-kastomnuyu-obuv-v-27-raza-dlya-masterskoy-bez-sayta.webp',
   results: [{ value: "×2,7", label: "Заказы", description: "за период проекта" }],
   sections: [
   {

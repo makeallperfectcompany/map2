@@ -13,7 +13,7 @@ export const prodvizhenieStroitelnoyKompaniiKarelskiyDomCase: CaseItem = {
   industry: null,
   priority: 50,
   date: `10 сентября 2025`,
-  hero: undefined,
+  hero: '/images/cases/prodvizhenie-stroitelnoy-kompanii-karelskiy-dom.webp',
   results: [],
   sections: [
   {

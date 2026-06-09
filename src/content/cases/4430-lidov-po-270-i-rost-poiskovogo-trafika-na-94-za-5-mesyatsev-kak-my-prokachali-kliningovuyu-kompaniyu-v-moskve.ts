@@ -13,7 +13,7 @@ export const _430LidovPo270IRostPoiskovogoTrafikaNa94Za5Case: CaseItem = {
   industry: null,
   priority: 50,
   date: `1 октября 2025`,
-  hero: undefined,
+  hero: '/images/cases/4430-lidov-po-270-i-rost-poiskovogo-trafika-na-94-za-5-mesyatsev-kak-my-prokachali-kliningovuyu-kompaniyu-v-moskve.webp',
   results: [],
   sections: [
   {

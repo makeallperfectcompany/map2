@@ -13,7 +13,7 @@ export const uvelichenieProdazhMagazinaZhenskoyOdezhdyNaWildberriesCase: CaseIte
   industry: null,
   priority: 50,
   date: `10 сентября 2025`,
-  hero: undefined,
+  hero: '/images/cases/uvelichenie-prodazh-magazina-zhenskoy-odezhdy-na-wildberries.webp',
   results: [],
   sections: [
   {

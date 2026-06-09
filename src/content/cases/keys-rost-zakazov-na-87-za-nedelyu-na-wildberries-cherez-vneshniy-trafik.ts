@@ -13,7 +13,7 @@ export const keysRostZakazovNa87ZaNedelyuNaWildberriesCherezCase: CaseItem = {
   industry: null,
   priority: 50,
   date: `9 марта 2026`,
-  hero: undefined,
+  hero: '/images/cases/keys-rost-zakazov-na-87-za-nedelyu-na-wildberries-cherez-vneshniy-trafik.webp',
   results: [],
   sections: [
   {

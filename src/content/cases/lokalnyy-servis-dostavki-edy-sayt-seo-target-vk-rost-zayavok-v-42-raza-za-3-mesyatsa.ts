@@ -13,7 +13,7 @@ export const lokalnyyServisDostavkiEdySaytSeoTargetVkRostCase: CaseItem = {
   industry: null,
   priority: 50,
   date: `13 сентября 2025`,
-  hero: undefined,
+  hero: '/images/cases/lokalnyy-servis-dostavki-edy-sayt-seo-target-vk-rost-zayavok-v-42-raza-za-3-mesyatsa.webp',
   results: [{ value: "×4,2", label: "Заявки", description: "за период проекта" }],
   sections: [
   {
