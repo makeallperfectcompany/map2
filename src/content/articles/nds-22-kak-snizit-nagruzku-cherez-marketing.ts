@@ -11,7 +11,7 @@ export const nds22KakSnizitNagruzkuCherezMarketingArticle: Article = {
   category: `B2B`,
   date: `7 октября 2025`,
   updatedAt: `7 октября 2025`,
-  cover: undefined,
+  cover: "/images/previews/article-nds.webp",
   author: `Make All Perfect`,
   authorRole: `Команда Make All Perfect`,
   slug: `nds-22-kak-snizit-nagruzku-cherez-marketing`,

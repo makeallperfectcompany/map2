@@ -11,7 +11,7 @@ export const seoIliKontekstnayaReklamaChtoVybratDlyaRostaBiznesaArticle: Article
   category: `Маркетинг`,
   date: `1 октября 2025`,
   updatedAt: `1 октября 2025`,
-  cover: undefined,
+  cover: "/images/previews/article-seo-vs-context.webp",
   author: `Make All Perfect`,
   authorRole: `Команда Make All Perfect`,
   slug: `seo-ili-kontekstnaya-reklama-chto-vybrat-dlya-rosta-biznesa`,

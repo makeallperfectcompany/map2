@@ -11,7 +11,7 @@ export const klassicheskiyMarketingUstarelKakNovayaModel4bArticle: Article = {
   category: `Маркетинг`,
   date: `21 октября 2025`,
   updatedAt: `21 октября 2025`,
-  cover: undefined,
+  cover: "/images/previews/article-classic-marketing.webp",
   author: `Make All Perfect`,
   authorRole: `Команда Make All Perfect`,
   slug: `klassicheskiy-marketing-ustarel-kak-novaya-model-4b-menyaet-pravila-igry`,

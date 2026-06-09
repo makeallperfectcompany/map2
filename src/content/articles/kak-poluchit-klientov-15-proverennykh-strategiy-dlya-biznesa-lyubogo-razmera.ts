@@ -11,7 +11,7 @@ export const kakPoluchitKlientov15ProverennykhStrategiyDlyaArticle: Article = {
   category: `Маркетинг`,
   date: `17 апреля 2026`,
   updatedAt: `17 апреля 2026`,
-  cover: undefined,
+  cover: "/images/previews/article-get-clients.webp",
   author: `Make All Perfect`,
   authorRole: `Команда Make All Perfect`,
   slug: `kak-poluchit-klientov-15-proverennykh-strategiy-dlya-biznesa-lyubogo-razmera`,

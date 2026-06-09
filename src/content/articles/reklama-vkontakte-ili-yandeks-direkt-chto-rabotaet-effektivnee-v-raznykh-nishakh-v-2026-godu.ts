@@ -11,7 +11,7 @@ export const reklamaVkontakteIliYandeksDirektChtoRabotaetArticle: Article = {
   category: `Реклама`,
   date: `15 декабря 2025`,
   updatedAt: `15 декабря 2025`,
-  cover: undefined,
+  cover: "/images/previews/article-vk-vs-yandex.webp",
   author: `Make All Perfect`,
   authorRole: `Команда Make All Perfect`,
   slug: `reklama-vkontakte-ili-yandeks-direkt-chto-rabotaet-effektivnee-v-raznykh-nishakh-v-2026-godu`,

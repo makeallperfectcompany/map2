@@ -11,7 +11,7 @@ export const prodvizhenieSaytaVDirektKakUspeshnoArticle: Article = {
   category: `Реклама`,
   date: `17 декабря 2025`,
   updatedAt: `17 декабря 2025`,
-  cover: undefined,
+  cover: "/images/previews/article-direct-promotion.webp",
   author: `Make All Perfect`,
   authorRole: `Команда Make All Perfect`,
   slug: `prodvizhenie-sayta-v-direkt-kak-uspeshno-reklamirovatsya-v-yandekse`,

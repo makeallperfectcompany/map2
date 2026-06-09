@@ -11,7 +11,7 @@ export const psikhologiyaPokupatelyaKakEmotsiiIVospriyatieArticle: Article = {
   category: `Маркетинг`,
   date: `17 октября 2025`,
   updatedAt: `17 октября 2025`,
-  cover: undefined,
+  cover: "/images/previews/article-buyer-psychology.webp",
   author: `Make All Perfect`,
   authorRole: `Команда Make All Perfect`,
   slug: `psikhologiya-pokupatelya-kak-emotsii-i-vospriyatie-vliyayut-na-reshenie-o-pokupke`,

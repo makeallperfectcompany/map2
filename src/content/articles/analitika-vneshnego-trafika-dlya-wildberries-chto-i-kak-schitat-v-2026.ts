@@ -11,7 +11,7 @@ export const analitikaVneshnegoTrafikaDlyaWildberriesChtoIKakArticle: Article = 
   category: `Реклама`,
   date: `1 февраля 2026`,
   updatedAt: `1 февраля 2026`,
-  cover: undefined,
+  cover: "/images/previews/article-external-traffic-analytics.webp",
   author: `Make All Perfect`,
   authorRole: `Команда Make All Perfect`,
   slug: `analitika-vneshnego-trafika-dlya-wildberries-chto-i-kak-schitat-v-2026`,

@@ -11,7 +11,7 @@ export const kakLokalnyyBiznesMozhetPobeditFederalnyeSetiArticle: Article = {
   category: `Маркетинг`,
   date: `19 декабря 2025`,
   updatedAt: `19 декабря 2025`,
-  cover: undefined,
+  cover: "/images/previews/article-local-business.webp",
   author: `Make All Perfect`,
   authorRole: `Команда Make All Perfect`,
   slug: `kak-lokalnyy-biznes-mozhet-pobedit-federalnye-seti-aktivnoe-prodvizhenie-na-geo-servisakh`,

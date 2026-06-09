@@ -11,7 +11,7 @@ export const gdeZakazatVneshniyTrafikDlyaWildberriesIOzonTsenyArticle: Article =
   category: `Реклама`,
   date: `10 марта 2026`,
   updatedAt: `10 марта 2026`,
-  cover: undefined,
+  cover: "/images/previews/article-where-order-traffic.webp",
   author: `Make All Perfect`,
   authorRole: `Команда Make All Perfect`,
   slug: `gde-zakazat-vneshniy-trafik-dlya-wildberries-i-ozon-tseny-kanaly-ploshchadki-i-chastye-oshibki`,

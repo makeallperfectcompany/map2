@@ -11,7 +11,7 @@ export const instrumentyInternetMarketingaPrakticheskiyGidDlyaArticle: Article =
   category: `Инструменты`,
   date: `20 апреля 2026`,
   updatedAt: `22 апреля 2026`,
-  cover: undefined,
+  cover: "/images/previews/article-marketing-tools.webp",
   author: `Make All Perfect`,
   authorRole: `Команда Make All Perfect`,
   slug: `instrumenty-internet-marketinga-prakticheskiy-gid-dlya-biznesa`,

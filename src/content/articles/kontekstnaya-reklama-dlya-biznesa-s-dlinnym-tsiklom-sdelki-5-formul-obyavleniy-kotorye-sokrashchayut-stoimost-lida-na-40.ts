@@ -11,7 +11,7 @@ export const kontekstnayaReklamaDlyaBiznesaSDlinnymTsiklomArticle: Article = {
   category: `B2B`,
   date: `25 апреля 2026`,
   updatedAt: `26 апреля 2026`,
-  cover: undefined,
+  cover: "/images/previews/article-contextual-long-cycle.webp",
   author: `Make All Perfect`,
   authorRole: `Команда Make All Perfect`,
   slug: `kontekstnaya-reklama-dlya-biznesa-s-dlinnym-tsiklom-sdelki-5-formul-obyavleniy-kotorye-sokrashchayut-stoimost-lida-na-40`,

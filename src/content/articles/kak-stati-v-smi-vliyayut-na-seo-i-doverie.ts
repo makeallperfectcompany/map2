@@ -11,7 +11,7 @@ export const kakStatiVSmiVliyayutNaSeoIDoverieArticle: Article = {
   category: `PR`,
   date: `18 декабря 2025`,
   updatedAt: `18 декабря 2025`,
-  cover: undefined,
+  cover: "/images/previews/article-smi-seo.webp",
   author: `Make All Perfect`,
   authorRole: `Команда Make All Perfect`,
   slug: `kak-stati-v-smi-vliyayut-na-seo-i-doverie`,

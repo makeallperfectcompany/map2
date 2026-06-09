@@ -11,7 +11,7 @@ export const vneshnyayaReklamaDlyaMarketplejsovKakVystrelitINeArticle: Article =
   category: `Маркетинг`,
   date: `15 июля 2025`,
   updatedAt: `17 июля 2025`,
-  cover: undefined,
+  cover: "/images/previews/article-external-ads-marketplaces.webp",
   author: `Make All Perfect`,
   authorRole: `Команда Make All Perfect`,
   slug: `vneshnyaya-reklama-dlya-marketplejsov-kak-vystrelit-i-ne-promahnutsya`,

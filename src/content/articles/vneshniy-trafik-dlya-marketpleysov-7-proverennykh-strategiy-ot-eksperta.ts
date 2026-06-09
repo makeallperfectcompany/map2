@@ -11,7 +11,7 @@ export const vneshniyTrafikDlyaMarketpleysov7ProverennykhArticle: Article = {
   category: `Маркетинг`,
   date: `10 апреля 2026`,
   updatedAt: `10 апреля 2026`,
-  cover: undefined,
+  cover: "/images/previews/article-marketplace-external.webp",
   author: `Make All Perfect`,
   authorRole: `Команда Make All Perfect`,
   slug: `vneshniy-trafik-dlya-marketpleysov-7-proverennykh-strategiy-ot-eksperta`,

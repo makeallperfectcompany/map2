@@ -11,7 +11,7 @@ export const chtoTakoeRfmAnalizIZachemOnB2bArticle: Article = {
   category: `Маркетинг`,
   date: `16 декабря 2025`,
   updatedAt: `16 декабря 2025`,
-  cover: undefined,
+  cover: "/images/previews/article-rfm-analysis.webp",
   author: `Make All Perfect`,
   authorRole: `Команда Make All Perfect`,
   slug: `chto-takoe-rfm-analiz-i-zachem-on-b2b`,

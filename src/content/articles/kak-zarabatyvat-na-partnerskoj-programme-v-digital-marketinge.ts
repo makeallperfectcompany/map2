@@ -11,7 +11,7 @@ export const kakZarabatyvatNaPartnerskojProgrammeVDigitalArticle: Article = {
   category: `Маркетинг`,
   date: `18 августа 2025`,
   updatedAt: `20 августа 2025`,
-  cover: undefined,
+  cover: "/images/previews/article-partner-program.webp",
   author: `Make All Perfect`,
   authorRole: `Команда Make All Perfect`,
   slug: `kak-zarabatyvat-na-partnerskoj-programme-v-digital-marketinge`,

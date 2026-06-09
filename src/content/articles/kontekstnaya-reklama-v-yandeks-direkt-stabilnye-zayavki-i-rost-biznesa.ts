@@ -11,7 +11,7 @@ export const kontekstnayaReklamaVYandeksDirektStabilnyeZayavkiArticle: Article =
   category: `Реклама`,
   date: `15 декабря 2025`,
   updatedAt: `15 декабря 2025`,
-  cover: undefined,
+  cover: "/images/previews/article-direct-promotion.webp",
   author: `Make All Perfect`,
   authorRole: `Команда Make All Perfect`,
   slug: `kontekstnaya-reklama-v-yandeks-direkt-stabilnye-zayavki-i-rost-biznesa`,

@@ -11,7 +11,7 @@ export const pochemuPadayutProdazhiNaWildberriesIOzonIKakEtoArticle: Article = {
   category: `Маркетинг`,
   date: `13 февраля 2026`,
   updatedAt: `13 февраля 2026`,
-  cover: undefined,
+  cover: "/images/previews/article-sales-decline.webp",
   author: `Make All Perfect`,
   authorRole: `Команда Make All Perfect`,
   slug: `pochemu-padayut-prodazhi-na-wildberries-i-ozon-i-kak-eto-ispravit`,

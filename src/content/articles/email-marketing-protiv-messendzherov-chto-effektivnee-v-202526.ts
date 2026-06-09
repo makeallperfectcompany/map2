@@ -11,7 +11,7 @@ export const emailMarketingProtivMessendzherovChtoEffektivneeArticle: Article = 
   category: `Email-маркетинг`,
   date: `3 октября 2025`,
   updatedAt: `3 октября 2025`,
-  cover: undefined,
+  cover: "/images/previews/article-email-vs-messengers.webp",
   author: `Make All Perfect`,
   authorRole: `Команда Make All Perfect`,
   slug: `email-marketing-protiv-messendzherov-chto-effektivnee-v-202526`,

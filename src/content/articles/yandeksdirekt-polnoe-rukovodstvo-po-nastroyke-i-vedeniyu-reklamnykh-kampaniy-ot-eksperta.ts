@@ -11,7 +11,7 @@ export const yandeksdirektPolnoeRukovodstvoPoNastroykeIVedeniyuArticle: Article 
   category: `Реклама`,
   date: `15 апреля 2026`,
   updatedAt: `15 апреля 2026`,
-  cover: undefined,
+  cover: "/images/previews/article-yandex-direct-guide.webp",
   author: `Make All Perfect`,
   authorRole: `Команда Make All Perfect`,
   slug: `yandeksdirekt-polnoe-rukovodstvo-po-nastroyke-i-vedeniyu-reklamnykh-kampaniy-ot-eksperta`,

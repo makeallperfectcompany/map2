@@ -11,7 +11,7 @@ export const yandeksKitRossiyskiyAnalogShopifyIliVyzovDlyaWbIArticle: Article = 
   category: `Тренды`,
   date: `29 сентября 2025`,
   updatedAt: `13 октября 2025`,
-  cover: undefined,
+  cover: "/images/previews/article-yandex-kit.webp",
   author: `Make All Perfect`,
   authorRole: `Команда Make All Perfect`,
   slug: `yandeks-kit-rossiyskiy-analog-shopify-ili-vyzov-dlya-wb-i-ozon`,

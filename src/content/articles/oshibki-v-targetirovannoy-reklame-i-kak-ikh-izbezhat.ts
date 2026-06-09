@@ -11,7 +11,7 @@ export const oshibkiVTargetirovannoyReklameIKakIkhIzbezhatArticle: Article = {
   category: `Маркетинг`,
   date: `2 октября 2025`,
   updatedAt: `23 октября 2025`,
-  cover: undefined,
+  cover: "/images/previews/article-targeting-mistakes.webp",
   author: `Make All Perfect`,
   authorRole: `Команда Make All Perfect`,
   slug: `oshibki-v-targetirovannoy-reklame-i-kak-ikh-izbezhat`,

@@ -11,7 +11,7 @@ export const reklamaVVkontakteKakV2025GoduNastroitEeTakChtobyArticle: Article = 
   category: `Реклама`,
   date: `19 сентября 2025`,
   updatedAt: `23 сентября 2025`,
-  cover: undefined,
+  cover: "/images/previews/article-vk-ads.webp",
   author: `Make All Perfect`,
   authorRole: `Команда Make All Perfect`,
   slug: `reklama-v-vkontakte-kak-v-2025-godu-nastroit-ee-tak-chtoby-byl-rezultat`,

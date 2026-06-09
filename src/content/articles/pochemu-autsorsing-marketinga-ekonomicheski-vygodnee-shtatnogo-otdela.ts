@@ -11,7 +11,7 @@ export const pochemuAutsorsingMarketingaEkonomicheskiVygodneeArticle: Article = 
   category: `Маркетинг`,
   date: `22 сентября 2025`,
   updatedAt: `23 сентября 2025`,
-  cover: undefined,
+  cover: "/images/previews/article-outsourcing.webp",
   author: `Make All Perfect`,
   authorRole: `Команда Make All Perfect`,
   slug: `pochemu-autsorsing-marketinga-ekonomicheski-vygodnee-shtatnogo-otdela`,

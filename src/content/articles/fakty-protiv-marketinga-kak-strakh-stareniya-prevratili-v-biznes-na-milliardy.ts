@@ -11,7 +11,7 @@ export const faktyProtivMarketingaKakStrakhStareniyaPrevratiliArticle: Article =
   category: `Реклама`,
   date: `18 октября 2025`,
   updatedAt: `18 октября 2025`,
-  cover: undefined,
+  cover: "/images/previews/article-aging-business.webp",
   author: `Make All Perfect`,
   authorRole: `Команда Make All Perfect`,
   slug: `fakty-protiv-marketinga-kak-strakh-stareniya-prevratili-v-biznes-na-milliardy`,

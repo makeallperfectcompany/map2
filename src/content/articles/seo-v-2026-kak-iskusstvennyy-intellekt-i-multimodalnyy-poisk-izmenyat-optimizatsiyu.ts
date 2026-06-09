@@ -11,7 +11,7 @@ export const seoV2026KakIskusstvennyyIntellektIMultimodalnyyArticle: Article = {
   category: `SEO`,
   date: `14 апреля 2026`,
   updatedAt: `14 апреля 2026`,
-  cover: undefined,
+  cover: "/images/previews/article-seo-2026.webp",
   author: `Make All Perfect`,
   authorRole: `Команда Make All Perfect`,
   slug: `seo-v-2026-kak-iskusstvennyy-intellekt-i-multimodalnyy-poisk-izmenyat-optimizatsiyu`,

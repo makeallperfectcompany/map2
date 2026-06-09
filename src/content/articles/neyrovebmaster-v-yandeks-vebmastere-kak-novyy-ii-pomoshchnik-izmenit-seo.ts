@@ -11,7 +11,7 @@ export const neyrovebmasterVYandeksVebmastereKakNovyyIiArticle: Article = {
   category: `Инструменты`,
   date: `29 сентября 2025`,
   updatedAt: `28 октября 2025`,
-  cover: undefined,
+  cover: "/images/previews/article-neirovebmaster.webp",
   author: `Make All Perfect`,
   authorRole: `Команда Make All Perfect`,
   slug: `neyrovebmaster-v-yandeks-vebmastere-kak-novyy-ii-pomoshchnik-izmenit-seo`,

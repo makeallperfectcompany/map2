@@ -11,7 +11,7 @@ export const kakPovysitProdazhiNaWbIOzonBezUchastiyaVAktsiyakhArticle: Article =
   category: `Маркетинг`,
   date: `9 февраля 2026`,
   updatedAt: `9 марта 2026`,
-  cover: undefined,
+  cover: "/images/previews/article-boost-sales-no-promo.webp",
   author: `Make All Perfect`,
   authorRole: `Команда Make All Perfect`,
   slug: `kak-povysit-prodazhi-na-wb-i-ozon-bez-uchastiya-v-aktsiyakh`,

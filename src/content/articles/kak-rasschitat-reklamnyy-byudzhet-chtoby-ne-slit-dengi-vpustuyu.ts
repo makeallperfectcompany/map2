@@ -11,7 +11,7 @@ export const kakRasschitatReklamnyyByudzhetChtobyNeSlitDengiArticle: Article = {
   category: `Реклама`,
   date: `14 июля 2025`,
   updatedAt: `9 декабря 2025`,
-  cover: undefined,
+  cover: "/images/previews/article-12-reklamnyy-byudzhet.webp",
   author: `Make All Perfect`,
   authorRole: `Команда Make All Perfect`,
   slug: `kak-rasschitat-reklamnyy-byudzhet-chtoby-ne-slit-dengi-vpustuyu`,

@@ -11,7 +11,7 @@ export const aiSeoKakIskusstvennyyIntellektMenyaetPravilaArticle: Article = {
   category: `SEO`,
   date: `7 октября 2025`,
   updatedAt: `8 октября 2025`,
-  cover: undefined,
+  cover: "/images/previews/article-ai-seo.webp",
   author: `Make All Perfect`,
   authorRole: `Команда Make All Perfect`,
   slug: `ai-seo-kak-iskusstvennyy-intellekt-menyaet-pravila-poiskovogo-prodvizheniya`,

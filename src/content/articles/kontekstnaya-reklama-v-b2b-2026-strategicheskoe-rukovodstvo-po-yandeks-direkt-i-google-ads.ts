@@ -11,7 +11,7 @@ export const kontekstnayaReklamaVB2b2026StrategicheskoeArticle: Article = {
   category: `Реклама`,
   date: `7 марта 2026`,
   updatedAt: `7 марта 2026`,
-  cover: undefined,
+  cover: "/images/previews/article-b2b-ppc-strategy.webp",
   author: `Make All Perfect`,
   authorRole: `Команда Make All Perfect`,
   slug: `kontekstnaya-reklama-v-b2b-2026-strategicheskoe-rukovodstvo-po-yandeks-direkt-i-google-ads`,

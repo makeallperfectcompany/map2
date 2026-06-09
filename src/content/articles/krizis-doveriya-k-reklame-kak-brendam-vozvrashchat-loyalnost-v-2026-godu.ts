@@ -11,7 +11,7 @@ export const krizisDoveriyaKReklameKakBrendamVozvrashchatArticle: Article = {
   category: `Маркетинг`,
   date: `21 октября 2025`,
   updatedAt: `20 октября 2025`,
-  cover: undefined,
+  cover: "/images/previews/article-trust-crisis.webp",
   author: `Make All Perfect`,
   authorRole: `Команда Make All Perfect`,
   slug: `krizis-doveriya-k-reklame-kak-brendam-vozvrashchat-loyalnost-v-2026-godu`,

@@ -11,7 +11,7 @@ export const kakPravilnoRaspredelitReklamnyyByudzhetMezhduArticle: Article = {
   category: `Стратегии`,
   date: `16 октября 2025`,
   updatedAt: `13 января 2026`,
-  cover: undefined,
+  cover: "/images/previews/article-ad-budget-allocation.webp",
   author: `Make All Perfect`,
   authorRole: `Команда Make All Perfect`,
   slug: `kak-pravilno-raspredelit-reklamnyy-byudzhet-mezhdu-kanalami`,

@@ -11,7 +11,7 @@ export const kakAdaptirovatMarketingStrategiyuVUsloviyakhArticle: Article = {
   category: `Маркетинг`,
   date: `7 ноября 2025`,
   updatedAt: `7 ноября 2025`,
-  cover: undefined,
+  cover: "/images/previews/article-adapt-strategy.webp",
   author: `Make All Perfect`,
   authorRole: `Команда Make All Perfect`,
   slug: `kak-adaptirovat-marketing-strategiyu-v-usloviyakh-padayushchego-sprosa-praktiki-i-primery`,

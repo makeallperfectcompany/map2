@@ -11,7 +11,7 @@ export const povedencheskieFaktoryMarketpleysovChtoRealnoArticle: Article = {
   category: `Маркетинг`,
   date: `25 февраля 2026`,
   updatedAt: `25 февраля 2026`,
-  cover: undefined,
+  cover: "/images/previews/article-marketplace-behavioral-factors.webp",
   author: `Make All Perfect`,
   authorRole: `Команда Make All Perfect`,
   slug: `povedencheskie-faktory-marketpleysov-chto-realno-vliyaet-na-vydachu`,

@@ -11,7 +11,7 @@ export const prodvizhenieBiznesaPolnoeRukovodstvoPoStrategiyamArticle: Article =
   category: `Маркетинг`,
   date: `17 апреля 2026`,
   updatedAt: `17 апреля 2026`,
-  cover: undefined,
+  cover: "/images/previews/article-business-promotion.webp",
   author: `Make All Perfect`,
   authorRole: `Команда Make All Perfect`,
   slug: `prodvizhenie-biznesa-polnoe-rukovodstvo-po-strategiyam`,

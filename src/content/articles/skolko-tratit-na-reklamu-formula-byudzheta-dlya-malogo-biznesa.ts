@@ -11,7 +11,7 @@ export const skolkoTratitNaReklamuFormulaByudzhetaDlyaMalogoArticle: Article = {
   category: `Реклама`,
   date: `2 октября 2025`,
   updatedAt: `2 октября 2025`,
-  cover: undefined,
+  cover: "/images/previews/article-ad-budget-formula.webp",
   author: `Make All Perfect`,
   authorRole: `Команда Make All Perfect`,
   slug: `skolko-tratit-na-reklamu-formula-byudzheta-dlya-malogo-biznesa`,

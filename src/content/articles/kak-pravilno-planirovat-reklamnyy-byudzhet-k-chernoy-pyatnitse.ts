@@ -11,7 +11,7 @@ export const kakPravilnoPlanirovatReklamnyyByudzhetKChernoyArticle: Article = {
   category: `Маркетинг`,
   date: `25 сентября 2025`,
   updatedAt: `26 сентября 2025`,
-  cover: undefined,
+  cover: "/images/previews/article-black-friday.webp",
   author: `Make All Perfect`,
   authorRole: `Команда Make All Perfect`,
   slug: `kak-pravilno-planirovat-reklamnyy-byudzhet-k-chernoy-pyatnitse`,

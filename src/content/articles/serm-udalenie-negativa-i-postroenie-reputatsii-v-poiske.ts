@@ -11,7 +11,7 @@ export const sermUdalenieNegativaIPostroenieReputatsiiVPoiskeArticle: Article = 
   category: `Брендинг`,
   date: `29 сентября 2025`,
   updatedAt: `1 октября 2025`,
-  cover: undefined,
+  cover: "/images/previews/article-serm.webp",
   author: `Make All Perfect`,
   authorRole: `Команда Make All Perfect`,
   slug: `serm-udalenie-negativa-i-postroenie-reputatsii-v-poiske`,

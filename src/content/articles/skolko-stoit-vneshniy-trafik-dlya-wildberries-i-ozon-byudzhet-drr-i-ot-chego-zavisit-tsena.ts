@@ -11,7 +11,7 @@ export const skolkoStoitVneshniyTrafikDlyaWildberriesIOzonArticle: Article = {
   category: `Маркетинг`,
   date: `14 марта 2026`,
   updatedAt: `14 марта 2026`,
-  cover: undefined,
+  cover: "/images/previews/article-external-traffic-cost.webp",
   author: `Make All Perfect`,
   authorRole: `Команда Make All Perfect`,
   slug: `skolko-stoit-vneshniy-trafik-dlya-wildberries-i-ozon-byudzhet-drr-i-ot-chego-zavisit-tsena`,

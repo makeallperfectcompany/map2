@@ -11,7 +11,7 @@ export const ormZachemBiznesuUpravlyatSvoeyOnlaynReputatsieyArticle: Article = {
   category: `Брендинг`,
   date: `28 сентября 2025`,
   updatedAt: `29 сентября 2025`,
-  cover: undefined,
+  cover: "/images/previews/article-orm.webp",
   author: `Make All Perfect`,
   authorRole: `Команда Make All Perfect`,
   slug: `orm-zachem-biznesu-upravlyat-svoey-onlayn-reputatsiey`,

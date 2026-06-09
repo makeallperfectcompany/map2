@@ -11,7 +11,7 @@ export const pochemuBezVneshnegoTrafikaRostNaMarketpleysakhArticle: Article = {
   category: `Реклама`,
   date: `31 января 2026`,
   updatedAt: `31 января 2026`,
-  cover: undefined,
+  cover: "/images/previews/article-without-external-traffic-growth.webp",
   author: `Make All Perfect`,
   authorRole: `Команда Make All Perfect`,
   slug: `pochemu-bez-vneshnego-trafika-rost-na-marketpleysakh-ogranichen-v-2026`,

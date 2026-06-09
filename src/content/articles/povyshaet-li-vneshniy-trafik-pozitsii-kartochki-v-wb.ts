@@ -11,7 +11,7 @@ export const povyshaetLiVneshniyTrafikPozitsiiKartochkiVWbArticle: Article = {
   category: `SEO`,
   date: `8 февраля 2026`,
   updatedAt: `8 февраля 2026`,
-  cover: undefined,
+  cover: "/images/previews/article-external-traffic-rankings.webp",
   author: `Make All Perfect`,
   authorRole: `Команда Make All Perfect`,
   slug: `povyshaet-li-vneshniy-trafik-pozitsii-kartochki-v-wb`,

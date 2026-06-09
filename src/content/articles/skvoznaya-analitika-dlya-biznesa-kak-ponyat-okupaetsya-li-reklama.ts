@@ -11,7 +11,7 @@ export const skvoznayaAnalitikaDlyaBiznesaKakPonyatOkupaetsyaArticle: Article = 
   category: `Аналитика`,
   date: `21 ноября 2025`,
   updatedAt: `21 ноября 2025`,
-  cover: undefined,
+  cover: "/images/previews/article-analytics.webp",
   author: `Make All Perfect`,
   authorRole: `Команда Make All Perfect`,
   slug: `skvoznaya-analitika-dlya-biznesa-kak-ponyat-okupaetsya-li-reklama`,

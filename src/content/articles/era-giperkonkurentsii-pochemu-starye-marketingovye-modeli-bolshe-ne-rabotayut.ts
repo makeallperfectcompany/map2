@@ -11,7 +11,7 @@ export const eraGiperkonkurentsiiPochemuStaryeMarketingovyeArticle: Article = {
   category: `Маркетинг`,
   date: `10 декабря 2025`,
   updatedAt: `10 декабря 2025`,
-  cover: undefined,
+  cover: "/images/previews/article-aging-business.webp",
   author: `Make All Perfect`,
   authorRole: `Команда Make All Perfect`,
   slug: `era-giperkonkurentsii-pochemu-starye-marketingovye-modeli-bolshe-ne-rabotayut`,

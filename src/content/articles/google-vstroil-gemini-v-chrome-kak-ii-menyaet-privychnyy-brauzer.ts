@@ -11,7 +11,7 @@ export const googleVstroilGeminiVChromeKakIiMenyaetPrivychnyyArticle: Article = 
   category: `Инструменты`,
   date: `30 сентября 2025`,
   updatedAt: `30 сентября 2025`,
-  cover: undefined,
+  cover: "/images/previews/article-gemini-chrome.webp",
   author: `Make All Perfect`,
   authorRole: `Команда Make All Perfect`,
   slug: `google-vstroil-gemini-v-chrome-kak-ii-menyaet-privychnyy-brauzer`,

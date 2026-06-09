@@ -11,7 +11,7 @@ export const neyrosetiDlyaSellerovKakIiPomogaetSozdavatArticle: Article = {
   category: `Маркетинг`,
   date: `20 октября 2025`,
   updatedAt: `20 октября 2025`,
-  cover: undefined,
+  cover: "/images/previews/article-ai-sellers.webp",
   author: `Make All Perfect`,
   authorRole: `Команда Make All Perfect`,
   slug: `neyroseti-dlya-sellerov-kak-ii-pomogaet-sozdavat-kartochki-i-kontent-na-marketpleysakh`,

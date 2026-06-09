@@ -11,7 +11,7 @@ export const vneshnyayaReklamaWildberriesKakUvelichitProdazhiArticle: Article = 
   category: `Реклама`,
   date: `15 апреля 2026`,
   updatedAt: `15 апреля 2026`,
-  cover: undefined,
+  cover: "/images/previews/article-wb-external-ads.webp",
   author: `Make All Perfect`,
   authorRole: `Команда Make All Perfect`,
   slug: `vneshnyaya-reklama-wildberries-kak-uvelichit-prodazhi-cherez-vneshniy-trafik-pod-klyuch`,

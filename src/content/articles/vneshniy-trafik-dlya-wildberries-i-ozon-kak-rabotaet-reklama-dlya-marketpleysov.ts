@@ -11,7 +11,7 @@ export const vneshniyTrafikDlyaWildberriesIOzonKakRabotaetArticle: Article = {
   category: `Реклама`,
   date: `11 марта 2026`,
   updatedAt: `9 марта 2026`,
-  cover: undefined,
+  cover: "/images/previews/article-external-traffic-marketplaces.webp",
   author: `Make All Perfect`,
   authorRole: `Команда Make All Perfect`,
   slug: `vneshniy-trafik-dlya-wildberries-i-ozon-kak-rabotaet-reklama-dlya-marketpleysov`,

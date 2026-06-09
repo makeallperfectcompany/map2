@@ -11,7 +11,7 @@ export const besplatnyySeoAuditSaytaPoluchiteProfessionalnyyArticle: Article = {
   category: `SEO`,
   date: `14 октября 2025`,
   updatedAt: `15 октября 2025`,
-  cover: undefined,
+  cover: "/images/previews/article-seo-audit.webp",
   author: `Make All Perfect`,
   authorRole: `Команда Make All Perfect`,
   slug: `besplatnyy-seo-audit-sayta-poluchite-professionalnyy-analiz-za-2-3-chasa`,

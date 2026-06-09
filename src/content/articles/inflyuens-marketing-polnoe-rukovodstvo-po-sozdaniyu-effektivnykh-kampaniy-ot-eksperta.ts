@@ -11,7 +11,7 @@ export const inflyuensMarketingPolnoeRukovodstvoPoSozdaniyuArticle: Article = {
   category: `Маркетинг`,
   date: `20 апреля 2026`,
   updatedAt: `21 апреля 2026`,
-  cover: undefined,
+  cover: "/images/previews/article-influence-marketing.webp",
   author: `Make All Perfect`,
   authorRole: `Команда Make All Perfect`,
   slug: `inflyuens-marketing-polnoe-rukovodstvo-po-sozdaniyu-effektivnykh-kampaniy-ot-eksperta`,

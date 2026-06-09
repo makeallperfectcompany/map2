@@ -11,7 +11,7 @@ export const userGeneratedContentUgcKakPrivlekatKlientovArticle: Article = {
   category: `Email-маркетинг`,
   date: `5 октября 2025`,
   updatedAt: `5 октября 2025`,
-  cover: undefined,
+  cover: "/images/previews/article-ugc.webp",
   author: `Make All Perfect`,
   authorRole: `Команда Make All Perfect`,
   slug: `user-generated-content-ugc-kak-privlekat-klientov-kontentom-samikh-pokupateley`,

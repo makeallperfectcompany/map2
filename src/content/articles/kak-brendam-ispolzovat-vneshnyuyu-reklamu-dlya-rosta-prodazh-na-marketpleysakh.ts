@@ -11,7 +11,7 @@ export const kakBrendamIspolzovatVneshnyuyuReklamuDlyaRostaArticle: Article = {
   category: `Аналитика`,
   date: `15 октября 2025`,
   updatedAt: `15 октября 2025`,
-  cover: undefined,
+  cover: "/images/previews/article-external-ads-marketplaces.webp",
   author: `Make All Perfect`,
   authorRole: `Команда Make All Perfect`,
   slug: `kak-brendam-ispolzovat-vneshnyuyu-reklamu-dlya-rosta-prodazh-na-marketpleysakh`,

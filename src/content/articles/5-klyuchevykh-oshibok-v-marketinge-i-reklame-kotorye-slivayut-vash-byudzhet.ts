@@ -11,7 +11,7 @@ export const _KlyuchevykhOshibokVMarketingeIReklameKotoryeArticle: Article = {
   category: `Маркетинг`,
   date: `25 сентября 2025`,
   updatedAt: `25 сентября 2025`,
-  cover: undefined,
+  cover: "/images/previews/article-5-mistakes.webp",
   author: `Make All Perfect`,
   authorRole: `Команда Make All Perfect`,
   slug: `5-klyuchevykh-oshibok-v-marketinge-i-reklame-kotorye-slivayut-vash-byudzhet`,

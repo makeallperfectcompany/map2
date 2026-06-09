@@ -11,7 +11,7 @@ export const sozdatSaytNaWordpressV2026GoduPolnyyGidPoRiskamArticle: Article = {
   category: `Веб-разработка`,
   date: `24 апреля 2026`,
   updatedAt: `24 апреля 2026`,
-  cover: undefined,
+  cover: "/images/previews/article-wordpress-2026.webp",
   author: `Make All Perfect`,
   authorRole: `Команда Make All Perfect`,
   slug: `sozdat-sayt-na-wordpress-v-2026-godu-polnyy-gid-po-riskam-stoimosti-i-vyboru-cms-dlya-rossiyskogo-biznes`,

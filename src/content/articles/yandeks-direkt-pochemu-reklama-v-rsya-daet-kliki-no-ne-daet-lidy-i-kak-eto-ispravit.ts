@@ -11,7 +11,7 @@ export const yandeksDirektPochemuReklamaVRsyaDaetKlikiNoNeDaetArticle: Article =
   category: `Реклама`,
   date: `15 октября 2025`,
   updatedAt: `15 октября 2025`,
-  cover: undefined,
+  cover: "/images/previews/article-rsya.webp",
   author: `Make All Perfect`,
   authorRole: `Команда Make All Perfect`,
   slug: `yandeks-direkt-pochemu-reklama-v-rsya-daet-kliki-no-ne-daet-lidy-i-kak-eto-ispravit`,

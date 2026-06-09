@@ -11,7 +11,7 @@ export const lestnitsaKhantaKakFormirovatSprosIVystraivatArticle: Article = {
   category: `Маркетинг`,
   date: `16 октября 2025`,
   updatedAt: `17 октября 2025`,
-  cover: undefined,
+  cover: "/images/previews/article-hunt-ladder.webp",
   author: `Make All Perfect`,
   authorRole: `Команда Make All Perfect`,
   slug: `lestnitsa-khanta-kak-formirovat-spros-i-vystraivat-marketing-po-etapam`,

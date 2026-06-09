@@ -11,7 +11,7 @@ export const zeroClickPoiskKakPoluchatTrafikBezPerehodovV2025Article: Article = 
   category: `SEO`,
   date: `6 сентября 2025`,
   updatedAt: `8 сентября 2025`,
-  cover: undefined,
+  cover: "/images/previews/article-zero-click.webp",
   author: `Make All Perfect`,
   authorRole: `Команда Make All Perfect`,
   slug: `zero-click-poisk-kak-poluchat-trafik-bez-perehodov-v-2025-godu`,

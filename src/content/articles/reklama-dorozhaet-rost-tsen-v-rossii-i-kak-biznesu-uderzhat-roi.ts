@@ -11,7 +11,7 @@ export const reklamaDorozhaetRostTsenVRossiiIKakBiznesuArticle: Article = {
   category: `Реклама`,
   date: `23 сентября 2025`,
   updatedAt: `29 января 2026`,
-  cover: undefined,
+  cover: "/images/previews/article-rising-ads.webp",
   author: `Make All Perfect`,
   authorRole: `Команда Make All Perfect`,
   slug: `reklama-dorozhaet-rost-tsen-v-rossii-i-kak-biznesu-uderzhat-roi`,

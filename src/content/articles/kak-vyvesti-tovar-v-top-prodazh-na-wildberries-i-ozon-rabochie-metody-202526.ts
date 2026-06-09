@@ -11,7 +11,7 @@ export const kakVyvestiTovarVTopProdazhNaWildberriesIOzonArticle: Article = {
   category: `Стратегии`,
   date: `16 сентября 2025`,
   updatedAt: `20 сентября 2025`,
-  cover: undefined,
+  cover: "/images/previews/article-marketplace-strategies.webp",
   author: `Make All Perfect`,
   authorRole: `Команда Make All Perfect`,
   slug: `kak-vyvesti-tovar-v-top-prodazh-na-wildberries-i-ozon-rabochie-metody-202526`,

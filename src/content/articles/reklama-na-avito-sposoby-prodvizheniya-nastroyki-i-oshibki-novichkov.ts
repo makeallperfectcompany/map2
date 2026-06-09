@@ -11,7 +11,7 @@ export const reklamaNaAvitoSposobyProdvizheniyaNastroykiIArticle: Article = {
   category: `Маркетинг`,
   date: `5 декабря 2025`,
   updatedAt: `5 декабря 2025`,
-  cover: undefined,
+  cover: "/images/previews/article-avito-ads.webp",
   author: `Make All Perfect`,
   authorRole: `Команда Make All Perfect`,
   slug: `reklama-na-avito-sposoby-prodvizheniya-nastroyki-i-oshibki-novichkov`,

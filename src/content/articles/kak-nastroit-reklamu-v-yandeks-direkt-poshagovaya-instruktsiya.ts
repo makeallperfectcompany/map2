@@ -11,7 +11,7 @@ export const kakNastroitReklamuVYandeksDirektPoshagovayaArticle: Article = {
   category: `Инструменты`,
   date: `21 сентября 2025`,
   updatedAt: `8 апреля 2026`,
-  cover: undefined,
+  cover: "/images/previews/article-yandex-direct-ads.webp",
   author: `Make All Perfect`,
   authorRole: `Команда Make All Perfect`,
   slug: `kak-nastroit-reklamu-v-yandeks-direkt-poshagovaya-instruktsiya`,
