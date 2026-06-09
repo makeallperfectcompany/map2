@@ -325,24 +325,24 @@
 .megaMenu {
   position: fixed;
   top: 64px;
-  left: max(var(--page-px), calc((100vw - 1200px) / 2));
+  left: 50%;
   z-index: 200;
   background: #fff;
   box-shadow: 0 24px 70px rgba(0,0,0,0.12);
   opacity: 0;
   visibility: hidden;
-  transform: translateY(-8px);
+  transform: translateX(-50%) translateY(-8px);
   transition: opacity .25s var(--ease), transform .25s var(--ease), visibility .25s;
   padding: 28px 0 32px;
-  width: min(1200px, calc(100vw - 2 * var(--page-px)));
+  width: min(1200px, 94vw);
   max-height: calc(100vh - 64px);
   overflow-y: auto;
-  border-radius: 0 0 24px 24px;
+  border-radius: 24px;
 }
 .megaMenuOpen {
   opacity: 1;
   visibility: visible;
-  transform: translateY(0);
+  transform: translateX(-50%) translateY(0);
 }
 
 .megaGrid {
