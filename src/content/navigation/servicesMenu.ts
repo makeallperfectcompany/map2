@@ -37,6 +37,8 @@ export const servicesMenu: ServiceMenuGroup[] = [
       { title: "SEO-продвижение в Google", href: "/services/seo-prodvizhenie-v-poiskovoj-sisteme-google" },
       { title: "Локальное SEO-продвижение", href: "/services/lokalnoe-seo" },
       { title: "Комплексный SEO-аудит сайта", href: "/services/kompleksnyj-seo-audit-sajta" },
+      { title: "AEO-продвижение", href: "/services/aeo-prodvizhenie" },
+      { title: "GEO-продвижение", href: "/services/geo-prodvizhenie-v-nejrosetyah" },
     ],
   },
   {
@@ -51,6 +53,7 @@ export const servicesMenu: ServiceMenuGroup[] = [
       { title: "Разработка на React", href: "/services/sozdanie-i-razrabotka-saytov-na-react" },
       { title: "Яндекс Кит", href: "/services/sozdanie-i-razrabotka-internet-magazina-na-yandeks-kit-pod-klyuch" },
       { title: "Редизайн и доработка сайтов", href: "/services/redizayn-i-dorabotka-saytov" },
+      { title: "Копирайтинг для сайта", href: "/services/kopirajting-dlya-sajta" },
     ],
   },
   {

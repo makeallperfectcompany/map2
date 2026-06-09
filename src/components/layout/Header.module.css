@@ -336,6 +336,8 @@
   transform: translateY(-8px);
   transition: opacity .25s var(--ease), transform .25s var(--ease), visibility .25s;
   padding: 20px 40px 24px;
+  max-height: calc(100vh - 64px);
+  overflow-y: auto;
 }
 .megaMenuOpen {
   opacity: 1;
