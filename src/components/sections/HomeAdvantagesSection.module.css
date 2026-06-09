@@ -52,7 +52,7 @@
 
 .layoutRow {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+  grid-template-columns: minmax(0, 1.3fr) minmax(0, 1.7fr);
   gap: 32px;
   align-items: stretch;
 }
