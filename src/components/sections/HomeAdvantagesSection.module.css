@@ -25,8 +25,7 @@
 }
 
 .sectionHeader {
-  max-width: 980px;
-  margin-bottom: 46px;
+  margin-bottom: 30px;
 }
 
 .sectionLabel {
@@ -49,9 +48,18 @@
   letter-spacing: -0.018em;
 }
 
-.sectionHeader h2 {
-  max-width: 640px;
-  margin: 14px 0 0;
+/* ---- h2 + advantages side by side ---- */
+
+.layoutRow {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+  gap: 32px;
+  align-items: start;
+}
+
+.h2Column h2 {
+  max-width: 540px;
+  margin: 0;
   color: #1d1d1f;
   font: 850 clamp(36px, 4vw, 58px)/1.02 Onest, Inter, system-ui, sans-serif;
   letter-spacing: -0.076em;
@@ -59,19 +67,20 @@
 }
 
 .description {
-  max-width: 640px;
-  margin: 24px 0 0;
+  max-width: 480px;
+  margin: 20px 0 0;
   color: #62666d;
   font: 450 18px/1.62 Onest, Inter, system-ui, sans-serif;
   letter-spacing: -0.02em;
 }
 
+/* ---- existing advantages grid (nested in right column) ---- */
+
 .advantagesLayout {
   display: grid;
-  grid-template-columns: minmax(360px, 0.88fr) minmax(0, 1.12fr);
-  gap: 22px;
+  grid-template-columns: minmax(300px, 0.88fr) minmax(0, 1.12fr);
+  gap: 18px;
   align-items: stretch;
-  margin-top: -20px;
 }
 
 .visualCard {
@@ -171,6 +180,19 @@
 }
 
 @media (max-width: 1120px) {
+  .layoutRow {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .h2Column h2 {
+    max-width: 780px;
+  }
+
+  .description {
+    max-width: 660px;
+  }
+
   .advantagesLayout {
     grid-template-columns: 1fr;
   }
@@ -190,16 +212,18 @@
   }
 
   .sectionHeader {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
   }
 
-  .sectionHeader h2 {
+  .h2Column h2 {
     font-size: 38px;
     line-height: 1.04;
+    max-width: 100%;
   }
 
   .description {
     font-size: 16px;
+    max-width: 100%;
   }
 
   .cardsGrid {
@@ -226,7 +250,7 @@
 }
 
 @media (max-width: 430px) {
-  .sectionHeader h2 {
+  .h2Column h2 {
     font-size: 34px;
   }
 }
