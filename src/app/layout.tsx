@@ -27,11 +27,11 @@ export const metadata: Metadata = {
   description:
     "Мы объединяем стратегию, дизайн, рекламу, контент и аналитику в единую систему роста бизнеса.",
   robots: {
-    index: true,
-    follow: true,
+    index: false,
+    follow: false,
     googleBot: {
-      index: true,
-      follow: true,
+      index: false,
+      follow: false,
       "max-snippet": -1,
       "max-image-preview": "large",
       "max-video-preview": -1,

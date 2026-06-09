@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Header from "@/components/layout/Header";
+import BurgerMenu from "@/components/layout/BurgerMenu";
 import Footer from "@/components/layout/Footer";
 import CookieNotice from "@/components/common/CookieNotice";
 import { PopupProvider } from "@/components/modals/PopupProvider";
@@ -34,6 +35,7 @@ export default function ClientLayout({
         menuOpen={menuOpen}
         onBurgerClick={handleBurgerClick}
       />
+      <BurgerMenu open={menuOpen} onClose={() => setMenuOpen(false)} />
       {children}
       <Footer />
       <CookieNotice />
