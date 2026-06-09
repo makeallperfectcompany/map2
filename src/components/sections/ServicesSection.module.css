@@ -205,7 +205,8 @@
 
 .serviceCard h3 {
   margin: 0;
-  min-height: 96px;
+  height: 96px;
+  overflow: hidden;
   color: #ffffff;
   font: 840 28px/1.06 Onest, Inter, system-ui, sans-serif;
   letter-spacing: -0.05em;
@@ -221,7 +222,6 @@
 .bigMark {
   display: flex;
   align-items: center;
-  min-height: 48px;
   height: 48px;
   color: #6FB7FF;
   font: 850 54px/0.9 Onest, Inter, system-ui, sans-serif;
@@ -238,7 +238,8 @@
 
 .serviceCard p {
   margin: 0;
-  min-height: 76px;
+  height: 88px;
+  overflow: hidden;
   color: rgba(255, 255, 255, 0.60);
   font: 430 14px/1.55 Onest, Inter, system-ui, sans-serif;
   letter-spacing: -0.012em;
@@ -449,12 +450,12 @@
   .serviceCard h3 {
     font-size: 22px;
     line-height: 1.08;
-    min-height: 58px;
+    height: 80px;
+    overflow: hidden;
   }
 
   .bigMark {
     font-size: 40px;
-    min-height: 36px;
     height: 36px;
   }
 
@@ -465,7 +466,8 @@
   .serviceCard p {
     font-size: 12px;
     line-height: 1.5;
-    min-height: 0;
+    height: 72px;
+    overflow: hidden;
   }
 
   /* ── Чипсы: все теги видны, переносятся на новые строки ── */
