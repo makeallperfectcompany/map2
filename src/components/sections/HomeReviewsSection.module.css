@@ -36,15 +36,15 @@
 
 .sectionLabel {
   display: inline-flex;
-  min-height: 32px;
+  min-height: 34px;
   align-items: center;
-  padding: 0 12px;
+  padding: 0 14px;
   border-radius: 999px;
   color: #0071e3;
-  background: rgba(0, 113, 227, 0.07);
-  border: 1px solid rgba(0, 113, 227, 0.10);
-  font: 760 12px/1 Onest, Inter, system-ui, sans-serif;
-  letter-spacing: -0.01em;
+  background: rgba(0, 113, 227, 0.075);
+  border: 1px solid rgba(0, 113, 227, 0.13);
+  font: 760 13px/1 Onest, Inter, system-ui, sans-serif;
+  letter-spacing: -0.012em;
 }
 
 .kicker {

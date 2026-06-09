@@ -33,21 +33,15 @@
 
 .kicker {
   display: inline-flex;
+  min-height: 34px;
   align-items: center;
-  gap: 8px;
+  padding: 0 14px;
+  border-radius: 999px;
   color: #6FB7FF;
-  font: 780 15px/1 Onest, Inter, system-ui, sans-serif;
-  letter-spacing: -0.02em;
-}
-
-.kicker::before {
-  content: "";
-  width: 7px;
-  height: 7px;
-  border-radius: 2px;
-  background: #6FB7FF;
-  transform: rotate(45deg);
-  box-shadow: 0 0 16px rgba(111, 183, 255, 0.72);
+  background: rgba(111, 183, 255, 0.075);
+  border: 1px solid rgba(111, 183, 255, 0.13);
+  font: 760 13px/1 Onest, Inter, system-ui, sans-serif;
+  letter-spacing: -0.012em;
 }
 
 .servicesIntro h2 {

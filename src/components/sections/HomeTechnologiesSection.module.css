@@ -40,22 +40,15 @@
 
 .sectionLabel {
   display: inline-flex;
-  min-height: 30px;
+  min-height: 34px;
   align-items: center;
-  gap: 9px;
+  padding: 0 14px;
+  border-radius: 999px;
   color: #69b6ff;
-  font: 760 15px/1 Onest, Inter, system-ui, sans-serif;
-  letter-spacing: -0.016em;
-}
-
-.sectionLabel::before {
-  content: "";
-  width: 9px;
-  height: 9px;
-  border-radius: 3px;
-  background: #69b6ff;
-  transform: rotate(45deg);
-  box-shadow: 0 0 18px rgba(105, 182, 255, 0.42);
+  background: rgba(105, 182, 255, 0.075);
+  border: 1px solid rgba(105, 182, 255, 0.13);
+  font: 760 13px/1 Onest, Inter, system-ui, sans-serif;
+  letter-spacing: -0.012em;
 }
 
 .sectionHeader h2 {
