@@ -28,11 +28,13 @@
   display: grid;
   grid-template-columns: minmax(0, 0.9fr) minmax(520px, 0.86fr);
   gap: 72px;
-  align-items: start;
+  align-items: stretch;
 }
 
 .content {
   padding-top: 16px;
+  display: flex;
+  flex-direction: column;
 }
 
 .sectionLabel {
@@ -46,11 +48,13 @@
   border: 1px solid rgba(0, 113, 227, 0.13);
   font: 760 13px/1 Onest, Inter, system-ui, sans-serif;
   letter-spacing: -0.012em;
+  flex-shrink: 0;
 }
 
 .content h2 {
   max-width: 760px;
   margin: 30px 0 0;
+  flex-shrink: 0;
   color: #1d1d1f;
   font: 900 clamp(36px, 4vw, 58px)/0.97 Onest, Inter, system-ui, sans-serif;
   letter-spacing: -0.083em;
@@ -62,6 +66,8 @@
   margin-top: 34px;
   display: grid;
   gap: 24px;
+  flex: 1;
+  align-content: end;
 }
 
 .text p {
@@ -79,7 +85,7 @@
 .videoCard {
   position: relative;
   overflow: hidden;
-  min-height: 540px;
+  min-height: 320px;
   border-radius: 40px;
   background:
     radial-gradient(circle at 70% 16%, rgba(0, 113, 227, 0.22), transparent 34%),
@@ -230,7 +236,17 @@
   }
 
   .videoCard {
-    min-height: 500px;
+    min-height: 400px;
+  }
+
+  .content {
+    padding-top: 0;
+  }
+
+  .text {
+    margin-top: 24px;
+    flex: none;
+    align-content: start;
   }
 }
 
@@ -252,16 +268,6 @@
   .videoCard {
     min-height: 420px;
     border-radius: 30px;
-  }
-
-  .playButton {
-    width: 76px;
-    height: 76px;
-  }
-
-  .playButton svg {
-    width: 34px;
-    height: 34px;
   }
 
   .bullets {
