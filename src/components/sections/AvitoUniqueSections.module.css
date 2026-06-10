@@ -567,6 +567,7 @@
   }
 
   .heroTitle {
+    margin-top: 16px;
     font-size: 38px;
     line-height: 1.075;
     letter-spacing: -0.045em;
@@ -597,9 +598,9 @@
 
   .trustBarInner {
     gap: 8px;
-    justify-content: flex-start;
+    justify-content: center;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
   }
 
   .trustItem + .trustItem {
@@ -622,6 +623,7 @@
   }
 
   .heroTitle {
+    margin-top: 8px;
     font-size: 30px;
     line-height: 1.08;
     letter-spacing: -0.04em;
