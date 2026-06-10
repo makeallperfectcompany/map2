@@ -121,6 +121,13 @@ export function AvitoAdvantagesSection() {
         <div className={styles.avitoAdvRow}>
           <div className={styles.avitoAdvLeft}>
             <h2>{content.advantages.title}</h2>
+            <div className={styles.avitoAdvVisual}>
+              <img
+                src="/images/home/advantages-visual.webp"
+                alt=""
+                title="Преимущества"
+              />
+            </div>
           </div>
 
           <div className={styles.avitoAdvRight}>
