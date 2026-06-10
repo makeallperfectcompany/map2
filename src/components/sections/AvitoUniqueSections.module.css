@@ -342,31 +342,24 @@
 .glassCard {
   display: flex;
   flex-direction: column;
-  padding: var(--card-py) var(--card-px);
-  border-radius: 20px;
-  background: rgba(255, 255, 255, 0.55);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.045),
-    0 22px 70px rgba(0, 0, 0, 0.18);
-  transition: transform 240ms cubic-bezier(.2,.7,.2,1), border-color 240ms cubic-bezier(.2,.7,.2,1), box-shadow 240ms cubic-bezier(.2,.7,.2,1);
+  padding: 26px;
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.84);
+  border: 1px solid rgba(29, 29, 31, 0.065);
+  box-shadow: 0 16px 44px rgba(15, 16, 20, 0.045);
+  transition: transform 240ms cubic-bezier(.2,.7,.2,1), border-color 240ms cubic-bezier(.2,.7,.2,1);
 }
 
 .glassCard:hover {
   transform: translateY(-4px);
-  border-color: rgba(0, 113, 227, 0.3);
-  box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.06),
-    0 30px 86px rgba(0, 0, 0, 0.26);
+  border-color: rgba(0, 113, 227, 0.22);
 }
 
 .cardCode {
   display: inline-flex;
   color: #0071E3;
-  font: 850 12px / 1 Onest, Inter, system-ui, sans-serif;
-  letter-spacing: 0.06em;
+  font: 780 13px/1 JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, monospace;
+  letter-spacing: -0.01em;
   margin-block-end: calc(var(--grid-gap) * 0.6);
 }
 
