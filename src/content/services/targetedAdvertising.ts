@@ -16,6 +16,14 @@ export interface FaqItem {
   answer: string;
 }
 
+export interface PricingTier {
+  name: string;
+  subtitle: string;
+  price: string;
+  budget: string;
+  features: string[];
+}
+
 export interface TargetedAdvertisingContent {
   slug: string;
   metadata: {
@@ -69,8 +77,12 @@ export interface TargetedAdvertisingContent {
     cards: FeatureCard[];
   };
   pricing: {
-    requiresApproval: true;
-    proposedValuesFromSeoBrief: string[];
+    eyebrow: string;
+    title: string;
+    description: string;
+    tiers: PricingTier[];
+    note: string;
+    cta: string;
   };
   existingSections: {
     cases: { eyebrow: string; title: string; description: string; cta: string };
@@ -179,8 +191,59 @@ export const targetedAdvertisingContent: TargetedAdvertisingContent = {
     ],
   },
   pricing: {
-    requiresApproval: true,
-    proposedValuesFromSeoBrief: ["СТАРТ — от 25 000 ₽/мес", "БИЗНЕС — от 45 000 ₽/мес", "PRO — от 80 000 ₽/мес"],
+    eyebrow: "Стоимость",
+    title: "Тарифы на ведение таргетированной рекламы",
+    description:
+      "Выберите подходящий объём услуг — от тестового запуска до полноценной системы лидогенерации.",
+    tiers: [
+      {
+        name: "Старт",
+        subtitle: "Для тестового запуска и проверки гипотез",
+        price: "от 40 000 ₽",
+        budget: "Рекламный бюджет: до 50 000 ₽",
+        features: [
+          "Анализ ниши, аудитории и конкурентов",
+          "Подбор площадок и первых гипотез",
+          "Подготовка структуры рекламных кампаний",
+          "Настройка аудиторий и таргетингов",
+          "Подготовка рекламных объявлений",
+          "Запуск тестовых кампаний",
+          "Первичный анализ заявок и стоимости привлечения",
+        ],
+      },
+      {
+        name: "Бизнес",
+        subtitle: "Для регулярного ведения и роста заявок",
+        price: "от 70 000 ₽ / мес",
+        budget: "Рекламный бюджет: до 150 000 ₽",
+        features: [
+          "Всё из тарифа Старт",
+          "Расширенная сегментация аудиторий",
+          "Тестирование креативов, офферов и посадочных страниц",
+          "Регулярная оптимизация рекламных кампаний",
+          "Отключение неэффективных связок",
+          "Контроль стоимости заявки и качества трафика",
+          "Ежемесячный отчёт с выводами и планом работ",
+        ],
+      },
+      {
+        name: "Индивидуально",
+        subtitle: "Для сложных воронок и KPI-задач",
+        price: "Рассчитывается индивидуально",
+        budget: "Рекламный бюджет: от 150 000 ₽",
+        features: [
+          "Всё из тарифа Бизнес",
+          "Разработка индивидуальной стратегии продвижения",
+          "Глубокая проработка аудиторий и сегментов",
+          "Работа с несколькими офферами и посадочными страницами",
+          "Настройка ретаргетинга и прогревающих цепочек",
+          "Аналитика по CPL, качеству заявок и окупаемости",
+          "Стратегия масштабирования по каналам",
+        ],
+      },
+    ],
+    note: "Не подходит стандартный тариф? Свяжитесь — подберём индивидуальный формат под вашу нишу, бюджет и цели.",
+    cta: "Получить индивидуальный расчёт",
   },
   existingSections: {
     cases: {

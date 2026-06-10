@@ -1,17 +1,19 @@
 import type { Metadata } from "next";
 import { targetedAdvertisingContent as content } from "@/content/services/targetedAdvertising";
-import {
-  TargetedAdvertisingApproach,
-  TargetedAdvertisingHero,
-  TargetedAdvertisingHowItWorks,
-  TargetedAdvertisingPlatforms,
-  TargetedAdvertisingProcess,
-  TargetedAdvertisingService,
-} from "@/components/sections/TargetedAdvertisingUniqueSections";
-import CasesSection from "@/components/sections/CasesSection";
+import { targetedAdsServiceTechnologies } from "@/content/services/targeted-ads-technologies";
+import { targetedAdsAdvantages } from "@/content/services/targeted-ads-advantages";
+
+import TargetedHero from "@/components/sections/TargetedHero/TargetedHero";
+import TargetedAdsProcessSection from "@/components/sections/TargetedAdsProcessSection";
+import AvitoStylePricingSection from "@/components/sections/AvitoStylePricingSection";
+import HomeTechnologiesSection from "@/components/sections/HomeTechnologiesSection";
+import HomeAdvantagesSection from "@/components/sections/HomeAdvantagesSection";
 import HomeIndustriesSection from "@/components/sections/HomeIndustriesSection";
+import HomeAboutSection from "@/components/sections/HomeAboutSection";
+import HomeBlogSection from "@/components/sections/HomeBlogSection";
+import HomeFaqSection from "@/components/sections/HomeFaqSection";
+import CasesSection from "@/components/sections/CasesSection";
 import HomeReviewsSection from "@/components/sections/HomeReviewsSection";
-import TargetedFaqSection from "@/components/sections/TargetedFaqSection";
 import FinalCtaSection from "@/components/sections/FinalCtaSection";
 
 export const metadata: Metadata = {
@@ -20,6 +22,21 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/services/targetirovannaya-reklama",
   },
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Главная", item: "https://makeallperfect.ru" },
+    { "@type": "ListItem", position: 2, name: "Услуги", item: "https://makeallperfect.ru/services" },
+    {
+      "@type": "ListItem",
+      position: 3,
+      name: "Таргетированная реклама",
+      item: "https://makeallperfect.ru/services/targetirovannaya-reklama",
+    },
+  ],
 };
 
 const serviceSchema = {
@@ -37,6 +54,14 @@ const serviceSchema = {
     name: "Россия",
   },
   description: content.metadata.description,
+  offers: content.pricing.tiers.map((tier, index) => ({
+    "@type": "Offer",
+    name: tier.name,
+    description: `${tier.subtitle}. ${tier.price}`,
+    price: tier.price.replace(/[^0-9]/g, ""),
+    priceCurrency: "RUB",
+    position: index + 1,
+  })),
 };
 
 const faqSchema = {
@@ -57,6 +82,10 @@ export default function TargetirovannayaReklamaPage() {
     <>
       <script
         type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
       />
       <script
@@ -65,23 +94,50 @@ export default function TargetirovannayaReklamaPage() {
       />
 
       <main>
-        <TargetedAdvertisingHero />
-        <TargetedAdvertisingHowItWorks />
-        <TargetedAdvertisingPlatforms />
-        <TargetedAdvertisingService />
-        <TargetedAdvertisingProcess />
-        <TargetedAdvertisingApproach />
+        {/* Hero — светлый, как на главной */}
+        <TargetedHero content={content.hero} />
 
-        <CasesSection />
+        {/* Объём услуг = Технологии */}
+        <HomeTechnologiesSection content={targetedAdsServiceTechnologies} />
+
+        {/* Преимущества */}
+        <HomeAdvantagesSection content={targetedAdsAdvantages} />
+
+        {/* Процесс работы — 2 колонки с визуалом */}
+        <TargetedAdsProcessSection
+          title={content.process.title}
+          text="Прозрачный процесс в 6 шагов — от диагностики задачи до масштабирования рабочих связок. Определяем цели, разрабатываем стратегию, запускаем кампании, оптимизируем и развиваем результат."
+          image="/images/home/advantages-visual.webp"
+          items={content.process.steps.map(s => [s.title, s.text] as const)}
+        />
+
+        {/* Отрасли — alias с главной */}
         <HomeIndustriesSection />
-        <HomeReviewsSection />
 
-        <TargetedFaqSection />
+        {/* Тарифы */}
+        <AvitoStylePricingSection
+          eyebrow={content.pricing.eyebrow}
+          title={content.pricing.title}
+          description={content.pricing.description}
+          tiers={content.pricing.tiers}
+          note={content.pricing.note}
+          cta={content.pricing.cta}
+        />
+
+        {/* Кейсы, О нас, Отзывы, Блог */}
+        <CasesSection />
+        <HomeAboutSection />
+        <HomeReviewsSection />
+        <HomeBlogSection />
+
+        {/* FAQ */}
+        <HomeFaqSection
+          title={content.faq.title}
+          items={content.faq.items}
+        />
       </main>
 
       <FinalCtaSection />
     </>
   );
 }
-
-// force redeploy
