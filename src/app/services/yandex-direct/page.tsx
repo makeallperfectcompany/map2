@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { yandexDirectContent as content } from "@/content/services/yandex-direct";
 import { yandexDirectServiceTechnologies } from "@/content/services/yandex-direct-technologies";
 import { yandexDirectAdvantages } from "@/content/services/yandex-direct-advantages";
-import { yandexDirectIndustries } from "@/content/services/yandex-direct-industries";
 import YandexDirectHero from "@/components/sections/YandexDirectHero/YandexDirectHero";
 import YandexDirectProcessSection from "@/components/sections/YandexDirectProcessSection";
 import YandexDirectPricingSection from "@/components/sections/YandexDirectPricingSection";
@@ -120,8 +119,8 @@ export default function YandexDirectPage() {
           items={content.process.steps}
         />
 
-        {/* Кому подходит = Отрасли */}
-        <HomeIndustriesSection content={yandexDirectIndustries} />
+        {/* Отрасли — alias с главной */}
+        <HomeIndustriesSection />
 
         {/* Тарифы */}
         <YandexDirectPricingSection

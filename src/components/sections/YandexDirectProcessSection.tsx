@@ -9,7 +9,7 @@ export default function YandexDirectProcessSection({ title, text, image, items }
   return (
     <section className={styles.section}>
       <Container>
-        <div className={`${grid.grid2} ${styles.layout}`}>
+        <div className={`${grid.grid2} ${styles.layout}`} style={{ alignItems: 'stretch' }}>
           <div>
             <div className={styles.header}>
               <h2>{title}</h2>
@@ -43,8 +43,8 @@ export default function YandexDirectProcessSection({ title, text, image, items }
               })}
             </div>
           </div>
-          <div className={styles.visualCard}>
-            <Image src={image} alt="Процесс настройки Яндекс Директ — Make All Perfect" width={1200} height={1500} sizes="(max-width: 768px) 100vw, 48vw" />
+          <div className={styles.visualCard} style={{ height: '100%', display: 'flex', position: 'relative' }}>
+            <Image src={image} alt="Процесс настройки Яндекс Директ — Make All Perfect" fill sizes="(max-width: 768px) 100vw, 48vw" style={{ objectFit: 'cover' }} />
           </div>
         </div>
       </Container>
