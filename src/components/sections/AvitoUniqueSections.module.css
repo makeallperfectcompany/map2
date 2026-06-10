@@ -183,62 +183,71 @@
 
 .btnGhost:hover::before { transform: translateY(0); }
 
-/* ── Trust bar (как на главной) ──────────────────────────────────── */
+/* ── Trust bar (как на главной: горизонтальный, с 2017) ────────── */
 .trustBar {
-  padding-top: 28px;
+  position: relative;
+  margin-top: 28px;
+  padding-top: 24px;
 }
 
 .trustBar::before {
-  content: "";
-  display: block;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
   max-width: 700px;
   border-top: 1px solid rgba(15,16,20,0.08);
-  margin-bottom: 22px;
 }
 
 .trustBarInner {
   display: flex;
   flex-wrap: wrap;
-  gap: 28px;
+  gap: 8px;
   max-width: 700px;
 }
 
+@media (min-width: 1024px) {
+  .trustBarInner {
+    flex-wrap: nowrap;
+    gap: 0;
+  }
+}
+
 .trustItem {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-  position: relative;
-  padding-left: 28px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.trustItem + .trustItem {
+  margin-left: 28px;
 }
 
 .trustItem::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 1px;
+  content: '';
+  display: inline-block;
   width: 18px;
   height: 18px;
+  flex-shrink: 0;
   border-radius: 50%;
   background: rgba(0,113,227,0.10);
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 18'%3E%3Cpath d='M5 9.5L8 12.5L13 6' stroke='%230071E3' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 18 18'%3E%3Cpath d='M5 9.5L7.5 12L13 6' stroke='%230071E3' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3E%3C/svg%3E");
   background-size: 18px;
   background-position: center;
   background-repeat: no-repeat;
+  margin-right: 4px;
 }
 
 .trustLabel {
-  font-size: 13.5px;
-  font-weight: 750;
-  color: var(--ink);
-  line-height: 1.25;
+  font: 750 13px/1 Onest, Inter, system-ui, sans-serif;
+  color: #1d1d1f;
   letter-spacing: -0.01em;
+  white-space: nowrap;
 }
 
 .trustValue {
-  font-size: 12px;
-  font-weight: 450;
-  color: var(--muted);
-  line-height: 1.35;
+  display: none;
 }
 
 /* Hero right — логотип */
@@ -252,7 +261,7 @@
 .heroLogo {
   width: 100%;
   height: auto;
-  max-width: 520px;
+  max-width: 650px;
   object-fit: contain;
   animation: none;
   mask: none;
@@ -684,6 +693,19 @@
     min-width: 0;
   }
 
+  .trustBar {
+    margin-top: 20px;
+    padding-top: 0;
+  }
+
+  .trustBarInner {
+    gap: 12px;
+  }
+
+  .trustLabel {
+    font-size: 14px;
+  }
+
   .darkSection {
     margin: 0 10px;
     border-radius: 24px;
@@ -748,6 +770,7 @@
 .avitoAdvLeft {
   display: flex;
   flex-direction: column;
+  gap: 18px;
 }
 
 .avitoAdvRow {

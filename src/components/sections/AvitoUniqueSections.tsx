@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { Container } from "@/components/ui/Container/Container";
 import grid from "@/styles/grid.module.css";
@@ -122,10 +123,13 @@ export function AvitoAdvantagesSection() {
           <div className={styles.avitoAdvLeft}>
             <h2>{content.advantages.title}</h2>
             <div className={styles.avitoAdvVisual}>
-              <img
+              <Image
                 src="/images/home/advantages-visual.webp"
                 alt=""
                 title="Преимущества"
+                fill
+                sizes="(max-width: 900px) 100vw, 40vw"
+                priority={false}
               />
             </div>
           </div>
