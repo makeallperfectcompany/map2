@@ -1,10 +1,13 @@
 /* ── Telegram Ads Hero (alias of main page hero) ────────────────── */
 .heroSection {
   position: relative;
+  width: 100%;
+  min-height: 100vh;
   overflow: hidden;
   background: #f5f6f8;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .heroInner {
@@ -195,6 +198,7 @@
 @media (min-width: 1280px) { .heroInner { padding-top: 88px; } }
 
 @media (max-width: 1024px) {
+  .heroSection { min-height: 100dvh; }
   .heroInner { grid-template-columns: 1fr; padding-top: 48px; padding-bottom: 40px; }
   .right { display: none; }
   .heroTitle { font-size: clamp(36px, 8vw, 60px); }
@@ -206,7 +210,13 @@
   .trustValue { font-size: 14px; }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 768px) {
+  .heroSection { min-height: unset; align-items: flex-start; margin-bottom: 30px; }
+  .heroTitle { font-size: 38px; line-height: 1.075; letter-spacing: -0.045em; }
+  .heroLead { font-size: 15px; }
+  .heroActions { gap: 12px; }
+  .btn { padding: 16px 22px; font-size: 14.5px; }
+  .trustBar { margin-top: 20px; }
   .trustBarInner { gap: 12px; flex-direction: column; align-items: flex-start; width: fit-content; }
   .trustLabel { font-size: 20px; }
   .trustValue { font-size: 14px; }
