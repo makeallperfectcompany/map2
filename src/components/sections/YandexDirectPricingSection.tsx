@@ -7,17 +7,19 @@ interface PricingCard {
   text: string;
   price: string;
   included: string[];
+  outcome?: string;
 }
 
 interface Props {
   title: string;
   text: string;
   cards: PricingCard[];
+  note?: string;
 }
 
-export default function YandexDirectPricingSection({ title, text, cards }: Props) {
+export default function YandexDirectPricingSection({ title, text, cards, note }: Props) {
   return (
-    <section className={styles.section}>
+    <section className={styles.section} id="pricing">
       <Container>
         <div className={styles.header}>
           <h2>{title}</h2>
@@ -34,9 +36,11 @@ export default function YandexDirectPricingSection({ title, text, cards }: Props
                   <li key={item}>{item}</li>
                 ))}
               </ul>
+              {card.outcome && <p className={styles.outcome}>{card.outcome}</p>}
             </article>
           ))}
         </div>
+        {note && <p className={styles.note}>{note}</p>}
       </Container>
     </section>
   );
