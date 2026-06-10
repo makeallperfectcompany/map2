@@ -127,10 +127,10 @@
 .techCard {
   position: relative;
   overflow: hidden;
-  min-height: 430px;
+  min-height: 340px;
   display: flex;
   flex-direction: column;
-  padding: 34px;
+  padding: 28px;
   border-radius: 30px;
   background:
     radial-gradient(circle at 78% 10%, rgba(255, 255, 255, 0.055), transparent 34%),
@@ -169,8 +169,8 @@
 .cardTitle {
   position: relative;
   z-index: 1;
-  margin-top: 38px;
-  height: 138px;
+  margin-top: 24px;
+  height: auto;
   overflow: hidden;
 }
 
@@ -203,7 +203,7 @@
   display: block;
   width: 48px;
   height: 48px;
-  margin-top: 26px;
+  margin-top: 14px;
   object-fit: contain;
   filter: brightness(0) invert(1);
 }
@@ -212,9 +212,9 @@
   position: relative;
   z-index: 1;
   max-width: 430px;
-  margin: 28px 0 0;
-  height: 132px;
-  overflow: hidden;
+  margin: 16px 0 0;
+  min-height: 0;
+  overflow: visible;
   color: #a9aaac;
   font: 480 17px/1.48 Onest, Inter, system-ui, sans-serif;
   letter-spacing: -0.02em;
@@ -310,23 +310,23 @@
   .techCard {
     flex: 0 0 300px;
     scroll-snap-align: start;
-    min-height: 340px;
-    padding: 24px;
+    min-height: auto;
+    padding: 20px;
     border-radius: 22px;
   }
 
   .cardTitle {
-    margin-top: 20px;
-    height: 108px;
-    overflow: hidden;
+    margin-top: 14px;
+    height: auto;
+    overflow: visible;
   }
 
   .cardTitle h3 {
-    font-size: 26px;
+    font-size: 22px;
   }
 
   .cardTitle p {
-    font-size: 20px;
+    font-size: 17px;
   }
 
   .code {
@@ -334,15 +334,15 @@
   }
 
   .cardIcon {
-    margin-top: 20px;
-    width: 48px;
-    height: 48px;
+    margin-top: 12px;
+    width: 44px;
+    height: 44px;
   }
 
   .cardText {
-    font-size: 14px;
-    height: 106px;
-    overflow: hidden;
+    font-size: 13px;
+    min-height: 0;
+    overflow: visible;
   }
 
   .scrollHint {
