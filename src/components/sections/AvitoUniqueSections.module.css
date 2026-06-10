@@ -390,18 +390,6 @@
   .processGrid {
     grid-template-columns: repeat(3, 1fr);
   }
-
-  .processGrid > :nth-child(4) {
-    grid-column: 1;
-    width: calc(100% + var(--grid-gap) / 2);
-    justify-self: end;
-  }
-
-  .processGrid > :nth-child(5) {
-    grid-column: 2;
-    width: calc(100% + var(--grid-gap) / 2);
-    justify-self: start;
-  }
 }
 
 /* ── Soft section background ──────────────────────────────────────── */
@@ -468,6 +456,14 @@
 .darkCard:hover {
   transform: translateY(-2px);
   border-color: rgba(111, 183, 255, 0.3);
+}
+
+.darkCardFeatured {
+  background: linear-gradient(135deg, #1E3A5F 0%, #2A5075 100%);
+  border-color: rgba(111, 183, 255, 0.2);
+  box-shadow:
+    inset 0 1px 0 rgba(111, 183, 255, 0.1),
+    0 22px 70px rgba(0, 0, 0, 0.18);
 }
 
 .darkCode {

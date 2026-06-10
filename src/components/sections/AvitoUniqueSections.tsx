@@ -89,8 +89,8 @@ export function AvitoServicesSection() {
           <p className={styles.darkDesc}>{content.services.description}</p>
         </div>
         <div className={grid.grid3}>
-          {content.services.cards.map((card) => (
-            <article className={styles.darkCard} key={card.code}>
+          {content.services.cards.map((card, index) => (
+            <article className={`${styles.darkCard} ${index === 0 ? styles.darkCardFeatured : ""}`} key={card.code}>
               <img
                 className={styles.darkCardIcon}
                 src={`/assets/services/avito/icons/icon-${card.code}.webp`}
