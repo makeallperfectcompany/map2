@@ -5,7 +5,7 @@ export const sniziliStoimostLidaNa42IUvelichiliKolVoZayavokCase: CaseItem = {
   slug: `snizili-stoimost-lida-na-42-i-uvelichili-kol-vo-zayavok-dlya-hr-servisa`,
   url: `/cases/snizili-stoimost-lida-na-42-i-uvelichili-kol-vo-zayavok-dlya-hr-servisa`,
   title: `Снизили стоимость лида на 42% и увеличили кол-во заявок для HR-сервиса`,
-  description: `ывфывфыв`,
+  description: `HR-сервис для среднего и крупного бизнеса. Комплексное продвижение через VK Ads, Telegram Ads и Яндекс.Директ увеличило количество заявок в 2+ раза и снизило стоимость лида на 42% за 3 месяца.`,
   seoTitle: `Кейс: Снизили CPL и увеличили количество заявок в HR-сервис`,
   seoDescription: `С помощью комплексного продвижения увеличили количество заявок от работодателей на подключение HR-сервиса на 100% в течение 3 месяцев и снизили CPL (стоимость лида) минимум на 30%.`,
   tags: ["VK Ads", "Telegram Ads", "Яндекс Директ", "SEO-продвижение"],
@@ -14,7 +14,11 @@ export const sniziliStoimostLidaNa42IUvelichiliKolVoZayavokCase: CaseItem = {
   priority: 50,
   date: `16 августа 2025`,
   hero: '/images/cases/snizili-stoimost-lida-na-42-i-uvelichili-kol-vo-zayavok-dlya-hr-servisa.webp',
-  results: [{ value: "−42%", label: "Стоимость лида", description: "за период проекта" }],
+  results: [
+    { value: "−42%", label: "Стоимость лида", description: "за период проекта" },
+    { value: "×2+", label: "Рост заявок", description: "по всем каналам" },
+    { value: "+18%", label: "Средний чек", description: "благодаря качественным лидам" },
+  ],
   sections: [
   {
       id: `about-client-1`,
