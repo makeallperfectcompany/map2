@@ -1,16 +1,18 @@
 import type { Metadata } from "next";
 import { vkAdsContent as content } from "@/content/services/vkAds";
-import {
-  VkAdsHero,
-  VkAdsServicesSection,
-  VkAdsAdvantagesSection,
-  VkAdsProcessSection,
-  VkAdsOpportunitiesSection,
-  VkAdsPricingSection,
-  VkAdsFaqSection,
-} from "@/components/sections/VkAdsUniqueSections";
-import CasesSection from "@/components/sections/CasesSection";
+import { vkAdsServiceTechnologies } from "@/content/services/vk-ads-technologies";
+import { vkAdsAdvantages } from "@/content/services/vk-ads-advantages";
+import { vkAdsIndustries } from "@/content/services/vk-ads-industries";
+import VkAdsHero from "@/components/sections/VkAdsHero/VkAdsHero";
+import VkAdsProcessSection from "@/components/sections/VkAdsProcessSection";
+import VkAdsPricingSection from "@/components/sections/VkAdsPricingSection";
+import HomeTechnologiesSection from "@/components/sections/HomeTechnologiesSection";
+import HomeAdvantagesSection from "@/components/sections/HomeAdvantagesSection";
 import HomeIndustriesSection from "@/components/sections/HomeIndustriesSection";
+import HomeAboutSection from "@/components/sections/HomeAboutSection";
+import HomeBlogSection from "@/components/sections/HomeBlogSection";
+import HomeFaqSection from "@/components/sections/HomeFaqSection";
+import CasesSection from "@/components/sections/CasesSection";
 import HomeReviewsSection from "@/components/sections/HomeReviewsSection";
 import FinalCtaSection from "@/components/sections/FinalCtaSection";
 
@@ -92,18 +94,44 @@ export default function VkAdsPage() {
       />
 
       <main>
-        <VkAdsHero />
-        <VkAdsServicesSection />
-        <VkAdsAdvantagesSection />
-        <VkAdsProcessSection />
-        <VkAdsOpportunitiesSection />
-        <VkAdsPricingSection />
+        {/* Hero — светлый, как на Avito */}
+        <VkAdsHero content={content.hero} />
 
+        {/* Объём услуг = Технологии */}
+        <HomeTechnologiesSection content={vkAdsServiceTechnologies} />
+
+        {/* Преимущества */}
+        <HomeAdvantagesSection content={vkAdsAdvantages} />
+
+        {/* Процесс работы — 2 колонки с визуалом */}
+        <VkAdsProcessSection
+          title={content.process.title}
+          text="Прозрачный процесс в 5 шагов — от заявки до первых клиентов. Созваниваемся, разрабатываем стратегию, запускаем кампании, оптимизируем и масштабируем результат."
+          image="/images/services/vk-ads/vk-ads-tech-visual.webp"
+          items={content.process.steps.map(s => [s.title, s.text] as const)}
+        />
+
+        {/* Кому подходит = Отрасли */}
+        <HomeIndustriesSection content={vkAdsIndustries} />
+
+        {/* Тарифы */}
+        <VkAdsPricingSection
+          title={content.pricing.title}
+          text={content.pricing.description}
+          tiers={content.pricing.tiers}
+        />
+
+        {/* Кейсы, О нас, Отзывы, Блог */}
         <CasesSection />
+        <HomeAboutSection />
         <HomeReviewsSection />
-        <HomeIndustriesSection />
+        <HomeBlogSection />
 
-        <VkAdsFaqSection />
+        {/* FAQ */}
+        <HomeFaqSection
+          title={content.faq.title}
+          items={content.faq.items}
+        />
       </main>
 
       <FinalCtaSection />
