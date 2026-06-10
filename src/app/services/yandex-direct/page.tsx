@@ -4,7 +4,7 @@ import { yandexDirectServiceTechnologies } from "@/content/services/yandex-direc
 import { yandexDirectAdvantages } from "@/content/services/yandex-direct-advantages";
 import YandexDirectHero from "@/components/sections/YandexDirectHero/YandexDirectHero";
 import YandexDirectProcessSection from "@/components/sections/YandexDirectProcessSection";
-import YandexDirectPricingSection from "@/components/sections/YandexDirectPricingSection";
+import TelegramAdsPricingSection from "@/components/sections/TelegramAdsPricingSection";
 import HomeTechnologiesSection from "@/components/sections/HomeTechnologiesSection";
 import HomeAdvantagesSection from "@/components/sections/HomeAdvantagesSection";
 import HomeIndustriesSection from "@/components/sections/HomeIndustriesSection";
@@ -123,10 +123,15 @@ export default function YandexDirectPage() {
         <HomeIndustriesSection />
 
         {/* Тарифы */}
-        <YandexDirectPricingSection
+        <TelegramAdsPricingSection
           title={content.pricing.title}
           text="Подбираем формат под вашу задачу: запуск с нуля, регулярное ведение или аудит действующих кампаний."
-          cards={content.pricing.cards}
+          plans={content.pricing.cards.map((card) => ({
+            name: card.title,
+            target: card.text,
+            price: card.price,
+            features: card.included,
+          }))}
         />
 
         {/* Кейсы, О нас, Отзывы, Блог */}
