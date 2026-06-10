@@ -1,0 +1,232 @@
+/* ── Google SEO Hero (alias of main page hero) ──────────────────────── */
+.heroSection {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  background: #f5f6f8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.heroInner {
+  composes: container from "@/components/ui/Container/Container.module.css";
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 40px;
+  padding-top: 72px;
+  padding-bottom: 56px;
+  width: 100%;
+}
+
+/* ── Left column ───────────────────────────────────────────────── */
+.left {
+  position: relative;
+  z-index: 2;
+}
+
+.heroTitle {
+  margin: 0;
+  max-width: 700px;
+  color: #1d1d1f;
+  font: 800 clamp(44px, 6vw, 88px)/0.95 var(--font-onest), system-ui, sans-serif;
+  letter-spacing: -0.075em;
+  text-wrap: balance;
+}
+
+.highlight {
+  display: block;
+  color: #0071E3;
+  font: inherit;
+}
+
+.heroLead {
+  margin: 28px 0 0;
+  max-width: 650px;
+  color: #6e6e73;
+  font: 450 clamp(17px, 1.45vw, 21px)/1.55 var(--font-onest), system-ui, sans-serif;
+}
+
+/* ── Buttons (gradient + glass) ────────────────────────────────── */
+.heroActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 34px;
+}
+
+.btn {
+  position: relative;
+  min-height: 48px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 999px;
+  padding: 0 26px 0 28px;
+  text-decoration: none;
+  font: 750 14px/1 var(--font-onest), system-ui, sans-serif;
+  transition: transform 240ms cubic-bezier(0.2, 0.7, 0.2, 1), box-shadow 240ms cubic-bezier(0.2, 0.7, 0.2, 1), filter 240ms cubic-bezier(0.2, 0.7, 0.2, 1);
+  cursor: pointer;
+  border: none;
+}
+
+.btn:active { transform: scale(0.96); }
+
+.btnAccent {
+  color: #fff;
+  background: linear-gradient(90deg, #0071E3 0%, #40A9FF 100%);
+  box-shadow: 0 18px 46px rgba(0,113,227,0.18);
+}
+
+.btnAccent:hover { transform: translateY(-2px); filter: brightness(1.08); box-shadow: 0 22px 50px rgba(0,113,227,0.25); }
+
+.btnGhost {
+  color: #1d1d1f;
+  background: rgba(255,255,255,0.62);
+  border: 1px solid rgba(15,16,20,0.10);
+  backdrop-filter: blur(10px);
+}
+
+.btnGhost:hover { transform: translateY(-2px); }
+
+.label { pointer-events: none; }
+
+.arrWrap {
+  display: inline-flex;
+  position: relative;
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+  overflow: hidden;
+  vertical-align: middle;
+}
+
+.arr {
+  position: absolute;
+  inset: 0;
+  transition: transform 300ms cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.arrGhost { transform: translateX(-100%); }
+
+.btn:hover .arrMain { transform: translateX(100%); }
+.btn:hover .arrGhost { transform: translateX(0); }
+
+/* ── Trust bar (label + value) ─────────────────────────────────── */
+.trustBar {
+  position: relative;
+  margin-top: 28px;
+  padding-top: 24px;
+}
+
+.trustBar::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-width: 700px;
+  border-top: 1px solid rgba(15,16,20,0.08);
+}
+
+.trustBarInner {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  max-width: 700px;
+}
+
+@media (min-width: 1024px) {
+  .trustBarInner { flex-wrap: nowrap; gap: 0; }
+}
+
+.trustItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  flex-direction: column;
+}
+
+.trustItem + .trustItem { margin-left: 28px; }
+
+.trustItem::before {
+  content: '';
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: rgba(0,113,227,0.10);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 18 18'%3E%3Cpath d='M5 9.5L7.5 12L13 6' stroke='%230071E3' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3E%3C/svg%3E");
+  background-size: 18px;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-bottom: 2px;
+}
+
+.trustLabel {
+  font: 750 13px/1 var(--font-onest), system-ui, sans-serif;
+  color: #1d1d1f;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+}
+
+.trustValue {
+  font: 450 12px/1.4 var(--font-onest), system-ui, sans-serif;
+  color: #6e6e73;
+}
+
+/* ── Right column (logo) ───────────────────────────────────────── */
+.right {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.heroLogo {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* ── Responsive ──────────────────────────────────────────────────── */
+@media (min-width: 768px) { .heroInner { padding-top: 80px; } }
+@media (min-width: 1280px) { .heroInner { padding-top: 88px; } }
+
+@media (max-width: 1024px) {
+  .heroSection { min-height: 100dvh; }
+  .heroInner { grid-template-columns: 1fr; padding-top: 48px; padding-bottom: 40px; }
+  .right { display: none; }
+  .heroTitle { font-size: clamp(36px, 8vw, 60px); }
+  .heroLead { font-size: 16px; }
+  .trustBar { margin-top: 20px; padding-top: 0; }
+  .trustBar::before { display: none; }
+  .trustBarInner { gap: 12px; flex-direction: column; align-items: flex-start; width: fit-content; }
+  .trustLabel { font-size: 20px; }
+  .trustValue { font-size: 14px; }
+}
+
+@media (max-width: 768px) {
+  .heroSection { min-height: unset; align-items: flex-start; margin-bottom: 30px; }
+  .heroTitle { font-size: 38px; line-height: 1.075; letter-spacing: -0.045em; }
+  .heroLead { font-size: 15px; }
+  .heroActions { gap: 12px; }
+  .btn { padding: 16px 22px; font-size: 14.5px; }
+  .trustBar { margin-top: 20px; }
+  .trustBarInner { gap: 12px; flex-direction: column; align-items: flex-start; width: fit-content; }
+  .trustLabel { font-size: 20px; }
+  .trustValue { font-size: 14px; }
+}
+
+@media (max-width: 640px) {
+  .heroTitle { font-size: 36px; }
+  .heroActions { flex-direction: column; align-items: center; width: 100%; }
+  .btn { width: 100%; min-width: 0; justify-content: center; padding: 16px 20px; }
+  .trustBarInner { gap: 12px; flex-direction: column; align-items: flex-start; width: fit-content; }
+  .trustLabel { font-size: 20px; }
+  .trustValue { font-size: 14px; }
+}

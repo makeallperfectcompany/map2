@@ -1,7 +1,20 @@
 import type { Metadata } from "next";
 import { googleSeoContent as content } from "@/content/services/prodvizhenie-v-google";
-import { GoogleSeoHeroSection, GoogleSeoUniqueSections } from "@/components/sections/GoogleSeoPageSections";
-import ServiceSharedSections from "@/components/sections/ServiceSharedSections";
+import { googleSeoTechnologies } from "@/content/services/google-seo-technologies";
+import { googleSeoAdvantages } from "@/content/services/google-seo-advantages";
+
+import GoogleSeoHero from "@/components/sections/GoogleSeoHero/GoogleSeoHero";
+import GoogleSeoProcessSection from "@/components/sections/GoogleSeoProcessSection";
+import AvitoStylePricingSection from "@/components/sections/AvitoStylePricingSection";
+import HomeTechnologiesSection from "@/components/sections/HomeTechnologiesSection";
+import HomeAdvantagesSection from "@/components/sections/HomeAdvantagesSection";
+import HomeIndustriesSection from "@/components/sections/HomeIndustriesSection";
+import HomeAboutSection from "@/components/sections/HomeAboutSection";
+import HomeBlogSection from "@/components/sections/HomeBlogSection";
+import HomeFaqSection from "@/components/sections/HomeFaqSection";
+import CasesSection from "@/components/sections/CasesSection";
+import HomeReviewsSection from "@/components/sections/HomeReviewsSection";
+import FinalCtaSection from "@/components/sections/FinalCtaSection";
 
 const canonical = "/services/seo-prodvizhenie-v-poiskovoj-sisteme-google";
 const pageUrl = `https://makeallperfect.ru${canonical}`;
@@ -30,74 +43,108 @@ export const metadata: Metadata = {
   },
 };
 
-const technologiesContent = {
-  label: "Технологии",
-  title: content.technologies.title,
-  description: content.technologies.text,
-  stats: [
-    { value: "Индексация", label: "Search Console", text: "Контроль сканирования и ошибок" },
-    { value: "Техника", label: "Core Web Vitals", text: "Скорость и пользовательский опыт" },
-    { value: "Структура", label: "Content Clusters", text: "Группы страниц под интенты" },
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Главная", item: "https://makeallperfect.ru" },
+    { "@type": "ListItem", position: 2, name: "Услуги", item: "https://makeallperfect.ru/services" },
+    { "@type": "ListItem", position: 3, name: "Продвижение сайта в Google", item: pageUrl },
   ],
-  cards: content.technologies.cards.map((card) => ({
-    eyebrow: card.code,
-    title: card.title,
-    muted: card.text.split(" ").slice(0, 3).join(" "),
-    code: card.code,
-    text: card.text,
-    tags: [card.code === "GSC" ? "Индексация" : card.code === "TS" ? "Техника" : card.code === "CWV" ? "Скорость" : card.code === "SCH" ? "Разметка" : card.code === "CC" ? "Структура" : "Аналитика"],
-    accent: card.code === "GSC" || card.code === "CWV",
+};
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "Продвижение сайта в Google",
+  serviceType: "SEO-продвижение в Google",
+  provider: {
+    "@type": "Organization",
+    name: "Make All Perfect",
+    url: "https://makeallperfect.ru",
+    aggregateRating: { "@type": "AggregateRating", ratingValue: "4.9", bestRating: "5", ratingCount: "57", reviewCount: "57" },
+  },
+  areaServed: "RU",
+  description: content.metadata.description,
+  offers: content.pricing.tiers.map((tier, index) => ({
+    "@type": "Offer",
+    name: tier.name,
+    description: `${tier.subtitle}. ${tier.price}`,
+    price: tier.price.replace(/[^0-9]/g, "") || "0",
+    priceCurrency: "RUB",
+    position: index + 1,
   })),
 };
 
-const schema = {
+const faqSchema = {
   "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "Service",
-      name: "Продвижение сайта в Google",
-      serviceType: "SEO-продвижение в Google",
-      provider: { "@type": "Organization", name: "Make All Perfect", url: "https://makeallperfect.ru" },
-      areaServed: "RU",
-      description: content.metadata.description,
-      offers: { "@type": "Offer", price: "50000", priceCurrency: "RUB", availability: "https://schema.org/InStock" },
-      aggregateRating: { "@type": "AggregateRating", ratingValue: "4.9", bestRating: "5", ratingCount: "57" },
-    },
-    {
-      "@type": "FAQPage",
-      mainEntity: content.faq.map((item) => ({
-        "@type": "Question",
-        name: item.question,
-        acceptedAnswer: { "@type": "Answer", text: item.answer },
-      })),
-    },
-    {
-      "@type": "BreadcrumbList",
-      itemListElement: [
-        { "@type": "ListItem", position: 1, name: "Главная", item: "https://makeallperfect.ru" },
-        { "@type": "ListItem", position: 2, name: "Услуги", item: "https://makeallperfect.ru/services" },
-        { "@type": "ListItem", position: 3, name: "Продвижение сайта в Google", item: pageUrl },
-      ],
-    },
-  ],
+  "@type": "FAQPage",
+  mainEntity: content.faq.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: { "@type": "Answer", text: item.answer },
+  })),
+};
+
+const heroContent = {
+  title: "Продвижение сайта в Google — стабильный поток заявок",
+  description: "SEO-продвижение в поисковой системе Google — от аудита и технической оптимизации до контента и наращивания ссылочного профиля. Работаем под заявки и продажи, а не под позиции.",
+  primaryCta: "Получить бесплатный аудит",
+  secondaryCta: "Смотреть кейсы",
 };
 
 export default function GoogleSeoPage() {
   return (
-    <main>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
-      <GoogleSeoHeroSection />
-      <GoogleSeoUniqueSections />
-      <ServiceSharedSections
-        technologiesContent={technologiesContent}
-        faq={{ items: content.faq.map(f => ({ question: f.question, answer: f.answer })) }}
-        finalCta={{ title: content.finalCta.title, description: content.finalCta.text }}
-      />
-      {content.finalCta.trustText && (
-        <p style={{textAlign:"center",fontSize:"12px",color:"var(--muted)",marginTop:"-28px",paddingBottom:"48px"}}>
-          {content.finalCta.trustText}
-        </p>
-      )}
-    </main>
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+
+      <main>
+        {/* Hero — светлый, как на главной */}
+        <GoogleSeoHero content={heroContent} />
+
+        {/* Технологии */}
+        <HomeTechnologiesSection content={googleSeoTechnologies} />
+
+        {/* Преимущества */}
+        <HomeAdvantagesSection content={googleSeoAdvantages} />
+
+        {/* Процесс работы — 2 колонки с визуалом */}
+        <GoogleSeoProcessSection
+          title={content.process.title}
+          text="Прозрачный процесс в 6 шагов — от диагностики сайта и ниши до регулярной аналитики и развития. Снимаем технические ограничения, строим структуру, усиливаем контент и доводим клиента до заявки."
+          image="/images/home/advantages-visual.webp"
+          items={content.process.steps}
+        />
+
+        {/* Тарифы */}
+        <AvitoStylePricingSection
+          eyebrow={content.pricing.eyebrow}
+          title={content.pricing.title}
+          description={content.pricing.description}
+          tiers={content.pricing.tiers}
+          note={content.pricing.note}
+          cta={content.pricing.cta}
+        />
+
+        {/* Отрасли — alias с главной */}
+        <HomeIndustriesSection />
+
+        {/* Кейсы, О нас, Отзывы, Блог */}
+        <CasesSection />
+        <HomeAboutSection />
+        <HomeReviewsSection />
+        <HomeBlogSection />
+
+        {/* FAQ */}
+        <HomeFaqSection
+          title="Часто задаваемые вопросы о SEO-продвижении в Google"
+          items={content.faq.map((f) => ({ question: f.question, answer: f.answer }))}
+        />
+      </main>
+
+      <FinalCtaSection />
+    </>
   );
 }
