@@ -421,6 +421,13 @@
   margin-block-end: calc(var(--grid-gap) * 0.8);
 }
 
+.darkDesc {
+  margin-block-start: var(--grid-gap);
+  color: rgba(245, 245, 247, 0.65);
+  font: 450 15px / 1.64 Onest, Inter, system-ui, sans-serif;
+  max-width: 600px;
+}
+
 .darkHeader h2 {
   color: #F5F5F7;
   font: 800 clamp(36px, 3.8vw, 52px) / 0.99 Onest, Inter, system-ui, sans-serif;

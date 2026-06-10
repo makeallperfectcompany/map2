@@ -80,25 +80,17 @@ export function AvitoHero() {
 /* ── Что входит в услугу ──────────────────────────────────────────── */
 export function AvitoServicesSection() {
   return (
-    <section className={styles.section}>
+    <section className={styles.darkSection}>
       <Container>
-        <div className={styles.sectionHeader}>
-          <SectionLabel>{content.services.eyebrow}</SectionLabel>
+        <div className={styles.darkHeader}>
+          <span className={styles.darkLabel}>{content.services.eyebrow}</span>
           <h2>{content.services.title}</h2>
-          <p className={styles.sectionDesc}>{content.services.description}</p>
+          <p className={styles.darkDesc}>{content.services.description}</p>
         </div>
         <div className={grid.grid3}>
           {content.services.cards.map((card) => (
-            <article className={styles.glassCard} key={card.code}>
-              <img
-                className={styles.cardIcon}
-                src={`/assets/services/avito/icons/icon-${card.code}.webp`}
-                alt=""
-                aria-hidden="true"
-                width={48}
-                height={48}
-              />
-              <span className={styles.cardCode}>{card.code}</span>
+            <article className={styles.darkCard} key={card.code}>
+              <span className={styles.darkCode}>{card.code}</span>
               <h3>{card.title}</h3>
               <p>{card.text}</p>
             </article>
