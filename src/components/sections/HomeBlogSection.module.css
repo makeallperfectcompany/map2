@@ -222,16 +222,12 @@
 }
 
 .contentBody {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
 }
 
 .articleBody p {
   margin: 10px 0 0;
   color: #6b6f76;
   font: 450 14px/1.5 Onest, Inter, system-ui, sans-serif;
-  flex: 1;
 }
 
 .readMore {
