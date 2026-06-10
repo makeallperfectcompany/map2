@@ -40,9 +40,7 @@ export default function HomeBlogSection() {
             <h2>{homeBlog.title}</h2>
             <p>{homeBlog.description}</p>
           </div>
-          <a className={styles.desktopCta} href={homeBlog.cta.href}>
-            {homeBlog.cta.label} ↗
-          </a>
+
         </div>
 
         <div className={styles.carouselOuter}>
@@ -99,9 +97,7 @@ export default function HomeBlogSection() {
           </div>
         </div>
 
-        <a className={styles.mobileCta} href={homeBlog.cta.href}>
-          {homeBlog.cta.label} ↗
-        </a>
+
       </Container>
     </section>
   );
