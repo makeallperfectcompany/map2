@@ -278,7 +278,8 @@
   .primaryButton, .secondaryButton { min-width: 0; padding: 16px 22px; font-size: 14.5px; }
   .left h1 { font-size: 38px; line-height: 1.075; letter-spacing: -0.045em; }
   .left p { font-size: 15px; }
-  .trustBar { gap: 16px; }
+  .trustBar { flex-direction: column; align-items: flex-start; width: fit-content; margin: 0 auto; gap: 12px; }
+  .trustLabel { font-size: 20px; }
   .left { min-width: unset; }
 }
 
@@ -291,5 +292,6 @@
   .primaryButton, .secondaryButton { padding: 14px 18px; font-size: 13.5px; }
   .left h1 { font-size: 32px; }
   .left p { font-size: 14px; }
-  .trustBar { gap: 12px; }
+  .trustBar { flex-direction: column; align-items: flex-start; width: fit-content; margin: 0 auto; gap: 12px; }
+  .trustLabel { font-size: 20px; }
 }
