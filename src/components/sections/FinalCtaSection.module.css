@@ -350,17 +350,19 @@
     font-size: 18px;
   }
 
-  /* Мессенджеры: иконки-баннеры, как в поп-апе */
+  /* Мессенджеры: иконки-баннеры */
   .messengers {
     flex-direction: row;
     flex-wrap: nowrap;
     gap: 8px;
+    justify-content: center;
   }
 
   .messengerButton {
-    flex: 1;
-    height: 34px;
-    min-height: 34px;
+    flex: 0 0 90px;
+    width: 90px;
+    height: 30px;
+    min-height: 30px;
     display: block;
     border-radius: 10px;
     overflow: hidden;
@@ -370,11 +372,11 @@
     transition: transform 180ms ease, box-shadow 180ms ease;
   }
 
-  .messengerButton img {
+  .messengerButtonImg {
     width: 100%;
     height: 100%;
     display: block;
-    object-fit: cover;
+    object-fit: contain;
     object-position: center;
   }
 
@@ -443,6 +445,8 @@
   }
 
   .messengerButton {
+    flex: 0 0 90px;
+    width: 90px;
     height: 30px;
     min-height: 30px;
     border-radius: 10px;
@@ -483,6 +487,8 @@
   }
 
   .messengerButton {
+    flex: 0 0 84px;
+    width: 84px;
     height: 28px;
     min-height: 28px;
   }

@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import { usePhoneMask } from "@/hooks/usePhoneMask";
 import { finalCta } from "@/content/home/final-cta";
 import { Container } from "@/components/ui/Container/Container";
@@ -56,12 +55,10 @@ export default function FinalCtaSection() {
                   <div className={styles.messengers}>
                     {finalCta.messengers.items.map((item) => (
                       <Link className={styles.messengerButton} href={item.href} key={item.label}>
-                        <Image
+                        <img
+                          className={styles.messengerButtonImg}
                           src={`/images/icons/messenger-buttons/${item.label.toLowerCase()}.webp`}
                           alt={item.label}
-                          width={150}
-                          height={50}
-                          unoptimized
                         />
                         <span>{item.label}</span>
                       </Link>
