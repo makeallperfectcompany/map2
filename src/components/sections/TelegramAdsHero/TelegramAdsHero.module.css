@@ -75,5 +75,80 @@
 .secondary:hover { transform: translateY(-2px); }
 .primary:hover { filter: brightness(1.08); box-shadow: 0 22px 50px rgba(0,136,204,0.25); }
 
+/* Trust bar — same as main page */
+.trustBar {
+  position: relative;
+  margin-top: 28px;
+  padding-top: 24px;
+}
+
+.trustBar::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-width: 700px;
+  border-top: 1px solid rgba(15,16,20,0.08);
+}
+
+.trustBarInner {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  max-width: 700px;
+}
+
+@media (min-width: 1024px) {
+  .trustBarInner {
+    flex-wrap: nowrap;
+    gap: 0;
+  }
+}
+
+.trustItem {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.trustItem + .trustItem {
+  margin-left: 28px;
+}
+
+.trustItem::before {
+  content: '';
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: rgba(0,136,204,0.10);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 18 18'%3E%3Cpath d='M5 9.5L7.5 12L13 6' stroke='%230088cc' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3E%3C/svg%3E");
+  background-size: 18px;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-right: 4px;
+}
+
+.trustLabel {
+  font: 750 13px/1 Onest, Inter, system-ui, sans-serif;
+  color: #1d1d1f;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+}
+
+@media (max-width: 1024px) {
+  .trustBar { margin-top: 20px; padding-top: 0; }
+  .trustBar::before { display: none; }
+  .trustBarInner { gap: 12px; flex-direction: column; align-items: flex-start; width: fit-content; margin: 0 auto; }
+  .trustLabel { font-size: 20px; }
+}
+
+@media (max-width: 640px) {
+  .trustBarInner { gap: 12px; flex-direction: column; align-items: flex-start; width: fit-content; margin: 0 auto; }
+  .trustLabel { font-size: 20px; }
+}
+
 @media (min-width: 768px) { .copy { padding-top: 72px; } }
 @media (min-width: 1280px) { .copy { padding-top: 80px; } }
