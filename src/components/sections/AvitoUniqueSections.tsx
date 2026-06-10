@@ -90,6 +90,14 @@ export function AvitoServicesSection() {
         <div className={grid.grid3}>
           {content.services.cards.map((card) => (
             <article className={styles.glassCard} key={card.code}>
+              <img
+                className={styles.cardIcon}
+                src={`/assets/services/avito/icons/icon-${card.code}.webp`}
+                alt=""
+                aria-hidden="true"
+                width={48}
+                height={48}
+              />
               <span className={styles.cardCode}>{card.code}</span>
               <h3>{card.title}</h3>
               <p>{card.text}</p>
@@ -133,17 +141,8 @@ export function AvitoProcessSection() {
           <SectionLabel>{content.process.eyebrow}</SectionLabel>
           <h2>{content.process.title}</h2>
         </div>
-        <div className={grid.grid3}>
-          {content.process.steps.slice(0, 3).map((step) => (
-            <article className={styles.glassCard} key={step.number}>
-              <span className={styles.cardCode}>{step.number}</span>
-              <h3>{step.title}</h3>
-              <p>{step.text}</p>
-            </article>
-          ))}
-        </div>
-        <div className={grid.grid2}>
-          {content.process.steps.slice(3).map((step) => (
+        <div className={styles.processGrid}>
+          {content.process.steps.map((step) => (
             <article className={styles.glassCard} key={step.number}>
               <span className={styles.cardCode}>{step.number}</span>
               <h3>{step.title}</h3>

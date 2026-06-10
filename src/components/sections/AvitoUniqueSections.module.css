@@ -8,7 +8,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url("/assets/home/hero/hero-bg.webp");
+  background-image: url("/assets/home/hero/avito-hero-bg.webp");
   background-size: cover;
   background-position: center right;
   background-repeat: no-repeat;
@@ -311,6 +311,15 @@
   margin-block-end: calc(var(--grid-gap) * 0.8);
 }
 
+/* ── Иконки для карточек услуг ──────────────────────────────────── */
+.cardIcon {
+  display: block;
+  width: 48px;
+  height: 48px;
+  margin-block-end: calc(var(--grid-gap) * 0.5);
+  object-fit: contain;
+}
+
 /* ── Glass-карточки (как на главной) ─────────────────────────────── */
 .glassCard {
   display: flex;
@@ -350,6 +359,31 @@
   flex: 1;
   color: var(--muted);
   font: 450 14px / 1.58 Onest, Inter, system-ui, sans-serif;
+}
+
+/* ── Сетка для Process (5 карточек: 3+2 центрированные) ────────── */
+.processGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--grid-gap);
+}
+
+@media (min-width: 768px) {
+  .processGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .processGrid > :nth-child(4) {
+    grid-column: 1;
+    width: calc(100% + var(--grid-gap) / 2);
+    justify-self: end;
+  }
+
+  .processGrid > :nth-child(5) {
+    grid-column: 2;
+    width: calc(100% + var(--grid-gap) / 2);
+    justify-self: start;
+  }
 }
 
 /* ── Soft section background ──────────────────────────────────────── */
