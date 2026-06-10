@@ -37,7 +37,7 @@ export default function CasesSection() {
         <div className={styles.carouselOuter}>
           <div className={styles.caseGrid} key={slide}>
             {cases.slice(slide * 3, slide * 3 + 3).map((item) => (
-              <article className={styles.caseCard} key={item.slug}>
+              <a className={styles.caseCard} href={item.url} key={item.slug}>
                 <div className={styles.caseCover}>
                   <img
                     src={item.hero}
@@ -55,7 +55,7 @@ export default function CasesSection() {
                   </div>
                   <span className={styles.readMore}>Открыть →</span>
                 </div>
-              </article>
+              </a>
             ))}
           </div>
 
