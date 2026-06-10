@@ -14,7 +14,11 @@ export const uvelichiliChisloZayavokNaPostuplenieNa86DlyaCase: CaseItem = {
   priority: 50,
   date: `13 сентября 2025`,
   hero: '/images/cases/uvelichili-chislo-zayavok-na-postuplenie-na-86-dlya-kolledzha-v-moskve.webp',
-  results: [{ value: "+86%", label: "Заявки", description: "за период проекта" }],
+  results: [
+    { value: "+86%", label: "Заявки", description: "за период проекта" },
+    { value: "×2,5", label: "Рост продаж", description: "за период проекта" },
+    { value: "+40%", label: "Конверсия", description: "целевых действий" }
+  ],
   sections: [
   {
       id: `about-client-1`,

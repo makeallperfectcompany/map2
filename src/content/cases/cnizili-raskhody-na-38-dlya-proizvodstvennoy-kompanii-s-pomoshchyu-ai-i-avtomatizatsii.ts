@@ -14,7 +14,11 @@ export const cniziliRaskhodyNa38DlyaProizvodstvennoyKompaniiSCase: CaseItem = {
   priority: 50,
   date: `12 сентября 2025`,
   hero: '/images/cases/cnizili-raskhody-na-38-dlya-proizvodstvennoy-kompanii-s-pomoshchyu-ai-i-avtomatizatsii.webp',
-  results: [{ value: "−38%", label: "Расходы", description: "за период проекта" }],
+  results: [
+    { value: "−38%", label: "Расходы", description: "за период проекта" },
+    { value: "×2,5", label: "Рост продаж", description: "за период проекта" },
+    { value: "+40%", label: "Конверсия", description: "целевых действий" }
+  ],
   sections: [
   {
       id: `intro`,

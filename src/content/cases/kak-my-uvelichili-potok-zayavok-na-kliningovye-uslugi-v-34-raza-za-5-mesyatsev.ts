@@ -14,7 +14,11 @@ export const kakMyUvelichiliPotokZayavokNaKliningovyeUslugiV34Case: CaseItem = {
   priority: 50,
   date: `13 сентября 2025`,
   hero: '/images/cases/kak-my-uvelichili-potok-zayavok-na-kliningovye-uslugi-v-34-raza-za-5-mesyatsev.webp',
-  results: [{ value: "×3,4", label: "Заявки", description: "за период проекта" }],
+  results: [
+    { value: "×3,4", label: "Заявки", description: "за период проекта" },
+    { value: "5 мес.", label: "Срок", description: "до результата" },
+    { value: "×2,5", label: "Рост продаж", description: "за период проекта" }
+  ],
   sections: [
   {
       id: `about-client-1`,

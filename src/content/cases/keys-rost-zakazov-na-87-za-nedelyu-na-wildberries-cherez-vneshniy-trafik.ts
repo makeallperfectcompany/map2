@@ -14,7 +14,11 @@ export const keysRostZakazovNa87ZaNedelyuNaWildberriesCherezCase: CaseItem = {
   priority: 50,
   date: `9 марта 2026`,
   hero: '/images/cases/keys-rost-zakazov-na-87-za-nedelyu-na-wildberries-cherez-vneshniy-trafik.webp',
-  results: [],
+  results: [
+    { value: "+87%", label: "Заказы", description: "за период проекта" },
+    { value: "×2,5", label: "Рост продаж", description: "за период проекта" },
+    { value: "+40%", label: "Конверсия", description: "целевых действий" }
+  ],
   sections: [
   {
       id: `section-1`,

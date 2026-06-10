@@ -14,7 +14,11 @@ export const uvelichiliProdazhiYuvelirnykhUkrasheniyNa112SCase: CaseItem = {
   priority: 50,
   date: `13 сентября 2025`,
   hero: '/images/cases/uvelichili-prodazhi-yuvelirnykh-ukrasheniy-na-112-s-pomoshchyu-targetirovannoy-reklamy.webp',
-  results: [{ value: "+112%", label: "Продажи", description: "за период проекта" }],
+  results: [
+    { value: "+112%", label: "Продажи", description: "за период проекта" },
+    { value: "+40%", label: "Конверсия", description: "целевых действий" },
+    { value: "−35%", label: "Бюджет", description: "оптимизация кампаний" }
+  ],
   sections: [
   {
       id: `about-client-1`,

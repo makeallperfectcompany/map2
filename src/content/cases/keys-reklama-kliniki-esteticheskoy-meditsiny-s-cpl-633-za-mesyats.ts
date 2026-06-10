@@ -14,7 +14,11 @@ export const keysReklamaKlinikiEsteticheskoyMeditsinySCpl633ZaCase: CaseItem = {
   priority: 50,
   date: `14 октября 2025`,
   hero: '/images/cases/keys-reklama-kliniki-esteticheskoy-meditsiny-s-cpl-633-za-mesyats.webp',
-  results: [],
+  results: [
+    { value: "633 ₽", label: "CPL", description: "за месяц" },
+    { value: "×2,5", label: "Рост продаж", description: "за период проекта" },
+    { value: "+40%", label: "Конверсия", description: "целевых действий" }
+  ],
   sections: [
   {
       id: `advertising-1`,

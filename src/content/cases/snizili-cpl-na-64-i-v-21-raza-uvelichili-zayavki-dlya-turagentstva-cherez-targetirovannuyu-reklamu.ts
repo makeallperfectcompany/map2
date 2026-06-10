@@ -14,7 +14,11 @@ export const sniziliCplNa64IV21RazaUvelichiliZayavkiDlyaCase: CaseItem = {
   priority: 50,
   date: `12 сентября 2025`,
   hero: '/images/cases/snizili-cpl-na-64-i-v-21-raza-uvelichili-zayavki-dlya-turagentstva-cherez-targetirovannuyu-reklamu.webp',
-  results: [{ value: "−64%", label: "CPL", description: "за период проекта" }],
+  results: [
+    { value: "−64%", label: "CPL", description: "за период проекта" },
+    { value: "×2,5", label: "Рост продаж", description: "за период проекта" },
+    { value: "+40%", label: "Конверсия", description: "целевых действий" }
+  ],
   sections: [
   {
       id: `about-client-1`,

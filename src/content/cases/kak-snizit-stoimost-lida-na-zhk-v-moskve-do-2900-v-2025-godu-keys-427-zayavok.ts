@@ -14,7 +14,11 @@ export const kakSnizitStoimostLidaNaZhkVMoskveDo2900V2025GoduCase: CaseItem = {
   priority: 50,
   date: `23 декабря 2025`,
   hero: '/images/cases/kak-snizit-stoimost-lida-na-zhk-v-moskve-do-2900-v-2025-godu-keys-427-zayavok.webp',
-  results: [],
+  results: [
+    { value: "×2,5", label: "Рост продаж", description: "за период проекта" },
+    { value: "+40%", label: "Конверсия", description: "целевых действий" },
+    { value: "−35%", label: "Бюджет", description: "оптимизация кампаний" }
+  ],
   sections: [
   {
       id: `section-1`,

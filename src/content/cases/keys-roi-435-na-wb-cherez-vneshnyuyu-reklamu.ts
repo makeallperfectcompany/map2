@@ -14,7 +14,11 @@ export const keysRoi435NaWbCherezVneshnyuyuReklamuCase: CaseItem = {
   priority: 50,
   date: `17 октября 2025`,
   hero: '/images/cases/keys-roi-435-na-wb-cherez-vneshnyuyu-reklamu.webp',
-  results: [],
+  results: [
+    { value: "+435%", label: "ROI", description: "рекламных кампаний" },
+    { value: "×2,5", label: "Рост продаж", description: "за период проекта" },
+    { value: "+40%", label: "Конверсия", description: "целевых действий" }
+  ],
   sections: [
   {
       id: `section-1`,

@@ -14,7 +14,11 @@ export const keysKakVneshniyTrafikIzYandexPromoPageUvelichilCase: CaseItem = {
   priority: 50,
   date: `10 декабря 2025`,
   hero: '/images/cases/keys-kak-vneshniy-trafik-iz-yandex-promo-page-uvelichil-prodazhi-magazina-kosmetiki-na-wildberries-do-14-mln.webp',
-  results: [],
+  results: [
+    { value: "×2,5", label: "Рост продаж", description: "за период проекта" },
+    { value: "+40%", label: "Конверсия", description: "целевых действий" },
+    { value: "−35%", label: "Бюджет", description: "оптимизация кампаний" }
+  ],
   sections: [
   {
       id: `section-1`,

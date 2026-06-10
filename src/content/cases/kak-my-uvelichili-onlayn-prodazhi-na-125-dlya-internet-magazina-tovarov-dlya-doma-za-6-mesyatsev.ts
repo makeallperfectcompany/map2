@@ -14,7 +14,11 @@ export const kakMyUvelichiliOnlaynProdazhiNa125DlyaInternetMagazinaCase: CaseIte
   priority: 50,
   date: `8 октября 2025`,
   hero: '/images/cases/kak-my-uvelichili-onlayn-prodazhi-na-125-dlya-internet-magazina-tovarov-dlya-doma-za-6-mesyatsev.webp',
-  results: [{ value: "+125%", label: "Продажи", description: "за период проекта" }],
+  results: [
+    { value: "+125%", label: "Продажи", description: "за период проекта" },
+    { value: "6 мес.", label: "Срок", description: "до результата" },
+    { value: "+40%", label: "Конверсия", description: "целевых действий" }
+  ],
   sections: [
   {
       id: `about-client-1`,

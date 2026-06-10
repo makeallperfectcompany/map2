@@ -14,7 +14,11 @@ export const prodazhaElitnykhUchastkovVSanktPeterburgeICase: CaseItem = {
   priority: 50,
   date: `10 сентября 2025`,
   hero: '/images/cases/prodazha-elitnykh-uchastkov-v-sankt-peterburge-i-leningradskoy-oblasti.webp',
-  results: [],
+  results: [
+    { value: "×2,5", label: "Рост продаж", description: "за период проекта" },
+    { value: "+40%", label: "Конверсия", description: "целевых действий" },
+    { value: "−35%", label: "Бюджет", description: "оптимизация кампаний" }
+  ],
   sections: [
   {
       id: `section-1`,

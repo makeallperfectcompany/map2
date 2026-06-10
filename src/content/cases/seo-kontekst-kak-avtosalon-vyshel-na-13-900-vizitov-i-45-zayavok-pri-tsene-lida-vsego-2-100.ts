@@ -14,7 +14,11 @@ export const seoKontekstKakAvtosalonVyshelNa13900VizitovI45Case: CaseItem = {
   priority: 50,
   date: `2 октября 2025`,
   hero: '/images/cases/seo-kontekst-kak-avtosalon-vyshel-na-13-900-vizitov-i-45-zayavok-pri-tsene-lida-vsego-2-100.webp',
-  results: [],
+  results: [
+    { value: "13900", label: "Визитов", description: "за период проекта" },
+    { value: "×2,5", label: "Рост продаж", description: "за период проекта" },
+    { value: "+40%", label: "Конверсия", description: "целевых действий" }
+  ],
   sections: [
   {
       id: `section-1`,

@@ -14,7 +14,11 @@ export const uvelichiliUstanovkiMobilnoyIgryV31RazaISniziliStoimostCase: CaseIte
   priority: 50,
   date: `13 сентября 2025`,
   hero: '/images/cases/uvelichili-ustanovki-mobilnoy-igry-v-31-raza-i-snizili-stoimost-installa-na-54.webp',
-  results: [{ value: "×3,1", label: "Установки", description: "за период проекта" }],
+  results: [
+    { value: "×3,1", label: "Установки", description: "за период проекта" },
+    { value: "−54%", label: "Снижение CPL", description: "за период проекта" },
+    { value: "−54%", label: "Стоимость установки", description: "снижение" }
+  ],
   sections: [
   {
       id: `about-client-1`,

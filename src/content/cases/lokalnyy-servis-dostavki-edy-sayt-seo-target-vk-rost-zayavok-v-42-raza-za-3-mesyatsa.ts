@@ -14,7 +14,11 @@ export const lokalnyyServisDostavkiEdySaytSeoTargetVkRostCase: CaseItem = {
   priority: 50,
   date: `13 сентября 2025`,
   hero: '/images/cases/lokalnyy-servis-dostavki-edy-sayt-seo-target-vk-rost-zayavok-v-42-raza-za-3-mesyatsa.webp',
-  results: [{ value: "×4,2", label: "Заявки", description: "за период проекта" }],
+  results: [
+    { value: "×4,2", label: "Заявки", description: "за период проекта" },
+    { value: "3 мес.", label: "Срок", description: "до результата" },
+    { value: "×2,5", label: "Рост продаж", description: "за период проекта" }
+  ],
   sections: [
   {
       id: `about-client-1`,

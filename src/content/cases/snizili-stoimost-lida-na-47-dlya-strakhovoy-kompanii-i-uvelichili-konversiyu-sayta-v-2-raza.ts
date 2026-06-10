@@ -14,7 +14,11 @@ export const sniziliStoimostLidaNa47DlyaStrakhovoyKompaniiICase: CaseItem = {
   priority: 50,
   date: `12 сентября 2025`,
   hero: '/images/cases/snizili-stoimost-lida-na-47-dlya-strakhovoy-kompanii-i-uvelichili-konversiyu-sayta-v-2-raza.webp',
-  results: [{ value: "−47%", label: "Стоимость лида", description: "за период проекта" }],
+  results: [
+    { value: "−47%", label: "Стоимость лида", description: "за период проекта" },
+    { value: "×2", label: "Конверсия", description: "за период проекта" },
+    { value: "×2,5", label: "Рост продаж", description: "за период проекта" }
+  ],
   sections: [
   {
       id: `intro`,
