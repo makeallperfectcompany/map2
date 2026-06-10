@@ -412,6 +412,9 @@
   .darkGridScroll .darkCardIcon {
     margin-left: auto;
     margin-right: auto;
+    width: 48px;
+    height: 48px;
+    margin-block-end: 12px;
   }
 
 .scrollHint {
@@ -757,6 +760,11 @@
   .darkSection {
     margin: 0 10px;
     border-radius: 24px;
+  }
+
+  .darkCard {
+    padding: 24px;
+    border-radius: 22px;
   }
 }
 
