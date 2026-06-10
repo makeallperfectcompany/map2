@@ -1,7 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { featuredReviews, type ReviewItem } from "@/content/reviews";
+import { reviews, type ReviewItem } from "@/content/reviews";
 import { Container } from "@/components/ui/Container/Container";
 import styles from "./HomeReviewsSection.module.css";
 
@@ -89,8 +89,8 @@ export default function HomeReviewsSection() {
 
   const pages = useMemo(() => {
     const result = [];
-    for (let index = 0; index < featuredReviews.length; index += REVIEWS_PER_PAGE) {
-      result.push(featuredReviews.slice(index, index + REVIEWS_PER_PAGE));
+    for (let index = 0; index < reviews.length; index += REVIEWS_PER_PAGE) {
+      result.push(reviews.slice(index, index + REVIEWS_PER_PAGE));
     }
     return result;
   }, []);
@@ -196,7 +196,7 @@ export default function HomeReviewsSection() {
         </div>
 
         <div className={styles.mobileScroller} aria-label="Отзывы">
-          {featuredReviews.map((review, index) => (
+          {reviews.map((review, index) => (
             <article className={styles.reviewCard} key={review.id}>
               <div className={styles.cardTop}>
                 <div className={styles.rating} aria-label="Высокая оценка">
