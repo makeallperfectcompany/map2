@@ -2,6 +2,7 @@
 
 import { useState, useRef, useEffect, useCallback } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { servicesMenu } from "@/content/navigation/servicesMenu";
 import styles from "./Header.module.css";
 
@@ -64,6 +65,12 @@ export default function ServicesMegaMenu() {
   const [open, setOpen] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
   const closeTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const pathname = usePathname();
+
+  // Close mega menu on page navigation
+  useEffect(() => {
+    setOpen(false);
+  }, [pathname]);
 
   const openMenu = useCallback(() => {
     if (closeTimeoutRef.current) {
