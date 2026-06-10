@@ -2,7 +2,7 @@ import type { IndustriesContent } from "@/components/sections/HomeIndustriesSect
 import { telegramAdsContent } from "./telegramAds";
 
 export const telegramAdsIndustries: IndustriesContent = {
-  label: "Кому подходит",
+  label: "Отрасли",
   kicker: "Какие задачи решаем",
   title: telegramAdsContent.opportunities.h2,
   description:
