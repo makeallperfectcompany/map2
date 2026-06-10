@@ -4,7 +4,7 @@ import { yandexDirectServiceTechnologies } from "@/content/services/yandex-direc
 import { yandexDirectAdvantages } from "@/content/services/yandex-direct-advantages";
 import YandexDirectHero from "@/components/sections/YandexDirectHero/YandexDirectHero";
 import YandexDirectProcessSection from "@/components/sections/YandexDirectProcessSection";
-import AvitoPricingSection from "@/components/sections/AvitoPricingSection";
+import AvitoStylePricingSection from "@/components/sections/AvitoStylePricingSection";
 import HomeTechnologiesSection from "@/components/sections/HomeTechnologiesSection";
 import HomeAdvantagesSection from "@/components/sections/HomeAdvantagesSection";
 import HomeIndustriesSection from "@/components/sections/HomeIndustriesSection";
@@ -123,10 +123,13 @@ export default function YandexDirectPage() {
         <HomeIndustriesSection />
 
         {/* Тарифы */}
-        <AvitoPricingSection
+        <AvitoStylePricingSection
+          eyebrow={content.pricing.eyebrow}
           title={content.pricing.title}
-          text={content.pricing.text}
-          items={content.pricing.cards.map((card) => [card.title, card.text, card.price] as [string, string, string])}
+          description={content.pricing.text}
+          tiers={content.pricing.tiers}
+          note={content.pricing.note}
+          cta={content.pricing.cta}
         />
 
         {/* Кейсы, О нас, Отзывы, Блог */}
