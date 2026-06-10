@@ -1,0 +1,217 @@
+/* ═══════════════════════════════════════════════════════════
+   SeoServicesSection — 6 SEO услуг
+   ═══════════════════════════════════════════════════════════ */
+
+.section {
+  position: relative;
+  margin: 0 24px;
+  border-radius: 32px;
+  padding: 56px 32px 56px;
+  color: #F5F5F7;
+  background: #1D1D1F;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+}
+
+/* ── Header ── */
+
+.header {
+  max-width: 720px;
+  margin-bottom: 44px;
+}
+
+.kicker {
+  display: inline-flex;
+  min-height: 34px;
+  align-items: center;
+  padding: 0 14px;
+  border-radius: 999px;
+  color: #6FB7FF;
+  background: rgba(111, 183, 255, 0.075);
+  border: 1px solid rgba(111, 183, 255, 0.13);
+  font: 760 13px/1 Onest, Inter, system-ui, sans-serif;
+  letter-spacing: -0.012em;
+}
+
+.header h2 {
+  margin: 18px 0 0;
+  font: 800 clamp(36px, 4vw, 58px)/0.98 Onest, Inter, system-ui, sans-serif;
+  letter-spacing: -0.03em;
+  text-wrap: balance;
+}
+
+.header h2 span {
+  display: block;
+  color: rgba(245, 245, 247, 0.55);
+}
+
+.header p {
+  margin: 18px 0 0;
+  max-width: 620px;
+  color: rgba(245, 245, 247, 0.65);
+  font: 440 16px/1.55 Onest, Inter, system-ui, sans-serif;
+  letter-spacing: -0.02em;
+}
+
+/* ── Grid: 3×2 ── */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+/* ── Card ── */
+
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: 24px 22px 16px;
+  border-radius: 20px;
+  background: #2A2A2C;
+  border: 1px solid rgba(255, 255, 255, 0.075);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.045),
+    0 22px 70px rgba(0, 0, 0, 0.18);
+  text-decoration: none;
+  color: inherit;
+  transition: transform 240ms ease, border-color 240ms ease, box-shadow 240ms ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(111, 183, 255, 0.22);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.06),
+    0 30px 86px rgba(0, 0, 0, 0.26);
+}
+
+.cardTop {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.cardType {
+  color: rgba(255, 255, 255, 0.42);
+  font: 760 11px/1 JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.11em;
+}
+
+.card h3 {
+  margin: 0;
+  font: 840 24px/1.08 Onest, Inter, system-ui, sans-serif;
+  letter-spacing: -0.04em;
+  color: #ffffff;
+}
+
+.cardDesc {
+  flex: 1;
+  margin: 12px 0 0;
+  color: rgba(255, 255, 255, 0.60);
+  font: 430 13px/1.5 Onest, Inter, system-ui, sans-serif;
+  letter-spacing: -0.012em;
+}
+
+.cardBottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding-top: 14px;
+  margin-top: auto;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.price {
+  color: rgba(255, 255, 255, 0.85);
+  font: 700 13px/1 JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, monospace;
+  letter-spacing: 0.04em;
+}
+
+.cta {
+  color: #6FB7FF;
+  font: 780 14px/1 Onest, Inter, system-ui, sans-serif;
+  letter-spacing: -0.01em;
+}
+
+/* ── Responsive ── */
+
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  .section {
+    margin: 0 12px;
+    border-radius: 24px;
+    padding: 48px 16px 40px;
+  }
+
+  .header h2 {
+    font-size: 34px;
+    line-height: 1.02;
+  }
+
+  .header p {
+    font-size: 14px;
+  }
+
+  .grid {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 10px;
+    padding: 4px 4px 16px;
+    margin: 0 -4px;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .card {
+    flex: 0 0 280px;
+    scroll-snap-align: start;
+    padding: 18px 16px 14px;
+    border-radius: 16px;
+  }
+
+  .card h3 {
+    font-size: 20px;
+  }
+
+  .cardDesc {
+    font-size: 12px;
+  }
+
+  .card:hover {
+    transform: none;
+  }
+}
+
+@media (max-width: 430px) {
+  .section {
+    margin: 0 8px;
+    border-radius: 20px;
+    padding: 40px 12px 32px;
+  }
+
+  .header h2 {
+    font-size: 28px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card {
+    transition: none;
+  }
+}
