@@ -1,40 +1,39 @@
-import { telegramAdsContent as content } from "@/content/services/telegramAds";
-import OpenConsultationButton from "@/components/forms/OpenConsultationButton";
 import { Container } from "@/components/ui/Container/Container";
-import styles from "./TelegramAdsPricingSection.module.css";
+import grid from "@/styles/grid.module.css";
+import styles from "./AvitoPricingSection.module.css";
 
-export default function TelegramAdsPricingSection() {
-  const { pricing } = content;
+interface PricingPlan {
+  name: string;
+  target: string;
+  price: string;
+  features: string[];
+}
 
+interface Props {
+  title: string;
+  text: string;
+  plans: PricingPlan[];
+}
+
+export default function TelegramAdsPricingSection({ title, text, plans }: Props) {
   return (
-    <section className={styles.section}>
-      <Container className={styles.inner}>
+    <section className={styles.section} id="pricing">
+      <Container>
         <div className={styles.header}>
-          <h2>{pricing.h2}</h2>
-          <p>{pricing.description}</p>
+          <h2>{title}</h2>
+          <p>{text}</p>
         </div>
-
-        <div className={styles.grid}>
-          {pricing.plans.map((plan, index) => (
-            <article
-              className={`${styles.card} ${index === 1 ? styles.featured : ""}`}
-              key={plan.name}
-            >
-              <div>
-                <div className={styles.cardHeader}>
-                  <div className={styles.planName}>{plan.name}</div>
-                  <span className={styles.planTarget}>{plan.target}</span>
-                </div>
-                <div className={styles.price}>{plan.price}</div>
-                <ul className={styles.features}>
-                  {plan.features.map((feature) => (
-                    <li className={styles.feature} key={feature}>{feature}</li>
-                  ))}
-                </ul>
-              </div>
-              <OpenConsultationButton as="a" href="/contacts" className={styles.ctaBtn}>
-                Связаться
-              </OpenConsultationButton>
+        <div className={grid.grid3}>
+          {plans.map((plan, index) => (
+            <article className={`${styles.card} ${index === 1 ? styles.hot : ""}`} key={plan.name}>
+              <h3>{plan.name}</h3>
+              <p className={styles.subtitle}>{plan.target}</p>
+              <strong>{plan.price}</strong>
+              <ul>
+                {plan.features.map((f) => (
+                  <li key={f}>{f}</li>
+                ))}
+              </ul>
             </article>
           ))}
         </div>

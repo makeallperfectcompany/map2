@@ -1,25 +1,46 @@
-import { telegramAdsContent as content } from "@/content/services/telegramAds";
+import Image from "next/image";
 import { Container } from "@/components/ui/Container/Container";
-import styles from "./TelegramAdsProcessSection.module.css";
+import grid from "@/styles/grid.module.css";
+import styles from "./AvitoProcessSection.module.css";
 
-export default function TelegramAdsProcessSection() {
-  const { process } = content;
+interface Props {
+  title: string;
+  text: string;
+  image: string;
+  items: readonly (readonly [string, string])[];
+}
 
+export default function TelegramAdsProcessSection({ title, text, image, items }: Props) {
   return (
     <section className={styles.section}>
-      <Container className={styles.inner}>
-        <div className={styles.header}>
-          <h2>{process.h2}</h2>
-        </div>
-
-        <div className={styles.grid}>
-          {process.steps.map((step, index) => (
-            <article className={styles.stepCard} key={step.title}>
-              <span className={styles.stepNumber}>{String(index + 1).padStart(2, "0")}</span>
-              <h3>{step.title}</h3>
-              <p>{step.description}</p>
-            </article>
-          ))}
+      <Container>
+        <div className={`${grid.grid2} ${styles.layout}`}>
+          <div>
+            <div className={styles.header}>
+              <h2>{title}</h2>
+              <p>{text}</p>
+            </div>
+            <div className={styles.timeline}>
+              {items.map(([itemTitle, itemText], index) => (
+                <article key={itemTitle}>
+                  <span>{String(index + 1).padStart(2, "0")}</span>
+                  <div>
+                    <h3>{itemTitle}</h3>
+                    <p>{itemText}</p>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </div>
+          <div className={styles.visualCard}>
+            <Image
+              src={image}
+              alt="Процесс настройки рекламы Telegram Ads — Make All Perfect"
+              width={1200}
+              height={1500}
+              sizes="(max-width: 768px) 100vw, 48vw"
+            />
+          </div>
         </div>
       </Container>
     </section>

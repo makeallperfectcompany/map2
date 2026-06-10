@@ -1,16 +1,19 @@
 import type { Metadata } from "next";
 import { telegramAdsContent as content } from "@/content/services/telegramAds";
-import TelegramAdsHero from "@/components/sections/TelegramAdsHero";
-import TelegramAdsServicesSection from "@/components/sections/TelegramAdsServicesSection";
-import TelegramAdsAdvantagesSection from "@/components/sections/TelegramAdsAdvantagesSection";
+import { telegramAdsServiceTechnologies } from "@/content/services/telegram-ads-technologies";
+import { telegramAdsAdvantages } from "@/content/services/telegram-ads-advantages";
+import { telegramAdsIndustries } from "@/content/services/telegram-ads-industries";
+import TelegramAdsHero from "@/components/sections/TelegramAdsHero/TelegramAdsHero";
 import TelegramAdsProcessSection from "@/components/sections/TelegramAdsProcessSection";
-import TelegramAdsOpportunitiesSection from "@/components/sections/TelegramAdsOpportunitiesSection";
 import TelegramAdsPricingSection from "@/components/sections/TelegramAdsPricingSection";
-import TelegramAdsFaqSection from "@/components/sections/TelegramAdsFaqSection";
+import HomeTechnologiesSection from "@/components/sections/HomeTechnologiesSection";
+import HomeAdvantagesSection from "@/components/sections/HomeAdvantagesSection";
+import HomeIndustriesSection from "@/components/sections/HomeIndustriesSection";
+import HomeAboutSection from "@/components/sections/HomeAboutSection";
+import HomeBlogSection from "@/components/sections/HomeBlogSection";
+import HomeFaqSection from "@/components/sections/HomeFaqSection";
 import CasesSection from "@/components/sections/CasesSection";
 import HomeReviewsSection from "@/components/sections/HomeReviewsSection";
-import HomeIndustriesSection from "@/components/sections/HomeIndustriesSection";
-import HomeBlogSection from "@/components/sections/HomeBlogSection";
 import FinalCtaSection from "@/components/sections/FinalCtaSection";
 
 export const metadata: Metadata = {
@@ -57,6 +60,12 @@ const serviceSchema = {
     name: "Россия",
   },
   description: content.meta.description,
+  offers: content.pricing.plans.map((plan, index) => ({
+    "@type": "Offer",
+    name: plan.name,
+    description: `${plan.target}. ${plan.price}`,
+    position: index + 1,
+  })),
 };
 
 const faqSchema = {
@@ -89,19 +98,44 @@ export default function TelegramAdsPage() {
       />
 
       <main>
-        <TelegramAdsHero />
-        <TelegramAdsServicesSection />
-        <TelegramAdsAdvantagesSection />
-        <TelegramAdsProcessSection />
-        <TelegramAdsOpportunitiesSection />
-        <TelegramAdsPricingSection />
+        {/* Hero — светлый, с gradient overlay */}
+        <TelegramAdsHero content={content.hero} />
 
+        {/* Объём услуг = Технологии */}
+        <HomeTechnologiesSection content={telegramAdsServiceTechnologies} />
+
+        {/* Преимущества */}
+        <HomeAdvantagesSection content={telegramAdsAdvantages} />
+
+        {/* Процесс работы — 2 колонки с визуалом */}
+        <TelegramAdsProcessSection
+          title={content.process.h2}
+          text="Прозрачный процесс в 5 шагов — от заявки до первых клиентов. Созваниваемся, разрабатываем стратегию, запускаем кампании, оптимизируем и масштабируем результат."
+          image="/images/services/telegram-ads/process-visual.webp"
+          items={content.process.steps.map((s) => [s.title, s.description] as const)}
+        />
+
+        {/* Кому подходит = Отрасли */}
+        <HomeIndustriesSection content={telegramAdsIndustries} />
+
+        {/* Тарифы */}
+        <TelegramAdsPricingSection
+          title={content.pricing.h2}
+          text={content.pricing.description}
+          plans={content.pricing.plans}
+        />
+
+        {/* Кейсы, О нас, Отзывы, Блог */}
         <CasesSection />
+        <HomeAboutSection />
         <HomeReviewsSection />
-        <HomeIndustriesSection />
         <HomeBlogSection />
 
-        <TelegramAdsFaqSection />
+        {/* FAQ */}
+        <HomeFaqSection
+          title={content.faq.h2}
+          items={content.faq.items}
+        />
       </main>
 
       <FinalCtaSection />
