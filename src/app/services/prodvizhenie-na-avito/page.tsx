@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { avitoContent as content } from "@/content/services/avito";
+import { homeTechnologies } from "@/content/home/technologies";
 import {
   AvitoHero,
   AvitoServicesSection,
@@ -7,11 +8,13 @@ import {
   AvitoProcessSection,
   AvitoOpportunitiesSection,
   AvitoPricingSection,
-  AvitoFaqSection,
 } from "@/components/sections/AvitoUniqueSections";
 import CasesSection from "@/components/sections/CasesSection";
-import HomeIndustriesSection from "@/components/sections/HomeIndustriesSection";
 import HomeReviewsSection from "@/components/sections/HomeReviewsSection";
+import HomeTechnologiesSection from "@/components/sections/HomeTechnologiesSection";
+import HomeAboutSection from "@/components/sections/HomeAboutSection";
+import HomeBlogSection from "@/components/sections/HomeBlogSection";
+import HomeFaqSection from "@/components/sections/HomeFaqSection";
 import FinalCtaSection from "@/components/sections/FinalCtaSection";
 
 export const metadata: Metadata = {
@@ -57,7 +60,7 @@ const serviceSchema = {
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  mainEntity: content.faq.items.map((item) => ({
+  mainEntity: content.faq.items.map((item: { question: string; answer: string }) => ({
     "@type": "Question",
     name: item.question,
     acceptedAnswer: {
@@ -84,18 +87,28 @@ export default function AvitoPage() {
       />
 
       <main>
+        {/* Hero — стиль как на главной: светлый, с доверительной плашкой */}
         <AvitoHero />
+
+        {/* Уникальные секции Avito, перестилизованные под общий стиль */}
         <AvitoServicesSection />
         <AvitoAdvantagesSection />
         <AvitoProcessSection />
         <AvitoOpportunitiesSection />
         <AvitoPricingSection />
 
+        {/* Общие блоки с главной */}
+        <HomeTechnologiesSection />
         <CasesSection />
+        <HomeAboutSection />
         <HomeReviewsSection />
-        <HomeIndustriesSection />
+        <HomeBlogSection />
 
-        <AvitoFaqSection />
+        {/* FAQ — UI общий, вопросы Avito */}
+        <HomeFaqSection
+          title={content.faq.title}
+          items={content.faq.items}
+        />
       </main>
 
       <FinalCtaSection />

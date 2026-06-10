@@ -3,53 +3,94 @@ import { Container } from "@/components/ui/Container/Container";
 import grid from "@/styles/grid.module.css";
 import { avitoContent as content } from "@/content/services/avito";
 import styles from "./AvitoUniqueSections.module.css";
+import OpenConsultationButton from "@/components/forms/OpenConsultationButton";
 
-function Eyebrow({ children }: { children: string }) {
-  return <span className={styles.eyebrow}>{children}</span>;
+/* ── Pill-лейбл как на главной ──────────────────────────────────── */
+function SectionLabel({ children }: { children: string }) {
+  return <span className={styles.sectionLabel}>{children}</span>;
 }
 
+/* ── Герой (светлый, Apple-стиль, доверительная плашка) ──────────── */
 export function AvitoHero() {
   return (
     <section className={styles.hero}>
-      <div className={styles.heroBackground} aria-hidden="true" />
-      <Container>
-        <div className={styles.heroContent}>
-          <div className={styles.heroText}>
-            <nav className={styles.breadcrumb} aria-label="Breadcrumb">
-              <a href="/">Главная</a>
-              <span aria-hidden="true">—</span>
-              <span>Продвижение на Avito</span>
-            </nav>
-            <h1>{content.hero.title}</h1>
-            <p className={styles.lead}>{content.hero.description}</p>
-            <div className={styles.actions}>
-              <Link className={styles.primaryButton} href="#consultation">
-                {content.hero.primaryCta} <span aria-hidden="true">↗</span>
-              </Link>
-              <Link className={styles.ghostButton} href="/cases">
-                {content.hero.secondaryCta} <span aria-hidden="true">↗</span>
-              </Link>
+      <div className={styles.heroInner}>
+        <div className={styles.heroLeft}>
+          <h1 className={styles.heroTitle}>{content.hero.title}</h1>
+          <p className={styles.heroLead}>{content.hero.description}</p>
+
+          <div className={styles.heroActions}>
+            <OpenConsultationButton as="a" className={`${styles.btn} ${styles.btnAccent}`}>
+              <span className={styles.btnLabel}>{content.hero.primaryCta}</span>
+              <span className={styles.arrWrap}>
+                <svg className={`${styles.arr} ${styles.arrMain}`} viewBox="0 0 14 14" fill="none">
+                  <path d="M3 11L11 3M11 3H4M11 3V10" stroke="white" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+                <svg className={`${styles.arr} ${styles.arrGhost}`} viewBox="0 0 14 14" fill="none">
+                  <path d="M3 11L11 3M11 3H4M11 3V10" stroke="white" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </span>
+            </OpenConsultationButton>
+
+            <Link href="/cases" className={`${styles.btn} ${styles.btnGhost}`}>
+              <span className={styles.btnLabel}>{content.hero.secondaryCta}</span>
+              <span className={styles.arrWrap}>
+                <svg className={`${styles.arr} ${styles.arrMain}`} viewBox="0 0 14 14" fill="none">
+                  <path d="M3 11L11 3M11 3H4M11 3V10" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+                <svg className={`${styles.arr} ${styles.arrGhost}`} viewBox="0 0 14 14" fill="none">
+                  <path d="M3 11L11 3M11 3H4M11 3V10" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </span>
+            </Link>
+          </div>
+
+          {/* Trust bar */}
+          <div className={styles.trustBar}>
+            <div className={styles.trustBarInner}>
+              <div className={styles.trustItem}>
+                <span className={styles.trustLabel}>С 2017 года в маркетинге</span>
+                <span className={styles.trustValue}>строим продвижение на опыте, аналитике и понимании бизнеса</span>
+              </div>
+              <div className={styles.trustItem}>
+                <span className={styles.trustLabel}>Не продаём лишние услуги</span>
+                <span className={styles.trustValue}>предлагаем только то, что действительно нужно для роста</span>
+              </div>
+              <div className={styles.trustItem}>
+                <span className={styles.trustLabel}>Полная прозрачность в работе</span>
+                <span className={styles.trustValue}>вы видите стратегию, цифры и ход работ на каждом этапе</span>
+              </div>
             </div>
           </div>
         </div>
-      </Container>
+
+        <div className={styles.heroRight}>
+          <img
+            className={styles.heroLogo}
+            src="/assets/home/hero/logo-hero.png"
+            alt="Make All Perfect"
+            title="Make All Perfect"
+          />
+        </div>
+      </div>
     </section>
   );
 }
 
+/* ── Что входит в услугу ──────────────────────────────────────────── */
 export function AvitoServicesSection() {
   return (
     <section className={styles.section}>
       <Container>
-        <div className={styles.heading}>
-          <Eyebrow>{content.services.eyebrow}</Eyebrow>
+        <div className={styles.sectionHeader}>
+          <SectionLabel>{content.services.eyebrow}</SectionLabel>
           <h2>{content.services.title}</h2>
-          <p>{content.services.description}</p>
+          <p className={styles.sectionDesc}>{content.services.description}</p>
         </div>
         <div className={grid.grid3}>
           {content.services.cards.map((card) => (
-            <article className={styles.lightCard} key={card.code}>
-              <span className={styles.number}>{card.code}</span>
+            <article className={styles.glassCard} key={card.code}>
+              <span className={styles.cardCode}>{card.code}</span>
               <h3>{card.title}</h3>
               <p>{card.text}</p>
             </article>
@@ -60,18 +101,19 @@ export function AvitoServicesSection() {
   );
 }
 
+/* ── Преимущества ────────────────────────────────────────────────── */
 export function AvitoAdvantagesSection() {
   return (
     <section className={`${styles.section} ${styles.softSection}`}>
       <Container>
-        <div className={styles.heading}>
-          <Eyebrow>{content.advantages.eyebrow}</Eyebrow>
+        <div className={styles.sectionHeader}>
+          <SectionLabel>{content.advantages.eyebrow}</SectionLabel>
           <h2>{content.advantages.title}</h2>
         </div>
         <div className={grid.grid4}>
           {content.advantages.cards.map((card) => (
-            <article className={styles.lightCard} key={card.code}>
-              <span className={styles.number}>{card.code}</span>
+            <article className={styles.glassCard} key={card.code}>
+              <span className={styles.cardCode}>{card.code}</span>
               <h3>{card.title}</h3>
               <p>{card.text}</p>
             </article>
@@ -82,27 +124,30 @@ export function AvitoAdvantagesSection() {
   );
 }
 
+/* ── Как мы работаем (сетка карточек вместо таймлайна) ────────────── */
 export function AvitoProcessSection() {
   return (
     <section className={styles.section}>
       <Container>
-        <div className={`${styles.heading} ${styles.headingCentered}`}>
-          <Eyebrow>{content.process.eyebrow}</Eyebrow>
+        <div className={styles.sectionHeader}>
+          <SectionLabel>{content.process.eyebrow}</SectionLabel>
           <h2>{content.process.title}</h2>
         </div>
-        <div className={styles.timeline}>
-          {content.process.steps.map((step, index) => (
-            <article className={styles.timelineCard} key={step.number}>
-              <div className={styles.timelineMarker}>
-                <span className={styles.timelineNumber}>{step.number}</span>
-                {index < content.process.steps.length - 1 && (
-                  <div className={styles.timelineLine} aria-hidden="true" />
-                )}
-              </div>
-              <div className={styles.timelineContent}>
-                <h3>{step.title}</h3>
-                <p>{step.text}</p>
-              </div>
+        <div className={grid.grid3}>
+          {content.process.steps.slice(0, 3).map((step) => (
+            <article className={styles.glassCard} key={step.number}>
+              <span className={styles.cardCode}>{step.number}</span>
+              <h3>{step.title}</h3>
+              <p>{step.text}</p>
+            </article>
+          ))}
+        </div>
+        <div className={grid.grid2}>
+          {content.process.steps.slice(3).map((step) => (
+            <article className={styles.glassCard} key={step.number}>
+              <span className={styles.cardCode}>{step.number}</span>
+              <h3>{step.title}</h3>
+              <p>{step.text}</p>
             </article>
           ))}
         </div>
@@ -111,18 +156,19 @@ export function AvitoProcessSection() {
   );
 }
 
+/* ── Для кого подходит (тёмная секция как ServicesSection) ───────── */
 export function AvitoOpportunitiesSection() {
   return (
-    <section className={`${styles.section} ${styles.darkSection}`}>
+    <section className={styles.darkSection}>
       <Container>
-        <div className={styles.heading}>
-          <Eyebrow>{content.opportunities.eyebrow}</Eyebrow>
+        <div className={styles.darkHeader}>
+          <span className={styles.darkLabel}>{content.opportunities.eyebrow}</span>
           <h2>{content.opportunities.title}</h2>
         </div>
         <div className={grid.grid4}>
           {content.opportunities.cards.map((card) => (
             <article className={styles.darkCard} key={card.code}>
-              <span className={styles.code}>{card.code}</span>
+              <span className={styles.darkCode}>{card.code}</span>
               <h3>{card.title}</h3>
               <p>{card.text}</p>
             </article>
@@ -133,19 +179,20 @@ export function AvitoOpportunitiesSection() {
   );
 }
 
+/* ── Стоимость ────────────────────────────────────────────────────── */
 export function AvitoPricingSection() {
   return (
     <section className={styles.section}>
       <Container>
-        <div className={`${styles.heading} ${styles.headingCentered}`}>
-          <Eyebrow>{content.pricing.eyebrow}</Eyebrow>
+        <div className={`${styles.sectionHeader} ${styles.headerCentered}`}>
+          <SectionLabel>{content.pricing.eyebrow}</SectionLabel>
           <h2>{content.pricing.title}</h2>
-          <p>{content.pricing.description}</p>
+          <p className={styles.sectionDesc}>{content.pricing.description}</p>
         </div>
         <div className={styles.pricingGrid}>
           {content.pricing.tiers.map((tier, index) => (
             <article
-              className={`${styles.pricingCard} ${index === 1 ? styles.pricingCardFeatured : ""}`}
+              className={`${styles.pricingCard} ${index === 1 ? styles.pricingFeatured : ""}`}
               key={tier.name}
             >
               {index === 1 && <span className={styles.pricingBadge}>Рекомендуем</span>}
@@ -167,35 +214,9 @@ export function AvitoPricingSection() {
         </div>
         <p className={styles.pricingNote}>{content.pricing.note}</p>
         <div className={styles.pricingCtaWrapper}>
-          <Link className={styles.primaryButton} href="#consultation">
-            {content.pricing.cta} <span aria-hidden="true">↗</span>
-          </Link>
-        </div>
-      </Container>
-    </section>
-  );
-}
-
-export function AvitoFaqSection() {
-  return (
-    <section className={`${styles.section} ${styles.softSection}`}>
-      <Container>
-        <div className={`${styles.heading} ${styles.headingCentered}`}>
-          <Eyebrow>{content.faq.eyebrow}</Eyebrow>
-          <h2>{content.faq.title}</h2>
-        </div>
-        <div className={styles.faqList}>
-          {content.faq.items.map((item) => (
-            <details className={styles.faqItem} key={item.question}>
-              <summary className={styles.faqQuestion}>
-                <span>{item.question}</span>
-                <span className={styles.faqIcon} aria-hidden="true">+</span>
-              </summary>
-              <div className={styles.faqAnswer}>
-                <p>{item.answer}</p>
-              </div>
-            </details>
-          ))}
+          <OpenConsultationButton as="a" className={`${styles.btn} ${styles.btnAccent}`}>
+            <span className={styles.btnLabel}>{content.pricing.cta}</span>
+          </OpenConsultationButton>
         </div>
       </Container>
     </section>
