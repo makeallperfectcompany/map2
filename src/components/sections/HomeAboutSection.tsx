@@ -38,8 +38,10 @@ export default function HomeAboutSection() {
         <div className={styles.bullets}>
           {homeAbout.bullets.map((bullet) => (
             <article className={styles.bulletCard} key={bullet.title}>
-              <span>{bullet.mark}</span>
-              <h3>{bullet.title}</h3>
+              <div className={styles.bulletTop}>
+                <span>{bullet.mark}</span>
+                <h3>{bullet.title}</h3>
+              </div>
               <p>{bullet.text}</p>
             </article>
           ))}

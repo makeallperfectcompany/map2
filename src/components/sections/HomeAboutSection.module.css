@@ -64,7 +64,7 @@
 
 .text {
   max-width: 720px;
-  margin: 8px 0;
+  margin: 25px 0 0;
   display: grid;
   gap: 14px;
 }
@@ -209,22 +209,28 @@
   flex-direction: column;
 }
 
-.bulletCard > span {
+.bulletTop {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.bulletTop > span {
   color: #0071e3;
   font: 800 12px/1 JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, monospace;
   letter-spacing: 0.04em;
 }
 
-.bulletCard h3 {
+.bulletTop h3 {
   margin: 22px 0 0;
   color: #1d1d1f;
   font: 830 22px/1.08 Onest, Inter, system-ui, sans-serif;
   letter-spacing: -0.058em;
+  flex: 1;
 }
 
 .bulletCard p {
   margin: 12px 0 0;
-  margin-top: auto;
   color: #62666d;
   font: 480 14.5px/1.42 Onest, Inter, system-ui, sans-serif;
   letter-spacing: -0.014em;
