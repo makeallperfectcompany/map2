@@ -2,10 +2,9 @@ import type { Metadata } from "next";
 import { telegramAdsContent as content } from "@/content/services/telegramAds";
 import { telegramAdsServiceTechnologies } from "@/content/services/telegram-ads-technologies";
 import { telegramAdsAdvantages } from "@/content/services/telegram-ads-advantages";
-import { telegramAdsIndustries } from "@/content/services/telegram-ads-industries";
 import TelegramAdsHero from "@/components/sections/TelegramAdsHero/TelegramAdsHero";
 import TelegramAdsProcessSection from "@/components/sections/TelegramAdsProcessSection";
-import TelegramAdsPricingSection from "@/components/sections/TelegramAdsPricingSection";
+import AvitoStylePricingSection from "@/components/sections/AvitoStylePricingSection";
 import HomeTechnologiesSection from "@/components/sections/HomeTechnologiesSection";
 import HomeAdvantagesSection from "@/components/sections/HomeAdvantagesSection";
 import HomeIndustriesSection from "@/components/sections/HomeIndustriesSection";
@@ -115,14 +114,17 @@ export default function TelegramAdsPage() {
           items={content.process.steps.map((s) => [s.title, s.description] as const)}
         />
 
-        {/* Кому подходит = Отрасли */}
-        <HomeIndustriesSection content={telegramAdsIndustries} />
+        {/* Отрасли — alias с главной */}
+        <HomeIndustriesSection />
 
-        {/* Тарифы */}
-        <TelegramAdsPricingSection
+        {/* Тарифы — alias с Avito */}
+        <AvitoStylePricingSection
+          eyebrow="Стоимость"
           title={content.pricing.h2}
-          text={content.pricing.description}
-          plans={content.pricing.plans}
+          description={content.pricing.description}
+          tiers={content.pricing.tiers}
+          note={content.pricing.note}
+          cta={content.pricing.cta}
         />
 
         {/* Кейсы, О нас, Отзывы, Блог */}
