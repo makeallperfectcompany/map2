@@ -108,22 +108,32 @@ export function AvitoServicesSection() {
   );
 }
 
-/* ── Преимущества ────────────────────────────────────────────────── */
+/* ── Преимущества (как на главной: h2 + 2x2 карточки) ─────────── */
 export function AvitoAdvantagesSection() {
   return (
-    <section className={`${styles.section} ${styles.softSection}`}>
-      <Container>
+    <section className={styles.avitoAdvSection}>
+      <Container className={styles.avitoAdvInner}>
         <div className={styles.sectionHeader}>
-          <SectionLabel>{content.advantages.eyebrow}</SectionLabel>
-          <h2>{content.advantages.title}</h2>
+          <span className={styles.sectionLabel}>{content.advantages.eyebrow}</span>
+          <p className={styles.kicker}>Почему выбирают нас</p>
         </div>
-        <div className={grid.grid4}>
-          {content.advantages.cards.map((card) => (
-            <article className={styles.glassCard} key={card.code}>
-              <h3>{card.title}</h3>
-              <p>{card.text}</p>
-            </article>
-          ))}
+
+        <div className={styles.avitoAdvRow}>
+          <div className={styles.avitoAdvLeft}>
+            <h2>{content.advantages.title}</h2>
+          </div>
+
+          <div className={styles.avitoAdvRight}>
+            <div className={styles.avitoAdvGrid}>
+              {content.advantages.cards.map((card, index) => (
+                <article className={styles.avitoAdvCard} key={card.code}>
+                  <span className={styles.avitoAdvNumber}>{String(index + 1).padStart(2, "0")}</span>
+                  <h3>{card.title}</h3>
+                  <p>{card.text}</p>
+                </article>
+              ))}
+            </div>
+          </div>
         </div>
       </Container>
     </section>
