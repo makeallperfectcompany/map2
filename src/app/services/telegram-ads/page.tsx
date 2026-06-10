@@ -110,7 +110,7 @@ export default function TelegramAdsPage() {
         <TelegramAdsProcessSection
           title={content.process.h2}
           text="Прозрачный процесс в 5 шагов — от заявки до первых клиентов. Созваниваемся, разрабатываем стратегию, запускаем кампании, оптимизируем и масштабируем результат."
-          image="/images/services/telegram-ads/process-visual.webp"
+          image="/images/home/advantages-visual.webp"
           items={content.process.steps.map((s) => [s.title, s.description] as const)}
         />
 

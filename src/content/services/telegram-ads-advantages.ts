@@ -6,7 +6,7 @@ export const telegramAdsAdvantages = {
   title: telegramAdsContent.advantages.h2,
   description:
     "Мы не просто запускаем рекламу — мы выстраиваем систему привлечения клиентов через Telegram с прозрачной отчётностью и фокусом на экономику бизнеса.",
-  visual: "/images/services/telegram-ads/advantages-bg.webp",
+  visual: "/images/services/telegram-ads/advantages-visual.webp",
   mainCard: {
     title: "Система вместо разрозненных настроек",
     text:
