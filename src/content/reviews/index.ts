@@ -76,6 +76,7 @@ export const reviews: ReviewItem[] = [
   {
     type: "review",
     id: "геннадий-кузнецов",
+    featured: true,
     name: "Геннадий Кузнецов",
     role: "Владелец компании",
     rating: 5,
@@ -89,6 +90,7 @@ export const reviews: ReviewItem[] = [
   {
     type: "review",
     id: "олег-сергеев",
+    featured: true,
     name: "Олег Сергеев",
     role: "Маркетолог в компании «ЭкоПродукт»",
     rating: 5,
@@ -102,6 +104,7 @@ export const reviews: ReviewItem[] = [
   {
     type: "review",
     id: "анатолий-г",
+    featured: true,
     name: "Анатолий Г.",
     role: "Основатель компании «Дымоход Коломна»",
     rating: 5,
@@ -115,6 +118,7 @@ export const reviews: ReviewItem[] = [
   {
     type: "review",
     id: "екатерина-ларионова",
+    featured: true,
     name: "Екатерина Ларионова",
     role: "Основатель / мебель и интерьер",
     rating: 5,
@@ -128,6 +132,7 @@ export const reviews: ReviewItem[] = [
   {
     type: "review",
     id: "павел-орлов",
+    featured: true,
     name: "Павел Орлов",
     role: "Руководитель отдела продаж / ремонт и сервисные услуги",
     rating: 5,
@@ -141,6 +146,7 @@ export const reviews: ReviewItem[] = [
   {
     type: "review",
     id: "анна-белова",
+    featured: true,
     name: "Анна Белова",
     role: "Управляющий партнёр / юридические услуги",
     rating: 5,
@@ -154,6 +160,7 @@ export const reviews: ReviewItem[] = [
   {
     type: "review",
     id: "илья-мельников",
+    featured: true,
     name: "Илья Мельников",
     role: "Коммерческий директор / строительство и инженерные системы",
     rating: 5,
@@ -167,6 +174,7 @@ export const reviews: ReviewItem[] = [
   {
     type: "review",
     id: "никита-сафонов",
+    featured: true,
     name: "Никита Сафонов",
     role: "Руководитель продукта / онлайн-образование / зарубежный рынок",
     rating: 5,
@@ -180,6 +188,7 @@ export const reviews: ReviewItem[] = [
   {
     type: "review",
     id: "марина-громова",
+    featured: true,
     name: "Марина Громова",
     role: "Директор по маркетингу / медицинские услуги",
     rating: 5,
@@ -193,6 +202,7 @@ export const reviews: ReviewItem[] = [
   {
     type: "review",
     id: "дмитрий-назаров",
+    featured: true,
     name: "Дмитрий Назаров",
     role: "Основатель / детское образование",
     rating: 5,
@@ -206,6 +216,7 @@ export const reviews: ReviewItem[] = [
   {
     type: "review",
     id: "сергей-капустин",
+    featured: true,
     name: "Сергей Капустин",
     role: "Владелец / автосервис",
     rating: 5,
@@ -219,6 +230,7 @@ export const reviews: ReviewItem[] = [
   {
     type: "review",
     id: "олег-руденко",
+    featured: true,
     name: "Олег Руденко",
     role: "Маркетинг-менеджер / B2B SaaS",
     rating: 5,
