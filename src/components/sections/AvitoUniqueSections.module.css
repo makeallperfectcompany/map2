@@ -554,7 +554,7 @@
 }
 
 .pricingHeader {
-  text-align: center;
+  text-align: left;
   padding-block-end: calc(var(--card-py) / 2);
   border-bottom: 1px solid rgba(15,16,20,0.08);
 }
@@ -583,12 +583,16 @@
   color: #0071E3;
   font: 800 32px / 1 Onest, Inter, system-ui, sans-serif;
   letter-spacing: -0.04em;
+  min-height: 66px;
+  display: flex;
+  align-items: flex-start;
 }
 
 .pricingBudget {
   margin: 8px 0 16px;
   color: var(--muted);
-  font: 450 13px / 1.4 Onest, Inter, system-ui, sans-serif;
+  font: 450 14px/1.4 Onest, Inter, system-ui, sans-serif;
+  min-height: 20px;
 }
 
 .pricingFeatures {
@@ -603,9 +607,9 @@
 
 .pricingFeatures li {
   position: relative;
-  padding-inline-start: 20px;
+  padding-inline-start: 24px;
   color: var(--ink);
-  font: 450 13px / 1.45 Onest, Inter, system-ui, sans-serif;
+  font: 450 14px/1.48 Onest, Inter, system-ui, sans-serif;
 }
 
 .pricingFeatures li::before {
