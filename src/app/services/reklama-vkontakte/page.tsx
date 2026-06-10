@@ -107,7 +107,7 @@ export default function VkAdsPage() {
         <VkAdsProcessSection
           title={content.process.title}
           text="Прозрачный процесс в 5 шагов — от заявки до первых клиентов. Созваниваемся, разрабатываем стратегию, запускаем кампании, оптимизируем и масштабируем результат."
-          image="/images/services/vk-ads/vk-ads-tech-visual.webp"
+          image="/images/home/advantages-visual.webp"
           items={content.process.steps.map(s => [s.title, s.text] as const)}
         />
 

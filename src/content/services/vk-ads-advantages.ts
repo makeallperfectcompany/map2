@@ -6,7 +6,7 @@ export const vkAdsAdvantages = {
   title: vkAdsContent.advantages.title,
   description:
     "Мы не просто запускаем рекламу — мы выстраиваем систему привлечения клиентов через VK с прозрачной отчётностью и фокусом на экономику бизнеса.",
-  visual: "/images/services/vk-ads/vk-ads-system-visual.webp",
+  visual: "/images/home/advantages-visual.webp",
   mainCard: {
     title: "Система вместо разрозненных настроек",
     text:
