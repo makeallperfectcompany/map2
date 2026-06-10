@@ -2,10 +2,10 @@ import type { Metadata } from "next";
 import { vkAdsContent as content } from "@/content/services/vkAds";
 import { vkAdsServiceTechnologies } from "@/content/services/vk-ads-technologies";
 import { vkAdsAdvantages } from "@/content/services/vk-ads-advantages";
-import { vkAdsIndustries } from "@/content/services/vk-ads-industries";
+
 import VkAdsHero from "@/components/sections/VkAdsHero/VkAdsHero";
 import VkAdsProcessSection from "@/components/sections/VkAdsProcessSection";
-import VkAdsPricingSection from "@/components/sections/VkAdsPricingSection";
+import AvitoStylePricingSection from "@/components/sections/AvitoStylePricingSection";
 import HomeTechnologiesSection from "@/components/sections/HomeTechnologiesSection";
 import HomeAdvantagesSection from "@/components/sections/HomeAdvantagesSection";
 import HomeIndustriesSection from "@/components/sections/HomeIndustriesSection";
@@ -111,14 +111,17 @@ export default function VkAdsPage() {
           items={content.process.steps.map(s => [s.title, s.text] as const)}
         />
 
-        {/* Кому подходит = Отрасли */}
-        <HomeIndustriesSection content={vkAdsIndustries} />
+        {/* Отрасли — alias с главной */}
+        <HomeIndustriesSection />
 
-        {/* Тарифы */}
-        <VkAdsPricingSection
+        {/* Тарифы — alias с Avito */}
+        <AvitoStylePricingSection
+          eyebrow={content.pricing.eyebrow}
           title={content.pricing.title}
-          text={content.pricing.description}
+          description={content.pricing.description}
           tiers={content.pricing.tiers}
+          note={content.pricing.note}
+          cta={content.pricing.cta}
         />
 
         {/* Кейсы, О нас, Отзывы, Блог */}

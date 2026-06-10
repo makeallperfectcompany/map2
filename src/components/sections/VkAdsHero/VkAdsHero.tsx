@@ -1,5 +1,4 @@
-import Image from "next/image";
-import { Container } from "@/components/ui/Container/Container";
+import Link from "next/link";
 import styles from "./VkAdsHero.module.css";
 
 interface Props {
@@ -20,34 +19,66 @@ const trustItems = [
 export default function VkAdsHero({ content }: Props) {
   return (
     <section className={styles.heroSection}>
-      <Image
-        src="/images/services/vk-ads/vk-ads-hero-bg.webp"
-        alt=""
-        fill
-        priority
-        className={styles.heroBg}
-        sizes="100vw"
-      />
-      <Container className={styles.container}>
-        <div className={styles.copy}>
-          <h1>{content.title}</h1>
-          <p>{content.description}</p>
-          <div className={styles.actions}>
-            <a href="#contact" className={styles.primary}>{content.primaryCta}</a>
-            <a href="#pricing" className={styles.secondary}>{content.secondaryCta}</a>
+      <div className={styles.heroInner}>
+        <div className={styles.left}>
+          <h1 className={styles.heroTitle}>
+            {content.title}
+            <span className={styles.highlight}>Make All Perfect</span>
+          </h1>
+
+          <p className={styles.heroLead}>
+            {content.description}
+          </p>
+
+          <div className={styles.heroActions}>
+            <Link href="#contact" className={`${styles.btn} ${styles.btnAccent}`}>
+              <span className={styles.label}>{content.primaryCta}</span>
+              <span className={styles.arrWrap}>
+                <svg className={`${styles.arr} ${styles.arrMain}`} viewBox="0 0 14 14" fill="none">
+                  <path d="M3 11L11 3M11 3H4M11 3V10" stroke="white" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+                <svg className={`${styles.arr} ${styles.arrGhost}`} viewBox="0 0 14 14" fill="none">
+                  <path d="M3 11L11 3M11 3H4M11 3V10" stroke="white" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </span>
+            </Link>
+
+            <Link href="#pricing" className={`${styles.btn} ${styles.btnGhost}`}>
+              <span className={styles.label}>{content.secondaryCta}</span>
+              <span className={styles.arrWrap}>
+                <svg className={`${styles.arr} ${styles.arrMain}`} viewBox="0 0 14 14" fill="none">
+                  <path d="M3 11L11 3M11 3H4M11 3V10" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+                <svg className={`${styles.arr} ${styles.arrGhost}`} viewBox="0 0 14 14" fill="none">
+                  <path d="M3 11L11 3M11 3H4M11 3V10" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </span>
+            </Link>
           </div>
 
+          {/* Trust bar */}
           <div className={styles.trustBar}>
             <div className={styles.trustBarInner}>
               {trustItems.map((item) => (
                 <div key={item.label} className={styles.trustItem}>
                   <span className={styles.trustLabel}>{item.label}</span>
+                  <span className={styles.trustValue}>{item.value}</span>
                 </div>
               ))}
             </div>
           </div>
         </div>
-      </Container>
+
+        {/* Right column: logo */}
+        <div className={styles.right}>
+          <img
+            className={styles.heroLogo}
+            src="/assets/home/hero/logo-hero.png"
+            alt="Make All Perfect"
+            title="Make All Perfect"
+          />
+        </div>
+      </div>
     </section>
   );
 }
