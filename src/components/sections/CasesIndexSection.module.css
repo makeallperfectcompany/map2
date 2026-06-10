@@ -227,7 +227,6 @@
 
 .cardBody p {
   margin: 14px 0 0;
-  flex: 1;
   color: #6b6f76;
   font: 450 14px/1.5 Onest, Inter, system-ui, sans-serif;
   display: -webkit-box;
@@ -236,23 +235,9 @@
   overflow: hidden;
 }
 
-.readMore {
-  display: inline-flex;
-  align-items: center;
-  margin-top: auto;
-  padding: 10px 20px;
-  border-radius: 14px;
-  background: linear-gradient(90deg, #1A3A6E 0%, #0071E3 52%, #5FA8FF 100%);
-  color: #fff;
-  font: 750 13px/1 Onest, Inter, system-ui, sans-serif;
-  box-shadow: 0 8px 20px rgba(0, 113, 227, 0.18);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-  align-self: flex-start;
-}
-
-.caseCard:hover .readMore {
-  transform: translateY(-1px);
-  box-shadow: 0 12px 28px rgba(0, 113, 227, 0.25);
+.caseCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 24px 60px rgba(15,16,20,0.075), inset 0 1px 0 rgba(255,255,255,0.92);
 }
 
 .casesCta {

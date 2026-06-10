@@ -45,10 +45,7 @@ export default function BlogIndexSection() {
                 </div>
                 <div className={styles.articleBody}>
                   <h3 className={styles.articleTitle}>{article.title}</h3>
-                  <div className={styles.bottomBlock}>
-                    <p className={styles.articleDesc}>{article.description}</p>
-                    <span className={styles.readMore}>Открыть →</span>
-                  </div>
+                  <p className={styles.articleDesc}>{article.description}</p>
                 </div>
               </a>
             ))}

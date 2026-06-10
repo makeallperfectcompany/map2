@@ -39,8 +39,6 @@ export default function CasesIndexSection() {
                 <div className={styles.cardBody}>
                   <h3>{item.title}</h3>
                   <p>{item.description}</p>
-
-                  <span className={styles.readMore}>Открыть →</span>
                 </div>
               </a>
             ))}
