@@ -212,6 +212,8 @@
 
 .contentBody {
   flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .caseBody h3 {
@@ -225,6 +227,7 @@
   margin: 14px 0 0;
   color: #6b6f76;
   font: 450 15px/1.55 Onest, Inter, system-ui, sans-serif;
+  flex: 1;
 }
 
 .readMore {
