@@ -593,21 +593,12 @@
   color: #0e0f12;
   font: 760 18px/1.15 Onest, Inter, system-ui, sans-serif;
   letter-spacing: -0.035em;
-  flex: 1;
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
 }
 
 .relatedCard p {
   margin: 12px 0 0;
   color: #6b6f76;
   font: 450 13px/1.45 Onest, Inter, system-ui, sans-serif;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
 }
 
 .finalCta {
