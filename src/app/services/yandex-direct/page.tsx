@@ -4,7 +4,7 @@ import { yandexDirectServiceTechnologies } from "@/content/services/yandex-direc
 import { yandexDirectAdvantages } from "@/content/services/yandex-direct-advantages";
 import YandexDirectHero from "@/components/sections/YandexDirectHero/YandexDirectHero";
 import YandexDirectProcessSection from "@/components/sections/YandexDirectProcessSection";
-import YandexDirectPricingSection from "@/components/sections/YandexDirectPricingSection";
+import AvitoPricingSection from "@/components/sections/AvitoPricingSection";
 import HomeTechnologiesSection from "@/components/sections/HomeTechnologiesSection";
 import HomeAdvantagesSection from "@/components/sections/HomeAdvantagesSection";
 import HomeIndustriesSection from "@/components/sections/HomeIndustriesSection";
@@ -123,11 +123,10 @@ export default function YandexDirectPage() {
         <HomeIndustriesSection />
 
         {/* Тарифы */}
-        <YandexDirectPricingSection
+        <AvitoPricingSection
           title={content.pricing.title}
           text={content.pricing.text}
-          cards={content.pricing.cards}
-          note="Стоимость работ указана отдельно от рекламного бюджета. Точный формат определяем после короткого аудита задачи: смотрим нишу, регион, количество направлений, текущие кампании и цели по заявкам."
+          items={content.pricing.cards.map((card) => [card.title, card.text, card.price] as [string, string, string])}
         />
 
         {/* Кейсы, О нас, Отзывы, Блог */}
