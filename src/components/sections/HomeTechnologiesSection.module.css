@@ -199,6 +199,15 @@
   letter-spacing: -0.08em;
 }
 
+.cardIcon {
+  display: block;
+  width: 48px;
+  height: 48px;
+  margin-top: 26px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+}
+
 .cardText {
   position: relative;
   z-index: 1;
@@ -322,6 +331,12 @@
 
   .code {
     font-size: 40px;
+  }
+
+  .cardIcon {
+    margin-top: 20px;
+    width: 48px;
+    height: 48px;
   }
 
   .cardText {

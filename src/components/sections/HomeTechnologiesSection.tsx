@@ -63,7 +63,11 @@ export default function HomeTechnologiesSection({ content }: Props) {
                 <p>{card.muted}</p>
               </div>
 
-              <strong className={styles.code}>{card.code}</strong>
+              {card.icon ? (
+                <img className={styles.cardIcon} src={card.icon} alt="" aria-hidden="true" width={48} height={48} />
+              ) : (
+                <strong className={styles.code}>{card.code}</strong>
+              )}
 
               <p className={styles.cardText}>{card.text}</p>
 

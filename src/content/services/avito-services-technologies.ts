@@ -27,6 +27,7 @@ export const avitoServiceTechnologies: TechnologiesContent = {
     title: card.title,
     muted: "",
     code: card.code,
+    icon: `/assets/services/avito/icons/icon-${card.code}.webp`,
     text: card.text,
     tags: [],
     accent: index === 0,
