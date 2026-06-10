@@ -8,7 +8,7 @@ import ContextualMechanicsSection from "@/components/sections/ContextualMechanic
 import ContextualFormatsSection from "@/components/sections/ContextualFormatsSection";
 import ContextualAuditSection from "@/components/sections/ContextualAuditSection";
 import ContextualProcessSection from "@/components/sections/ContextualProcessSection";
-import ContextualPricingSection from "@/components/sections/ContextualPricingSection";
+import AvitoStylePricingSection from "@/components/sections/AvitoStylePricingSection";
 import ContextualUseCasesSection from "@/components/sections/ContextualUseCasesSection";
 import ContextualIndustriesSection from "@/components/sections/ContextualIndustriesSection";
 import ContextualTechnologiesSection from "@/components/sections/ContextualTechnologiesSection";
@@ -78,7 +78,14 @@ export default function ContextualAdvertisingPage() {
       <ContextualFormatsSection data={data.formats} />
       <ContextualAuditSection data={data.audit} />
       <ContextualProcessSection data={data.process} />
-      <ContextualPricingSection data={data.pricing} />
+      <AvitoStylePricingSection
+        eyebrow={data.pricing.eyebrow}
+        title={data.pricing.title}
+        description={data.pricing.description}
+        tiers={data.pricing.tiers}
+        note={data.pricing.note}
+        cta={data.pricing.cta}
+      />
       <ContextualUseCasesSection data={data.useCases} />
       <ContextualIndustriesSection data={data.industries} />
       <ContextualTechnologiesSection data={data.technologies} />
