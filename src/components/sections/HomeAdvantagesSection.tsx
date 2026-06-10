@@ -3,22 +3,34 @@ import { homeAdvantages } from "@/content/home/advantages";
 import { Container } from "@/components/ui/Container/Container";
 import styles from "./HomeAdvantagesSection.module.css";
 
-export default function HomeAdvantagesSection() {
+interface AdvantagesContent {
+  label: string;
+  kicker: string;
+  title: string;
+  description: string;
+  visual: string;
+  mainCard: { title: string; text: string };
+  items: { title: string; text: string }[];
+}
+
+export default function HomeAdvantagesSection({ content }: { content?: AdvantagesContent }) {
+  const data = content ?? homeAdvantages;
+
   return (
     <section className={styles.advantagesSection}>
       <Container className={styles.inner}>
         <div className={styles.sectionHeader}>
-          <span className={styles.sectionLabel}>{homeAdvantages.label}</span>
-          <p className={styles.kicker}>{homeAdvantages.kicker}</p>
+          <span className={styles.sectionLabel}>{data.label}</span>
+          <p className={styles.kicker}>{data.kicker}</p>
         </div>
 
         <div className={styles.layoutRow}>
           <div className={styles.h2Column}>
-            <h2>{homeAdvantages.title}</h2>
-            <p className={styles.description}>{homeAdvantages.description}</p>
+            <h2>{data.title}</h2>
+            <p className={styles.description}>{data.description}</p>
             <div className={styles.visualCard}>
               <Image
-                src={homeAdvantages.visual}
+                src={data.visual}
                 alt=""
                 title="Преимущества работы"
                 fill
@@ -31,12 +43,12 @@ export default function HomeAdvantagesSection() {
           <div className={styles.contentColumn}>
             <article className={styles.mainCard}>
               <span>Full-cycle growth</span>
-              <h3>{homeAdvantages.mainCard.title}</h3>
-              <p>{homeAdvantages.mainCard.text}</p>
+              <h3>{data.mainCard.title}</h3>
+              <p>{data.mainCard.text}</p>
             </article>
 
             <div className={styles.cardsGrid}>
-              {homeAdvantages.items.map((item, index) => (
+              {data.items.map((item, index) => (
                 <article className={styles.advantageCard} key={item.title}>
                   <span className={styles.cardNumber}>{String(index + 1).padStart(2, "0")}</span>
                   <h3>{item.title}</h3>

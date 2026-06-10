@@ -2,10 +2,10 @@ import type { Metadata } from "next";
 import { avitoContent as content } from "@/content/services/avito";
 import { avitoIndustries } from "@/content/services/avito-industries";
 import { avitoTechnologies } from "@/content/services/avito-technologies";
+import { avitoAdvantages } from "@/content/home/avito-advantages";
 import {
   AvitoHero,
   AvitoServicesSection,
-  AvitoAdvantagesSection,
   AvitoProcessSection,
   AvitoOpportunitiesSection,
   AvitoPricingSection,
@@ -13,6 +13,7 @@ import {
 import CasesSection from "@/components/sections/CasesSection";
 import HomeReviewsSection from "@/components/sections/HomeReviewsSection";
 import HomeIndustriesSection from "@/components/sections/HomeIndustriesSection";
+import HomeAdvantagesSection from "@/components/sections/HomeAdvantagesSection";
 import HomeTechnologiesSection from "@/components/sections/HomeTechnologiesSection";
 import HomeAboutSection from "@/components/sections/HomeAboutSection";
 import HomeBlogSection from "@/components/sections/HomeBlogSection";
@@ -94,7 +95,7 @@ export default function AvitoPage() {
 
         {/* Уникальные секции Avito, перестилизованные под общий стиль */}
         <AvitoServicesSection />
-        <AvitoAdvantagesSection />
+        <HomeAdvantagesSection content={avitoAdvantages} />
         <AvitoProcessSection />
         <AvitoOpportunitiesSection />
         <AvitoPricingSection />

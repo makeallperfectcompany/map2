@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import { Container } from "@/components/ui/Container/Container";
 import grid from "@/styles/grid.module.css";
@@ -103,48 +102,6 @@ export function AvitoServicesSection() {
               <p>{card.text}</p>
             </article>
           ))}
-        </div>
-      </Container>
-    </section>
-  );
-}
-
-/* ── Преимущества (как на главной: h2 + 2x2 карточки) ─────────── */
-export function AvitoAdvantagesSection() {
-  return (
-    <section className={styles.avitoAdvSection}>
-      <Container className={styles.avitoAdvInner}>
-        <div className={styles.sectionHeader}>
-          <span className={styles.sectionLabel}>{content.advantages.eyebrow}</span>
-          <p className={styles.kicker}>Почему выбирают нас</p>
-        </div>
-
-        <div className={styles.avitoAdvRow}>
-          <div className={styles.avitoAdvLeft}>
-            <h2>{content.advantages.title}</h2>
-            <div className={styles.avitoAdvVisual}>
-              <Image
-                src="/images/home/advantages-visual.webp"
-                alt=""
-                title="Преимущества"
-                fill
-                sizes="(max-width: 900px) 100vw, 40vw"
-                priority={false}
-              />
-            </div>
-          </div>
-
-          <div className={styles.avitoAdvRight}>
-            <div className={styles.avitoAdvGrid}>
-              {content.advantages.cards.map((card, index) => (
-                <article className={styles.avitoAdvCard} key={card.code}>
-                  <span className={styles.avitoAdvNumber}>{String(index + 1).padStart(2, "0")}</span>
-                  <h3>{card.title}</h3>
-                  <p>{card.text}</p>
-                </article>
-              ))}
-            </div>
-          </div>
         </div>
       </Container>
     </section>
