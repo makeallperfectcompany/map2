@@ -218,6 +218,8 @@
 
 .cardBody h3 {
   margin: 0;
+  height: 120px;
+  overflow: hidden;
   color: #0e0f12;
   font: 780 24px/1.2 Onest, Inter, system-ui, sans-serif;
   letter-spacing: -0.04em;
@@ -225,6 +227,7 @@
 
 .cardBody p {
   margin: 14px 0 0;
+  flex: 1;
   color: #6b6f76;
   font: 450 14px/1.5 Onest, Inter, system-ui, sans-serif;
   display: -webkit-box;
@@ -236,7 +239,7 @@
 .readMore {
   display: inline-flex;
   align-items: center;
-  margin-top: 24px;
+  margin-top: auto;
   padding: 10px 20px;
   border-radius: 14px;
   background: linear-gradient(90deg, #1A3A6E 0%, #0071E3 52%, #5FA8FF 100%);
