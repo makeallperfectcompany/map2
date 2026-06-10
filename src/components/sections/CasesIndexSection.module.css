@@ -229,6 +229,10 @@
   margin: 14px 0 0;
   color: #6b6f76;
   font: 450 14px/1.5 Onest, Inter, system-ui, sans-serif;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .caseCard:hover {
