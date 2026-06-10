@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { avitoContent as content } from "@/content/services/avito";
-import { homeTechnologies } from "@/content/home/technologies";
+import { avitoIndustries } from "@/content/services/avito-industries";
+import { avitoTechnologies } from "@/content/services/avito-technologies";
 import {
   AvitoHero,
   AvitoServicesSection,
@@ -11,6 +12,7 @@ import {
 } from "@/components/sections/AvitoUniqueSections";
 import CasesSection from "@/components/sections/CasesSection";
 import HomeReviewsSection from "@/components/sections/HomeReviewsSection";
+import HomeIndustriesSection from "@/components/sections/HomeIndustriesSection";
 import HomeTechnologiesSection from "@/components/sections/HomeTechnologiesSection";
 import HomeAboutSection from "@/components/sections/HomeAboutSection";
 import HomeBlogSection from "@/components/sections/HomeBlogSection";
@@ -97,8 +99,11 @@ export default function AvitoPage() {
         <AvitoOpportunitiesSection />
         <AvitoPricingSection />
 
-        {/* Общие блоки с главной */}
-        <HomeTechnologiesSection />
+        {/* Отрасли — контент адаптирован под Avito */}
+        <HomeIndustriesSection content={avitoIndustries} />
+
+        {/* Технологии — контент адаптирован под Avito */}
+        <HomeTechnologiesSection content={avitoTechnologies} />
         <CasesSection />
         <HomeAboutSection />
         <HomeReviewsSection />
