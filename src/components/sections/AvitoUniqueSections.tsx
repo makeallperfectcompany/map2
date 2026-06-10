@@ -90,7 +90,14 @@ export function AvitoServicesSection() {
         <div className={grid.grid3}>
           {content.services.cards.map((card) => (
             <article className={styles.darkCard} key={card.code}>
-              <span className={styles.darkCode}>{card.code}</span>
+              <img
+                className={styles.darkCardIcon}
+                src={`/assets/services/avito/icons/icon-${card.code}.webp`}
+                alt=""
+                aria-hidden="true"
+                width={48}
+                height={48}
+              />
               <h3>{card.title}</h3>
               <p>{card.text}</p>
             </article>
@@ -113,7 +120,6 @@ export function AvitoAdvantagesSection() {
         <div className={grid.grid4}>
           {content.advantages.cards.map((card) => (
             <article className={styles.glassCard} key={card.code}>
-              <span className={styles.cardCode}>{card.code}</span>
               <h3>{card.title}</h3>
               <p>{card.text}</p>
             </article>

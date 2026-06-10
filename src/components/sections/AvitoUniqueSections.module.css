@@ -320,6 +320,15 @@
   object-fit: contain;
 }
 
+.darkCardIcon {
+  display: block;
+  width: 48px;
+  height: 48px;
+  margin-block-end: 12px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+}
+
 /* ── Glass-карточки (как на главной) ─────────────────────────────── */
 .glassCard {
   display: flex;
