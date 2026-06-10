@@ -64,7 +64,7 @@
 
 .text {
   max-width: 720px;
-  margin-top: 8px;
+  margin: 8px 0;
   display: grid;
   gap: 14px;
 }
@@ -205,6 +205,8 @@
   background: rgba(255, 255, 255, 0.90);
   border: 1px solid rgba(29, 29, 31, 0.07);
   box-shadow: 0 18px 54px rgba(15, 16, 20, 0.05);
+  display: flex;
+  flex-direction: column;
 }
 
 .bulletCard > span {
@@ -222,6 +224,7 @@
 
 .bulletCard p {
   margin: 12px 0 0;
+  margin-top: auto;
   color: #62666d;
   font: 480 14.5px/1.42 Onest, Inter, system-ui, sans-serif;
   letter-spacing: -0.014em;
