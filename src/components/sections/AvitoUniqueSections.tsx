@@ -76,39 +76,6 @@ export function AvitoHero() {
   );
 }
 
-/* ── Что входит в услугу ──────────────────────────────────────────── */
-export function AvitoServicesSection() {
-  return (
-    <section className={styles.darkSection}>
-      <Container>
-        <div className={styles.darkHeader}>
-          <span className={styles.darkLabel}>{content.services.eyebrow}</span>
-          <h2>{content.services.title}</h2>
-          <p className={styles.darkDesc}>{content.services.description}</p>
-        </div>
-        <div className={styles.darkGridScroll}>
-          {content.services.cards.map((card, index) => (
-            <article className={`${styles.darkCard} ${index === 0 ? styles.darkCardFeatured : ""}`} key={card.code}>
-              <img
-                className={styles.darkCardIcon}
-                src={`/assets/services/avito/icons/icon-${card.code}.webp`}
-                alt=""
-                aria-hidden="true"
-                width={48}
-                height={48}
-              />
-              <h3>{card.title}</h3>
-              <p>{card.text}</p>
-            </article>
-          ))}
-        </div>
-        {/* Scroll hint — видно только на мобилках */}
-        <div className={styles.scrollHint} aria-hidden="true">→ Листайте</div>
-      </Container>
-    </section>
-  );
-}
-
 /* ── Как мы работаем (сетка карточек вместо таймлайна) ────────────── */
 export function AvitoProcessSection() {
   return (

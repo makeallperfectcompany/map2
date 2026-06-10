@@ -3,9 +3,9 @@ import { avitoContent as content } from "@/content/services/avito";
 import { avitoIndustries } from "@/content/services/avito-industries";
 import { avitoTechnologies } from "@/content/services/avito-technologies";
 import { avitoAdvantages } from "@/content/home/avito-advantages";
+import { avitoServiceTechnologies } from "@/content/services/avito-services-technologies";
 import {
   AvitoHero,
-  AvitoServicesSection,
   AvitoProcessSection,
   AvitoPricingSection,
 } from "@/components/sections/AvitoUniqueSections";
@@ -93,7 +93,7 @@ export default function AvitoPage() {
         <AvitoHero />
 
         {/* Уникальные секции Avito, перестилизованные под общий стиль */}
-        <AvitoServicesSection />
+        <HomeTechnologiesSection content={avitoServiceTechnologies} />
         <HomeAdvantagesSection content={avitoAdvantages} />
         <AvitoProcessSection />
 

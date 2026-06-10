@@ -331,15 +331,6 @@
   object-fit: contain;
 }
 
-.darkCardIcon {
-  display: block;
-  width: 48px;
-  height: 48px;
-  margin-block-end: 12px;
-  object-fit: contain;
-  filter: brightness(0) invert(1);
-}
-
 /* ── Glass-карточки (как на главной) ─────────────────────────────── */
 .glassCard {
   display: flex;
@@ -378,62 +369,6 @@
   font: 450 14px / 1.58 Onest, Inter, system-ui, sans-serif;
 }
 
-/* ── Mobile scroll for services grid (как на главной) ────────────── */
-.darkGridScroll {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: var(--grid-gap);
-}
-
-@media (max-width: 767px) {
-  .darkGridScroll {
-    display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    gap: 12px;
-    padding: 2px 18px 16px;
-    margin: 32px 0 0;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-  }
-
-  .darkGridScroll::-webkit-scrollbar {
-    display: none;
-  }
-
-  .darkGridScroll > * {
-    flex: 0 0 300px;
-    scroll-snap-align: start;
-    min-height: 340px;
-    align-items: center;
-    text-align: center;
-  }
-
-  .darkGridScroll .darkCardIcon {
-    margin-left: auto;
-    margin-right: auto;
-    width: 48px;
-    height: 48px;
-    margin-block-end: 12px;
-  }
-
-.scrollHint {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  gap: 4px;
-  margin-top: 12px;
-  color: rgba(255,255,255,0.4);
-  font: 500 12px/1 Onest, Inter, system-ui, sans-serif;
-  animation: hintPulse 2s ease-in-out infinite;
-}
-
-@keyframes hintPulse {
-  0%, 100% { opacity: 0.4; }
-  50% { opacity: 0.9; }
-  }
-}
-
 /* ── Сетка для Process (5 карточек: 3+2 центрированные) ────────── */
 .processGrid {
   display: grid;
@@ -450,102 +385,6 @@
 /* ── Soft section background ──────────────────────────────────────── */
 .softSection {
   background: linear-gradient(180deg, #ffffff 0%, #f5f5f7 100%);
-}
-
-/* ── Тёмная секция (как ServicesSection на главной) ──────────────── */
-.darkSection {
-  margin: 0 24px;
-  border-radius: 32px;
-  padding: 56px 32px 56px;
-  background: #1D1D1F;
-  color: #F5F5F7;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-.darkHeader {
-  margin-block-end: calc(var(--grid-gap) * 1.6);
-}
-
-.darkLabel {
-  display: inline-flex;
-  min-height: 34px;
-  align-items: center;
-  padding: 0 14px;
-  border-radius: 999px;
-  background: rgba(111, 183, 255, 0.075);
-  border: 1px solid rgba(111, 183, 255, 0.13);
-  color: #6fb7ff;
-  font: 760 13px/1 Onest, Inter, system-ui, sans-serif;
-  letter-spacing: -0.012em;
-  font: 760 13px / 1 Onest, Inter, system-ui, sans-serif;
-  letter-spacing: -0.012em;
-  margin-block-end: calc(var(--grid-gap) * 0.8);
-}
-
-.darkDesc {
-  margin-block-start: var(--grid-gap);
-  color: rgba(245, 245, 247, 0.65);
-  font: 450 15px / 1.64 Onest, Inter, system-ui, sans-serif;
-  max-width: 600px;
-}
-
-.darkHeader h2 {
-  color: #F5F5F7;
-  font: 800 clamp(36px, 4vw, 58px)/0.98 Onest, Inter, system-ui, sans-serif;
-  letter-spacing: -0.03em;
-  text-wrap: balance;
-  max-width: 720px;
-}
-
-.darkCard {
-  display: flex;
-  flex-direction: column;
-  padding: 20px 18px 14px;
-  border-radius: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.075);
-  background: #2A2A2C;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.045), 0 22px 70px rgba(0, 0, 0, 0.18);
-  transition: transform 240ms cubic-bezier(.2,.7,.2,1), border-color 240ms cubic-bezier(.2,.7,.2,1), box-shadow 240ms cubic-bezier(.2,.7,.2,1);
-}
-
-.darkCard:hover {
-  transform: translateY(-4px);
-  border-color: rgba(111, 183, 255, 0.22);
-  box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.06),
-    0 30px 86px rgba(0, 0, 0, 0.26);
-}
-
-.darkCardFeatured {
-  background:
-    radial-gradient(circle at 86% 14%, rgba(0, 113, 227, 0.40), transparent 50%),
-    radial-gradient(circle at 16% 86%, rgba(0, 113, 227, 0.18), transparent 38%),
-    linear-gradient(180deg, #0a2240 0%, #071530 100%);
-  border-color: rgba(111, 183, 255, 0.2);
-  box-shadow:
-    inset 0 1px 0 rgba(111, 183, 255, 0.1),
-    0 22px 70px rgba(0, 0, 0, 0.18);
-}
-
-.darkCode {
-  display: inline-flex;
-  color: #6FB7FF;
-  font: 850 12px / 1 Onest, Inter, system-ui, sans-serif;
-  letter-spacing: 0.1em;
-  margin-block-end: calc(var(--grid-gap) * 0.6);
-}
-
-.darkCard h3 {
-  margin-block: 0 calc(var(--grid-gap) * 0.35);
-  color: #F5F5F7;
-  font: 840 22px / 1.08 Onest, Inter, system-ui, sans-serif;
-  letter-spacing: -0.05em;
-}
-
-.darkCard p {
-  flex: 1;
-  color: rgba(245, 245, 247, 0.52);
-  font: 450 14px / 1.56 Onest, Inter, system-ui, sans-serif;
 }
 
 /* ── Pricing ──────────────────────────────────────────────────────── */
@@ -763,15 +602,6 @@
     font-size: 14px;
   }
 
-  .darkSection {
-    margin: 0 10px;
-    border-radius: 24px;
-  }
-
-  .darkCard {
-    padding: 24px;
-    border-radius: 22px;
-  }
 }
 
 @media (max-width: 480px) {
