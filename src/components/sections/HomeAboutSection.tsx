@@ -19,7 +19,7 @@ export default function HomeAboutSection() {
             </div>
           </div>
 
-          <div className={styles.mediaColumn}>
+          <div className={styles.videoColumn}>
             <div className={styles.videoCard}>
               <video
                 className={styles.videoPlayer}
@@ -32,17 +32,17 @@ export default function HomeAboutSection() {
                 aria-label="Видео о Make All Perfect"
               />
             </div>
-
-            <div className={styles.bullets}>
-              {homeAbout.bullets.map((bullet) => (
-                <article className={styles.bulletCard} key={bullet.title}>
-                  <span>{bullet.mark}</span>
-                  <h3>{bullet.title}</h3>
-                  <p>{bullet.text}</p>
-                </article>
-              ))}
-            </div>
           </div>
+        </div>
+
+        <div className={styles.bullets}>
+          {homeAbout.bullets.map((bullet) => (
+            <article className={styles.bulletCard} key={bullet.title}>
+              <span>{bullet.mark}</span>
+              <h3>{bullet.title}</h3>
+              <p>{bullet.text}</p>
+            </article>
+          ))}
         </div>
       </Container>
     </section>
