@@ -1,13 +1,13 @@
-/* ── VK Ads Hero (alias of main page hero) ──────────────────────── */
+/* ── Service hero (alias of main page hero) ──────────────────────── */
 .heroSection {
   position: relative;
   width: 100%;
   min-height: 100vh;
-  overflow: hidden;
-  background: #f5f6f8;
   display: flex;
   align-items: center;
   justify-content: center;
+  background: #f5f6f8;
+  overflow: hidden;
 }
 
 .heroInner {
@@ -49,72 +49,118 @@
   font: 450 clamp(17px, 1.45vw, 21px)/1.55 var(--font-onest), system-ui, sans-serif;
 }
 
-/* ── Buttons (gradient + glass) ────────────────────────────────── */
+/* ── Buttons — matching main page ──────────────────────────────── */
 .heroActions {
   display: flex;
-  flex-wrap: wrap;
-  gap: 14px;
+  gap: 16px;
   margin-top: 34px;
+  flex-wrap: wrap;
 }
 
 .btn {
+  --btn-y: 0;
   position: relative;
-  min-height: 48px;
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  border-radius: 999px;
-  padding: 0 26px 0 28px;
-  text-decoration: none;
-  font: 750 14px/1 var(--font-onest), system-ui, sans-serif;
-  transition: transform 240ms cubic-bezier(0.2, 0.7, 0.2, 1), box-shadow 240ms cubic-bezier(0.2, 0.7, 0.2, 1), filter 240ms cubic-bezier(0.2, 0.7, 0.2, 1);
+  justify-content: space-between;
+  gap: 18px;
+  padding: 18px 26px;
+  border-radius: 14px;
+  font-family: inherit;
+  font-size: 15.5px;
+  font-weight: 500;
   cursor: pointer;
-  border: none;
-}
-
-.btn:active { transform: scale(0.96); }
-
-.btnAccent {
-  color: #fff;
-  background: linear-gradient(90deg, #0071E3 0%, #40A9FF 100%);
-  box-shadow: 0 18px 46px rgba(0,113,227,0.18);
-}
-
-.btnAccent:hover { transform: translateY(-2px); filter: brightness(1.08); box-shadow: 0 22px 50px rgba(0,113,227,0.25); }
-
-.btnGhost {
-  color: #1d1d1f;
-  background: rgba(255,255,255,0.62);
-  border: 1px solid rgba(15,16,20,0.10);
-  backdrop-filter: blur(10px);
-}
-
-.btnGhost:hover { transform: translateY(-2px); }
-
-.label { pointer-events: none; }
-
-.arrWrap {
-  display: inline-flex;
-  position: relative;
-  width: 14px;
-  height: 14px;
-  flex-shrink: 0;
+  text-decoration: none;
+  min-width: 230px;
+  border: 1px solid transparent;
   overflow: hidden;
-  vertical-align: middle;
+  isolation: isolate;
+  transition:
+    transform .35s var(--ease),
+    box-shadow .4s var(--ease),
+    background .35s var(--ease),
+    border-color .35s var(--ease),
+    color .35s var(--ease);
+  will-change: transform;
 }
 
-.arr {
+.btn .label { position: relative; z-index: 2; transition: transform .4s var(--ease); }
+
+.btn .arrWrap {
+  position: relative; z-index: 2;
+  width: 14px; height: 14px;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.btn .arr {
+  width: 14px; height: 14px;
+  display: block;
+  transition: transform .45s var(--ease-snap);
+}
+
+.btn .arrGhost {
+  position: absolute; inset: 0;
+  transform: translate(-100%, 100%);
+}
+
+/* Accent — brand gradient */
+.btnAccent {
+  background: linear-gradient(90deg, #1A3A6E 0%, #0071E3 52%, #5FA8FF 100%);
+  color: #fff;
+  border: none;
+  box-shadow:
+    0 18px 42px rgba(0,113,227,0.18),
+    0 8px 18px rgba(26,58,110,0.10);
+  overflow: hidden;
+}
+
+.btnAccent:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 22px 50px rgba(0,113,227,0.25),
+    0 10px 22px rgba(26,58,110,0.14);
+  filter: brightness(1.08);
+}
+
+.btnAccent:active { transform: translateY(0); transition-duration: .15s; }
+
+/* Ghost (white-glass) */
+.btnGhost {
+  background: rgba(255,255,255,0.62);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: #1d1d1f;
+  border: 1px solid rgba(15,16,20,0.10);
+  box-shadow: 0 2px 6px rgba(15,16,20,0.04);
+  overflow: hidden;
+}
+
+.btnGhost::before {
+  content: "";
   position: absolute;
   inset: 0;
-  transition: transform 300ms cubic-bezier(0.2, 0.7, 0.2, 1);
+  background: linear-gradient(180deg, rgba(255,255,255,0.0), rgba(255,255,255,0.95));
+  transform: translateY(100%);
+  z-index: 1;
+  transition: transform .5s var(--ease);
 }
 
-.arrGhost { transform: translateX(-100%); }
+.btnGhost:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 28px rgba(15,16,20,0.10);
+  border-color: rgba(15,16,20,0.18);
+}
 
-.btn:hover .arrMain { transform: translateX(100%); }
-.btn:hover .arrGhost { transform: translateX(0); }
+.btnGhost:hover::before { transform: translateY(0); }
 
-/* ── Trust bar (label + value) ─────────────────────────────────── */
+.btnGhost:active { transform: translateY(0); transition-duration: .15s; }
+
+/* Arrow swap on hover (works for both buttons) */
+.btn:hover .arrMain { transform: translate(140%, -140%); }
+.btn:hover .arrGhost { transform: translate(0, 0); }
+
+/* ── Trust bar — matching main page ────────────────────────────── */
 .trustBar {
   position: relative;
   margin-top: 28px;
@@ -143,10 +189,9 @@
 }
 
 .trustItem {
-  display: flex;
-  align-items: flex-start;
+  display: inline-flex;
+  align-items: center;
   gap: 8px;
-  flex-direction: column;
 }
 
 .trustItem + .trustItem { margin-left: 28px; }
@@ -163,7 +208,8 @@
   background-size: 18px;
   background-position: center;
   background-repeat: no-repeat;
-  margin-bottom: 2px;
+  margin-right: 4px;
+  margin-bottom: 0;
 }
 
 .trustLabel {
@@ -203,19 +249,20 @@
   .right { display: none; }
   .heroTitle { font-size: clamp(36px, 8vw, 60px); }
   .heroLead { font-size: 16px; }
+  .heroActions { gap: 12px; }
   .trustBar { margin-top: 20px; padding-top: 0; }
   .trustBar::before { display: none; }
   .trustBarInner { gap: 12px; flex-direction: column; align-items: flex-start; width: fit-content; }
+  .trustItem { margin-left: 0 !important; }
   .trustLabel { font-size: 20px; }
   .trustValue { font-size: 14px; }
+  .btn { min-width: 0; padding: 16px 22px; font-size: 14.5px; }
 }
 
 @media (max-width: 768px) {
   .heroSection { min-height: unset; align-items: flex-start; margin-bottom: 30px; }
   .heroTitle { font-size: 38px; line-height: 1.075; letter-spacing: -0.045em; }
   .heroLead { font-size: 15px; }
-  .heroActions { gap: 12px; }
-  .btn { padding: 16px 22px; font-size: 14.5px; }
   .trustBar { margin-top: 20px; }
   .trustBarInner { gap: 12px; flex-direction: column; align-items: flex-start; width: fit-content; }
   .trustLabel { font-size: 20px; }
@@ -224,7 +271,7 @@
 
 @media (max-width: 640px) {
   .heroTitle { font-size: 36px; }
-  .heroActions { flex-direction: column; align-items: center; width: 100%; }
+  .heroActions { flex-direction: column; align-items: center; width: 100%; margin-bottom: 0; }
   .btn { width: 100%; min-width: 0; justify-content: center; padding: 16px 20px; }
   .trustBarInner { gap: 12px; flex-direction: column; align-items: flex-start; width: fit-content; }
   .trustLabel { font-size: 20px; }
