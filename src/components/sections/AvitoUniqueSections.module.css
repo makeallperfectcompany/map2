@@ -378,6 +378,51 @@
   font: 450 14px / 1.58 Onest, Inter, system-ui, sans-serif;
 }
 
+/* ── Mobile scroll for services grid (как на главной) ────────────── */
+.darkGridScroll {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--grid-gap);
+}
+
+@media (max-width: 767px) {
+  .darkGridScroll {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 10px;
+    padding: 4px 4px 12px;
+    margin: 0 -4px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .darkGridScroll::-webkit-scrollbar {
+    display: none;
+  }
+
+  .darkGridScroll > * {
+    flex: 0 0 280px;
+    scroll-snap-align: start;
+  }
+}
+
+.scrollHint {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 4px;
+  margin-top: 12px;
+  color: rgba(255,255,255,0.4);
+  font: 500 12px/1 Onest, Inter, system-ui, sans-serif;
+  animation: hintPulse 2s ease-in-out infinite;
+}
+
+@keyframes hintPulse {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 0.9; }
+}
+
 /* ── Сетка для Process (5 карточек: 3+2 центрированные) ────────── */
 .processGrid {
   display: grid;
@@ -705,6 +750,10 @@
   .darkSection {
     margin: 0 10px;
     border-radius: 24px;
+  }
+
+  .darkGridScroll > * {
+    flex: 0 0 270px;
   }
 }
 

@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { Container } from "@/components/ui/Container/Container";
-import grid from "@/styles/grid.module.css";
 import { avitoContent as content } from "@/content/services/avito";
 import styles from "./AvitoUniqueSections.module.css";
 import OpenConsultationButton from "@/components/forms/OpenConsultationButton";
@@ -87,7 +86,7 @@ export function AvitoServicesSection() {
           <h2>{content.services.title}</h2>
           <p className={styles.darkDesc}>{content.services.description}</p>
         </div>
-        <div className={grid.grid3}>
+        <div className={styles.darkGridScroll}>
           {content.services.cards.map((card, index) => (
             <article className={`${styles.darkCard} ${index === 0 ? styles.darkCardFeatured : ""}`} key={card.code}>
               <img
@@ -103,6 +102,8 @@ export function AvitoServicesSection() {
             </article>
           ))}
         </div>
+        {/* Scroll hint — видно только на мобилках */}
+        <div className={styles.scrollHint} aria-hidden="true">→ Листайте</div>
       </Container>
     </section>
   );
