@@ -21,7 +21,7 @@ export default function YandexDirectHero({ content }: Props) {
   return (
     <section className={styles.heroSection}>
       <Image
-        src="/images/services/yandex-direct/hero-visual.png"
+        src="/images/services/yandex-direct/hero-bg.webp"
         alt=""
         fill
         priority
