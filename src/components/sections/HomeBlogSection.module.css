@@ -226,11 +226,10 @@
 }
 
 .contentBody {
-  flex: 1;
 }
 
 .articleBody p {
-  margin: 14px 0 0;
+  margin: 10px 0 0;
   color: #6b6f76;
   font: 450 14px/1.5 Onest, Inter, system-ui, sans-serif;
   display: -webkit-box;
@@ -251,7 +250,6 @@
   box-shadow: 0 8px 20px rgba(0, 113, 227, 0.18);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
   align-self: flex-start;
-  margin-top: 24px;
 }
 
 .articleCard:hover .readMore {
