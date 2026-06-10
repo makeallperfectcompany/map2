@@ -1,8 +1,8 @@
 import type { IndustriesContent } from "@/components/sections/HomeIndustriesSection";
 
 export const avitoIndustries: IndustriesContent = {
-  label: "Отрасли",
-  kicker: "Опыт продвижения на Avito",
+  label: "Для кого",
+  kicker: "Кому подходит продвижение на Avito",
   title: "Продвигаем бизнес на Avito в нишах с высокой конкуренцией",
   description:
     "У каждой ниши на Avito — своя аудитория, свои сезонные пики и своя динамика ставок. Мы не используем шаблонные стратегии, а адаптируем продвижение под конкретный рынок: настраиваем автозагрузку, подбираем ставки, оптимизируем контент карточек.",

@@ -130,30 +130,6 @@ export function AvitoProcessSection() {
     </section>
   );
 }
-
-/* ── Для кого подходит (тёмная секция как ServicesSection) ───────── */
-export function AvitoOpportunitiesSection() {
-  return (
-    <section className={styles.darkSection}>
-      <Container>
-        <div className={styles.darkHeader}>
-          <span className={styles.darkLabel}>{content.opportunities.eyebrow}</span>
-          <h2>{content.opportunities.title}</h2>
-        </div>
-        <div className={grid.grid4}>
-          {content.opportunities.cards.map((card) => (
-            <article className={styles.darkCard} key={card.code}>
-              <span className={styles.darkCode}>{card.code}</span>
-              <h3>{card.title}</h3>
-              <p>{card.text}</p>
-            </article>
-          ))}
-        </div>
-      </Container>
-    </section>
-  );
-}
-
 /* ── Стоимость ────────────────────────────────────────────────────── */
 export function AvitoPricingSection() {
   return (

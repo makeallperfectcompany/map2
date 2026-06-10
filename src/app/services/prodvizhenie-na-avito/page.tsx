@@ -7,7 +7,6 @@ import {
   AvitoHero,
   AvitoServicesSection,
   AvitoProcessSection,
-  AvitoOpportunitiesSection,
   AvitoPricingSection,
 } from "@/components/sections/AvitoUniqueSections";
 import CasesSection from "@/components/sections/CasesSection";
@@ -97,11 +96,11 @@ export default function AvitoPage() {
         <AvitoServicesSection />
         <HomeAdvantagesSection content={avitoAdvantages} />
         <AvitoProcessSection />
-        <AvitoOpportunitiesSection />
-        <AvitoPricingSection />
 
-        {/* Отрасли — контент адаптирован под Avito */}
+        {/* Для кого подходит = блок Отрасли с переименованным заголовком */}
         <HomeIndustriesSection content={avitoIndustries} />
+
+        <AvitoPricingSection />
 
         {/* Технологии — контент адаптирован под Avito */}
         <HomeTechnologiesSection content={avitoTechnologies} />
