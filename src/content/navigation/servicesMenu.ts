@@ -30,7 +30,7 @@ export const servicesMenu: ServiceMenuGroup[] = [
   {
     code: "SEO",
     title: "SEO и органический рост",
-    href: "/services/seo-prodvizhenie-v-poiskovoj-sisteme-yandeks",
+    href: "/services/seo",
     icon: "search",
     items: [
       { title: "SEO-продвижение в Яндекс", href: "/services/seo-prodvizhenie-v-poiskovoj-sisteme-yandeks" },

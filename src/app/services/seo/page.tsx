@@ -1,6 +1,6 @@
 import Script from "next/script";
 import type { Metadata } from "next";
-import GeoHero from "@/components/sections/GeoHero/GeoHero";
+import SeoHero from "@/components/sections/SeoHero/SeoHero";
 import SeoServicesSection from "@/components/sections/SeoServicesSection";
 import HomeTechnologiesSection from "@/components/sections/HomeTechnologiesSection";
 import HomeIndustriesSection from "@/components/sections/HomeIndustriesSection";
@@ -91,7 +91,7 @@ export default function SeoServicePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
 
-      <GeoHero content={heroContent} />
+      <SeoHero content={heroContent} />
       <SeoServicesSection />
       <HomeIndustriesSection />
       <CasesSection />
