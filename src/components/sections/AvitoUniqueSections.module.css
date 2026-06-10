@@ -405,10 +405,8 @@
 .darkSection {
   margin: 0 24px;
   border-radius: 32px;
-  padding-block: var(--section-py);
-  background:
-    radial-gradient(circle at 78% 10%, rgba(122, 167, 199, 0.14), transparent 34%),
-    linear-gradient(135deg, #111419 0%, #1A1D23 52%, #0E1014 100%);
+  padding: 56px 32px 56px;
+  background: #1D1D1F;
   color: #F5F5F7;
   border: 1px solid rgba(255, 255, 255, 0.08);
 }
@@ -426,6 +424,8 @@
   background: rgba(111, 183, 255, 0.075);
   border: 1px solid rgba(111, 183, 255, 0.13);
   color: #6fb7ff;
+  font: 760 13px/1 Onest, Inter, system-ui, sans-serif;
+  letter-spacing: -0.012em;
   font: 760 13px / 1 Onest, Inter, system-ui, sans-serif;
   letter-spacing: -0.012em;
   margin-block-end: calc(var(--grid-gap) * 0.8);
@@ -440,16 +440,16 @@
 
 .darkHeader h2 {
   color: #F5F5F7;
-  font: 800 clamp(36px, 3.8vw, 52px) / 0.99 Onest, Inter, system-ui, sans-serif;
-  letter-spacing: -0.07em;
+  font: 800 clamp(36px, 4vw, 58px)/0.98 Onest, Inter, system-ui, sans-serif;
+  letter-spacing: -0.03em;
   text-wrap: balance;
-  max-width: 800px;
+  max-width: 720px;
 }
 
 .darkCard {
   display: flex;
   flex-direction: column;
-  padding: var(--card-py) var(--card-px);
+  padding: 20px 18px 14px;
   border-radius: 20px;
   border: 1px solid rgba(255, 255, 255, 0.075);
   background: #2A2A2C;
