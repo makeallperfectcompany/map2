@@ -350,12 +350,11 @@
     font-size: 18px;
   }
 
-  /* Мессенджеры: иконки-баннеры */
+  /* Мессенджеры: иконки-баннеры равномерно */
   .messengers {
     flex-direction: row;
     flex-wrap: nowrap;
-    gap: 8px;
-    justify-content: center;
+    justify-content: space-between;
   }
 
   .messengerButton {
@@ -437,18 +436,18 @@
     border-radius: 18px;
   }
 
-  /* Мессенджеры: иконки-баннеры */
+  /* Мессенджеры: иконки-баннеры равномерно */
   .messengers {
     flex-direction: row;
     flex-wrap: nowrap;
-    gap: 8px;
+    justify-content: space-between;
   }
 
   .messengerButton {
-    flex: 0 0 90px;
-    width: 90px;
-    height: 30px;
-    min-height: 30px;
+    flex: 0 0 86px;
+    width: 86px;
+    height: 28px;
+    min-height: 28px;
     border-radius: 10px;
   }
 
@@ -481,16 +480,16 @@
     font-size: 11.5px;
   }
 
-  /* Мессенджеры: иконки-баннеры */
+  /* Мессенджеры: иконки-баннеры равномерно */
   .messengers {
-    gap: 6px;
+    justify-content: space-between;
   }
 
   .messengerButton {
-    flex: 0 0 84px;
-    width: 84px;
-    height: 28px;
-    min-height: 28px;
+    flex: 0 0 82px;
+    width: 82px;
+    height: 26px;
+    min-height: 26px;
   }
 
   .form input[type="text"],
