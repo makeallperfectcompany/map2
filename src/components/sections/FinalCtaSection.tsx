@@ -56,7 +56,13 @@ export default function FinalCtaSection() {
                   <div className={styles.messengers}>
                     {finalCta.messengers.items.map((item) => (
                       <Link className={styles.messengerButton} href={item.href} key={item.label}>
-                        <Image src={item.icon} alt="" aria-hidden="true" width={24} height={24} unoptimized />
+                        <Image
+                          src={`/images/icons/messenger-buttons/${item.label.toLowerCase()}.webp`}
+                          alt={item.label}
+                          width={150}
+                          height={50}
+                          unoptimized
+                        />
                         <span>{item.label}</span>
                       </Link>
                     ))}
