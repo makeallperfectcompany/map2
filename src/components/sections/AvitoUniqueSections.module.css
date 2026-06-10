@@ -390,9 +390,9 @@
     display: flex;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
-    gap: 10px;
-    padding: 4px 4px 12px;
-    margin: 0 -4px;
+    gap: 12px;
+    padding: 2px 18px 16px;
+    margin: 66px 0 0;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
   }
@@ -402,10 +402,17 @@
   }
 
   .darkGridScroll > * {
-    flex: 0 0 280px;
+    flex: 0 0 300px;
     scroll-snap-align: start;
+    min-height: 340px;
+    align-items: center;
+    text-align: center;
   }
-}
+
+  .darkGridScroll .darkCardIcon {
+    margin-left: auto;
+    margin-right: auto;
+  }
 
 .scrollHint {
   display: flex;
@@ -750,10 +757,6 @@
   .darkSection {
     margin: 0 10px;
     border-radius: 24px;
-  }
-
-  .darkGridScroll > * {
-    flex: 0 0 270px;
   }
 }
 
