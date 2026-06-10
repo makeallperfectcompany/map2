@@ -19,7 +19,7 @@ export default function ArticleTemplate({ article }: { article: Article }) {
     "@context": "https://schema.org",
     "@type": "Article",
     headline: article.title,
-    description: article.description,
+    description: article.seoDescription ?? article.description,
     image: article.cover ? `${BASE_URL}${article.cover}` : `${BASE_URL}/og-image.jpg`,
     datePublished: article.date,
     dateModified: article.updatedAt,

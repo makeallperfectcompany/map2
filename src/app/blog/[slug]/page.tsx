@@ -25,7 +25,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   return {
     title: article.seoTitle,
-    description: article.description,
+    description: article.seoDescription ?? article.description,
     alternates: {
       canonical: url,
     },
@@ -33,7 +33,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       type: "article",
       url,
       title: article.seoTitle,
-      description: article.description,
+      description: article.seoDescription ?? article.description,
       images: [ogImage],
       publishedTime: article.date,
       modifiedTime: article.updatedAt,
@@ -42,7 +42,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     twitter: {
       card: "summary_large_image",
       title: article.seoTitle,
-      description: article.description,
+      description: article.seoDescription ?? article.description,
       images: [ogImage.url],
     },
   };

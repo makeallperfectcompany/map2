@@ -76,6 +76,7 @@ export type Article = {
   priority: number;
   seoTitle: string;
   description: string;
+  seoDescription?: string;
   category: string;
   date: string;
   updatedAt?: string;
