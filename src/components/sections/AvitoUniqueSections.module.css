@@ -392,7 +392,7 @@
     scroll-snap-type: x mandatory;
     gap: 12px;
     padding: 2px 18px 16px;
-    margin: 66px 0 0;
+    margin: 32px 0 0;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
   }
@@ -431,6 +431,7 @@
 @keyframes hintPulse {
   0%, 100% { opacity: 0.4; }
   50% { opacity: 0.9; }
+  }
 }
 
 /* ── Сетка для Process (5 карточек: 3+2 центрированные) ────────── */
@@ -685,6 +686,7 @@
   .pricingGrid {
     grid-template-columns: repeat(3, 1fr);
   }
+}
 
 @media (max-width: 1024px) {
   .trustBar {
@@ -753,6 +755,10 @@
     justify-content: center;
   }
 
+  .trustItem + .trustItem {
+    margin-left: 0;
+  }
+
   .trustLabel {
     font-size: 14px;
   }
@@ -788,5 +794,13 @@
     margin-left: auto;
     margin-right: auto;
   }
-}
 
+  .trustLabel {
+    font-size: 12px;
+    white-space: normal;
+  }
+
+  .trustItem + .trustItem {
+    margin-left: 0;
+  }
+}
